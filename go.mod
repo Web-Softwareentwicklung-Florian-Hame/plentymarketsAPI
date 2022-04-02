@@ -1,4 +1,4 @@
-module github.com/fhame/PlentymarketsAPI
+module github.com/Web-Softwareentwicklung-Florian-Hame/Plentymarkets-API
 
 go 1.16
 

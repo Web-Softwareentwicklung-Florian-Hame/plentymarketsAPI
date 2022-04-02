@@ -1,10 +1,10 @@
-package PlentymarketsAPI
+package plentymarketsAPI
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/Web-Softwareentwicklung-Florian-Hame/Plentymarkets-API/api"
+	"github.com/Web-Softwareentwicklung-Florian-Hame/plentymarketsAPI/api"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/kardianos/osext"
 	"golang.org/x/oauth2"

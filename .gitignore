@@ -13,3 +13,10 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+# non relevant files for repo
+.DS_Store
+.idea/
+cmd/
+bin/
+opeanpi_bu.json

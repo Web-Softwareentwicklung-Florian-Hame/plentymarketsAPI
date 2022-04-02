@@ -1,0 +1,1676 @@
+openapi: 3.0.1
+info:
+  title: Plentymarkets-API
+  version: 1.0.0
+
+servers:
+  - url: /
+
+paths:
+  /rest/login:
+    post:
+      summary: login for authentication at rest api
+      description: needed for authenticate at the plentymarkets rest api
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: '#/components/schemas/RestLoginBody'
+      responses:
+        200:
+          description: returns token data after successfull authentication
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/RestLoginResponse'
+  /rest/items/variations:
+    get:
+      summary: fetching variations with pagination and the possibility to fetch additional related data by 'with' query param
+      description: fetching variations
+      parameters:
+        - in: query
+          name: with
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - properties
+                - variationProperties
+                - variationBarcodes
+                - variationBundleComponents
+                - variationComponentBundles
+                - variationSalesPrices
+                - marketItemNumbers
+                - variationCategories
+                - variationClients
+                - variationMarkets
+                - variationDefaultCategory
+                - variationSuppliers
+                - variationWarehouses
+                - images
+                - itemImages
+                - variationAttributeValues
+                - variationSkus
+                - variationAdditionalSkus
+                - unit
+                - parent
+                - item
+                - stock
+          explode: false
+        - in: query
+          name: lang
+          description: The language of the variation information.
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Limits the results to a specific page.
+          schema:
+            type: integer
+        - in: query
+          name: itemsPerPage
+          description: Limits the number of results listed per page to a specific number.
+          schema:
+            type: integer
+        - in: query
+          name: id
+          description: Filter restricts the list of results to variations with the specified variation ID. An variation ID must be specified. More than one ID should be separated by commas.
+          schema:
+            type: array
+            items:
+              type: integer
+          explode: false
+        - in: query
+          name: itemId
+          description: Filter restricts the list of results to variations with the specified item ID. An item ID must be specified. More than one ID should be separated by commas.
+          schema:
+            type: array
+            items:
+              type: integer
+          explode: false
+        - in: query
+          name: variationTagId
+          description: Filter restricts the list of results to variations with the specified item name. An item name must be specified.
+          schema:
+            type: array
+            items:
+              type: integer
+          explode: false
+        - in: query
+          name: itemName
+          description: Filter restricts the list of results to variations with the specified item name
+          schema:
+            type: string
+        - in: query
+          name: flagOne
+          description: Filter restricts the list of results to variations of items with the flag one.
+          schema:
+            type: integer
+        - in: query
+          name: flagTwo
+          description: Filter restricts the list of results to variations of items with the flag two.
+          schema:
+            type: integer
+        - in: query
+          name: storeSpecial
+          description: "Filter restricts the list of results to variations of items with the specified store special. The following values are allowed: 0 (None), 1 (Special offer), 2 (New item), 3 (Top item)"
+          schema:
+            type: number
+            enum:
+              - 0
+              - 1
+              - 2
+              - 3
+        - in: query
+          name: categoryId
+          description: Filter restricts the list of results to variations with the specified category id
+          schema:
+            type: integer
+        - in: query
+          name: isMain
+          description: Filter restricts the list of results to variations that are main variations.
+          schema:
+            type: boolean
+        - in: query
+          name: isActive
+          description: Filter restricts the list of results to variations that are active.
+          schema:
+            type: boolean
+        - in: query
+          name: barcode
+          description: Filter restricts the list of results to variations with the specified barcode.
+          schema:
+            type: string
+        - in: query
+          name: numberExact
+          description: Filter restricts the list of results to the variation with the variation number specified.
+          schema:
+            type: string
+        - in: query
+          name: numberFuzzy
+          description: "Filter restricts the list of results to variations with numbers that contain the variation number specified (SQL LIKE operator). For example, if variations with variation numbers 1 to 400 exist in the system, filtering by 12 will list variation numbers 12, 112, 120-129, 212 and 312."
+          schema:
+            type: string
+        - in: query
+          name: isBundle
+          description: Filter restricts the list of results to variations to which variations were added to create a bundle.
+          schema:
+            type: boolean
+        - in: query
+          name: plentyId
+          description: Filter restricts the list of results to variations that are visible in specified clients. Separate more than one client by commas.
+          schema:
+            type: array
+            items:
+              type: integer
+          explode: false
+        - in: query
+          name: referrerId
+          description: Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas.
+          schema:
+            type: array
+            items:
+              type: integer
+          explode: false
+        - in: query
+          name: supplierNumber
+          description: Filter restricts the list of results to variations with the specified supplier number.
+          schema:
+            type: string
+        - in: query
+          name: sku
+          description: "Filter restricts the list of results to variations with the specified SKU. In additional, results can also be restricted to a specific referrer by specifying the referrer ID after a colon. Example: L0R3MIP5UM:104.1"
+          schema:
+            type: string
+        - in: query
+          name: manufacturerId
+          description: Filter restricts the list of results to variations with the specified manufacturer ID.
+          schema:
+            type: integer
+        - in: query
+          name: updatedBetween
+          description: Filter restricts the list of results to variations updated during the specified period. The end date (to) is optional. If no end date is specified, variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?updatedBetween=1451606400,1456790400 will list variations updated between 2016-01-01 and 2016-03-01. .../variations?updatedBetween=1451606400 will list variations updated since 2016-01-01. The PHP function strtotime is also supported.
+          schema:
+            type: string
+        - in: query
+          name: createdBetween
+          description: Filter restricts the list of results to variations created during the specified period. The end date (to) is optional. If no end date is specified, variations created between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../variations?createdBetween=1451606400,1456790400 will list variations created between 2016-01-01 and 2016-03-01. .../variations?createdBetween=1451606400 will list variations created since 2016-01-01. The PHP function strtotime is also supported.
+          schema:
+            type: string
+        - in: query
+          name: relatedUpdatedBetween
+          description: Filter restricts the list of results to those variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats.
+          schema:
+            type: string
+        - in: query
+          name: itemDescription
+          description: Filter restricts the list of results to variations with descriptions that contain the specified string.
+          schema:
+            type: string
+        - in: query
+          name: stockWarehouseId
+          description: Filter restricts the list of results to variations which have physical stock on the given warehouse.
+          schema:
+            type: string
+        - in: query
+          name: supplierId
+          description: Filter restricts the list of results to variations with the specified supplier ID.
+          schema:
+            type: integer
+
+      responses:
+        200:
+          description: variation pagination response
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/VariationPagination'
+  /rest/items/{itemId}/variations:
+    post:
+      summary: creating variations for an item
+      description: creating variations for an item
+      parameters:
+        - in: path
+          name: itemId
+          schema:
+            type: integer
+          required: true
+          description: numeric itemId of the item where the variations belongs to
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Variation'
+      responses:
+        200:
+          description: successfull created variation response
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/Variation'
+  /rest/categories:
+    get:
+      summary: fetching categories with pagination and optional filter queries
+      description: fetching categories
+      responses:
+        200:
+          description: category variation response
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/CategoryPagination'
+    post:
+      summary: creating new categories
+      description: creating new categories
+      responses:
+        200:
+          description: successfully created categories
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/Category'
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Category'
+  /rest/items:
+    get:
+      summary: fetching items with optional extra data or filters given in query parameter
+      description: fetching items with optional extra data or filters given in query parameter
+      parameters:
+        - in: query
+          description: Includes the specified variation information in the results
+          name: with
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - itemProperties
+                - itemCrossSelling
+                - variations
+                - itemImages
+                - itemShippingProfiles
+                - ebayTitles
+        - in: query
+          name: lang
+          description: The language of the variation information.
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Limits the results to a specific page.
+          schema:
+            type: integer
+        - in: query
+          name: itemsPerPage
+          description: Limits the number of results listed per page to a specific number.
+          schema:
+            type: integer
+        - in: query
+          name: name
+          description: Filter restricts the list of results to items with the specified item name.
+          schema:
+            type: string
+        - in: query
+          name: manufacturerId
+          description: Filter restricts the list of results to items with the specified manufacturerId.
+          schema:
+            type: integer
+        - in: query
+          name: id
+          description: Filter restricts the list of results to items with the specified ID. More than one ID should be separated by commas.
+          schema:
+            type: array
+            items:
+              type: integer
+          explode: false
+        - in: query
+          name: flagOne
+          description: Filter restricts the list of results to items with the specified flagOne.
+          schema:
+            type: integer
+        - in: query
+          name: flagTwo
+          description: Filter restricts the list of results to items with the specified flagTwo.
+          schema:
+            type: integer
+        - in: query
+          name: updatedBetween
+          description: Filter restricts the list of results to items updated during the specified period. The end date (to) is optional. If no end date is specified, items updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween=1451606400,1456790400 will list items updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween=1451606400 will list items updated since 2016-01-01. The PHP function strtotime is also supported.
+          schema:
+            type: string
+        - in: query
+          name: variationUpdatedBetween
+          description: Filter restricts the list of results to items with variations that were updated during the specified period. The end date (to) is optional. If no end date is specified, items with variations updated between the start date (from) and the present will be listed. The dates can be specified as unix timestamps or in the ISO 8601 date format. Start date and optional end date are separated by a comma. For example, .../items?updatedBetween=1451606400,1456790400 will list items with variations that were updated between 2016-01-01 and 2016-03-01. .../items?updatedBetween=1451606400 will list items with variations that were updated since 2016-01-01. The PHP function strtotime is also supported.
+          schema:
+            type: string
+        - in: query
+          name: variationRelatedUpdatedBetween
+          description: Filter restricts the list of results to items with variations for which related information was updated during the specified period. Related information is defined as information linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category. See variationUpdatedBetween for supported formats.
+          schema:
+            type: string
+        - in: query
+          name: or
+          description: "Filters can be defined in this param to link them via OR instead of AND. The syntax looks like the following: or=(updatedBetween=1573050718&varitionUpdatedBetween=1573050718). Everything in the brackets is written in the normal URL-Syntax. The or-param can be used multiple times if it is used like this: or[]=(...)&or[]=(...)"
+          schema:
+            type: string
+      responses:
+        200:
+          description: successfully fetched items
+          content:
+            application/json;charset=utf-8:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ItemPagination'
+    post:
+      summary: creates items
+      description: creates items
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              type: array
+              items:
+               $ref: '#/components/schemas/Item'
+
+      responses:
+        200:
+          description: successfully created item
+          content:
+            application/json;charset=utf-8:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Item'
+
+components:
+  schemas:
+    RestLoginBody:
+      type: object
+      description: payload for authenticate at the rest api
+      required:
+        - username
+        - password
+      properties:
+        username:
+          type: string
+        password:
+          type: string
+    RestLoginResponse:
+      type: object
+      description: token data return after successfull rest api authentication
+      properties:
+        concurrent_sessions:
+          type: integer
+        max_current_sessions:
+          type: integer
+        user_id:
+          type: integer
+        tokenType:
+          type: string
+        expiresIn:
+          type: integer
+        accessToken:
+          type: string
+        refreshToken:
+          type: string
+    Variation:
+      type: object
+      description: variation object model
+      properties:
+        id:
+          type: integer
+        isMain:
+          type: boolean
+        mainVariationId:
+          type: integer
+        itemId:
+          type: integer
+        categoryVariationId:
+          type: integer
+        marketVariationId:
+          type: integer
+        clientVariationId:
+          type: integer
+        salesPriceVariationId:
+          type: integer
+        supplierVariationId:
+          type: integer
+        warehouseVariationId:
+          type: integer
+        position:
+          type: integer
+        isActive:
+          type: boolean
+        number:
+          type: string
+        model:
+          type: string
+        externalId:
+          type: string
+        parentVariationId:
+          type: integer
+        parentVariationQuantity:
+          type: integer
+        availability:
+          type: integer
+        estimatedAvailableAt:
+          type: string
+          format: date-time
+        purchasePrice:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        relatedUpdatedAt:
+          type: string
+          format: date-time
+        priceCalculationId:
+          type: integer
+        priceCalculationUUID:
+          type: string
+        picking:
+          type: string
+        stockLimitation:
+          type: integer
+        isVisibleIfNetStockIsPositive:
+          type: boolean
+        isInvisibleIfNetStockIsNotPositive:
+          type: boolean
+        isAvailableIfNetStockIsPositive:
+          type: boolean
+        isUnavailableIfNetStockIsNotPositive:
+          type: boolean
+        mainWarehouseId:
+          type: integer
+        maximumOrderQuantity:
+          type: number
+        minimumOrderQuantity:
+          type: number
+        intervalOrderQuantity:
+          type: number
+        availableUntil:
+          type: string
+        releasedAt:
+          type: string
+          format: date-time
+        unitCombinationId:
+          type: number
+        name:
+          type: string
+        weightG:
+          type: integer
+        weightNetG:
+          type: integer
+        widthMM:
+          type: integer
+        lengthMM:
+          type: integer
+        heightMM:
+          type: integer
+        extraShippingCharge1:
+          type: number
+        extraShippingCharge2:
+          type: number
+        unitsContained:
+          type: number
+        palletTypeId:
+          type: integer
+        packingUnits:
+          type: number
+        packingUnitTypeId:
+          type: integer
+        transportationCosts:
+          type: number
+        storageCosts:
+          type: number
+        operatingCosts:
+          type: number
+        vatId:
+          type: integer
+        automaticClientVisibility:
+          type: integer
+        isHiddenInCategoryList:
+          type: boolean
+        defaultShippingCosts:
+          type: number
+        mayShowUnitPrice:
+          type: boolean
+        movingAveragePrice:
+          type: number
+        propertyVariationId:
+          type: integer
+        automaticListVisibility:
+          type: integer
+        isVisibleInListIfNetStockIsPositive:
+          type: boolean
+        isInvisibleInListIfNetStockIsNotPositive:
+          type: boolean
+        singleItemCount:
+          type: integer
+        availabilityUpdatedAt:
+          type: string
+          format: date-time
+        tagVariationId:
+          type: string
+        hasCalculatedBundleWeight:
+          type: boolean
+        hasCalculatedBundleNetWeight:
+          type: boolean
+        hasCalculatedBundlePurchasePrice:
+          type: boolean
+        hasCalculatedBundleMovingAveragePrice:
+          type: boolean
+        customsTariffNumber:
+          type: string
+        properties:
+          type: array
+          items:
+            $ref: '#/components/schemas/Property'
+        variationProperties:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationProperty'
+        variationBarcodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationBarcode'
+        variationSalesPrices:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationSalesPrice'
+        marketItemNumbers:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationMarketItemNumber'
+        variationCategories:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationCategory'
+        variationClients:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationClient'
+        variationMarkets:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationMarket'
+        variationDefaultCategory:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationDefaultCategory'
+        variationSuppliers:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationSupplier'
+        images:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationImage'
+        itemImages:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationImage'
+        variationAttributeValues:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationAttributeValue'
+        variationSkus:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationSku'
+        unit:
+          $ref: '#/components/schemas/VariationUnit'
+        parent:
+          $ref: '#/components/schemas/Variation'
+        item:
+          $ref: '#/components/schemas/VariationItem'
+        stock:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationStock'
+    VariationStock:
+      type: object
+      description: variation stock model
+      properties:
+        purchasePrice:
+          type: number
+        reservedListing:
+          type: number
+        reservedBundles:
+          type: number
+        variationId:
+          type: integer
+        itemId:
+          type: integer
+        warehouseId:
+          type: integer
+        physicalStock:
+          type: number
+        reservedStock:
+          type: number
+        netStock:
+          type: number
+        reorderLevel:
+          type: number
+        deltaReorderLevel:
+          type: number
+    VariationItem:
+      type: object
+      description: item model superior to the variation
+      properties:
+        id:
+          type: integer
+        position:
+          type: integer
+        manufacturerId:
+          type: integer
+        stockType:
+          type: integer
+        add_cms_page:
+          type: string
+        storeSpecial:
+          type: integer
+        condition:
+          type: integer
+        amazonFedas:
+          type: string
+        updatedAt:
+          type: string
+          format: date-time
+        free1:
+          type: string
+        free2:
+          type: string
+        free3:
+          type: string
+        free4:
+          type: string
+        free5:
+          type: string
+        free6:
+          type: string
+        free7:
+          type: string
+        free8:
+          type: string
+        free9:
+          type: string
+        free10:
+          type: string
+        free11:
+          type: string
+        free12:
+          type: string
+        free13:
+          type: string
+        free14:
+          type: string
+        free15:
+          type: string
+        free16:
+          type: string
+        free17:
+          type: string
+        free18:
+          type: string
+        free19:
+          type: string
+        free20:
+          type: string
+        customsTariffNumber:
+          type: string
+        producingCountryId:
+          type: integer
+        revenueAccount:
+          type: integer
+        couponRestriction:
+          type: integer
+        flagOne:
+          type: integer
+        flagTwo:
+          type: integer
+        ageRestriction:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        amazonProductType:
+          type: integer
+        ebayPresetId:
+          type: integer
+        ebayCategory:
+          type: string
+        ebayCategory2:
+          type: string
+        ebayStoreCategory:
+          type: string
+        ebayStoreCategory2:
+          type: string
+        amazonFbaPlatform:
+          type: integer
+        feedback:
+          type: integer
+        gimahhot:
+          type: string
+        maximumOrderQuantity:
+          type: number
+        isSubscribable:
+          type: boolean
+        rakutenCategoryId:
+          type: integer
+        isShippingPackage:
+          type: boolean
+        conditionApi:
+          type: number
+        isSerialNumber:
+          type: boolean
+        isShippableByAmazon:
+          type: boolean
+        ownerId:
+          type: integer
+        itemType:
+          type: string
+        mainVariationId:
+          type: integer
+    VariationUnit:
+      type: object
+      description: variation unit model
+      properties:
+        id:
+          type: integer
+        unitId:
+          type: integer
+        content:
+          type: integer
+    VariationSku:
+      type: object
+      description: variation sku model
+      properties:
+        id:
+          type: integer
+        variationId:
+          type: integer
+        marketId:
+          type: integer
+        accountId:
+          type: integer
+        initialSku:
+          type: string
+        sku:
+          type: string
+        parentSku:
+          type: string
+        isActive:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        exportedAt:
+          type: string
+          format: date-time
+        stockUpdatedAt:
+          type: string
+          format: date-time
+        deletedAt:
+          type: string
+          format: date-time
+        status:
+          type: string
+        additionalInformation:
+          type: string
+    VariationAttributeValue:
+      type: object
+      description: variation attribute value model
+      properties:
+        attributeValueSetId:
+          type: integer
+        attributeId:
+          type: integer
+        valueId:
+          type: integer
+        isLinkableToImage:
+          type: boolean
+        attribute:
+          $ref: '#/components/schemas/VariationAttributeValueAttribute'
+        attributeValue:
+          $ref: '#/components/schemas/VariationAttributeValueValue'
+    VariationAttributeValueValue:
+      type: object
+      description: Variation attribute value model that is place in VariationAttributeValue model
+      properties:
+        id:
+          type: integer
+        attributeId:
+          type: integer
+        backendName:
+          type: string
+        position:
+          type: integer
+        image:
+          type: string
+        comment:
+          type: string
+        amazonValue:
+          type: string
+        ottoValue:
+          type: string
+        neckermannAtEpValue:
+          type: string
+        laRedouteValue:
+          type: string
+        tracdelightValue:
+          type: string
+        percentageDistribution:
+          type: integer
+        updatedAt:
+          type: string
+          format: date-time
+    VariationAttributeValueAttribute:
+      type: object
+      description: Variation attribute model that is place in VariationAttributeValue model
+      properties:
+        id:
+          type: integer
+        backendName:
+          type: string
+        position:
+          type: integer
+        isSurchargePercental:
+          type: boolean
+        isLinkableToImage:
+          type: boolean
+        amazonAttribute:
+          type: string
+        fruugoAttribute:
+          type: string
+        pixmaniaAttribute:
+          type: string
+        ottoAttribute:
+          type: string
+        googleShoppingAttribute:
+          type: string
+        neckermannAtEpAttribute:
+          type: integer
+        typeOfSelectionInOnlineStore:
+          type: string
+        laRedouteAttribute:
+          type: integer
+        isGroupable:
+          type: boolean
+        updatedAt:
+          type: string
+          format: date-time
+    VariationImage:
+      type: object
+      description: variation image model
+      properties:
+        id:
+          type: integer
+        itemId:
+          type: integer
+        type:
+          type: string
+        fileType:
+          type: string
+        path:
+          type: string
+        position:
+          type: integer
+        lastUpdate:
+          type: string
+        insert:
+          type: string
+        md5Checksum:
+          type: string
+        width:
+          type: integer
+        height:
+          type: integer
+        size:
+          type: integer
+        storageProviderId:
+          type: string
+        md5ChecksumOriginal:
+          type: string
+        cleanImageName:
+          type: string
+        url:
+          type: string
+        urlMiddle:
+          type: string
+        urlPreview:
+          type: string
+        urlSecondPreview:
+          type: string
+        documentUploadPath:
+          type: string
+        documentUploadPathPreview:
+          type: string
+        documentUploadPreviewWidth:
+          type: integer
+        documentUploadPreviewHeight:
+          type: integer
+        hasVariationLink:
+          type: boolean
+        availabilities:
+          type: array
+          items:
+            $ref: '#/components/schemas/ImageAvailability'
+        names:
+          type: array
+          items:
+            $ref: '#/components/schemas/ImageName'
+    ImageName:
+      type: object
+      description: image name model
+      properties:
+        imageId:
+          type: integer
+        lang:
+          type: string
+        name:
+          type: string
+        alternate:
+          type: string
+    ImageAvailability:
+      type: object
+      description: image availability model
+      properties:
+        imageId:
+          type: integer
+        type:
+          type: string
+        value:
+          type: integer
+    VariationSupplier:
+      type: object
+      description: variation supplier model
+      properties:
+        id:
+          type: integer
+        variationId:
+          type: integer
+        supplierId:
+          type: integer
+        purchasePrice:
+          type: number
+        minimumPurchase:
+          type: number
+        itemNumber:
+          type: string
+        lastPriceQuery:
+          type: boolean
+        deliveryTimeInDays:
+          type: integer
+        discount:
+          type: number
+        isDiscountable:
+          type: boolean
+        packagingUnit:
+          type: number
+        lastUpdateTimestamp:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        currencyPurchasePrice:
+          type: number
+        itemDescription:
+          type: string
+    VariationDefaultCategory:
+      type: object
+      description: variation default category model
+      properties:
+        variationId:
+          type: integer
+        branchId:
+          type: integer
+        plentyId:
+          type: integer
+        manually:
+          type: string
+    VariationMarket:
+      type: object
+      description: variation market link model
+      properties:
+        variationId:
+          type: integer
+        marketId:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+    VariationClient:
+      type: object
+      description: variation client model
+      properties:
+        variationId:
+          type: integer
+        plentyId:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+    VariationCategory:
+      type: object
+      description: variation category model
+      properties:
+        variationId:
+          type: integer
+        categoryId:
+          type: integer
+        position:
+          type: integer
+        isNeckermannPrimary:
+          type: boolean
+    VariationMarketItemNumber:
+      type: object
+      description: market item number model for variations
+      properties:
+        id:
+          type: integer
+        variationId:
+          type: integer
+        countryId:
+          type: integer
+        type:
+          type: string
+        position:
+          type: integer
+        value:
+          type: string
+    VariationSalesPrice:
+      type: object
+      description: variation sales price model
+      properties:
+        variationId:
+          type: integer
+        salesPriceId:
+          type: integer
+        price:
+          type: number
+        updatedAt:
+          type: string
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+    VariationProperty:
+      type: object
+      description: variation property model
+      properties:
+        id:
+          type: integer
+        itemId:
+          type: integer
+        propertyId:
+          type: integer
+        propertySelectionId:
+          type: integer
+        valueInt:
+          type: integer
+        valueFloat:
+          type: number
+        surcharge:
+          type: number
+        updatedAt:
+          type: string
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+        variationId:
+          type: integer
+        names:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationPropertyName'
+        property:
+          $ref: '#/components/schemas/VariationPropertyProperty'
+    VariationBarcode:
+      type: object
+      description: Variation barcode model
+      properties:
+        barcodeId:
+          type: integer
+        variationId:
+          type: integer
+        code:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+    VariationPropertyProperty:
+      type: object
+      description: Property model within the variationProperty model
+      properties:
+        id:
+          type: integer
+        position:
+          type: integer
+        unit:
+          type: integer
+        propertyGroupId:
+          type: integer
+        backendName:
+          type: string
+        valueType:
+          type: string
+        isSearchable:
+          type: boolean
+        isOderProperty:
+          type: boolean
+        isShownOnItemPage:
+          type: boolean
+        isShownOnItemList:
+          type: boolean
+        isShownAtCheckout:
+          type: boolean
+        isShownInPdf:
+          type: boolean
+        comment:
+          type: string
+        surcharge:
+          type: number
+        isShownAsAdditionalCosts:
+          type: boolean
+        updatedAt:
+          type: string
+          format: date-time
+    VariationPropertyName:
+      type: object
+      description: Variation property name model
+      properties:
+        propertyValueId:
+          type: integer
+        lang:
+          type: string
+        value:
+          type: string
+    Property:
+      type: object
+      description: variation property model
+      properties:
+        propertyId:
+          type: integer
+        relationTypeIdentifier:
+          type: string
+        relationTargetId:
+          type: integer
+        selectionRelationId:
+          type: integer
+        groupId:
+          type: integer
+        markup:
+          type: integer
+        relationValues:
+          type: array
+          items:
+            $ref: '#/components/schemas/PropertyRelationValues'
+        propertyRelation:
+          $ref: '#/components/schemas/PropertyRelation'
+        id:
+          type: number
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    PropertyRelationValues:
+      type: object
+      description: relation values of properties model
+      properties:
+        lang:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
+        propertyRelationId:
+          type: integer
+        id:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    PropertyRelation:
+      type: object
+      description: propertyRelation model
+      properties:
+        cast:
+          type: string
+        typeIdentifier:
+          type: string
+        position:
+          type: integer
+        id:
+          type: integer
+        propertyId:
+          type: integer
+        propertyGroupId:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    Category:
+      type: object
+      description: category model
+      properties:
+        id:
+          type: integer
+        parentCategoryId:
+          type: integer
+        level:
+          type: integer
+        type:
+          type: string
+        linklist:
+          type: string
+        right:
+          type: string
+        sitemap:
+          type: string
+        hasChildren:
+          type: boolean
+        details:
+          type: array
+          items:
+            $ref: '#/components/schemas/CategoryDetails'
+    CategoryDetails:
+      type: object
+      description: category details model
+      properties:
+        categoryId:
+          type: integer
+        lang:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        description2:
+          type: string
+        shortDescription:
+          type: string
+        metaKeywords:
+          type: string
+        metaDescription:
+          type: string
+        nameUrl:
+          type: string
+        metaTitle:
+          type: string
+        position:
+          type: string
+        updatedAt:
+          type: string
+          format: date-time
+        updatedBy:
+          type: string
+        itemListView:
+          type: string
+        singleItemView:
+          type: string
+        pageView:
+          type: string
+        fulltext:
+          type: string
+        metaRobots:
+          type: string
+        canonicalLink:
+          type: string
+        previewUrl:
+          type: string
+        image:
+          type: string
+        imagePath:
+          type: string
+        image2:
+          type: string
+        image2Path:
+          type: string
+        plentyId:
+          type: integer
+    Item:
+      type: object
+      description: item type
+      required:
+        - ageRestriction
+        - profileId
+        - propertyId
+        - variations
+      properties:
+        position:
+          type: integer
+        stockType:
+          type: integer
+          description: "values: 0 = Stocked item (default)1 = Production item2 = Colli 3 = Special order item"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+        storeSpecial:
+          type: integer
+          description: "Option to present items more prominently in the online store. 1 = Special offer 2 = New items 3 = Top items"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+        ownerId:
+          type: integer
+          description: "The plentymarkets user that is assigned as owner of this item."
+        manufacturerId:
+          type: integer
+          description: "The ID of the manufacturer of the item"
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        customsTariffNumber:
+          type: string
+          description: "Deprecated: The customs tariff number of the item; usually a 11 digit code number based on the Harmonised System"
+        revenueAccount:
+          type: integer
+          description: "The revenue account the item is linked to. An individual revenue account can be saved for each item in plentymarkets. If this is not done, plentymarkets automatically determines a revenue account based on the VAT rate."
+        couponRestriction:
+          type: integer
+          description: "Indicates if the item can be purchased using a promotional coupon. 0 = Permitted 1 = Not permitted 2 = Purchasable with coupon only"
+          enum:
+            - 0
+            - 1
+            - 2
+        condition:
+          type: integer
+          description: "The condition of the item. Possible values: 0 = New 1 = Used 2 = Boxed as new 3 = New with label 4 = Factory seconds"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+        conditionApi:
+          type: integer
+          description: "The condition of the item that is transferred to markets via API. 0 = New 1 = Used but as new 2 = Used but very good 3 = Used but good 4 = Used but acceptable 5 = Factory seconds"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+        isSubscribable:
+          type: boolean
+          description: "Flag that indicates if the item can be ordered as a subscription item. If yes, the item can be ordered for delivery at regular intervals."
+        isShippingPackage:
+          type: boolean
+          description: "Flag that indicates if a shipping package is to be used for this item. If yes and the variation's dimensions are entered in the Settings tab of a variation, the correct shipping package is assigned automatically."
+        amazonFbaPlatform:
+          type: integer
+          description: "Indicates the platform used for Fulfilment by Amazon (FBA). 0 = Do not use 1 = AMAZON EU (Europe) 2 = AMAZON FE (Far East) 3 = AMAZON NA (North America)"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+        isShippableByAmazon:
+          type: boolean
+        amazonProductType:
+          type: integer
+          description: "The Amazon product type of the item. List of IDs: https://www.plentymarkets.co.uk/manual/data-exchange/data-formats/item/"
+        amazonFedas:
+          type: string
+          description: "The FEDAS product classification key of the item."
+        ebayPresetId:
+          type: integer
+          description: "The eBay preset ID. This plentymarkets ID must be specified to save values for $ebayCategory, $ebayCategory2, $ebayStoreCategory and $ebayStoreCategory2"
+        ebayCategory:
+          type: integer
+          description: "The eBay category 1 of the item. This category is used when a new listing is created."
+        ebayCategory2:
+          type: integer
+          description: "The eBay category 2 of the item. This category is used when a new listing is created."
+        rakutenCategoryId:
+          type: integer
+          description: "The ID of the Rakuten category of this item."
+        flagOne:
+          type: integer
+          description: "Flag 1 of the item. Flags can be used to organise and filter items. Each item can be assigned up to two flags. 0 = no flag"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            - 20
+            - 21
+            - 22
+            - 23
+            - 24
+            - 25
+            - 26
+            - 27
+            - 28
+            - 29
+            - 30
+            - 31
+        flagTwo:
+          type: integer
+          description: "Flag 2 of the item. Flags can be used to organise and filter items. Each item can be assigned up to two flags. 0 = no flag"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+        ageRestriction:
+          type: integer
+          description: "The age customers must be to purchase the item. Items with an age rating of 18+ must be linked to a shipping profile for which the PostIdent option is activated. 0 = None available 3 = Released for ages 3 and up 6 = Ages 6 and up 9 = Ages 9 and up 12 = Ages 12 and up 14 = Ages 14 and up 16 = Ages 16 and up 18 = Ages 18 and up 50 = Not marked 88 = Not 99 = Unknown"
+          enum:
+            - 0
+            - 3
+            - 6
+            - 9
+            - 12
+            - 14
+            - 16
+            - 18
+            - 50
+            - 88
+            - 99
+        feedback:
+          type: integer
+          description: "The feedback, i.e. rating, that this item received. Possible values are 1 to 5 or 1 to 10 depending on the maximum rating setting. An initial feedback can be saved for items. The saved value will then be displayed as the initial feedback. Every time new feedback is submitted, the average value will be recalculated automatically."
+          enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+        itemType:
+          type: string
+          description: "The type of the item. Because Set items are managed using a separate route, this value is always Default. optional allowed values are default, multiPack, set"
+        ebayTitles:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemEbayTitle'
+        itemShippingProfiles:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemShippingProfile'
+        profileId:
+          type: integer
+          description: "The unique ID of the shipping profile"
+        itemProperties:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemProperty'
+        propertyId:
+          type: integer
+          description: "The id of the property item"
+        propertySelectionId:
+          type: integer
+          description: "The id of the property selection"
+        id:
+          type: integer
+        variations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variation'
+    ItemEbayTitle:
+      type: object
+      properties:
+        title:
+          type: string
+        itemId:
+          type: integer
+        id:
+          type: integer
+    ItemShippingProfile:
+      type: object
+      properties:
+        id:
+          type: integer
+        itemId:
+          type: integer
+        profileId:
+          type: integer
+    ItemProperty:
+      type: object
+      properties:
+        id:
+          type: integer
+        itemId:
+          type: integer
+        propertyId:
+          type: integer
+        propertySelectionId:
+          type: integer
+        valueInt:
+          type: integer
+        valueFloat:
+          type: number
+        valuefile:
+          type: string
+        surcharge:
+          type: number
+
+    # paginations
+    ItemPagination:
+      type: object
+      description: pagination response containing items
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Item'
+    VariationPagination:
+      type: object
+      description: pagination response containing variations
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variation'
+    CategoryPagination:
+      type: object
+      description: pagination response containing categories
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'

@@ -34,8 +34,8 @@ type ApiClientConfig struct {
 }
 
 const (
-	longPeriodCallsLeftHeader = "X-Plenty-Global-Long-Period-Calls-Left"
-	shortPeriodCallsLeftHeader = "X-Plenty-Global-Short-Period-Calls-Left"
+	longPeriodCallsLeftHeader      = "X-Plenty-Global-Long-Period-Calls-Left"
+	shortPeriodCallsLeftHeader     = "X-Plenty-Global-Short-Period-Calls-Left"
 	shortPeriodSecondsToWaitHeader = "X-Plenty-Global-Short-Period-Decay"
 )
 
@@ -55,7 +55,7 @@ func NewApiClient(cfg ApiClientConfig) (*api.APIClient, error) {
 		return nil, fmt.Errorf("please provide one of the possible token data storage options in config")
 	}
 
-	tokenSource, err := client.getTokenSource(storedToken, cfg.ApiConfig.Username, cfg.ApiConfig.Password)
+	tokenSource, err := client.getTokenSource(storedToken, cfg.ApiConfig.Host, cfg.ApiConfig.Username, cfg.ApiConfig.Password)
 	if err != nil {
 		return nil, err
 	}
@@ -145,16 +145,16 @@ func (c apiClient) loadTokenFromFile(tokenFilePath string) (*oauth2.Token, error
 	return &token, nil
 }
 
-func (c apiClient) getTokenSource(storedToken *oauth2.Token, username, password string) (oauth2.TokenSource, error) {
+func (c apiClient) getTokenSource(storedToken *oauth2.Token, host, username, password string) (oauth2.TokenSource, error) {
 	var err error
 	conf := oauth2.Config{
 		Endpoint: oauth2.Endpoint{
-			AuthURL: "https://lichtyam.plentymarkets-cloud01.com/rest/login",
-			TokenURL: "https://lichtyam.plentymarkets-cloud01.com/rest/login",
+			AuthURL:  fmt.Sprintf("https://%s/rest/login", host),
+			TokenURL: fmt.Sprintf("https://%s/rest/login", host),
 		},
 	}
 
-	if storedToken.Expiry.UTC().Before(time.Now().Add(5*time.Minute).UTC()) {
+	if storedToken.Expiry.UTC().Before(time.Now().Add(5 * time.Minute).UTC()) {
 		storedToken, err = conf.PasswordCredentialsToken(context.Background(), username, password)
 		if err != nil {
 			return nil, err
@@ -184,7 +184,6 @@ func (c apiClient) getTokenExpiry(tokenString string) (*time.Time, error) {
 
 	return &expiresAt, nil
 }
-
 
 // EvaluateApiLimits evaluates the plentymarkets api limits from given http response header and
 // returns whether there are free limits left in long period, how long it's needed to wait until short period limit is reset when there is no call left in short period

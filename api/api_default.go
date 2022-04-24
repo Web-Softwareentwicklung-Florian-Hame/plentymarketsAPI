@@ -248,6 +248,232 @@ func (a *DefaultApiService) RestCategoriesPostExecute(r ApiRestCategoriesPostReq
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiRestItemsAttributeValuesValueIdNamesPostRequest struct {
+	ctx _context.Context
+	ApiService *DefaultApiService
+	valueId int32
+	attributeValueName *AttributeValueName
+}
+
+func (r ApiRestItemsAttributeValuesValueIdNamesPostRequest) AttributeValueName(attributeValueName AttributeValueName) ApiRestItemsAttributeValuesValueIdNamesPostRequest {
+	r.attributeValueName = &attributeValueName
+	return r
+}
+
+func (r ApiRestItemsAttributeValuesValueIdNamesPostRequest) Execute() (AttributeValueName, *_nethttp.Response, error) {
+	return r.ApiService.RestItemsAttributeValuesValueIdNamesPostExecute(r)
+}
+
+/*
+RestItemsAttributeValuesValueIdNamesPost creating attribute values names
+
+creating attribute values names
+
+ @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param valueId
+ @return ApiRestItemsAttributeValuesValueIdNamesPostRequest
+*/
+func (a *DefaultApiService) RestItemsAttributeValuesValueIdNamesPost(ctx _context.Context, valueId int32) ApiRestItemsAttributeValuesValueIdNamesPostRequest {
+	return ApiRestItemsAttributeValuesValueIdNamesPostRequest{
+		ApiService: a,
+		ctx: ctx,
+		valueId: valueId,
+	}
+}
+
+// Execute executes the request
+//  @return AttributeValueName
+func (a *DefaultApiService) RestItemsAttributeValuesValueIdNamesPostExecute(r ApiRestItemsAttributeValuesValueIdNamesPostRequest) (AttributeValueName, *_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodPost
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+		localVarReturnValue  AttributeValueName
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestItemsAttributeValuesValueIdNamesPost")
+	if err != nil {
+		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/rest/items/attribute_values/{valueId}/names"
+	localVarPath = strings.Replace(localVarPath, "{"+"valueId"+"}", _neturl.PathEscape(parameterToString(r.valueId, "")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json;charset=utf-8"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json;charset=utf-8"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.attributeValueName
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = _ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiRestItemsAttributesAttributeIdNamesPostRequest struct {
+	ctx _context.Context
+	ApiService *DefaultApiService
+	attributeId int32
+	attributeName *AttributeName
+}
+
+func (r ApiRestItemsAttributesAttributeIdNamesPostRequest) AttributeName(attributeName AttributeName) ApiRestItemsAttributesAttributeIdNamesPostRequest {
+	r.attributeName = &attributeName
+	return r
+}
+
+func (r ApiRestItemsAttributesAttributeIdNamesPostRequest) Execute() (AttributeName, *_nethttp.Response, error) {
+	return r.ApiService.RestItemsAttributesAttributeIdNamesPostExecute(r)
+}
+
+/*
+RestItemsAttributesAttributeIdNamesPost creating names for attribute
+
+creating names for attribute
+
+ @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param attributeId
+ @return ApiRestItemsAttributesAttributeIdNamesPostRequest
+*/
+func (a *DefaultApiService) RestItemsAttributesAttributeIdNamesPost(ctx _context.Context, attributeId int32) ApiRestItemsAttributesAttributeIdNamesPostRequest {
+	return ApiRestItemsAttributesAttributeIdNamesPostRequest{
+		ApiService: a,
+		ctx: ctx,
+		attributeId: attributeId,
+	}
+}
+
+// Execute executes the request
+//  @return AttributeName
+func (a *DefaultApiService) RestItemsAttributesAttributeIdNamesPostExecute(r ApiRestItemsAttributesAttributeIdNamesPostRequest) (AttributeName, *_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodPost
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+		localVarReturnValue  AttributeName
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestItemsAttributesAttributeIdNamesPost")
+	if err != nil {
+		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/rest/items/attributes/{attributeId}/names"
+	localVarPath = strings.Replace(localVarPath, "{"+"attributeId"+"}", _neturl.PathEscape(parameterToString(r.attributeId, "")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json;charset=utf-8"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json;charset=utf-8"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.attributeName
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = _ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiRestItemsAttributesAttributeIdValuesGetRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
@@ -383,15 +609,15 @@ type ApiRestItemsAttributesAttributeIdValuesPostRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
 	attributeId int32
-	attributeValue *[]AttributeValue
+	attributeValue *AttributeValue
 }
 
-func (r ApiRestItemsAttributesAttributeIdValuesPostRequest) AttributeValue(attributeValue []AttributeValue) ApiRestItemsAttributesAttributeIdValuesPostRequest {
+func (r ApiRestItemsAttributesAttributeIdValuesPostRequest) AttributeValue(attributeValue AttributeValue) ApiRestItemsAttributesAttributeIdValuesPostRequest {
 	r.attributeValue = &attributeValue
 	return r
 }
 
-func (r ApiRestItemsAttributesAttributeIdValuesPostRequest) Execute() ([]AttributeValue, *_nethttp.Response, error) {
+func (r ApiRestItemsAttributesAttributeIdValuesPostRequest) Execute() (AttributeValue, *_nethttp.Response, error) {
 	return r.ApiService.RestItemsAttributesAttributeIdValuesPostExecute(r)
 }
 
@@ -413,15 +639,15 @@ func (a *DefaultApiService) RestItemsAttributesAttributeIdValuesPost(ctx _contex
 }
 
 // Execute executes the request
-//  @return []AttributeValue
-func (a *DefaultApiService) RestItemsAttributesAttributeIdValuesPostExecute(r ApiRestItemsAttributesAttributeIdValuesPostRequest) ([]AttributeValue, *_nethttp.Response, error) {
+//  @return AttributeValue
+func (a *DefaultApiService) RestItemsAttributesAttributeIdValuesPostExecute(r ApiRestItemsAttributesAttributeIdValuesPostRequest) (AttributeValue, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []AttributeValue
+		localVarReturnValue  AttributeValue
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestItemsAttributesAttributeIdValuesPost")

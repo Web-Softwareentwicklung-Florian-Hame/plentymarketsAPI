@@ -489,18 +489,58 @@ paths:
         content:
           application/json;charset=utf-8:
             schema:
-              type: array
-              items:
-                $ref: "#/components/schemas/AttributeValue"
+              $ref: "#/components/schemas/AttributeValue"
       responses:
         200:
           description: successful created attribute response
           content:
             application/json;charset=utf-8:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/AttributeValue"
+                $ref: "#/components/schemas/AttributeValue"
+  /rest/items/attributes/{attributeId}/names:
+    post:
+      summary: "creating names for attribute"
+      description: "creating names for attribute"
+      parameters:
+        - in: path
+          name: attributeId
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: "#/components/schemas/AttributeName"
+      responses:
+        200:
+          description: "successfull created attribute name"
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/AttributeName"
+  /rest/items/attribute_values/{valueId}/names:
+    post:
+      summary: "creating attribute values names"
+      description: "creating attribute values names"
+      parameters:
+        - in: path
+          name: valueId
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: "#/components/schemas/AttributeValueName"
+      responses:
+        200:
+          description: successful created attribute value name
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/AttributeValueName"
 
 components:
   schemas:
@@ -993,7 +1033,6 @@ components:
           format: date-time
         attribute:
           $ref: "#/components/schemas/Attribute"
-
     Attribute:
       type: object
       description: Variation attribute model that is place in VariationAttributeValue model
@@ -1725,6 +1764,24 @@ components:
           type: string
         surcharge:
           type: number
+    AttributeName:
+      type: object
+      properties:
+        lang:
+          type: string
+        name:
+          type: string
+        attributeId:
+          type: integer
+    AttributeValueName:
+      type: object
+      properties:
+        lang:
+          type: string
+        name:
+          type: string
+        valueId:
+          type: integer
 
     # paginations
     ItemPagination:

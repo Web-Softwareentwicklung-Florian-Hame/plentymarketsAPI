@@ -7,8 +7,10 @@ api_default.go
 client.go
 configuration.go
 docs/Attribute.md
+docs/AttributeName.md
 docs/AttributePagination.md
 docs/AttributeValue.md
+docs/AttributeValueName.md
 docs/AttributeValuePagination.md
 docs/Category.md
 docs/CategoryDetails.md
@@ -49,8 +51,10 @@ git_push.sh
 go.mod
 go.sum
 model_attribute.go
+model_attribute_name.go
 model_attribute_pagination.go
 model_attribute_value.go
+model_attribute_value_name.go
 model_attribute_value_pagination.go
 model_category.go
 model_category_details.go

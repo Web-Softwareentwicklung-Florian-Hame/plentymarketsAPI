@@ -80,6 +80,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**RestCategoriesGet**](docs/DefaultApi.md#restcategoriesget) | **Get** /rest/categories | fetching categories with pagination and optional filter queries
 *DefaultApi* | [**RestCategoriesPost**](docs/DefaultApi.md#restcategoriespost) | **Post** /rest/categories | creating new categories
+*DefaultApi* | [**RestItemsAttributeValuesValueIdNamesPost**](docs/DefaultApi.md#restitemsattributevaluesvalueidnamespost) | **Post** /rest/items/attribute_values/{valueId}/names | creating attribute values names
+*DefaultApi* | [**RestItemsAttributesAttributeIdNamesPost**](docs/DefaultApi.md#restitemsattributesattributeidnamespost) | **Post** /rest/items/attributes/{attributeId}/names | creating names for attribute
 *DefaultApi* | [**RestItemsAttributesAttributeIdValuesGet**](docs/DefaultApi.md#restitemsattributesattributeidvaluesget) | **Get** /rest/items/attributes/{attributeId}/values | fetching attributes values with pagination
 *DefaultApi* | [**RestItemsAttributesAttributeIdValuesPost**](docs/DefaultApi.md#restitemsattributesattributeidvaluespost) | **Post** /rest/items/attributes/{attributeId}/values | creating new attribute values
 *DefaultApi* | [**RestItemsAttributesGet**](docs/DefaultApi.md#restitemsattributesget) | **Get** /rest/items/attributes | fetching attributes with pagination
@@ -94,8 +96,10 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [Attribute](docs/Attribute.md)
+ - [AttributeName](docs/AttributeName.md)
  - [AttributePagination](docs/AttributePagination.md)
  - [AttributeValue](docs/AttributeValue.md)
+ - [AttributeValueName](docs/AttributeValueName.md)
  - [AttributeValuePagination](docs/AttributeValuePagination.md)
  - [Category](docs/Category.md)
  - [CategoryDetails](docs/CategoryDetails.md)

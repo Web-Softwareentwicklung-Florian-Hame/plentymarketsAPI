@@ -697,19 +697,63 @@ paths:
         content:
           application/json;charset=utf-8:
             schema:
-              items:
-                $ref: '#/components/schemas/AttributeValue'
-              type: array
+              $ref: '#/components/schemas/AttributeValue'
       responses:
         "200":
           content:
             application/json;charset=utf-8:
               schema:
-                items:
-                  $ref: '#/components/schemas/AttributeValue'
-                type: array
+                $ref: '#/components/schemas/AttributeValue'
           description: successful created attribute response
       summary: creating new attribute values
+  /rest/items/attributes/{attributeId}/names:
+    post:
+      description: creating names for attribute
+      parameters:
+      - explode: false
+        in: path
+        name: attributeId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: '#/components/schemas/AttributeName'
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AttributeName'
+          description: successfull created attribute name
+      summary: creating names for attribute
+  /rest/items/attribute_values/{valueId}/names:
+    post:
+      description: creating attribute values names
+      parameters:
+      - explode: false
+        in: path
+        name: valueId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: '#/components/schemas/AttributeValueName'
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AttributeValueName'
+          description: successful created attribute value name
+      summary: creating attribute values names
 components:
   schemas:
     RestLoginBody:
@@ -4670,6 +4714,32 @@ components:
           type: string
         surcharge:
           type: number
+      type: object
+    AttributeName:
+      example:
+        attributeId: 0
+        name: name
+        lang: lang
+      properties:
+        lang:
+          type: string
+        name:
+          type: string
+        attributeId:
+          type: integer
+      type: object
+    AttributeValueName:
+      example:
+        valueId: 0
+        name: name
+        lang: lang
+      properties:
+        lang:
+          type: string
+        name:
+          type: string
+        valueId:
+          type: integer
       type: object
     ItemPagination:
       description: pagination response containing items

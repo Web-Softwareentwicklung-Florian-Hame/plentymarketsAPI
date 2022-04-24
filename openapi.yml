@@ -271,7 +271,9 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Category'
+                type: array
+                items:
+                  $ref: '#/components/schemas/Category'
       requestBody:
         content:
           application/json;charset=utf-8:

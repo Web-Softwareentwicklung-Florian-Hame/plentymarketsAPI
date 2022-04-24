@@ -404,7 +404,9 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                $ref: '#/components/schemas/Category'
+                items:
+                  $ref: '#/components/schemas/Category'
+                type: array
           description: successfully created categories
       summary: creating new categories
   /rest/items:

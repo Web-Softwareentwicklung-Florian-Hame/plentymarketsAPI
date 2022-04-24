@@ -141,7 +141,7 @@ func (r ApiRestCategoriesPostRequest) Category(category []Category) ApiRestCateg
 	return r
 }
 
-func (r ApiRestCategoriesPostRequest) Execute() (Category, *_nethttp.Response, error) {
+func (r ApiRestCategoriesPostRequest) Execute() ([]Category, *_nethttp.Response, error) {
 	return r.ApiService.RestCategoriesPostExecute(r)
 }
 
@@ -161,15 +161,15 @@ func (a *DefaultApiService) RestCategoriesPost(ctx _context.Context) ApiRestCate
 }
 
 // Execute executes the request
-//  @return Category
-func (a *DefaultApiService) RestCategoriesPostExecute(r ApiRestCategoriesPostRequest) (Category, *_nethttp.Response, error) {
+//  @return []Category
+func (a *DefaultApiService) RestCategoriesPostExecute(r ApiRestCategoriesPostRequest) ([]Category, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  Category
+		localVarReturnValue  []Category
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestCategoriesPost")

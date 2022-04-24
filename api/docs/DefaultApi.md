@@ -77,7 +77,7 @@ No authorization required
 
 ## RestCategoriesPost
 
-> Category RestCategoriesPost(ctx).Category(category).Execute()
+> []Category RestCategoriesPost(ctx).Category(category).Execute()
 
 creating new categories
 
@@ -105,7 +105,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestCategoriesPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RestCategoriesPost`: Category
+    // response from `RestCategoriesPost`: []Category
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestCategoriesPost`: %v\n", resp)
 }
 ```
@@ -125,7 +125,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Category**](Category.md)
+[**[]Category**](Category.md)
 
 ### Authorization
 

@@ -382,6 +382,15 @@ paths:
   /rest/categories:
     get:
       description: fetching categories
+      parameters:
+      - description: Limits the results to a specific page.
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
       responses:
         "200":
           content:

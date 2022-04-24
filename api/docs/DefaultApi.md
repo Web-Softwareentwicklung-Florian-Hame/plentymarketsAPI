@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 ## RestCategoriesGet
 
-> CategoryPagination RestCategoriesGet(ctx).Execute()
+> CategoryPagination RestCategoriesGet(ctx).Page(page).Execute()
 
 fetching categories with pagination and optional filter queries
 
@@ -35,10 +35,11 @@ import (
 )
 
 func main() {
+    page := int32(56) // int32 | Limits the results to a specific page. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.RestCategoriesGet(context.Background()).Execute()
+    resp, r, err := api_client.DefaultApi.RestCategoriesGet(context.Background()).Page(page).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestCategoriesGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -50,12 +51,16 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiRestCategoriesGetRequest struct via the builder pattern
 
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | Limits the results to a specific page. | 
 
 ### Return type
 

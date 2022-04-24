@@ -31,8 +31,14 @@ type DefaultApiService service
 type ApiRestCategoriesGetRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
+	page *int32
 }
 
+// Limits the results to a specific page.
+func (r ApiRestCategoriesGetRequest) Page(page int32) ApiRestCategoriesGetRequest {
+	r.page = &page
+	return r
+}
 
 func (r ApiRestCategoriesGetRequest) Execute() (CategoryPagination, *_nethttp.Response, error) {
 	return r.ApiService.RestCategoriesGetExecute(r)
@@ -76,6 +82,9 @@ func (a *DefaultApiService) RestCategoriesGetExecute(r ApiRestCategoriesGetReque
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
+	if r.page != nil {
+		localVarQueryParams.Add("page", parameterToString(*r.page, ""))
+	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

@@ -255,6 +255,13 @@ paths:
     get:
       summary: fetching categories with pagination and optional filter queries
       description: fetching categories
+      parameters:
+        - in: query
+          name: page
+          description: Limits the results to a specific page.
+          schema:
+            type: integer
+
       responses:
         200:
           description: category variation response

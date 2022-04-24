@@ -434,18 +434,14 @@ paths:
         content:
           application/json;charset=utf-8:
             schema:
-              type: array
-              items:
-                $ref: "#/components/schemas/Attribute"
+              $ref: "#/components/schemas/Attribute"
       responses:
         200:
           description: successful created attribute response
           content:
             application/json;charset=utf-8:
               schema:
-                type: array
-                items:
-                  $ref: "#/components/schemas/Attribute"
+                $ref: "#/components/schemas/Attribute"
   /rest/items/attributes/{attributeId}/values:
     get:
       summary: "fetching attributes values with pagination"

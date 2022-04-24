@@ -622,15 +622,15 @@ func (a *DefaultApiService) RestItemsAttributesGetExecute(r ApiRestItemsAttribut
 type ApiRestItemsAttributesPostRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
-	attribute *[]Attribute
+	attribute *Attribute
 }
 
-func (r ApiRestItemsAttributesPostRequest) Attribute(attribute []Attribute) ApiRestItemsAttributesPostRequest {
+func (r ApiRestItemsAttributesPostRequest) Attribute(attribute Attribute) ApiRestItemsAttributesPostRequest {
 	r.attribute = &attribute
 	return r
 }
 
-func (r ApiRestItemsAttributesPostRequest) Execute() ([]Attribute, *_nethttp.Response, error) {
+func (r ApiRestItemsAttributesPostRequest) Execute() (Attribute, *_nethttp.Response, error) {
 	return r.ApiService.RestItemsAttributesPostExecute(r)
 }
 
@@ -650,15 +650,15 @@ func (a *DefaultApiService) RestItemsAttributesPost(ctx _context.Context) ApiRes
 }
 
 // Execute executes the request
-//  @return []Attribute
-func (a *DefaultApiService) RestItemsAttributesPostExecute(r ApiRestItemsAttributesPostRequest) ([]Attribute, *_nethttp.Response, error) {
+//  @return Attribute
+func (a *DefaultApiService) RestItemsAttributesPostExecute(r ApiRestItemsAttributesPostRequest) (Attribute, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  []Attribute
+		localVarReturnValue  Attribute
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestItemsAttributesPost")

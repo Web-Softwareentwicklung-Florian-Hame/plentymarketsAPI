@@ -366,7 +366,7 @@ No authorization required
 
 ## RestItemsAttributesPost
 
-> []Attribute RestItemsAttributesPost(ctx).Attribute(attribute).Execute()
+> Attribute RestItemsAttributesPost(ctx).Attribute(attribute).Execute()
 
 creating new attributes
 
@@ -385,7 +385,7 @@ import (
 )
 
 func main() {
-    attribute := []openapiclient.Attribute{*openapiclient.NewAttribute()} // []Attribute |  (optional)
+    attribute := *openapiclient.NewAttribute() // Attribute |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -394,7 +394,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsAttributesPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RestItemsAttributesPost`: []Attribute
+    // response from `RestItemsAttributesPost`: Attribute
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsAttributesPost`: %v\n", resp)
 }
 ```
@@ -410,11 +410,11 @@ Other parameters are passed through a pointer to a apiRestItemsAttributesPostReq
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **attribute** | [**[]Attribute**](Attribute.md) |  | 
+ **attribute** | [**Attribute**](Attribute.md) |  | 
 
 ### Return type
 
-[**[]Attribute**](Attribute.md)
+[**Attribute**](Attribute.md)
 
 ### Authorization
 

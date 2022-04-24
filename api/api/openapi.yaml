@@ -633,17 +633,13 @@ paths:
         content:
           application/json;charset=utf-8:
             schema:
-              items:
-                $ref: '#/components/schemas/Attribute'
-              type: array
+              $ref: '#/components/schemas/Attribute'
       responses:
         "200":
           content:
             application/json;charset=utf-8:
               schema:
-                items:
-                  $ref: '#/components/schemas/Attribute'
-                type: array
+                $ref: '#/components/schemas/Attribute'
           description: successful created attribute response
       summary: creating new attributes
   /rest/items/attributes/{attributeId}/values:

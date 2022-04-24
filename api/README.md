@@ -80,6 +80,10 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**RestCategoriesGet**](docs/DefaultApi.md#restcategoriesget) | **Get** /rest/categories | fetching categories with pagination and optional filter queries
 *DefaultApi* | [**RestCategoriesPost**](docs/DefaultApi.md#restcategoriespost) | **Post** /rest/categories | creating new categories
+*DefaultApi* | [**RestItemsAttributesAttributeIdValuesGet**](docs/DefaultApi.md#restitemsattributesattributeidvaluesget) | **Get** /rest/items/attributes/{attributeId}/values | fetching attributes values with pagination
+*DefaultApi* | [**RestItemsAttributesAttributeIdValuesPost**](docs/DefaultApi.md#restitemsattributesattributeidvaluespost) | **Post** /rest/items/attributes/{attributeId}/values | creating new attribute values
+*DefaultApi* | [**RestItemsAttributesGet**](docs/DefaultApi.md#restitemsattributesget) | **Get** /rest/items/attributes | fetching attributes with pagination
+*DefaultApi* | [**RestItemsAttributesPost**](docs/DefaultApi.md#restitemsattributespost) | **Post** /rest/items/attributes | creating new attributes
 *DefaultApi* | [**RestItemsGet**](docs/DefaultApi.md#restitemsget) | **Get** /rest/items | fetching items with optional extra data or filters given in query parameter
 *DefaultApi* | [**RestItemsItemIdVariationsPost**](docs/DefaultApi.md#restitemsitemidvariationspost) | **Post** /rest/items/{itemId}/variations | creating variations for an item
 *DefaultApi* | [**RestItemsPost**](docs/DefaultApi.md#restitemspost) | **Post** /rest/items | creates items
@@ -89,6 +93,10 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Attribute](docs/Attribute.md)
+ - [AttributePagination](docs/AttributePagination.md)
+ - [AttributeValue](docs/AttributeValue.md)
+ - [AttributeValuePagination](docs/AttributeValuePagination.md)
  - [Category](docs/Category.md)
  - [CategoryDetails](docs/CategoryDetails.md)
  - [CategoryPagination](docs/CategoryPagination.md)
@@ -106,8 +114,6 @@ Class | Method | HTTP request | Description
  - [RestLoginResponse](docs/RestLoginResponse.md)
  - [Variation](docs/Variation.md)
  - [VariationAttributeValue](docs/VariationAttributeValue.md)
- - [VariationAttributeValueAttribute](docs/VariationAttributeValueAttribute.md)
- - [VariationAttributeValueValue](docs/VariationAttributeValueValue.md)
  - [VariationBarcode](docs/VariationBarcode.md)
  - [VariationCategory](docs/VariationCategory.md)
  - [VariationClient](docs/VariationClient.md)

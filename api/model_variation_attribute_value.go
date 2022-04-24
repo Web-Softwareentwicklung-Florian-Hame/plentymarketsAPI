@@ -20,8 +20,8 @@ type VariationAttributeValue struct {
 	AttributeId *int32 `json:"attributeId,omitempty"`
 	ValueId *int32 `json:"valueId,omitempty"`
 	IsLinkableToImage *bool `json:"isLinkableToImage,omitempty"`
-	Attribute *VariationAttributeValueAttribute `json:"attribute,omitempty"`
-	AttributeValue *VariationAttributeValueValue `json:"attributeValue,omitempty"`
+	Attribute *Attribute `json:"attribute,omitempty"`
+	AttributeValue *AttributeValue `json:"attributeValue,omitempty"`
 }
 
 // NewVariationAttributeValue instantiates a new VariationAttributeValue object
@@ -170,9 +170,9 @@ func (o *VariationAttributeValue) SetIsLinkableToImage(v bool) {
 }
 
 // GetAttribute returns the Attribute field value if set, zero value otherwise.
-func (o *VariationAttributeValue) GetAttribute() VariationAttributeValueAttribute {
+func (o *VariationAttributeValue) GetAttribute() Attribute {
 	if o == nil || o.Attribute == nil {
-		var ret VariationAttributeValueAttribute
+		var ret Attribute
 		return ret
 	}
 	return *o.Attribute
@@ -180,7 +180,7 @@ func (o *VariationAttributeValue) GetAttribute() VariationAttributeValueAttribut
 
 // GetAttributeOk returns a tuple with the Attribute field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VariationAttributeValue) GetAttributeOk() (*VariationAttributeValueAttribute, bool) {
+func (o *VariationAttributeValue) GetAttributeOk() (*Attribute, bool) {
 	if o == nil || o.Attribute == nil {
 		return nil, false
 	}
@@ -196,15 +196,15 @@ func (o *VariationAttributeValue) HasAttribute() bool {
 	return false
 }
 
-// SetAttribute gets a reference to the given VariationAttributeValueAttribute and assigns it to the Attribute field.
-func (o *VariationAttributeValue) SetAttribute(v VariationAttributeValueAttribute) {
+// SetAttribute gets a reference to the given Attribute and assigns it to the Attribute field.
+func (o *VariationAttributeValue) SetAttribute(v Attribute) {
 	o.Attribute = &v
 }
 
 // GetAttributeValue returns the AttributeValue field value if set, zero value otherwise.
-func (o *VariationAttributeValue) GetAttributeValue() VariationAttributeValueValue {
+func (o *VariationAttributeValue) GetAttributeValue() AttributeValue {
 	if o == nil || o.AttributeValue == nil {
-		var ret VariationAttributeValueValue
+		var ret AttributeValue
 		return ret
 	}
 	return *o.AttributeValue
@@ -212,7 +212,7 @@ func (o *VariationAttributeValue) GetAttributeValue() VariationAttributeValueVal
 
 // GetAttributeValueOk returns a tuple with the AttributeValue field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VariationAttributeValue) GetAttributeValueOk() (*VariationAttributeValueValue, bool) {
+func (o *VariationAttributeValue) GetAttributeValueOk() (*AttributeValue, bool) {
 	if o == nil || o.AttributeValue == nil {
 		return nil, false
 	}
@@ -228,8 +228,8 @@ func (o *VariationAttributeValue) HasAttributeValue() bool {
 	return false
 }
 
-// SetAttributeValue gets a reference to the given VariationAttributeValueValue and assigns it to the AttributeValue field.
-func (o *VariationAttributeValue) SetAttributeValue(v VariationAttributeValueValue) {
+// SetAttributeValue gets a reference to the given AttributeValue and assigns it to the AttributeValue field.
+func (o *VariationAttributeValue) SetAttributeValue(v AttributeValue) {
 	o.AttributeValue = &v
 }
 

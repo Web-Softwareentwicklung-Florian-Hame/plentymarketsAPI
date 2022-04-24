@@ -6,6 +6,10 @@ api/openapi.yaml
 api_default.go
 client.go
 configuration.go
+docs/Attribute.md
+docs/AttributePagination.md
+docs/AttributeValue.md
+docs/AttributeValuePagination.md
 docs/Category.md
 docs/CategoryDetails.md
 docs/CategoryPagination.md
@@ -24,8 +28,6 @@ docs/RestLoginBody.md
 docs/RestLoginResponse.md
 docs/Variation.md
 docs/VariationAttributeValue.md
-docs/VariationAttributeValueAttribute.md
-docs/VariationAttributeValueValue.md
 docs/VariationBarcode.md
 docs/VariationCategory.md
 docs/VariationClient.md
@@ -46,6 +48,10 @@ docs/VariationUnit.md
 git_push.sh
 go.mod
 go.sum
+model_attribute.go
+model_attribute_pagination.go
+model_attribute_value.go
+model_attribute_value_pagination.go
 model_category.go
 model_category_details.go
 model_category_pagination.go
@@ -63,8 +69,6 @@ model_rest_login_body.go
 model_rest_login_response.go
 model_variation.go
 model_variation_attribute_value.go
-model_variation_attribute_value_attribute.go
-model_variation_attribute_value_value.go
 model_variation_barcode.go
 model_variation_category.go
 model_variation_client.go

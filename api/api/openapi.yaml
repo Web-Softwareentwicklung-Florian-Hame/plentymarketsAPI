@@ -19,7 +19,7 @@ paths:
             application/json;charset=utf-8:
               schema:
                 $ref: '#/components/schemas/RestLoginResponse'
-          description: returns token data after successfull authentication
+          description: returns token data after successful authentication
       summary: login for authentication at rest api
   /rest/items/variations:
     get:
@@ -377,7 +377,7 @@ paths:
             application/json;charset=utf-8:
               schema:
                 $ref: '#/components/schemas/Variation'
-          description: successfull created variation response
+          description: successful created variation response
       summary: creating variations for an item
   /rest/categories:
     get:
@@ -416,7 +416,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/Category'
                 type: array
-          description: successfully created categories
+          description: successfuly created categories
       summary: creating new categories
   /rest/items:
     get:
@@ -573,7 +573,7 @@ paths:
                 items:
                   $ref: '#/components/schemas/ItemPagination'
                 type: array
-          description: successfully fetched items
+          description: successfuly fetched items
       summary: fetching items with optional extra data or filters given in query parameter
     post:
       description: creates items
@@ -592,8 +592,128 @@ paths:
                 items:
                   $ref: '#/components/schemas/Item'
                 type: array
-          description: successfully created item
+          description: successfuly created item
       summary: creates items
+  /rest/items/attributes:
+    get:
+      description: fetching attributes with pagination
+      parameters:
+      - description: Limits the results to a specific page.
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: with
+        required: false
+        schema:
+          items:
+            enum:
+            - names
+            - values
+            - maps
+            type: string
+          type: array
+        style: form
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AttributePagination'
+          description: successful get attributes response
+      summary: fetching attributes with pagination
+    post:
+      description: creating new attributes
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              items:
+                $ref: '#/components/schemas/Attribute'
+              type: array
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Attribute'
+                type: array
+          description: successful created attribute response
+      summary: creating new attributes
+  /rest/items/attributes/{attributeId}/values:
+    get:
+      description: fetching attributes values with pagination
+      parameters:
+      - explode: false
+        in: path
+        name: attributeId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      - description: Limits the results to a specific page.
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - explode: true
+        in: query
+        name: with
+        required: false
+        schema:
+          items:
+            enum:
+            - attribute
+            - names
+            - marketNames
+            - valueMap
+            type: string
+          type: array
+        style: form
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/AttributeValuePagination'
+          description: successful get attribute values response
+      summary: fetching attributes values with pagination
+    post:
+      description: creating new attribute values
+      parameters:
+      - explode: false
+        in: path
+        name: attributeId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              items:
+                $ref: '#/components/schemas/AttributeValue'
+              type: array
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                items:
+                  $ref: '#/components/schemas/AttributeValue'
+                type: array
+          description: successful created attribute response
+      summary: creating new attribute values
 components:
   schemas:
     RestLoginBody:
@@ -611,7 +731,7 @@ components:
       - username
       type: object
     RestLoginResponse:
-      description: token data return after successfull rest api authentication
+      description: token data return after successful rest api authentication
       example:
         expiresIn: 5
         concurrent_sessions: 0
@@ -1012,6 +1132,33 @@ components:
             neckermannAtEpAttribute: 9
             laRedouteAttribute: 7
             isSurchargePercental: true
+            values:
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
             amazonAttribute: amazonAttribute
             pixmaniaAttribute: pixmaniaAttribute
             typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -1046,6 +1193,33 @@ components:
             neckermannAtEpAttribute: 9
             laRedouteAttribute: 7
             isSurchargePercental: true
+            values:
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
             amazonAttribute: amazonAttribute
             pixmaniaAttribute: pixmaniaAttribute
             typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -1811,6 +1985,33 @@ components:
           neckermannAtEpAttribute: 9
           laRedouteAttribute: 7
           isSurchargePercental: true
+          values:
+          - image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
           amazonAttribute: amazonAttribute
           pixmaniaAttribute: pixmaniaAttribute
           typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -1833,11 +2034,11 @@ components:
         isLinkableToImage:
           type: boolean
         attribute:
-          $ref: '#/components/schemas/VariationAttributeValueAttribute'
+          $ref: '#/components/schemas/Attribute'
         attributeValue:
-          $ref: '#/components/schemas/VariationAttributeValueValue'
+          $ref: '#/components/schemas/AttributeValue'
       type: object
-    VariationAttributeValueValue:
+    AttributeValue:
       description: Variation attribute value model that is place in VariationAttributeValue
         model
       example:
@@ -1882,8 +2083,10 @@ components:
         updatedAt:
           format: date-time
           type: string
+        attribute:
+          $ref: '#/components/schemas/Attribute'
       type: object
-    VariationAttributeValueAttribute:
+    Attribute:
       description: Variation attribute model that is place in VariationAttributeValue
         model
       example:
@@ -1891,6 +2094,33 @@ components:
         neckermannAtEpAttribute: 9
         laRedouteAttribute: 7
         isSurchargePercental: true
+        values:
+        - image: image
+          percentageDistribution: 1
+          ottoValue: ottoValue
+          laRedouteValue: laRedouteValue
+          attributeId: 7
+          tracdelightValue: tracdelightValue
+          amazonValue: amazonValue
+          backendName: backendName
+          comment: comment
+          id: 7
+          position: 9
+          neckermannAtEpValue: neckermannAtEpValue
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        - image: image
+          percentageDistribution: 1
+          ottoValue: ottoValue
+          laRedouteValue: laRedouteValue
+          attributeId: 7
+          tracdelightValue: tracdelightValue
+          amazonValue: amazonValue
+          backendName: backendName
+          comment: comment
+          id: 7
+          position: 9
+          neckermannAtEpValue: neckermannAtEpValue
+          updatedAt: 2000-01-23T04:56:07.000+00:00
         amazonAttribute: amazonAttribute
         pixmaniaAttribute: pixmaniaAttribute
         typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -1934,6 +2164,11 @@ components:
         updatedAt:
           format: date-time
           type: string
+        values:
+          description: only accessible for get attributes call when with flag is set
+          items:
+            $ref: '#/components/schemas/AttributeValue'
+          type: array
       type: object
     VariationImage:
       description: variation image model
@@ -3081,6 +3316,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -3115,6 +3377,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -3730,6 +4019,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -3764,6 +4080,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -4748,6 +5091,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -4782,6 +5152,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -5397,6 +5794,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -5431,6 +5855,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -6109,6 +6560,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -6143,6 +6621,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -6758,6 +7263,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -6792,6 +7324,33 @@ components:
                 neckermannAtEpAttribute: 9
                 laRedouteAttribute: 7
                 isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 1
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 7
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 9
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
                 pixmaniaAttribute: pixmaniaAttribute
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -7464,6 +8023,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -7498,6 +8084,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -8113,6 +8726,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -8147,6 +8787,33 @@ components:
               neckermannAtEpAttribute: 9
               laRedouteAttribute: 7
               isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
               pixmaniaAttribute: pixmaniaAttribute
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
@@ -8561,5 +9228,177 @@ components:
         entries:
           items:
             $ref: '#/components/schemas/Category'
+          type: array
+      type: object
+    AttributePagination:
+      description: pagination response containing categories
+      example:
+        totalsCount: 6
+        lastOnPage: 5
+        entries:
+        - isLinkableToImage: true
+          neckermannAtEpAttribute: 9
+          laRedouteAttribute: 7
+          isSurchargePercental: true
+          values:
+          - image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          amazonAttribute: amazonAttribute
+          pixmaniaAttribute: pixmaniaAttribute
+          typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+          fruugoAttribute: fruugoAttribute
+          googleShoppingAttribute: googleShoppingAttribute
+          isGroupable: true
+          backendName: backendName
+          id: 1
+          position: 3
+          ottoAttribute: ottoAttribute
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        - isLinkableToImage: true
+          neckermannAtEpAttribute: 9
+          laRedouteAttribute: 7
+          isSurchargePercental: true
+          values:
+          - image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          amazonAttribute: amazonAttribute
+          pixmaniaAttribute: pixmaniaAttribute
+          typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+          fruugoAttribute: fruugoAttribute
+          googleShoppingAttribute: googleShoppingAttribute
+          isGroupable: true
+          backendName: backendName
+          id: 1
+          position: 3
+          ottoAttribute: ottoAttribute
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        itemsPerPage: 2
+        isLastPage: true
+        firstOnPage: 5
+        page: 0
+        lastPageNumber: 1
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          items:
+            $ref: '#/components/schemas/Attribute'
+          type: array
+      type: object
+    AttributeValuePagination:
+      description: pagination response containing categories
+      example:
+        totalsCount: 6
+        lastOnPage: 5
+        entries:
+        - image: image
+          percentageDistribution: 1
+          ottoValue: ottoValue
+          laRedouteValue: laRedouteValue
+          attributeId: 7
+          tracdelightValue: tracdelightValue
+          amazonValue: amazonValue
+          backendName: backendName
+          comment: comment
+          id: 7
+          position: 9
+          neckermannAtEpValue: neckermannAtEpValue
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        - image: image
+          percentageDistribution: 1
+          ottoValue: ottoValue
+          laRedouteValue: laRedouteValue
+          attributeId: 7
+          tracdelightValue: tracdelightValue
+          amazonValue: amazonValue
+          backendName: backendName
+          comment: comment
+          id: 7
+          position: 9
+          neckermannAtEpValue: neckermannAtEpValue
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        itemsPerPage: 2
+        isLastPage: true
+        firstOnPage: 5
+        page: 0
+        lastPageNumber: 1
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          items:
+            $ref: '#/components/schemas/AttributeValue'
           type: array
       type: object

@@ -14,7 +14,7 @@ import (
 	"encoding/json"
 )
 
-// RestLoginResponse token data return after successfull rest api authentication
+// RestLoginResponse token data return after successful rest api authentication
 type RestLoginResponse struct {
 	ConcurrentSessions *int32 `json:"concurrent_sessions,omitempty"`
 	MaxCurrentSessions *int32 `json:"max_current_sessions,omitempty"`

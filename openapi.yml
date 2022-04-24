@@ -18,7 +18,7 @@ paths:
               $ref: '#/components/schemas/RestLoginBody'
       responses:
         200:
-          description: returns token data after successfull authentication
+          description: returns token data after successful authentication
           content:
             application/json;charset=utf-8:
               schema:
@@ -246,7 +246,7 @@ paths:
                 $ref: '#/components/schemas/Variation'
       responses:
         200:
-          description: successfull created variation response
+          description: successful created variation response
           content:
             application/json;charset=utf-8:
               schema:
@@ -274,7 +274,7 @@ paths:
       description: creating new categories
       responses:
         200:
-          description: successfully created categories
+          description: successfuly created categories
           content:
             application/json;charset=utf-8:
               schema:
@@ -372,7 +372,7 @@ paths:
             type: string
       responses:
         200:
-          description: successfully fetched items
+          description: successfuly fetched items
           content:
             application/json;charset=utf-8:
               schema:
@@ -388,17 +388,123 @@ paths:
             schema:
               type: array
               items:
-               $ref: '#/components/schemas/Item'
+                $ref: '#/components/schemas/Item'
 
       responses:
         200:
-          description: successfully created item
+          description: successfuly created item
           content:
             application/json;charset=utf-8:
               schema:
                 type: array
                 items:
                   $ref: '#/components/schemas/Item'
+  /rest/items/attributes:
+    get:
+      summary: "fetching attributes with pagination"
+      description: "fetching attributes with pagination"
+      parameters:
+        - in: query
+          name: page
+          description: Limits the results to a specific page.
+          schema:
+            type: integer
+        - in: query
+          name: with
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - names
+                - values
+                - maps
+
+      responses:
+        200:
+          description: "successful get attributes response"
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/AttributePagination"
+    post:
+      summary: "creating new attributes"
+      description: "creating new attributes"
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/Attribute"
+      responses:
+        200:
+          description: successful created attribute response
+          content:
+            application/json;charset=utf-8:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Attribute"
+  /rest/items/attributes/{attributeId}/values:
+    get:
+      summary: "fetching attributes values with pagination"
+      description: "fetching attributes values with pagination"
+      parameters:
+        - in: path
+          name: attributeId
+          schema:
+            type: integer
+          required: true
+        - in: query
+          name: page
+          description: Limits the results to a specific page.
+          schema:
+            type: integer
+        - in: query
+          name: with
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - attribute
+                - names
+                - marketNames
+                - valueMap
+
+      responses:
+        200:
+          description: "successful get attribute values response"
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/AttributeValuePagination"
+    post:
+      summary: "creating new attribute values"
+      description: "creating new attribute values"
+      parameters:
+        - in: path
+          name: attributeId
+          schema:
+            type: integer
+          required: true
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              type: array
+              items:
+                $ref: "#/components/schemas/AttributeValue"
+      responses:
+        200:
+          description: successful created attribute response
+          content:
+            application/json;charset=utf-8:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/AttributeValue"
 
 components:
   schemas:
@@ -415,7 +521,7 @@ components:
           type: string
     RestLoginResponse:
       type: object
-      description: token data return after successfull rest api authentication
+      description: token data return after successful rest api authentication
       properties:
         concurrent_sessions:
           type: integer
@@ -855,10 +961,10 @@ components:
         isLinkableToImage:
           type: boolean
         attribute:
-          $ref: '#/components/schemas/VariationAttributeValueAttribute'
+          $ref: '#/components/schemas/Attribute'
         attributeValue:
-          $ref: '#/components/schemas/VariationAttributeValueValue'
-    VariationAttributeValueValue:
+          $ref: '#/components/schemas/AttributeValue'
+    AttributeValue:
       type: object
       description: Variation attribute value model that is place in VariationAttributeValue model
       properties:
@@ -889,7 +995,10 @@ components:
         updatedAt:
           type: string
           format: date-time
-    VariationAttributeValueAttribute:
+        attribute:
+          $ref: "#/components/schemas/Attribute"
+
+    Attribute:
       type: object
       description: Variation attribute model that is place in VariationAttributeValue model
       properties:
@@ -924,6 +1033,11 @@ components:
         updatedAt:
           type: string
           format: date-time
+        values:
+          description: "only accessible for get attributes call when with flag is set"
+          type: array
+          items:
+            $ref: "#/components/schemas/AttributeValue"
     VariationImage:
       type: object
       description: variation image model
@@ -1683,3 +1797,49 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Category'
+    AttributePagination:
+      type: object
+      description: pagination response containing categories
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Attribute'
+    AttributeValuePagination:
+      type: object
+      description: pagination response containing categories
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/AttributeValue'
+    
+    

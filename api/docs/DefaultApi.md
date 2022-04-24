@@ -6,6 +6,10 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**RestCategoriesGet**](DefaultApi.md#RestCategoriesGet) | **Get** /rest/categories | fetching categories with pagination and optional filter queries
 [**RestCategoriesPost**](DefaultApi.md#RestCategoriesPost) | **Post** /rest/categories | creating new categories
+[**RestItemsAttributesAttributeIdValuesGet**](DefaultApi.md#RestItemsAttributesAttributeIdValuesGet) | **Get** /rest/items/attributes/{attributeId}/values | fetching attributes values with pagination
+[**RestItemsAttributesAttributeIdValuesPost**](DefaultApi.md#RestItemsAttributesAttributeIdValuesPost) | **Post** /rest/items/attributes/{attributeId}/values | creating new attribute values
+[**RestItemsAttributesGet**](DefaultApi.md#RestItemsAttributesGet) | **Get** /rest/items/attributes | fetching attributes with pagination
+[**RestItemsAttributesPost**](DefaultApi.md#RestItemsAttributesPost) | **Post** /rest/items/attributes | creating new attributes
 [**RestItemsGet**](DefaultApi.md#RestItemsGet) | **Get** /rest/items | fetching items with optional extra data or filters given in query parameter
 [**RestItemsItemIdVariationsPost**](DefaultApi.md#RestItemsItemIdVariationsPost) | **Post** /rest/items/{itemId}/variations | creating variations for an item
 [**RestItemsPost**](DefaultApi.md#RestItemsPost) | **Post** /rest/items | creates items
@@ -131,6 +135,286 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]Category**](Category.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestItemsAttributesAttributeIdValuesGet
+
+> AttributeValuePagination RestItemsAttributesAttributeIdValuesGet(ctx, attributeId).Page(page).With(with).Execute()
+
+fetching attributes values with pagination
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    attributeId := int32(56) // int32 | 
+    page := int32(56) // int32 | Limits the results to a specific page. (optional)
+    with := []string{"With_example"} // []string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestItemsAttributesAttributeIdValuesGet(context.Background(), attributeId).Page(page).With(with).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsAttributesAttributeIdValuesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestItemsAttributesAttributeIdValuesGet`: AttributeValuePagination
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsAttributesAttributeIdValuesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**attributeId** | **int32** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestItemsAttributesAttributeIdValuesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **page** | **int32** | Limits the results to a specific page. | 
+ **with** | **[]string** |  | 
+
+### Return type
+
+[**AttributeValuePagination**](AttributeValuePagination.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestItemsAttributesAttributeIdValuesPost
+
+> []AttributeValue RestItemsAttributesAttributeIdValuesPost(ctx, attributeId).AttributeValue(attributeValue).Execute()
+
+creating new attribute values
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    attributeId := int32(56) // int32 | 
+    attributeValue := []openapiclient.AttributeValue{*openapiclient.NewAttributeValue()} // []AttributeValue |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestItemsAttributesAttributeIdValuesPost(context.Background(), attributeId).AttributeValue(attributeValue).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsAttributesAttributeIdValuesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestItemsAttributesAttributeIdValuesPost`: []AttributeValue
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsAttributesAttributeIdValuesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**attributeId** | **int32** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestItemsAttributesAttributeIdValuesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+ **attributeValue** | [**[]AttributeValue**](AttributeValue.md) |  | 
+
+### Return type
+
+[**[]AttributeValue**](AttributeValue.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestItemsAttributesGet
+
+> AttributePagination RestItemsAttributesGet(ctx).Page(page).With(with).Execute()
+
+fetching attributes with pagination
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    page := int32(56) // int32 | Limits the results to a specific page. (optional)
+    with := []string{"With_example"} // []string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestItemsAttributesGet(context.Background()).Page(page).With(with).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsAttributesGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestItemsAttributesGet`: AttributePagination
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsAttributesGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestItemsAttributesGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int32** | Limits the results to a specific page. | 
+ **with** | **[]string** |  | 
+
+### Return type
+
+[**AttributePagination**](AttributePagination.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestItemsAttributesPost
+
+> []Attribute RestItemsAttributesPost(ctx).Attribute(attribute).Execute()
+
+creating new attributes
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    attribute := []openapiclient.Attribute{*openapiclient.NewAttribute()} // []Attribute |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestItemsAttributesPost(context.Background()).Attribute(attribute).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsAttributesPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestItemsAttributesPost`: []Attribute
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsAttributesPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestItemsAttributesPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **attribute** | [**[]Attribute**](Attribute.md) |  | 
+
+### Return type
+
+[**[]Attribute**](Attribute.md)
 
 ### Authorization
 

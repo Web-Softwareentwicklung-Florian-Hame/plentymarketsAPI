@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **AttributeId** | Pointer to **int32** |  | [optional] 
 **ValueId** | Pointer to **int32** |  | [optional] 
 **IsLinkableToImage** | Pointer to **bool** |  | [optional] 
-**Attribute** | Pointer to [**VariationAttributeValueAttribute**](VariationAttributeValueAttribute.md) |  | [optional] 
-**AttributeValue** | Pointer to [**VariationAttributeValueValue**](VariationAttributeValueValue.md) |  | [optional] 
+**Attribute** | Pointer to [**Attribute**](Attribute.md) |  | [optional] 
+**AttributeValue** | Pointer to [**AttributeValue**](AttributeValue.md) |  | [optional] 
 
 ## Methods
 
@@ -132,20 +132,20 @@ HasIsLinkableToImage returns a boolean if a field has been set.
 
 ### GetAttribute
 
-`func (o *VariationAttributeValue) GetAttribute() VariationAttributeValueAttribute`
+`func (o *VariationAttributeValue) GetAttribute() Attribute`
 
 GetAttribute returns the Attribute field if non-nil, zero value otherwise.
 
 ### GetAttributeOk
 
-`func (o *VariationAttributeValue) GetAttributeOk() (*VariationAttributeValueAttribute, bool)`
+`func (o *VariationAttributeValue) GetAttributeOk() (*Attribute, bool)`
 
 GetAttributeOk returns a tuple with the Attribute field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAttribute
 
-`func (o *VariationAttributeValue) SetAttribute(v VariationAttributeValueAttribute)`
+`func (o *VariationAttributeValue) SetAttribute(v Attribute)`
 
 SetAttribute sets Attribute field to given value.
 
@@ -157,20 +157,20 @@ HasAttribute returns a boolean if a field has been set.
 
 ### GetAttributeValue
 
-`func (o *VariationAttributeValue) GetAttributeValue() VariationAttributeValueValue`
+`func (o *VariationAttributeValue) GetAttributeValue() AttributeValue`
 
 GetAttributeValue returns the AttributeValue field if non-nil, zero value otherwise.
 
 ### GetAttributeValueOk
 
-`func (o *VariationAttributeValue) GetAttributeValueOk() (*VariationAttributeValueValue, bool)`
+`func (o *VariationAttributeValue) GetAttributeValueOk() (*AttributeValue, bool)`
 
 GetAttributeValueOk returns a tuple with the AttributeValue field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAttributeValue
 
-`func (o *VariationAttributeValue) SetAttributeValue(v VariationAttributeValueValue)`
+`func (o *VariationAttributeValue) SetAttributeValue(v AttributeValue)`
 
 SetAttributeValue sets AttributeValue field to given value.
 

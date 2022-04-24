@@ -24,7 +24,7 @@ type Attribute struct {
 	IsLinkableToImage *bool `json:"isLinkableToImage,omitempty"`
 	AmazonAttribute *string `json:"amazonAttribute,omitempty"`
 	FruugoAttribute *string `json:"fruugoAttribute,omitempty"`
-	PixmaniaAttribute *string `json:"pixmaniaAttribute,omitempty"`
+	PixmaniaAttribute *int32 `json:"pixmaniaAttribute,omitempty"`
 	OttoAttribute *string `json:"ottoAttribute,omitempty"`
 	GoogleShoppingAttribute *string `json:"googleShoppingAttribute,omitempty"`
 	NeckermannAtEpAttribute *int32 `json:"neckermannAtEpAttribute,omitempty"`
@@ -278,9 +278,9 @@ func (o *Attribute) SetFruugoAttribute(v string) {
 }
 
 // GetPixmaniaAttribute returns the PixmaniaAttribute field value if set, zero value otherwise.
-func (o *Attribute) GetPixmaniaAttribute() string {
+func (o *Attribute) GetPixmaniaAttribute() int32 {
 	if o == nil || o.PixmaniaAttribute == nil {
-		var ret string
+		var ret int32
 		return ret
 	}
 	return *o.PixmaniaAttribute
@@ -288,7 +288,7 @@ func (o *Attribute) GetPixmaniaAttribute() string {
 
 // GetPixmaniaAttributeOk returns a tuple with the PixmaniaAttribute field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Attribute) GetPixmaniaAttributeOk() (*string, bool) {
+func (o *Attribute) GetPixmaniaAttributeOk() (*int32, bool) {
 	if o == nil || o.PixmaniaAttribute == nil {
 		return nil, false
 	}
@@ -304,8 +304,8 @@ func (o *Attribute) HasPixmaniaAttribute() bool {
 	return false
 }
 
-// SetPixmaniaAttribute gets a reference to the given string and assigns it to the PixmaniaAttribute field.
-func (o *Attribute) SetPixmaniaAttribute(v string) {
+// SetPixmaniaAttribute gets a reference to the given int32 and assigns it to the PixmaniaAttribute field.
+func (o *Attribute) SetPixmaniaAttribute(v int32) {
 	o.PixmaniaAttribute = &v
 }
 

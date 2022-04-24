@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **IsLinkableToImage** | Pointer to **bool** |  | [optional] 
 **AmazonAttribute** | Pointer to **string** |  | [optional] 
 **FruugoAttribute** | Pointer to **string** |  | [optional] 
-**PixmaniaAttribute** | Pointer to **string** |  | [optional] 
+**PixmaniaAttribute** | Pointer to **int32** |  | [optional] 
 **OttoAttribute** | Pointer to **string** |  | [optional] 
 **GoogleShoppingAttribute** | Pointer to **string** |  | [optional] 
 **NeckermannAtEpAttribute** | Pointer to **int32** |  | [optional] 
@@ -217,20 +217,20 @@ HasFruugoAttribute returns a boolean if a field has been set.
 
 ### GetPixmaniaAttribute
 
-`func (o *Attribute) GetPixmaniaAttribute() string`
+`func (o *Attribute) GetPixmaniaAttribute() int32`
 
 GetPixmaniaAttribute returns the PixmaniaAttribute field if non-nil, zero value otherwise.
 
 ### GetPixmaniaAttributeOk
 
-`func (o *Attribute) GetPixmaniaAttributeOk() (*string, bool)`
+`func (o *Attribute) GetPixmaniaAttributeOk() (*int32, bool)`
 
 GetPixmaniaAttributeOk returns a tuple with the PixmaniaAttribute field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPixmaniaAttribute
 
-`func (o *Attribute) SetPixmaniaAttribute(v string)`
+`func (o *Attribute) SetPixmaniaAttribute(v int32)`
 
 SetPixmaniaAttribute sets PixmaniaAttribute field to given value.
 

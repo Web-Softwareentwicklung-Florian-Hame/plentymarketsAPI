@@ -776,31 +776,31 @@ components:
         variationSkus:
         - additionalInformation: additionalInformation
           isActive: true
-          marketId: 8
-          accountId: 2
+          marketId: 2
+          accountId: 9
           createdAt: 2000-01-23T04:56:07.000+00:00
           initialSku: initialSku
           deletedAt: 2000-01-23T04:56:07.000+00:00
-          variationId: 3
+          variationId: 8
           parentSku: parentSku
           stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
           exportedAt: 2000-01-23T04:56:07.000+00:00
-          id: 4
+          id: 3
           sku: sku
           updatedAt: 2000-01-23T04:56:07.000+00:00
           status: status
         - additionalInformation: additionalInformation
           isActive: true
-          marketId: 8
-          accountId: 2
+          marketId: 2
+          accountId: 9
           createdAt: 2000-01-23T04:56:07.000+00:00
           initialSku: initialSku
           deletedAt: 2000-01-23T04:56:07.000+00:00
-          variationId: 3
+          variationId: 8
           parentSku: parentSku
           stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
           exportedAt: 2000-01-23T04:56:07.000+00:00
-          id: 4
+          id: 3
           sku: sku
           updatedAt: 2000-01-23T04:56:07.000+00:00
           status: status
@@ -826,28 +826,28 @@ components:
         model: model
         id: 7
         stock:
-        - reorderLevel: 1.9626702727164813
-          deltaReorderLevel: 5.573385265048522
-          itemId: 4
-          variationId: 2
-          warehouseId: 2
-          physicalStock: 3.196820582978078
-          reservedStock: 5.296102445648278
-          reservedBundles: 6.176386745020588
-          netStock: 3.8156682252305574
-          purchasePrice: 7.390706075830692
-          reservedListing: 1.0502890910539986
-        - reorderLevel: 1.9626702727164813
-          deltaReorderLevel: 5.573385265048522
-          itemId: 4
-          variationId: 2
-          warehouseId: 2
-          physicalStock: 3.196820582978078
-          reservedStock: 5.296102445648278
-          reservedBundles: 6.176386745020588
-          netStock: 3.8156682252305574
-          purchasePrice: 7.390706075830692
-          reservedListing: 1.0502890910539986
+        - reorderLevel: 5.573385265048522
+          deltaReorderLevel: 3.0269458094096646
+          itemId: 2
+          variationId: 4
+          warehouseId: 3
+          physicalStock: 5.296102445648278
+          reservedStock: 3.8156682252305574
+          reservedBundles: 2.0981949483881577
+          netStock: 1.9626702727164813
+          purchasePrice: 1.0502890910539986
+          reservedListing: 6.176386745020588
+        - reorderLevel: 5.573385265048522
+          deltaReorderLevel: 3.0269458094096646
+          itemId: 2
+          variationId: 4
+          warehouseId: 3
+          physicalStock: 5.296102445648278
+          reservedStock: 3.8156682252305574
+          reservedBundles: 2.0981949483881577
+          netStock: 1.9626702727164813
+          purchasePrice: 1.0502890910539986
+          reservedListing: 6.176386745020588
         updatedAt: 2000-01-23T04:56:07.000+00:00
         hasCalculatedBundlePurchasePrice: true
         images:
@@ -932,20 +932,20 @@ components:
           fileType: fileType
           md5ChecksumOriginal: md5ChecksumOriginal
         item:
-          storeSpecial: 6
+          storeSpecial: 0
           customsTariffNumber: customsTariffNumber
-          producingCountryId: 2
-          couponRestriction: 0
+          producingCountryId: 5
+          couponRestriction: 7
           ebayCategory2: ebayCategory2
           free11: free11
           free12: free12
           free13: free13
           amazonFbaPlatform: 9
           free14: free14
-          ownerId: 4
+          ownerId: 0
           free10: free10
           free19: free19
-          feedback: 9
+          feedback: 7
           createdAt: 2000-01-23T04:56:07.000+00:00
           free2: free2
           free15: free15
@@ -957,36 +957,36 @@ components:
           free6: free6
           free7: free7
           free4: free4
-          id: 6
+          id: 4
           free5: free5
           isShippingPackage: true
           free8: free8
-          ebayPresetId: 0
+          ebayPresetId: 9
           updatedAt: 2000-01-23T04:56:07.000+00:00
           free9: free9
           ebayCategory: ebayCategory
           add_cms_page: add_cms_page
           free20: free20
-          conditionApi: 0.11859130807119977
-          condition: 0
-          rakutenCategoryId: 6
+          conditionApi: 4.637509675190766
+          condition: 2
+          rakutenCategoryId: 0
           isShippableByAmazon: true
           isSubscribable: true
           isSerialNumber: true
-          mainVariationId: 0
-          position: 4
-          revenueAccount: 5
+          mainVariationId: 7
+          position: 8
+          revenueAccount: 0
           itemType: itemType
-          flagTwo: 6
+          flagTwo: 4
           amazonProductType: 0
           gimahhot: gimahhot
-          maximumOrderQuantity: 7.88722683998926
-          flagOne: 7
-          stockType: 2
-          manufacturerId: 8
+          maximumOrderQuantity: 6.918231485891953
+          flagOne: 6
+          stockType: 6
+          manufacturerId: 2
           ebayStoreCategory: ebayStoreCategory
           amazonFedas: amazonFedas
-          ageRestriction: 4
+          ageRestriction: 0
           ebayStoreCategory2: ebayStoreCategory2
         extraShippingCharge2: 6.704019297950036
         availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -1000,9 +1000,9 @@ components:
         propertyVariationId: 3
         automaticListVisibility: 7
         unit:
-          unitId: 4
-          id: 9
-          content: 8
+          unitId: 8
+          id: 4
+          content: 6
         operatingCosts: 0.10263654006109402
         variationProperties:
         - surcharge: 3.901545264248647
@@ -1115,52 +1115,52 @@ components:
           valueId: 3
           attributeValue:
             image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           attribute:
             isLinkableToImage: true
-            neckermannAtEpAttribute: 9
+            neckermannAtEpAttribute: 7
             laRedouteAttribute: 7
             isSurchargePercental: true
             values:
             - image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             - image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             amazonAttribute: amazonAttribute
-            pixmaniaAttribute: pixmaniaAttribute
+            pixmaniaAttribute: 9
             typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
             fruugoAttribute: fruugoAttribute
             googleShoppingAttribute: googleShoppingAttribute
@@ -1176,52 +1176,52 @@ components:
           valueId: 3
           attributeValue:
             image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           attribute:
             isLinkableToImage: true
-            neckermannAtEpAttribute: 9
+            neckermannAtEpAttribute: 7
             laRedouteAttribute: 7
             isSurchargePercental: true
             values:
             - image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             - image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             amazonAttribute: amazonAttribute
-            pixmaniaAttribute: pixmaniaAttribute
+            pixmaniaAttribute: 9
             typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
             fruugoAttribute: fruugoAttribute
             googleShoppingAttribute: googleShoppingAttribute
@@ -1681,17 +1681,17 @@ components:
     VariationStock:
       description: variation stock model
       example:
-        reorderLevel: 1.9626702727164813
-        deltaReorderLevel: 5.573385265048522
-        itemId: 4
-        variationId: 2
-        warehouseId: 2
-        physicalStock: 3.196820582978078
-        reservedStock: 5.296102445648278
-        reservedBundles: 6.176386745020588
-        netStock: 3.8156682252305574
-        purchasePrice: 7.390706075830692
-        reservedListing: 1.0502890910539986
+        reorderLevel: 5.573385265048522
+        deltaReorderLevel: 3.0269458094096646
+        itemId: 2
+        variationId: 4
+        warehouseId: 3
+        physicalStock: 5.296102445648278
+        reservedStock: 3.8156682252305574
+        reservedBundles: 2.0981949483881577
+        netStock: 1.9626702727164813
+        purchasePrice: 1.0502890910539986
+        reservedListing: 6.176386745020588
       properties:
         purchasePrice:
           type: number
@@ -1719,20 +1719,20 @@ components:
     VariationItem:
       description: item model superior to the variation
       example:
-        storeSpecial: 6
+        storeSpecial: 0
         customsTariffNumber: customsTariffNumber
-        producingCountryId: 2
-        couponRestriction: 0
+        producingCountryId: 5
+        couponRestriction: 7
         ebayCategory2: ebayCategory2
         free11: free11
         free12: free12
         free13: free13
         amazonFbaPlatform: 9
         free14: free14
-        ownerId: 4
+        ownerId: 0
         free10: free10
         free19: free19
-        feedback: 9
+        feedback: 7
         createdAt: 2000-01-23T04:56:07.000+00:00
         free2: free2
         free15: free15
@@ -1744,36 +1744,36 @@ components:
         free6: free6
         free7: free7
         free4: free4
-        id: 6
+        id: 4
         free5: free5
         isShippingPackage: true
         free8: free8
-        ebayPresetId: 0
+        ebayPresetId: 9
         updatedAt: 2000-01-23T04:56:07.000+00:00
         free9: free9
         ebayCategory: ebayCategory
         add_cms_page: add_cms_page
         free20: free20
-        conditionApi: 0.11859130807119977
-        condition: 0
-        rakutenCategoryId: 6
+        conditionApi: 4.637509675190766
+        condition: 2
+        rakutenCategoryId: 0
         isShippableByAmazon: true
         isSubscribable: true
         isSerialNumber: true
-        mainVariationId: 0
-        position: 4
-        revenueAccount: 5
+        mainVariationId: 7
+        position: 8
+        revenueAccount: 0
         itemType: itemType
-        flagTwo: 6
+        flagTwo: 4
         amazonProductType: 0
         gimahhot: gimahhot
-        maximumOrderQuantity: 7.88722683998926
-        flagOne: 7
-        stockType: 2
-        manufacturerId: 8
+        maximumOrderQuantity: 6.918231485891953
+        flagOne: 6
+        stockType: 6
+        manufacturerId: 2
         ebayStoreCategory: ebayStoreCategory
         amazonFedas: amazonFedas
-        ageRestriction: 4
+        ageRestriction: 0
         ebayStoreCategory2: ebayStoreCategory2
       properties:
         id:
@@ -1894,9 +1894,9 @@ components:
     VariationUnit:
       description: variation unit model
       example:
-        unitId: 4
-        id: 9
-        content: 8
+        unitId: 8
+        id: 4
+        content: 6
       properties:
         id:
           type: integer
@@ -1910,16 +1910,16 @@ components:
       example:
         additionalInformation: additionalInformation
         isActive: true
-        marketId: 8
-        accountId: 2
+        marketId: 2
+        accountId: 9
         createdAt: 2000-01-23T04:56:07.000+00:00
         initialSku: initialSku
         deletedAt: 2000-01-23T04:56:07.000+00:00
-        variationId: 3
+        variationId: 8
         parentSku: parentSku
         stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
         exportedAt: 2000-01-23T04:56:07.000+00:00
-        id: 4
+        id: 3
         sku: sku
         updatedAt: 2000-01-23T04:56:07.000+00:00
         status: status
@@ -1968,52 +1968,52 @@ components:
         valueId: 3
         attributeValue:
           image: image
-          percentageDistribution: 1
+          percentageDistribution: 4
           ottoValue: ottoValue
           laRedouteValue: laRedouteValue
-          attributeId: 7
+          attributeId: 9
           tracdelightValue: tracdelightValue
           amazonValue: amazonValue
           backendName: backendName
           comment: comment
           id: 7
-          position: 9
+          position: 1
           neckermannAtEpValue: neckermannAtEpValue
           updatedAt: 2000-01-23T04:56:07.000+00:00
         attribute:
           isLinkableToImage: true
-          neckermannAtEpAttribute: 9
+          neckermannAtEpAttribute: 7
           laRedouteAttribute: 7
           isSurchargePercental: true
           values:
           - image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           - image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           amazonAttribute: amazonAttribute
-          pixmaniaAttribute: pixmaniaAttribute
+          pixmaniaAttribute: 9
           typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
           fruugoAttribute: fruugoAttribute
           googleShoppingAttribute: googleShoppingAttribute
@@ -2043,16 +2043,16 @@ components:
         model
       example:
         image: image
-        percentageDistribution: 1
+        percentageDistribution: 4
         ottoValue: ottoValue
         laRedouteValue: laRedouteValue
-        attributeId: 7
+        attributeId: 9
         tracdelightValue: tracdelightValue
         amazonValue: amazonValue
         backendName: backendName
         comment: comment
         id: 7
-        position: 9
+        position: 1
         neckermannAtEpValue: neckermannAtEpValue
         updatedAt: 2000-01-23T04:56:07.000+00:00
       properties:
@@ -2091,38 +2091,38 @@ components:
         model
       example:
         isLinkableToImage: true
-        neckermannAtEpAttribute: 9
+        neckermannAtEpAttribute: 7
         laRedouteAttribute: 7
         isSurchargePercental: true
         values:
         - image: image
-          percentageDistribution: 1
+          percentageDistribution: 4
           ottoValue: ottoValue
           laRedouteValue: laRedouteValue
-          attributeId: 7
+          attributeId: 9
           tracdelightValue: tracdelightValue
           amazonValue: amazonValue
           backendName: backendName
           comment: comment
           id: 7
-          position: 9
+          position: 1
           neckermannAtEpValue: neckermannAtEpValue
           updatedAt: 2000-01-23T04:56:07.000+00:00
         - image: image
-          percentageDistribution: 1
+          percentageDistribution: 4
           ottoValue: ottoValue
           laRedouteValue: laRedouteValue
-          attributeId: 7
+          attributeId: 9
           tracdelightValue: tracdelightValue
           amazonValue: amazonValue
           backendName: backendName
           comment: comment
           id: 7
-          position: 9
+          position: 1
           neckermannAtEpValue: neckermannAtEpValue
           updatedAt: 2000-01-23T04:56:07.000+00:00
         amazonAttribute: amazonAttribute
-        pixmaniaAttribute: pixmaniaAttribute
+        pixmaniaAttribute: 9
         typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
         fruugoAttribute: fruugoAttribute
         googleShoppingAttribute: googleShoppingAttribute
@@ -2148,7 +2148,7 @@ components:
         fruugoAttribute:
           type: string
         pixmaniaAttribute:
-          type: string
+          type: integer
         ottoAttribute:
           type: string
         googleShoppingAttribute:
@@ -2960,31 +2960,31 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
@@ -3010,28 +3010,28 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -3116,20 +3116,20 @@ components:
             fileType: fileType
             md5ChecksumOriginal: md5ChecksumOriginal
           item:
-            storeSpecial: 6
+            storeSpecial: 0
             customsTariffNumber: customsTariffNumber
-            producingCountryId: 2
-            couponRestriction: 0
+            producingCountryId: 5
+            couponRestriction: 7
             ebayCategory2: ebayCategory2
             free11: free11
             free12: free12
             free13: free13
             amazonFbaPlatform: 9
             free14: free14
-            ownerId: 4
+            ownerId: 0
             free10: free10
             free19: free19
-            feedback: 9
+            feedback: 7
             createdAt: 2000-01-23T04:56:07.000+00:00
             free2: free2
             free15: free15
@@ -3141,36 +3141,36 @@ components:
             free6: free6
             free7: free7
             free4: free4
-            id: 6
+            id: 4
             free5: free5
             isShippingPackage: true
             free8: free8
-            ebayPresetId: 0
+            ebayPresetId: 9
             updatedAt: 2000-01-23T04:56:07.000+00:00
             free9: free9
             ebayCategory: ebayCategory
             add_cms_page: add_cms_page
             free20: free20
-            conditionApi: 0.11859130807119977
-            condition: 0
-            rakutenCategoryId: 6
+            conditionApi: 4.637509675190766
+            condition: 2
+            rakutenCategoryId: 0
             isShippableByAmazon: true
             isSubscribable: true
             isSerialNumber: true
-            mainVariationId: 0
-            position: 4
-            revenueAccount: 5
+            mainVariationId: 7
+            position: 8
+            revenueAccount: 0
             itemType: itemType
-            flagTwo: 6
+            flagTwo: 4
             amazonProductType: 0
             gimahhot: gimahhot
-            maximumOrderQuantity: 7.88722683998926
-            flagOne: 7
-            stockType: 2
-            manufacturerId: 8
+            maximumOrderQuantity: 6.918231485891953
+            flagOne: 6
+            stockType: 6
+            manufacturerId: 2
             ebayStoreCategory: ebayStoreCategory
             amazonFedas: amazonFedas
-            ageRestriction: 4
+            ageRestriction: 0
             ebayStoreCategory2: ebayStoreCategory2
           extraShippingCharge2: 6.704019297950036
           availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -3184,9 +3184,9 @@ components:
           propertyVariationId: 3
           automaticListVisibility: 7
           unit:
-            unitId: 4
-            id: 9
-            content: 8
+            unitId: 8
+            id: 4
+            content: 6
           operatingCosts: 0.10263654006109402
           variationProperties:
           - surcharge: 3.901545264248647
@@ -3299,52 +3299,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -3360,52 +3360,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -3663,31 +3663,31 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
@@ -3713,28 +3713,28 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -3819,20 +3819,20 @@ components:
             fileType: fileType
             md5ChecksumOriginal: md5ChecksumOriginal
           item:
-            storeSpecial: 6
+            storeSpecial: 0
             customsTariffNumber: customsTariffNumber
-            producingCountryId: 2
-            couponRestriction: 0
+            producingCountryId: 5
+            couponRestriction: 7
             ebayCategory2: ebayCategory2
             free11: free11
             free12: free12
             free13: free13
             amazonFbaPlatform: 9
             free14: free14
-            ownerId: 4
+            ownerId: 0
             free10: free10
             free19: free19
-            feedback: 9
+            feedback: 7
             createdAt: 2000-01-23T04:56:07.000+00:00
             free2: free2
             free15: free15
@@ -3844,36 +3844,36 @@ components:
             free6: free6
             free7: free7
             free4: free4
-            id: 6
+            id: 4
             free5: free5
             isShippingPackage: true
             free8: free8
-            ebayPresetId: 0
+            ebayPresetId: 9
             updatedAt: 2000-01-23T04:56:07.000+00:00
             free9: free9
             ebayCategory: ebayCategory
             add_cms_page: add_cms_page
             free20: free20
-            conditionApi: 0.11859130807119977
-            condition: 0
-            rakutenCategoryId: 6
+            conditionApi: 4.637509675190766
+            condition: 2
+            rakutenCategoryId: 0
             isShippableByAmazon: true
             isSubscribable: true
             isSerialNumber: true
-            mainVariationId: 0
-            position: 4
-            revenueAccount: 5
+            mainVariationId: 7
+            position: 8
+            revenueAccount: 0
             itemType: itemType
-            flagTwo: 6
+            flagTwo: 4
             amazonProductType: 0
             gimahhot: gimahhot
-            maximumOrderQuantity: 7.88722683998926
-            flagOne: 7
-            stockType: 2
-            manufacturerId: 8
+            maximumOrderQuantity: 6.918231485891953
+            flagOne: 6
+            stockType: 6
+            manufacturerId: 2
             ebayStoreCategory: ebayStoreCategory
             amazonFedas: amazonFedas
-            ageRestriction: 4
+            ageRestriction: 0
             ebayStoreCategory2: ebayStoreCategory2
           extraShippingCharge2: 6.704019297950036
           availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -3887,9 +3887,9 @@ components:
           propertyVariationId: 3
           automaticListVisibility: 7
           unit:
-            unitId: 4
-            id: 9
-            content: 8
+            unitId: 8
+            id: 4
+            content: 6
           operatingCosts: 0.10263654006109402
           variationProperties:
           - surcharge: 3.901545264248647
@@ -4002,52 +4002,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -4063,52 +4063,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -4735,31 +4735,31 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
@@ -4785,28 +4785,28 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -4891,20 +4891,20 @@ components:
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
             item:
-              storeSpecial: 6
+              storeSpecial: 0
               customsTariffNumber: customsTariffNumber
-              producingCountryId: 2
-              couponRestriction: 0
+              producingCountryId: 5
+              couponRestriction: 7
               ebayCategory2: ebayCategory2
               free11: free11
               free12: free12
               free13: free13
               amazonFbaPlatform: 9
               free14: free14
-              ownerId: 4
+              ownerId: 0
               free10: free10
               free19: free19
-              feedback: 9
+              feedback: 7
               createdAt: 2000-01-23T04:56:07.000+00:00
               free2: free2
               free15: free15
@@ -4916,36 +4916,36 @@ components:
               free6: free6
               free7: free7
               free4: free4
-              id: 6
+              id: 4
               free5: free5
               isShippingPackage: true
               free8: free8
-              ebayPresetId: 0
+              ebayPresetId: 9
               updatedAt: 2000-01-23T04:56:07.000+00:00
               free9: free9
               ebayCategory: ebayCategory
               add_cms_page: add_cms_page
               free20: free20
-              conditionApi: 0.11859130807119977
-              condition: 0
-              rakutenCategoryId: 6
+              conditionApi: 4.637509675190766
+              condition: 2
+              rakutenCategoryId: 0
               isShippableByAmazon: true
               isSubscribable: true
               isSerialNumber: true
-              mainVariationId: 0
-              position: 4
-              revenueAccount: 5
+              mainVariationId: 7
+              position: 8
+              revenueAccount: 0
               itemType: itemType
-              flagTwo: 6
+              flagTwo: 4
               amazonProductType: 0
               gimahhot: gimahhot
-              maximumOrderQuantity: 7.88722683998926
-              flagOne: 7
-              stockType: 2
-              manufacturerId: 8
+              maximumOrderQuantity: 6.918231485891953
+              flagOne: 6
+              stockType: 6
+              manufacturerId: 2
               ebayStoreCategory: ebayStoreCategory
               amazonFedas: amazonFedas
-              ageRestriction: 4
+              ageRestriction: 0
               ebayStoreCategory2: ebayStoreCategory2
             extraShippingCharge2: 6.704019297950036
             availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -4959,9 +4959,9 @@ components:
             propertyVariationId: 3
             automaticListVisibility: 7
             unit:
-              unitId: 4
-              id: 9
-              content: 8
+              unitId: 8
+              id: 4
+              content: 6
             operatingCosts: 0.10263654006109402
             variationProperties:
             - surcharge: 3.901545264248647
@@ -5074,52 +5074,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -5135,52 +5135,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -5438,31 +5438,31 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
@@ -5488,28 +5488,28 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -5594,20 +5594,20 @@ components:
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
             item:
-              storeSpecial: 6
+              storeSpecial: 0
               customsTariffNumber: customsTariffNumber
-              producingCountryId: 2
-              couponRestriction: 0
+              producingCountryId: 5
+              couponRestriction: 7
               ebayCategory2: ebayCategory2
               free11: free11
               free12: free12
               free13: free13
               amazonFbaPlatform: 9
               free14: free14
-              ownerId: 4
+              ownerId: 0
               free10: free10
               free19: free19
-              feedback: 9
+              feedback: 7
               createdAt: 2000-01-23T04:56:07.000+00:00
               free2: free2
               free15: free15
@@ -5619,36 +5619,36 @@ components:
               free6: free6
               free7: free7
               free4: free4
-              id: 6
+              id: 4
               free5: free5
               isShippingPackage: true
               free8: free8
-              ebayPresetId: 0
+              ebayPresetId: 9
               updatedAt: 2000-01-23T04:56:07.000+00:00
               free9: free9
               ebayCategory: ebayCategory
               add_cms_page: add_cms_page
               free20: free20
-              conditionApi: 0.11859130807119977
-              condition: 0
-              rakutenCategoryId: 6
+              conditionApi: 4.637509675190766
+              condition: 2
+              rakutenCategoryId: 0
               isShippableByAmazon: true
               isSubscribable: true
               isSerialNumber: true
-              mainVariationId: 0
-              position: 4
-              revenueAccount: 5
+              mainVariationId: 7
+              position: 8
+              revenueAccount: 0
               itemType: itemType
-              flagTwo: 6
+              flagTwo: 4
               amazonProductType: 0
               gimahhot: gimahhot
-              maximumOrderQuantity: 7.88722683998926
-              flagOne: 7
-              stockType: 2
-              manufacturerId: 8
+              maximumOrderQuantity: 6.918231485891953
+              flagOne: 6
+              stockType: 6
+              manufacturerId: 2
               ebayStoreCategory: ebayStoreCategory
               amazonFedas: amazonFedas
-              ageRestriction: 4
+              ageRestriction: 0
               ebayStoreCategory2: ebayStoreCategory2
             extraShippingCharge2: 6.704019297950036
             availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -5662,9 +5662,9 @@ components:
             propertyVariationId: 3
             automaticListVisibility: 7
             unit:
-              unitId: 4
-              id: 9
-              content: 8
+              unitId: 8
+              id: 4
+              content: 6
             operatingCosts: 0.10263654006109402
             variationProperties:
             - surcharge: 3.901545264248647
@@ -5777,52 +5777,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -5838,52 +5838,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -6204,31 +6204,31 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
@@ -6254,28 +6254,28 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -6360,20 +6360,20 @@ components:
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
             item:
-              storeSpecial: 6
+              storeSpecial: 0
               customsTariffNumber: customsTariffNumber
-              producingCountryId: 2
-              couponRestriction: 0
+              producingCountryId: 5
+              couponRestriction: 7
               ebayCategory2: ebayCategory2
               free11: free11
               free12: free12
               free13: free13
               amazonFbaPlatform: 9
               free14: free14
-              ownerId: 4
+              ownerId: 0
               free10: free10
               free19: free19
-              feedback: 9
+              feedback: 7
               createdAt: 2000-01-23T04:56:07.000+00:00
               free2: free2
               free15: free15
@@ -6385,36 +6385,36 @@ components:
               free6: free6
               free7: free7
               free4: free4
-              id: 6
+              id: 4
               free5: free5
               isShippingPackage: true
               free8: free8
-              ebayPresetId: 0
+              ebayPresetId: 9
               updatedAt: 2000-01-23T04:56:07.000+00:00
               free9: free9
               ebayCategory: ebayCategory
               add_cms_page: add_cms_page
               free20: free20
-              conditionApi: 0.11859130807119977
-              condition: 0
-              rakutenCategoryId: 6
+              conditionApi: 4.637509675190766
+              condition: 2
+              rakutenCategoryId: 0
               isShippableByAmazon: true
               isSubscribable: true
               isSerialNumber: true
-              mainVariationId: 0
-              position: 4
-              revenueAccount: 5
+              mainVariationId: 7
+              position: 8
+              revenueAccount: 0
               itemType: itemType
-              flagTwo: 6
+              flagTwo: 4
               amazonProductType: 0
               gimahhot: gimahhot
-              maximumOrderQuantity: 7.88722683998926
-              flagOne: 7
-              stockType: 2
-              manufacturerId: 8
+              maximumOrderQuantity: 6.918231485891953
+              flagOne: 6
+              stockType: 6
+              manufacturerId: 2
               ebayStoreCategory: ebayStoreCategory
               amazonFedas: amazonFedas
-              ageRestriction: 4
+              ageRestriction: 0
               ebayStoreCategory2: ebayStoreCategory2
             extraShippingCharge2: 6.704019297950036
             availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -6428,9 +6428,9 @@ components:
             propertyVariationId: 3
             automaticListVisibility: 7
             unit:
-              unitId: 4
-              id: 9
-              content: 8
+              unitId: 8
+              id: 4
+              content: 6
             operatingCosts: 0.10263654006109402
             variationProperties:
             - surcharge: 3.901545264248647
@@ -6543,52 +6543,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -6604,52 +6604,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -6907,31 +6907,31 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
-              accountId: 2
+              marketId: 2
+              accountId: 9
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
               deletedAt: 2000-01-23T04:56:07.000+00:00
-              variationId: 3
+              variationId: 8
               parentSku: parentSku
               stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
               exportedAt: 2000-01-23T04:56:07.000+00:00
-              id: 4
+              id: 3
               sku: sku
               updatedAt: 2000-01-23T04:56:07.000+00:00
               status: status
@@ -6957,28 +6957,28 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
-              variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -7063,20 +7063,20 @@ components:
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
             item:
-              storeSpecial: 6
+              storeSpecial: 0
               customsTariffNumber: customsTariffNumber
-              producingCountryId: 2
-              couponRestriction: 0
+              producingCountryId: 5
+              couponRestriction: 7
               ebayCategory2: ebayCategory2
               free11: free11
               free12: free12
               free13: free13
               amazonFbaPlatform: 9
               free14: free14
-              ownerId: 4
+              ownerId: 0
               free10: free10
               free19: free19
-              feedback: 9
+              feedback: 7
               createdAt: 2000-01-23T04:56:07.000+00:00
               free2: free2
               free15: free15
@@ -7088,36 +7088,36 @@ components:
               free6: free6
               free7: free7
               free4: free4
-              id: 6
+              id: 4
               free5: free5
               isShippingPackage: true
               free8: free8
-              ebayPresetId: 0
+              ebayPresetId: 9
               updatedAt: 2000-01-23T04:56:07.000+00:00
               free9: free9
               ebayCategory: ebayCategory
               add_cms_page: add_cms_page
               free20: free20
-              conditionApi: 0.11859130807119977
-              condition: 0
-              rakutenCategoryId: 6
+              conditionApi: 4.637509675190766
+              condition: 2
+              rakutenCategoryId: 0
               isShippableByAmazon: true
               isSubscribable: true
               isSerialNumber: true
-              mainVariationId: 0
-              position: 4
-              revenueAccount: 5
+              mainVariationId: 7
+              position: 8
+              revenueAccount: 0
               itemType: itemType
-              flagTwo: 6
+              flagTwo: 4
               amazonProductType: 0
               gimahhot: gimahhot
-              maximumOrderQuantity: 7.88722683998926
-              flagOne: 7
-              stockType: 2
-              manufacturerId: 8
+              maximumOrderQuantity: 6.918231485891953
+              flagOne: 6
+              stockType: 6
+              manufacturerId: 2
               ebayStoreCategory: ebayStoreCategory
               amazonFedas: amazonFedas
-              ageRestriction: 4
+              ageRestriction: 0
               ebayStoreCategory2: ebayStoreCategory2
             extraShippingCharge2: 6.704019297950036
             availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -7131,9 +7131,9 @@ components:
             propertyVariationId: 3
             automaticListVisibility: 7
             unit:
-              unitId: 4
-              id: 9
-              content: 8
+              unitId: 8
+              id: 4
+              content: 6
             operatingCosts: 0.10263654006109402
             variationProperties:
             - surcharge: 3.901545264248647
@@ -7246,52 +7246,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -7307,52 +7307,52 @@ components:
               valueId: 3
               attributeValue:
                 image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               attribute:
                 isLinkableToImage: true
-                neckermannAtEpAttribute: 9
+                neckermannAtEpAttribute: 7
                 laRedouteAttribute: 7
                 isSurchargePercental: true
                 values:
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 - image: image
-                  percentageDistribution: 1
+                  percentageDistribution: 4
                   ottoValue: ottoValue
                   laRedouteValue: laRedouteValue
-                  attributeId: 7
+                  attributeId: 9
                   tracdelightValue: tracdelightValue
                   amazonValue: amazonValue
                   backendName: backendName
                   comment: comment
                   id: 7
-                  position: 9
+                  position: 1
                   neckermannAtEpValue: neckermannAtEpValue
                   updatedAt: 2000-01-23T04:56:07.000+00:00
                 amazonAttribute: amazonAttribute
-                pixmaniaAttribute: pixmaniaAttribute
+                pixmaniaAttribute: 9
                 typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
                 fruugoAttribute: fruugoAttribute
                 googleShoppingAttribute: googleShoppingAttribute
@@ -7667,31 +7667,31 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
@@ -7717,28 +7717,28 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -7823,20 +7823,20 @@ components:
             fileType: fileType
             md5ChecksumOriginal: md5ChecksumOriginal
           item:
-            storeSpecial: 6
+            storeSpecial: 0
             customsTariffNumber: customsTariffNumber
-            producingCountryId: 2
-            couponRestriction: 0
+            producingCountryId: 5
+            couponRestriction: 7
             ebayCategory2: ebayCategory2
             free11: free11
             free12: free12
             free13: free13
             amazonFbaPlatform: 9
             free14: free14
-            ownerId: 4
+            ownerId: 0
             free10: free10
             free19: free19
-            feedback: 9
+            feedback: 7
             createdAt: 2000-01-23T04:56:07.000+00:00
             free2: free2
             free15: free15
@@ -7848,36 +7848,36 @@ components:
             free6: free6
             free7: free7
             free4: free4
-            id: 6
+            id: 4
             free5: free5
             isShippingPackage: true
             free8: free8
-            ebayPresetId: 0
+            ebayPresetId: 9
             updatedAt: 2000-01-23T04:56:07.000+00:00
             free9: free9
             ebayCategory: ebayCategory
             add_cms_page: add_cms_page
             free20: free20
-            conditionApi: 0.11859130807119977
-            condition: 0
-            rakutenCategoryId: 6
+            conditionApi: 4.637509675190766
+            condition: 2
+            rakutenCategoryId: 0
             isShippableByAmazon: true
             isSubscribable: true
             isSerialNumber: true
-            mainVariationId: 0
-            position: 4
-            revenueAccount: 5
+            mainVariationId: 7
+            position: 8
+            revenueAccount: 0
             itemType: itemType
-            flagTwo: 6
+            flagTwo: 4
             amazonProductType: 0
             gimahhot: gimahhot
-            maximumOrderQuantity: 7.88722683998926
-            flagOne: 7
-            stockType: 2
-            manufacturerId: 8
+            maximumOrderQuantity: 6.918231485891953
+            flagOne: 6
+            stockType: 6
+            manufacturerId: 2
             ebayStoreCategory: ebayStoreCategory
             amazonFedas: amazonFedas
-            ageRestriction: 4
+            ageRestriction: 0
             ebayStoreCategory2: ebayStoreCategory2
           extraShippingCharge2: 6.704019297950036
           availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -7891,9 +7891,9 @@ components:
           propertyVariationId: 3
           automaticListVisibility: 7
           unit:
-            unitId: 4
-            id: 9
-            content: 8
+            unitId: 8
+            id: 4
+            content: 6
           operatingCosts: 0.10263654006109402
           variationProperties:
           - surcharge: 3.901545264248647
@@ -8006,52 +8006,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -8067,52 +8067,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -8370,31 +8370,31 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
-            accountId: 2
+            marketId: 2
+            accountId: 9
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
             deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
+            variationId: 8
             parentSku: parentSku
             stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
             exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
+            id: 3
             sku: sku
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
@@ -8420,28 +8420,28 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
-            variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
+          - reorderLevel: 5.573385265048522
+            deltaReorderLevel: 3.0269458094096646
+            itemId: 2
+            variationId: 4
+            warehouseId: 3
+            physicalStock: 5.296102445648278
+            reservedStock: 3.8156682252305574
+            reservedBundles: 2.0981949483881577
+            netStock: 1.9626702727164813
+            purchasePrice: 1.0502890910539986
+            reservedListing: 6.176386745020588
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -8526,20 +8526,20 @@ components:
             fileType: fileType
             md5ChecksumOriginal: md5ChecksumOriginal
           item:
-            storeSpecial: 6
+            storeSpecial: 0
             customsTariffNumber: customsTariffNumber
-            producingCountryId: 2
-            couponRestriction: 0
+            producingCountryId: 5
+            couponRestriction: 7
             ebayCategory2: ebayCategory2
             free11: free11
             free12: free12
             free13: free13
             amazonFbaPlatform: 9
             free14: free14
-            ownerId: 4
+            ownerId: 0
             free10: free10
             free19: free19
-            feedback: 9
+            feedback: 7
             createdAt: 2000-01-23T04:56:07.000+00:00
             free2: free2
             free15: free15
@@ -8551,36 +8551,36 @@ components:
             free6: free6
             free7: free7
             free4: free4
-            id: 6
+            id: 4
             free5: free5
             isShippingPackage: true
             free8: free8
-            ebayPresetId: 0
+            ebayPresetId: 9
             updatedAt: 2000-01-23T04:56:07.000+00:00
             free9: free9
             ebayCategory: ebayCategory
             add_cms_page: add_cms_page
             free20: free20
-            conditionApi: 0.11859130807119977
-            condition: 0
-            rakutenCategoryId: 6
+            conditionApi: 4.637509675190766
+            condition: 2
+            rakutenCategoryId: 0
             isShippableByAmazon: true
             isSubscribable: true
             isSerialNumber: true
-            mainVariationId: 0
-            position: 4
-            revenueAccount: 5
+            mainVariationId: 7
+            position: 8
+            revenueAccount: 0
             itemType: itemType
-            flagTwo: 6
+            flagTwo: 4
             amazonProductType: 0
             gimahhot: gimahhot
-            maximumOrderQuantity: 7.88722683998926
-            flagOne: 7
-            stockType: 2
-            manufacturerId: 8
+            maximumOrderQuantity: 6.918231485891953
+            flagOne: 6
+            stockType: 6
+            manufacturerId: 2
             ebayStoreCategory: ebayStoreCategory
             amazonFedas: amazonFedas
-            ageRestriction: 4
+            ageRestriction: 0
             ebayStoreCategory2: ebayStoreCategory2
           extraShippingCharge2: 6.704019297950036
           availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
@@ -8594,9 +8594,9 @@ components:
           propertyVariationId: 3
           automaticListVisibility: 7
           unit:
-            unitId: 4
-            id: 9
-            content: 8
+            unitId: 8
+            id: 4
+            content: 6
           operatingCosts: 0.10263654006109402
           variationProperties:
           - surcharge: 3.901545264248647
@@ -8709,52 +8709,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -8770,52 +8770,52 @@ components:
             valueId: 3
             attributeValue:
               image: image
-              percentageDistribution: 1
+              percentageDistribution: 4
               ottoValue: ottoValue
               laRedouteValue: laRedouteValue
-              attributeId: 7
+              attributeId: 9
               tracdelightValue: tracdelightValue
               amazonValue: amazonValue
               backendName: backendName
               comment: comment
               id: 7
-              position: 9
+              position: 1
               neckermannAtEpValue: neckermannAtEpValue
               updatedAt: 2000-01-23T04:56:07.000+00:00
             attribute:
               isLinkableToImage: true
-              neckermannAtEpAttribute: 9
+              neckermannAtEpAttribute: 7
               laRedouteAttribute: 7
               isSurchargePercental: true
               values:
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               - image: image
-                percentageDistribution: 1
+                percentageDistribution: 4
                 ottoValue: ottoValue
                 laRedouteValue: laRedouteValue
-                attributeId: 7
+                attributeId: 9
                 tracdelightValue: tracdelightValue
                 amazonValue: amazonValue
                 backendName: backendName
                 comment: comment
                 id: 7
-                position: 9
+                position: 1
                 neckermannAtEpValue: neckermannAtEpValue
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               amazonAttribute: amazonAttribute
-              pixmaniaAttribute: pixmaniaAttribute
+              pixmaniaAttribute: 9
               typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
               fruugoAttribute: fruugoAttribute
               googleShoppingAttribute: googleShoppingAttribute
@@ -9237,38 +9237,38 @@ components:
         lastOnPage: 5
         entries:
         - isLinkableToImage: true
-          neckermannAtEpAttribute: 9
+          neckermannAtEpAttribute: 7
           laRedouteAttribute: 7
           isSurchargePercental: true
           values:
           - image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           - image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           amazonAttribute: amazonAttribute
-          pixmaniaAttribute: pixmaniaAttribute
+          pixmaniaAttribute: 9
           typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
           fruugoAttribute: fruugoAttribute
           googleShoppingAttribute: googleShoppingAttribute
@@ -9279,38 +9279,38 @@ components:
           ottoAttribute: ottoAttribute
           updatedAt: 2000-01-23T04:56:07.000+00:00
         - isLinkableToImage: true
-          neckermannAtEpAttribute: 9
+          neckermannAtEpAttribute: 7
           laRedouteAttribute: 7
           isSurchargePercental: true
           values:
           - image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           - image: image
-            percentageDistribution: 1
+            percentageDistribution: 4
             ottoValue: ottoValue
             laRedouteValue: laRedouteValue
-            attributeId: 7
+            attributeId: 9
             tracdelightValue: tracdelightValue
             amazonValue: amazonValue
             backendName: backendName
             comment: comment
             id: 7
-            position: 9
+            position: 1
             neckermannAtEpValue: neckermannAtEpValue
             updatedAt: 2000-01-23T04:56:07.000+00:00
           amazonAttribute: amazonAttribute
-          pixmaniaAttribute: pixmaniaAttribute
+          pixmaniaAttribute: 9
           typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
           fruugoAttribute: fruugoAttribute
           googleShoppingAttribute: googleShoppingAttribute
@@ -9352,29 +9352,29 @@ components:
         lastOnPage: 5
         entries:
         - image: image
-          percentageDistribution: 1
+          percentageDistribution: 4
           ottoValue: ottoValue
           laRedouteValue: laRedouteValue
-          attributeId: 7
+          attributeId: 9
           tracdelightValue: tracdelightValue
           amazonValue: amazonValue
           backendName: backendName
           comment: comment
           id: 7
-          position: 9
+          position: 1
           neckermannAtEpValue: neckermannAtEpValue
           updatedAt: 2000-01-23T04:56:07.000+00:00
         - image: image
-          percentageDistribution: 1
+          percentageDistribution: 4
           ottoValue: ottoValue
           laRedouteValue: laRedouteValue
-          attributeId: 7
+          attributeId: 9
           tracdelightValue: tracdelightValue
           amazonValue: amazonValue
           backendName: backendName
           comment: comment
           id: 7
-          position: 9
+          position: 1
           neckermannAtEpValue: neckermannAtEpValue
           updatedAt: 2000-01-23T04:56:07.000+00:00
         itemsPerPage: 2

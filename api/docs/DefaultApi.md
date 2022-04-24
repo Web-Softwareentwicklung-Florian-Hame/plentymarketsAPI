@@ -154,7 +154,7 @@ No authorization required
 
 ## RestItemsAttributeValuesValueIdNamesPost
 
-> AttributeValueName RestItemsAttributeValuesValueIdNamesPost(ctx, valueId).AttributeValueName(attributeValueName).Execute()
+> AttributeName RestItemsAttributeValuesValueIdNamesPost(ctx, valueId).AttributeName(attributeName).Execute()
 
 creating attribute values names
 
@@ -174,16 +174,16 @@ import (
 
 func main() {
     valueId := int32(56) // int32 | 
-    attributeValueName := *openapiclient.NewAttributeValueName() // AttributeValueName |  (optional)
+    attributeName := *openapiclient.NewAttributeName() // AttributeName |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.RestItemsAttributeValuesValueIdNamesPost(context.Background(), valueId).AttributeValueName(attributeValueName).Execute()
+    resp, r, err := api_client.DefaultApi.RestItemsAttributeValuesValueIdNamesPost(context.Background(), valueId).AttributeName(attributeName).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsAttributeValuesValueIdNamesPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RestItemsAttributeValuesValueIdNamesPost`: AttributeValueName
+    // response from `RestItemsAttributeValuesValueIdNamesPost`: AttributeName
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsAttributeValuesValueIdNamesPost`: %v\n", resp)
 }
 ```
@@ -204,11 +204,11 @@ Other parameters are passed through a pointer to a apiRestItemsAttributeValuesVa
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **attributeValueName** | [**AttributeValueName**](AttributeValueName.md) |  | 
+ **attributeName** | [**AttributeName**](AttributeName.md) |  | 
 
 ### Return type
 
-[**AttributeValueName**](AttributeValueName.md)
+[**AttributeName**](AttributeName.md)
 
 ### Authorization
 

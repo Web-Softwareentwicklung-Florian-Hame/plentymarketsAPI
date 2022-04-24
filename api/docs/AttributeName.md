@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Lang** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
-**AttributeId** | Pointer to **int32** |  | [optional] 
 
 ## Methods
 
@@ -76,31 +75,6 @@ SetName sets Name field to given value.
 `func (o *AttributeName) HasName() bool`
 
 HasName returns a boolean if a field has been set.
-
-### GetAttributeId
-
-`func (o *AttributeName) GetAttributeId() int32`
-
-GetAttributeId returns the AttributeId field if non-nil, zero value otherwise.
-
-### GetAttributeIdOk
-
-`func (o *AttributeName) GetAttributeIdOk() (*int32, bool)`
-
-GetAttributeIdOk returns a tuple with the AttributeId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAttributeId
-
-`func (o *AttributeName) SetAttributeId(v int32)`
-
-SetAttributeId sets AttributeId field to given value.
-
-### HasAttributeId
-
-`func (o *AttributeName) HasAttributeId() bool`
-
-HasAttributeId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

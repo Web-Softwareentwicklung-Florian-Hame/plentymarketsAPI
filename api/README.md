@@ -99,7 +99,6 @@ Class | Method | HTTP request | Description
  - [AttributeName](docs/AttributeName.md)
  - [AttributePagination](docs/AttributePagination.md)
  - [AttributeValue](docs/AttributeValue.md)
- - [AttributeValueName](docs/AttributeValueName.md)
  - [AttributeValuePagination](docs/AttributeValuePagination.md)
  - [Category](docs/Category.md)
  - [CategoryDetails](docs/CategoryDetails.md)

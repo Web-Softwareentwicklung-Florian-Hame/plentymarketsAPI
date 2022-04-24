@@ -252,15 +252,15 @@ type ApiRestItemsAttributeValuesValueIdNamesPostRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
 	valueId int32
-	attributeValueName *AttributeValueName
+	attributeName *AttributeName
 }
 
-func (r ApiRestItemsAttributeValuesValueIdNamesPostRequest) AttributeValueName(attributeValueName AttributeValueName) ApiRestItemsAttributeValuesValueIdNamesPostRequest {
-	r.attributeValueName = &attributeValueName
+func (r ApiRestItemsAttributeValuesValueIdNamesPostRequest) AttributeName(attributeName AttributeName) ApiRestItemsAttributeValuesValueIdNamesPostRequest {
+	r.attributeName = &attributeName
 	return r
 }
 
-func (r ApiRestItemsAttributeValuesValueIdNamesPostRequest) Execute() (AttributeValueName, *_nethttp.Response, error) {
+func (r ApiRestItemsAttributeValuesValueIdNamesPostRequest) Execute() (AttributeName, *_nethttp.Response, error) {
 	return r.ApiService.RestItemsAttributeValuesValueIdNamesPostExecute(r)
 }
 
@@ -282,15 +282,15 @@ func (a *DefaultApiService) RestItemsAttributeValuesValueIdNamesPost(ctx _contex
 }
 
 // Execute executes the request
-//  @return AttributeValueName
-func (a *DefaultApiService) RestItemsAttributeValuesValueIdNamesPostExecute(r ApiRestItemsAttributeValuesValueIdNamesPostRequest) (AttributeValueName, *_nethttp.Response, error) {
+//  @return AttributeName
+func (a *DefaultApiService) RestItemsAttributeValuesValueIdNamesPostExecute(r ApiRestItemsAttributeValuesValueIdNamesPostRequest) (AttributeName, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  AttributeValueName
+		localVarReturnValue  AttributeName
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestItemsAttributeValuesValueIdNamesPost")
@@ -323,7 +323,7 @@ func (a *DefaultApiService) RestItemsAttributeValuesValueIdNamesPostExecute(r Ap
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.attributeValueName
+	localVarPostBody = r.attributeName
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

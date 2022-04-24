@@ -533,14 +533,14 @@ paths:
         content:
           application/json;charset=utf-8:
             schema:
-              $ref: "#/components/schemas/AttributeValueName"
+              $ref: "#/components/schemas/AttributeName"
       responses:
         200:
           description: successful created attribute value name
           content:
             application/json;charset=utf-8:
               schema:
-                $ref: "#/components/schemas/AttributeValueName"
+                $ref: "#/components/schemas/AttributeName"
 
 components:
   schemas:
@@ -1771,17 +1771,6 @@ components:
           type: string
         name:
           type: string
-        attributeId:
-          type: integer
-    AttributeValueName:
-      type: object
-      properties:
-        lang:
-          type: string
-        name:
-          type: string
-        valueId:
-          type: integer
 
     # paginations
     ItemPagination:

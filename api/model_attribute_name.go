@@ -18,7 +18,6 @@ import (
 type AttributeName struct {
 	Lang *string `json:"lang,omitempty"`
 	Name *string `json:"name,omitempty"`
-	AttributeId *int32 `json:"attributeId,omitempty"`
 }
 
 // NewAttributeName instantiates a new AttributeName object
@@ -102,38 +101,6 @@ func (o *AttributeName) SetName(v string) {
 	o.Name = &v
 }
 
-// GetAttributeId returns the AttributeId field value if set, zero value otherwise.
-func (o *AttributeName) GetAttributeId() int32 {
-	if o == nil || o.AttributeId == nil {
-		var ret int32
-		return ret
-	}
-	return *o.AttributeId
-}
-
-// GetAttributeIdOk returns a tuple with the AttributeId field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *AttributeName) GetAttributeIdOk() (*int32, bool) {
-	if o == nil || o.AttributeId == nil {
-		return nil, false
-	}
-	return o.AttributeId, true
-}
-
-// HasAttributeId returns a boolean if a field has been set.
-func (o *AttributeName) HasAttributeId() bool {
-	if o != nil && o.AttributeId != nil {
-		return true
-	}
-
-	return false
-}
-
-// SetAttributeId gets a reference to the given int32 and assigns it to the AttributeId field.
-func (o *AttributeName) SetAttributeId(v int32) {
-	o.AttributeId = &v
-}
-
 func (o AttributeName) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Lang != nil {
@@ -141,9 +108,6 @@ func (o AttributeName) MarshalJSON() ([]byte, error) {
 	}
 	if o.Name != nil {
 		toSerialize["name"] = o.Name
-	}
-	if o.AttributeId != nil {
-		toSerialize["attributeId"] = o.AttributeId
 	}
 	return json.Marshal(toSerialize)
 }

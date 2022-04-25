@@ -1297,11 +1297,17 @@ func (a *DefaultApiService) RestItemsItemIdVariationsPostExecute(r ApiRestItemsI
 type ApiRestItemsManufacturersGetRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
+	page *int32
 	with *[]string
 	updatedAt *string
 	name *string
 }
 
+// Limits the results to a specific page.
+func (r ApiRestItemsManufacturersGetRequest) Page(page int32) ApiRestItemsManufacturersGetRequest {
+	r.page = &page
+	return r
+}
 func (r ApiRestItemsManufacturersGetRequest) With(with []string) ApiRestItemsManufacturersGetRequest {
 	r.with = &with
 	return r
@@ -1359,6 +1365,9 @@ func (a *DefaultApiService) RestItemsManufacturersGetExecute(r ApiRestItemsManuf
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
 
+	if r.page != nil {
+		localVarQueryParams.Add("page", parameterToString(*r.page, ""))
+	}
 	if r.with != nil {
 		localVarQueryParams.Add("with", parameterToString(*r.with, "csv"))
 	}

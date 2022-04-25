@@ -742,7 +742,7 @@ No authorization required
 
 ## RestItemsManufacturersGet
 
-> ManufacturersPagination RestItemsManufacturersGet(ctx).With(with).UpdatedAt(updatedAt).Name(name).Execute()
+> ManufacturersPagination RestItemsManufacturersGet(ctx).Page(page).With(with).UpdatedAt(updatedAt).Name(name).Execute()
 
 list manufacturers
 
@@ -761,13 +761,14 @@ import (
 )
 
 func main() {
+    page := int32(56) // int32 | Limits the results to a specific page. (optional)
     with := []string{"With_example"} // []string |  (optional)
     updatedAt := "updatedAt_example" // string | Filter restricts the list of results to records updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
     name := "name_example" // string | Filter restricts the list of results to records with specified name. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.RestItemsManufacturersGet(context.Background()).With(with).UpdatedAt(updatedAt).Name(name).Execute()
+    resp, r, err := api_client.DefaultApi.RestItemsManufacturersGet(context.Background()).Page(page).With(with).UpdatedAt(updatedAt).Name(name).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsManufacturersGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -788,6 +789,7 @@ Other parameters are passed through a pointer to a apiRestItemsManufacturersGetR
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **page** | **int32** | Limits the results to a specific page. | 
  **with** | **[]string** |  | 
  **updatedAt** | **string** | Filter restricts the list of results to records updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. | 
  **name** | **string** | Filter restricts the list of results to records with specified name. | 

@@ -547,6 +547,11 @@ paths:
       description: "list manufacturers"
       parameters:
         - in: query
+          name: page
+          description: Limits the results to a specific page.
+          schema:
+            type: integer
+        - in: query
           name: with
           explode: false
           schema:

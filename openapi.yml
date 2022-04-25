@@ -1520,6 +1520,8 @@ components:
         - propertyId
         - variations
       properties:
+        producingCountryId:
+          type: integer
         position:
           type: integer
         stockType:

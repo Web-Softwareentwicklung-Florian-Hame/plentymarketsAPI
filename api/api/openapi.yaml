@@ -2946,42 +2946,43 @@ components:
     Item:
       description: item type
       example:
-        storeSpecial: 3
+        storeSpecial: 2
+        producingCountryId: 7
         customsTariffNumber: customsTariffNumber
         itemType: itemType
         itemShippingProfiles:
-        - itemId: 1
-          profileId: 2
-          id: 6
-        - itemId: 1
-          profileId: 2
-          id: 6
-        propertySelectionId: 6
+        - itemId: 2
+          profileId: 6
+          id: 1
+        - itemId: 2
+          profileId: 6
+          id: 1
+        propertySelectionId: 0
         couponRestriction: 1
-        ebayCategory2: 5
-        amazonFbaPlatform: 6
+        ebayCategory2: 9
+        amazonFbaPlatform: 7
         itemProperties:
-        - surcharge: 0.8851374739011653
-          itemId: 5
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
-        - surcharge: 0.8851374739011653
-          itemId: 5
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
-        ownerId: 2
-        flagTwo: 6
-        feedback: 9
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
+        ownerId: 4
+        flagTwo: 8
+        feedback: 6
         createdAt: 2000-01-23T04:56:07.000+00:00
-        amazonProductType: 7
+        amazonProductType: 1
         variations:
         - intervalOrderQuantity: 6.438423552598547
           customsTariffNumber: customsTariffNumber
@@ -4389,16 +4390,16 @@ components:
               propertyId: 0
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
-        flagOne: 9
-        id: 0
+        flagOne: 6
+        id: 4
         isShippingPackage: true
-        propertyId: 7
-        ebayPresetId: 1
+        propertyId: 6
+        ebayPresetId: 4
         updatedAt: 2000-01-23T04:56:07.000+00:00
-        ebayCategory: 4
-        stockType: 9
-        manufacturerId: 4
-        conditionApi: 1
+        ebayCategory: 5
+        stockType: 3
+        manufacturerId: 7
+        conditionApi: 6
         amazonFedas: amazonFedas
         condition: 1
         rakutenCategoryId: 9
@@ -4424,19 +4425,21 @@ components:
           metaDescription: metaDescription
           urlPath: urlPath
         ebayTitles:
-        - itemId: 6
-          id: 3
+        - itemId: 3
+          id: 6
           title: title
-        - itemId: 6
-          id: 3
+        - itemId: 3
+          id: 6
           title: title
         isShippableByAmazon: true
         profileId: 6
         isSubscribable: true
-        ageRestriction: 8
-        position: 7
-        revenueAccount: 7
+        ageRestriction: 9
+        position: 9
+        revenueAccount: 1
       properties:
+        producingCountryId:
+          type: integer
         position:
           type: integer
         stockType:
@@ -4688,8 +4691,8 @@ components:
       type: object
     ItemEbayTitle:
       example:
-        itemId: 6
-        id: 3
+        itemId: 3
+        id: 6
         title: title
       properties:
         title:
@@ -4701,9 +4704,9 @@ components:
       type: object
     ItemShippingProfile:
       example:
-        itemId: 1
-        profileId: 2
-        id: 6
+        itemId: 2
+        profileId: 6
+        id: 1
       properties:
         id:
           type: integer
@@ -4714,14 +4717,14 @@ components:
       type: object
     ItemProperty:
       example:
-        surcharge: 0.8851374739011653
-        itemId: 5
+        surcharge: 7.058770351582356
+        itemId: 6
         propertySelectionId: 3
         valuefile: valuefile
-        id: 6
-        valueInt: 3
-        propertyId: 6
-        valueFloat: 7.143538047012306
+        id: 5
+        valueInt: 7
+        propertyId: 3
+        valueFloat: 0.8851374739011653
       properties:
         id:
           type: integer
@@ -4790,42 +4793,43 @@ components:
         totalsCount: 6
         lastOnPage: 5
         entries:
-        - storeSpecial: 3
+        - storeSpecial: 2
+          producingCountryId: 7
           customsTariffNumber: customsTariffNumber
           itemType: itemType
           itemShippingProfiles:
-          - itemId: 1
-            profileId: 2
-            id: 6
-          - itemId: 1
-            profileId: 2
-            id: 6
-          propertySelectionId: 6
+          - itemId: 2
+            profileId: 6
+            id: 1
+          - itemId: 2
+            profileId: 6
+            id: 1
+          propertySelectionId: 0
           couponRestriction: 1
-          ebayCategory2: 5
-          amazonFbaPlatform: 6
+          ebayCategory2: 9
+          amazonFbaPlatform: 7
           itemProperties:
-          - surcharge: 0.8851374739011653
-            itemId: 5
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          - surcharge: 0.8851374739011653
-            itemId: 5
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          ownerId: 2
-          flagTwo: 6
-          feedback: 9
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          ownerId: 4
+          flagTwo: 8
+          feedback: 6
           createdAt: 2000-01-23T04:56:07.000+00:00
-          amazonProductType: 7
+          amazonProductType: 1
           variations:
           - intervalOrderQuantity: 6.438423552598547
             customsTariffNumber: customsTariffNumber
@@ -6233,16 +6237,16 @@ components:
                 propertyId: 0
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               updatedAt: 2000-01-23T04:56:07.000+00:00
-          flagOne: 9
-          id: 0
+          flagOne: 6
+          id: 4
           isShippingPackage: true
-          propertyId: 7
-          ebayPresetId: 1
+          propertyId: 6
+          ebayPresetId: 4
           updatedAt: 2000-01-23T04:56:07.000+00:00
-          ebayCategory: 4
-          stockType: 9
-          manufacturerId: 4
-          conditionApi: 1
+          ebayCategory: 5
+          stockType: 3
+          manufacturerId: 7
+          conditionApi: 6
           amazonFedas: amazonFedas
           condition: 1
           rakutenCategoryId: 9
@@ -6268,54 +6272,55 @@ components:
             metaDescription: metaDescription
             urlPath: urlPath
           ebayTitles:
-          - itemId: 6
-            id: 3
+          - itemId: 3
+            id: 6
             title: title
-          - itemId: 6
-            id: 3
+          - itemId: 3
+            id: 6
             title: title
           isShippableByAmazon: true
           profileId: 6
           isSubscribable: true
-          ageRestriction: 8
-          position: 7
-          revenueAccount: 7
-        - storeSpecial: 3
+          ageRestriction: 9
+          position: 9
+          revenueAccount: 1
+        - storeSpecial: 2
+          producingCountryId: 7
           customsTariffNumber: customsTariffNumber
           itemType: itemType
           itemShippingProfiles:
-          - itemId: 1
-            profileId: 2
-            id: 6
-          - itemId: 1
-            profileId: 2
-            id: 6
-          propertySelectionId: 6
+          - itemId: 2
+            profileId: 6
+            id: 1
+          - itemId: 2
+            profileId: 6
+            id: 1
+          propertySelectionId: 0
           couponRestriction: 1
-          ebayCategory2: 5
-          amazonFbaPlatform: 6
+          ebayCategory2: 9
+          amazonFbaPlatform: 7
           itemProperties:
-          - surcharge: 0.8851374739011653
-            itemId: 5
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          - surcharge: 0.8851374739011653
-            itemId: 5
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          ownerId: 2
-          flagTwo: 6
-          feedback: 9
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          ownerId: 4
+          flagTwo: 8
+          feedback: 6
           createdAt: 2000-01-23T04:56:07.000+00:00
-          amazonProductType: 7
+          amazonProductType: 1
           variations:
           - intervalOrderQuantity: 6.438423552598547
             customsTariffNumber: customsTariffNumber
@@ -7723,16 +7728,16 @@ components:
                 propertyId: 0
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               updatedAt: 2000-01-23T04:56:07.000+00:00
-          flagOne: 9
-          id: 0
+          flagOne: 6
+          id: 4
           isShippingPackage: true
-          propertyId: 7
-          ebayPresetId: 1
+          propertyId: 6
+          ebayPresetId: 4
           updatedAt: 2000-01-23T04:56:07.000+00:00
-          ebayCategory: 4
-          stockType: 9
-          manufacturerId: 4
-          conditionApi: 1
+          ebayCategory: 5
+          stockType: 3
+          manufacturerId: 7
+          conditionApi: 6
           amazonFedas: amazonFedas
           condition: 1
           rakutenCategoryId: 9
@@ -7758,18 +7763,18 @@ components:
             metaDescription: metaDescription
             urlPath: urlPath
           ebayTitles:
-          - itemId: 6
-            id: 3
+          - itemId: 3
+            id: 6
             title: title
-          - itemId: 6
-            id: 3
+          - itemId: 3
+            id: 6
             title: title
           isShippableByAmazon: true
           profileId: 6
           isSubscribable: true
-          ageRestriction: 8
-          position: 7
-          revenueAccount: 7
+          ageRestriction: 9
+          position: 9
+          revenueAccount: 1
         itemsPerPage: 2
         isLastPage: true
         firstOnPage: 5

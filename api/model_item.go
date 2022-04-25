@@ -17,6 +17,7 @@ import (
 
 // Item item type
 type Item struct {
+	ProducingCountryId *int32 `json:"producingCountryId,omitempty"`
 	Position *int32 `json:"position,omitempty"`
 	// values: 0 = Stocked item (default)1 = Production item2 = Colli 3 = Special order item
 	StockType *int32 `json:"stockType,omitempty"`
@@ -100,6 +101,38 @@ func NewItem(ageRestriction int32, profileId int32, propertyId int32, variations
 func NewItemWithDefaults() *Item {
 	this := Item{}
 	return &this
+}
+
+// GetProducingCountryId returns the ProducingCountryId field value if set, zero value otherwise.
+func (o *Item) GetProducingCountryId() int32 {
+	if o == nil || o.ProducingCountryId == nil {
+		var ret int32
+		return ret
+	}
+	return *o.ProducingCountryId
+}
+
+// GetProducingCountryIdOk returns a tuple with the ProducingCountryId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Item) GetProducingCountryIdOk() (*int32, bool) {
+	if o == nil || o.ProducingCountryId == nil {
+		return nil, false
+	}
+	return o.ProducingCountryId, true
+}
+
+// HasProducingCountryId returns a boolean if a field has been set.
+func (o *Item) HasProducingCountryId() bool {
+	if o != nil && o.ProducingCountryId != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetProducingCountryId gets a reference to the given int32 and assigns it to the ProducingCountryId field.
+func (o *Item) SetProducingCountryId(v int32) {
+	o.ProducingCountryId = &v
 }
 
 // GetPosition returns the Position field value if set, zero value otherwise.
@@ -1224,6 +1257,9 @@ func (o *Item) SetVariations(v []Variation) {
 
 func (o Item) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.ProducingCountryId != nil {
+		toSerialize["producingCountryId"] = o.ProducingCountryId
+	}
 	if o.Position != nil {
 		toSerialize["position"] = o.Position
 	}

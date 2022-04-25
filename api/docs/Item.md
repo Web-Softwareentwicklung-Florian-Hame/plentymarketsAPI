@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ProducingCountryId** | Pointer to **int32** |  | [optional] 
 **Position** | Pointer to **int32** |  | [optional] 
 **StockType** | Pointer to **int32** | values: 0 &#x3D; Stocked item (default)1 &#x3D; Production item2 &#x3D; Colli 3 &#x3D; Special order item | [optional] 
 **StoreSpecial** | Pointer to **int32** | Option to present items more prominently in the online store. 1 &#x3D; Special offer 2 &#x3D; New items 3 &#x3D; Top items | [optional] 
@@ -59,6 +60,31 @@ will change when the set of required properties is changed
 NewItemWithDefaults instantiates a new Item object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetProducingCountryId
+
+`func (o *Item) GetProducingCountryId() int32`
+
+GetProducingCountryId returns the ProducingCountryId field if non-nil, zero value otherwise.
+
+### GetProducingCountryIdOk
+
+`func (o *Item) GetProducingCountryIdOk() (*int32, bool)`
+
+GetProducingCountryIdOk returns a tuple with the ProducingCountryId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProducingCountryId
+
+`func (o *Item) SetProducingCountryId(v int32)`
+
+SetProducingCountryId sets ProducingCountryId field to given value.
+
+### HasProducingCountryId
+
+`func (o *Item) HasProducingCountryId() bool`
+
+HasProducingCountryId returns a boolean if a field has been set.
 
 ### GetPosition
 

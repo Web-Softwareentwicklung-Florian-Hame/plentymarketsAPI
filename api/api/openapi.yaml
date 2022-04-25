@@ -754,6 +754,64 @@ paths:
                 $ref: '#/components/schemas/AttributeName'
           description: successful created attribute value name
       summary: creating attribute values names
+  /rest/items/manufacturers:
+    get:
+      description: list manufacturers
+      parameters:
+      - explode: false
+        in: query
+        name: with
+        required: false
+        schema:
+          items:
+            enum:
+            - comissions
+            - externals
+            type: string
+          type: array
+        style: form
+      - description: Filter restricts the list of results to records updated after
+          the specified date. The date can be specified as unix timestamps or in the
+          ISO 8601 date format. The PHP function strtotime is also supported.
+        explode: true
+        in: query
+        name: updatedAt
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to records with specified
+          name.
+        explode: true
+        in: query
+        name: name
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/ManufacturersPagination'
+          description: manufactuers pagination response
+      summary: list manufacturers
+    post:
+      description: creates a manufacturer
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: '#/components/schemas/Manufacturer'
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/Manufacturer'
+          description: successfuly created manufacturer
+      summary: creates a manufacturer
 components:
   schemas:
     RestLoginBody:
@@ -4785,6 +4843,67 @@ components:
         urlPath:
           type: string
         keywords:
+          type: string
+      type: object
+    Manufacturer:
+      example:
+        laRedouteBrandId: 4
+        pixmaniaBrandId: 3
+        town: town
+        postcode: postcode
+        url: url
+        countryId: 9
+        phoneNumber: phoneNumber
+        street: street
+        externalName: externalName
+        name: name
+        logo: logo
+        houseNo: houseNo
+        faxNumber: faxNumber
+        neckermannAtEpBrandId: 2
+        comment: comment
+        id: 7
+        position: 7
+        email: email
+        updatedAt: updatedAt
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        externalName:
+          type: string
+        logo:
+          type: string
+        url:
+          type: string
+        street:
+          type: string
+        houseNo:
+          type: string
+        postcode:
+          type: string
+        town:
+          type: string
+        phoneNumber:
+          type: string
+        faxNumber:
+          type: string
+        email:
+          type: string
+        countryId:
+          type: integer
+        pixmaniaBrandId:
+          type: integer
+        neckermannAtEpBrandId:
+          type: integer
+        laRedouteBrandId:
+          type: integer
+        position:
+          type: integer
+        comment:
+          type: string
+        updatedAt:
           type: string
       type: object
     ItemPagination:
@@ -9556,5 +9675,74 @@ components:
         entries:
           items:
             $ref: '#/components/schemas/AttributeValue'
+          type: array
+      type: object
+    ManufacturersPagination:
+      description: pagination response containing categories
+      example:
+        totalsCount: 6
+        lastOnPage: 5
+        entries:
+        - laRedouteBrandId: 4
+          pixmaniaBrandId: 3
+          town: town
+          postcode: postcode
+          url: url
+          countryId: 9
+          phoneNumber: phoneNumber
+          street: street
+          externalName: externalName
+          name: name
+          logo: logo
+          houseNo: houseNo
+          faxNumber: faxNumber
+          neckermannAtEpBrandId: 2
+          comment: comment
+          id: 7
+          position: 7
+          email: email
+          updatedAt: updatedAt
+        - laRedouteBrandId: 4
+          pixmaniaBrandId: 3
+          town: town
+          postcode: postcode
+          url: url
+          countryId: 9
+          phoneNumber: phoneNumber
+          street: street
+          externalName: externalName
+          name: name
+          logo: logo
+          houseNo: houseNo
+          faxNumber: faxNumber
+          neckermannAtEpBrandId: 2
+          comment: comment
+          id: 7
+          position: 7
+          email: email
+          updatedAt: updatedAt
+        itemsPerPage: 2
+        isLastPage: true
+        firstOnPage: 5
+        page: 0
+        lastPageNumber: 1
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          items:
+            $ref: '#/components/schemas/Manufacturer'
           type: array
       type: object

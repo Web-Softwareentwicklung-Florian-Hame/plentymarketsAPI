@@ -88,6 +88,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**RestItemsAttributesPost**](docs/DefaultApi.md#restitemsattributespost) | **Post** /rest/items/attributes | creating new attributes
 *DefaultApi* | [**RestItemsGet**](docs/DefaultApi.md#restitemsget) | **Get** /rest/items | fetching items with optional extra data or filters given in query parameter
 *DefaultApi* | [**RestItemsItemIdVariationsPost**](docs/DefaultApi.md#restitemsitemidvariationspost) | **Post** /rest/items/{itemId}/variations | creating variations for an item
+*DefaultApi* | [**RestItemsManufacturersGet**](docs/DefaultApi.md#restitemsmanufacturersget) | **Get** /rest/items/manufacturers | list manufacturers
+*DefaultApi* | [**RestItemsManufacturersPost**](docs/DefaultApi.md#restitemsmanufacturerspost) | **Post** /rest/items/manufacturers | creates a manufacturer
 *DefaultApi* | [**RestItemsPost**](docs/DefaultApi.md#restitemspost) | **Post** /rest/items | creates items
 *DefaultApi* | [**RestItemsVariationsGet**](docs/DefaultApi.md#restitemsvariationsget) | **Get** /rest/items/variations | fetching variations with pagination and the possibility to fetch additional related data by &#39;with&#39; query param
 *DefaultApi* | [**RestLoginPost**](docs/DefaultApi.md#restloginpost) | **Post** /rest/login | login for authentication at rest api
@@ -111,6 +113,8 @@ Class | Method | HTTP request | Description
  - [ItemProperty](docs/ItemProperty.md)
  - [ItemShippingProfile](docs/ItemShippingProfile.md)
  - [ItemTexts](docs/ItemTexts.md)
+ - [Manufacturer](docs/Manufacturer.md)
+ - [ManufacturersPagination](docs/ManufacturersPagination.md)
  - [Property](docs/Property.md)
  - [PropertyRelation](docs/PropertyRelation.md)
  - [PropertyRelationValues](docs/PropertyRelationValues.md)

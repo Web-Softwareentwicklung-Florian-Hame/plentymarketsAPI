@@ -541,6 +541,53 @@ paths:
             application/json;charset=utf-8:
               schema:
                 $ref: "#/components/schemas/AttributeName"
+  /rest/items/manufacturers:
+    get:
+      summary: "list manufacturers"
+      description: "list manufacturers"
+      parameters:
+        - in: query
+          name: with
+          explode: false
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - comissions
+                - externals
+        - in: query
+          name: updatedAt
+          description: "Filter restricts the list of results to records updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported."
+          schema:
+            type: string
+        - in: query
+          name: name
+          description: "Filter restricts the list of results to records with specified name."
+          schema:
+            type: string
+      responses:
+        200:
+          description: manufactuers pagination response
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/ManufacturersPagination"
+    post:
+      summary: "creates a manufacturer"
+      description: "creates a manufacturer"
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: "#/components/schemas/Manufacturer"
+      responses:
+        200:
+          description: successfuly created manufacturer
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: "#/components/schemas/Manufacturer"
 
 components:
   schemas:
@@ -1800,7 +1847,47 @@ components:
           type: string
         keywords:
           type: string
-
+    Manufacturer:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        externalName:
+          type: string
+        logo:
+          type: string
+        url:
+          type: string
+        street:
+          type: string
+        houseNo:
+          type: string
+        postcode:
+          type: string
+        town:
+          type: string
+        phoneNumber:
+          type: string
+        faxNumber:
+          type: string
+        email:
+          type: string
+        countryId:
+          type: integer
+        pixmaniaBrandId:
+          type: integer
+        neckermannAtEpBrandId:
+          type: integer
+        laRedouteBrandId:
+          type: integer
+        position:
+          type: integer
+        comment:
+          type: string
+        updatedAt:
+          type: string
 
     # paginations
     ItemPagination:
@@ -1913,5 +2000,28 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/AttributeValue'
+    ManufacturersPagination:
+      type: object
+      description: pagination response containing categories
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Manufacturer'
+
     
     

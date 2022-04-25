@@ -14,6 +14,8 @@ Method | HTTP request | Description
 [**RestItemsAttributesPost**](DefaultApi.md#RestItemsAttributesPost) | **Post** /rest/items/attributes | creating new attributes
 [**RestItemsGet**](DefaultApi.md#RestItemsGet) | **Get** /rest/items | fetching items with optional extra data or filters given in query parameter
 [**RestItemsItemIdVariationsPost**](DefaultApi.md#RestItemsItemIdVariationsPost) | **Post** /rest/items/{itemId}/variations | creating variations for an item
+[**RestItemsManufacturersGet**](DefaultApi.md#RestItemsManufacturersGet) | **Get** /rest/items/manufacturers | list manufacturers
+[**RestItemsManufacturersPost**](DefaultApi.md#RestItemsManufacturersPost) | **Post** /rest/items/manufacturers | creates a manufacturer
 [**RestItemsPost**](DefaultApi.md#RestItemsPost) | **Post** /rest/items | creates items
 [**RestItemsVariationsGet**](DefaultApi.md#RestItemsVariationsGet) | **Get** /rest/items/variations | fetching variations with pagination and the possibility to fetch additional related data by &#39;with&#39; query param
 [**RestLoginPost**](DefaultApi.md#RestLoginPost) | **Post** /rest/login | login for authentication at rest api
@@ -723,6 +725,142 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Variation**](Variation.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestItemsManufacturersGet
+
+> ManufacturersPagination RestItemsManufacturersGet(ctx).With(with).UpdatedAt(updatedAt).Name(name).Execute()
+
+list manufacturers
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    with := []string{"With_example"} // []string |  (optional)
+    updatedAt := "updatedAt_example" // string | Filter restricts the list of results to records updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. (optional)
+    name := "name_example" // string | Filter restricts the list of results to records with specified name. (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestItemsManufacturersGet(context.Background()).With(with).UpdatedAt(updatedAt).Name(name).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsManufacturersGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestItemsManufacturersGet`: ManufacturersPagination
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsManufacturersGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestItemsManufacturersGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **with** | **[]string** |  | 
+ **updatedAt** | **string** | Filter restricts the list of results to records updated after the specified date. The date can be specified as unix timestamps or in the ISO 8601 date format. The PHP function strtotime is also supported. | 
+ **name** | **string** | Filter restricts the list of results to records with specified name. | 
+
+### Return type
+
+[**ManufacturersPagination**](ManufacturersPagination.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestItemsManufacturersPost
+
+> Manufacturer RestItemsManufacturersPost(ctx).Manufacturer(manufacturer).Execute()
+
+creates a manufacturer
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    manufacturer := *openapiclient.NewManufacturer() // Manufacturer |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestItemsManufacturersPost(context.Background()).Manufacturer(manufacturer).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsManufacturersPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestItemsManufacturersPost`: Manufacturer
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsManufacturersPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestItemsManufacturersPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **manufacturer** | [**Manufacturer**](Manufacturer.md) |  | 
+
+### Return type
+
+[**Manufacturer**](Manufacturer.md)
 
 ### Authorization
 

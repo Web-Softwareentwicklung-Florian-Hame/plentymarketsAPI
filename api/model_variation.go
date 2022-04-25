@@ -76,7 +76,7 @@ type Variation struct {
 	DefaultShippingCosts *float32 `json:"defaultShippingCosts,omitempty"`
 	MayShowUnitPrice *bool `json:"mayShowUnitPrice,omitempty"`
 	MovingAveragePrice *float32 `json:"movingAveragePrice,omitempty"`
-	PropertyVariationId *int32 `json:"propertyVariationId,omitempty"`
+	PropertyVariationId *string `json:"propertyVariationId,omitempty"`
 	AutomaticListVisibility *int32 `json:"automaticListVisibility,omitempty"`
 	IsVisibleInListIfNetStockIsPositive *bool `json:"isVisibleInListIfNetStockIsPositive,omitempty"`
 	IsInvisibleInListIfNetStockIsNotPositive *bool `json:"isInvisibleInListIfNetStockIsNotPositive,omitempty"`
@@ -2014,9 +2014,9 @@ func (o *Variation) SetMovingAveragePrice(v float32) {
 }
 
 // GetPropertyVariationId returns the PropertyVariationId field value if set, zero value otherwise.
-func (o *Variation) GetPropertyVariationId() int32 {
+func (o *Variation) GetPropertyVariationId() string {
 	if o == nil || o.PropertyVariationId == nil {
-		var ret int32
+		var ret string
 		return ret
 	}
 	return *o.PropertyVariationId
@@ -2024,7 +2024,7 @@ func (o *Variation) GetPropertyVariationId() int32 {
 
 // GetPropertyVariationIdOk returns a tuple with the PropertyVariationId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Variation) GetPropertyVariationIdOk() (*int32, bool) {
+func (o *Variation) GetPropertyVariationIdOk() (*string, bool) {
 	if o == nil || o.PropertyVariationId == nil {
 		return nil, false
 	}
@@ -2040,8 +2040,8 @@ func (o *Variation) HasPropertyVariationId() bool {
 	return false
 }
 
-// SetPropertyVariationId gets a reference to the given int32 and assigns it to the PropertyVariationId field.
-func (o *Variation) SetPropertyVariationId(v int32) {
+// SetPropertyVariationId gets a reference to the given string and assigns it to the PropertyVariationId field.
+func (o *Variation) SetPropertyVariationId(v string) {
 	o.PropertyVariationId = &v
 }
 

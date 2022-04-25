@@ -63,7 +63,7 @@ Name | Type | Description | Notes
 **DefaultShippingCosts** | Pointer to **float32** |  | [optional] 
 **MayShowUnitPrice** | Pointer to **bool** |  | [optional] 
 **MovingAveragePrice** | Pointer to **float32** |  | [optional] 
-**PropertyVariationId** | Pointer to **int32** |  | [optional] 
+**PropertyVariationId** | Pointer to **string** |  | [optional] 
 **AutomaticListVisibility** | Pointer to **int32** |  | [optional] 
 **IsVisibleInListIfNetStockIsPositive** | Pointer to **bool** |  | [optional] 
 **IsInvisibleInListIfNetStockIsNotPositive** | Pointer to **bool** |  | [optional] 
@@ -1590,20 +1590,20 @@ HasMovingAveragePrice returns a boolean if a field has been set.
 
 ### GetPropertyVariationId
 
-`func (o *Variation) GetPropertyVariationId() int32`
+`func (o *Variation) GetPropertyVariationId() string`
 
 GetPropertyVariationId returns the PropertyVariationId field if non-nil, zero value otherwise.
 
 ### GetPropertyVariationIdOk
 
-`func (o *Variation) GetPropertyVariationIdOk() (*int32, bool)`
+`func (o *Variation) GetPropertyVariationIdOk() (*string, bool)`
 
 GetPropertyVariationIdOk returns a tuple with the PropertyVariationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPropertyVariationId
 
-`func (o *Variation) SetPropertyVariationId(v int32)`
+`func (o *Variation) SetPropertyVariationId(v string)`
 
 SetPropertyVariationId sets PropertyVariationId field to given value.
 

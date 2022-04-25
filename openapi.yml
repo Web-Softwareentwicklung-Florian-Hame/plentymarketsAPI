@@ -771,7 +771,7 @@ components:
         movingAveragePrice:
           type: number
         propertyVariationId:
-          type: integer
+          type: string
         automaticListVisibility:
           type: integer
         isVisibleInListIfNetStockIsPositive:

@@ -226,6 +226,24 @@ paths:
             application/json;charset=utf-8:
               schema:
                 $ref: '#/components/schemas/VariationPagination'
+    put:
+      summary: updating up to 50 variations
+      description: updating up to 50 variations
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Variation'
+      responses:
+        200:
+          description: successful updated items or in case multiple variations were updated errors are in 'failed' field
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/MultipleVariationsUpdatedResponse'
+
   /rest/items/{itemId}/variations:
     post:
       summary: creating variations for an item
@@ -1907,11 +1925,26 @@ components:
             type: array
             items:
               type: string
-
     MultipleItemsCreatedResponseItem:
       type: object
       additionalProperties:
         $ref: "#/components/schemas/Item"
+
+    MultipleVariationsUpdatedResponse:
+      type: object
+      description: format of the response when multiple variations gots updated
+      properties:
+        success:
+          $ref: "#/components/schemas/MultipleVariationsUpdatedResponseVariation"
+        failed:
+          additionalProperties:
+            type: array
+            items:
+              type: string
+    MultipleVariationsUpdatedResponseVariation:
+      type: object
+      additionalProperties:
+        $ref: "#/components/schemas/Variation"
 
 
     # paginations

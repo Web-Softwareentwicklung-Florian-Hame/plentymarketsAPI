@@ -352,6 +352,24 @@ paths:
           description: variation pagination response
       summary: fetching variations with pagination and the possibility to fetch additional
         related data by 'with' query param
+    put:
+      description: updating up to 50 variations
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              items:
+                $ref: '#/components/schemas/Variation'
+              type: array
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/MultipleVariationsUpdatedResponse'
+          description: successful updated items or in case multiple variations were
+            updated errors are in 'failed' field
+      summary: updating up to 50 variations
   /rest/items/{itemId}/variations:
     post:
       description: creating variations for an item
@@ -4931,6 +4949,734 @@ components:
     MultipleItemsCreatedResponseItem:
       additionalProperties:
         $ref: '#/components/schemas/Item'
+      type: object
+    MultipleVariationsUpdatedResponse:
+      description: format of the response when multiple variations gots updated
+      example:
+        success:
+          key:
+            intervalOrderQuantity: 6.438423552598547
+            customsTariffNumber: customsTariffNumber
+            variationCategories:
+            - variationId: 7
+              position: 3
+              categoryId: 3
+              isNeckermannPrimary: true
+            - variationId: 7
+              position: 3
+              categoryId: 3
+              isNeckermannPrimary: true
+            automaticClientVisibility: 8
+            stockLimitation: 9
+            minimumOrderQuantity: 9.018348186070783
+            variationSkus:
+            - additionalInformation: additionalInformation
+              isActive: true
+              marketId: 2
+              accountId: 9
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              initialSku: initialSku
+              deletedAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 8
+              parentSku: parentSku
+              stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+              exportedAt: 2000-01-23T04:56:07.000+00:00
+              id: 3
+              sku: sku
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+              status: status
+            - additionalInformation: additionalInformation
+              isActive: true
+              marketId: 2
+              accountId: 9
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              initialSku: initialSku
+              deletedAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 8
+              parentSku: parentSku
+              stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+              exportedAt: 2000-01-23T04:56:07.000+00:00
+              id: 3
+              sku: sku
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+              status: status
+            isUnavailableIfNetStockIsNotPositive: true
+            packingUnits: 7.143538047012306
+            vatId: 4
+            relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            purchasePrice: 5.025004791520295
+            isActive: true
+            widthMM: 2
+            number: number
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            availableUntil: availableUntil
+            variationClients:
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 9
+              plentyId: 5
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 9
+              plentyId: 5
+            isInvisibleIfNetStockIsNotPositive: true
+            weightG: 6
+            model: model
+            id: 7
+            stock:
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
+            - reorderLevel: 5.573385265048522
+              deltaReorderLevel: 3.0269458094096646
+              itemId: 2
+              variationId: 4
+              warehouseId: 3
+              physicalStock: 5.296102445648278
+              reservedStock: 3.8156682252305574
+              reservedBundles: 2.0981949483881577
+              netStock: 1.9626702727164813
+              purchasePrice: 1.0502890910539986
+              reservedListing: 6.176386745020588
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            hasCalculatedBundlePurchasePrice: true
+            images:
+            - documentUploadPreviewHeight: 3
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 2
+              height: 9
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              availabilities:
+              - imageId: 5
+                type: type
+                value: 1
+              - imageId: 5
+                type: type
+                value: 1
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 6
+              names:
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 1
+              storageProviderId: storageProviderId
+              lastUpdate: lastUpdate
+              width: 6
+              position: 4
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            - documentUploadPreviewHeight: 3
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 2
+              height: 9
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              availabilities:
+              - imageId: 5
+                type: type
+                value: 1
+              - imageId: 5
+                type: type
+                value: 1
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 6
+              names:
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 1
+              storageProviderId: storageProviderId
+              lastUpdate: lastUpdate
+              width: 6
+              position: 4
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            item:
+              storeSpecial: 0
+              customsTariffNumber: customsTariffNumber
+              producingCountryId: 5
+              couponRestriction: 7
+              ebayCategory2: ebayCategory2
+              free11: free11
+              free12: free12
+              free13: free13
+              amazonFbaPlatform: 9
+              free14: free14
+              ownerId: 0
+              free10: free10
+              free19: free19
+              feedback: 7
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              free2: free2
+              free15: free15
+              free3: free3
+              free16: free16
+              free17: free17
+              free1: free1
+              free18: free18
+              free6: free6
+              free7: free7
+              free4: free4
+              id: 4
+              free5: free5
+              isShippingPackage: true
+              free8: free8
+              ebayPresetId: 9
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+              free9: free9
+              ebayCategory: ebayCategory
+              add_cms_page: add_cms_page
+              free20: free20
+              conditionApi: 4.637509675190766
+              condition: 2
+              rakutenCategoryId: 0
+              isShippableByAmazon: true
+              isSubscribable: true
+              isSerialNumber: true
+              mainVariationId: 7
+              position: 8
+              revenueAccount: 0
+              itemType: itemType
+              flagTwo: 4
+              amazonProductType: 0
+              gimahhot: gimahhot
+              maximumOrderQuantity: 6.918231485891953
+              flagOne: 6
+              stockType: 6
+              manufacturerId: 2
+              ebayStoreCategory: ebayStoreCategory
+              amazonFedas: amazonFedas
+              ageRestriction: 0
+              ebayStoreCategory2: ebayStoreCategory2
+            extraShippingCharge2: 6.704019297950036
+            availabilityUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            isMain: true
+            categoryVariationId: 2
+            parentVariationQuantity: 1
+            picking: picking
+            palletTypeId: 3
+            isVisibleIfNetStockIsPositive: true
+            itemId: 3
+            propertyVariationId: 3
+            automaticListVisibility: 7
+            unit:
+              unitId: 8
+              id: 4
+              content: 6
+            operatingCosts: 0.10263654006109402
+            variationProperties:
+            - surcharge: 3.901545264248647
+              itemId: 5
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              propertySelectionId: 6
+              variationId: 0
+              names:
+              - propertyValueId: 2
+                lang: lang
+                value: value
+              - propertyValueId: 2
+                lang: lang
+                value: value
+              property:
+                surcharge: 8.863729185622827
+                isShownOnItemList: true
+                isShownInPdf: true
+                unit: 6
+                isShownAtCheckout: true
+                valueType: valueType
+                isOderProperty: true
+                isShownAsAdditionalCosts: true
+                propertyGroupId: 4
+                backendName: backendName
+                isShownOnItemPage: true
+                comment: comment
+                id: 1
+                position: 8
+                isSearchable: true
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              id: 7
+              valueInt: 8
+              propertyId: 4
+              valueFloat: 4.459605034958679
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - surcharge: 3.901545264248647
+              itemId: 5
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              propertySelectionId: 6
+              variationId: 0
+              names:
+              - propertyValueId: 2
+                lang: lang
+                value: value
+              - propertyValueId: 2
+                lang: lang
+                value: value
+              property:
+                surcharge: 8.863729185622827
+                isShownOnItemList: true
+                isShownInPdf: true
+                unit: 6
+                isShownAtCheckout: true
+                valueType: valueType
+                isOderProperty: true
+                isShownAsAdditionalCosts: true
+                propertyGroupId: 4
+                backendName: backendName
+                isShownOnItemPage: true
+                comment: comment
+                id: 1
+                position: 8
+                isSearchable: true
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              id: 7
+              valueInt: 8
+              propertyId: 4
+              valueFloat: 4.459605034958679
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            mainWarehouseId: 6
+            name: name
+            variationMarkets:
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 7
+              marketId: 0.4768402382624515
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 7
+              marketId: 0.4768402382624515
+            mainVariationId: 9
+            parentVariationId: 7
+            position: 6
+            hasCalculatedBundleNetWeight: true
+            mayShowUnitPrice: true
+            unitCombinationId: 3.5571952270680973
+            salesPriceVariationId: 1
+            releasedAt: 2000-01-23T04:56:07.000+00:00
+            weightNetG: 1
+            transportationCosts: 7.058770351582356
+            packingUnitTypeId: 0
+            hasCalculatedBundleWeight: true
+            isAvailableIfNetStockIsPositive: true
+            isHiddenInCategoryList: true
+            availability: 4
+            isVisibleInListIfNetStockIsPositive: true
+            variationSalesPrices:
+            - salesPriceId: 9
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 3
+              price: 8.761432466225475
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - salesPriceId: 9
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 3
+              price: 8.761432466225475
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            variationAttributeValues:
+            - attributeId: 5
+              isLinkableToImage: true
+              valueId: 3
+              attributeValue:
+                image: image
+                percentageDistribution: 4
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 9
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 1
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              attribute:
+                isLinkableToImage: true
+                neckermannAtEpAttribute: 7
+                laRedouteAttribute: 7
+                isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 4
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 9
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 1
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 4
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 9
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 1
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                amazonAttribute: amazonAttribute
+                pixmaniaAttribute: 9
+                typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+                fruugoAttribute: fruugoAttribute
+                googleShoppingAttribute: googleShoppingAttribute
+                isGroupable: true
+                backendName: backendName
+                id: 1
+                position: 3
+                ottoAttribute: ottoAttribute
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              attributeValueSetId: 5
+            - attributeId: 5
+              isLinkableToImage: true
+              valueId: 3
+              attributeValue:
+                image: image
+                percentageDistribution: 4
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 9
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 1
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              attribute:
+                isLinkableToImage: true
+                neckermannAtEpAttribute: 7
+                laRedouteAttribute: 7
+                isSurchargePercental: true
+                values:
+                - image: image
+                  percentageDistribution: 4
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 9
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 1
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                - image: image
+                  percentageDistribution: 4
+                  ottoValue: ottoValue
+                  laRedouteValue: laRedouteValue
+                  attributeId: 9
+                  tracdelightValue: tracdelightValue
+                  amazonValue: amazonValue
+                  backendName: backendName
+                  comment: comment
+                  id: 7
+                  position: 1
+                  neckermannAtEpValue: neckermannAtEpValue
+                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                amazonAttribute: amazonAttribute
+                pixmaniaAttribute: 9
+                typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+                fruugoAttribute: fruugoAttribute
+                googleShoppingAttribute: googleShoppingAttribute
+                isGroupable: true
+                backendName: backendName
+                id: 1
+                position: 3
+                ottoAttribute: ottoAttribute
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              attributeValueSetId: 5
+            priceCalculationUUID: priceCalculationUUID
+            variationBarcodes:
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 1
+              code: code
+              barcodeId: 9
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              variationId: 1
+              code: code
+              barcodeId: 9
+            tagVariationId: tagVariationId
+            marketItemNumbers:
+            - variationId: 5
+              id: 0
+              position: 8
+              type: type
+              value: value
+              countryId: 5
+            - variationId: 5
+              id: 0
+              position: 8
+              type: type
+              value: value
+              countryId: 5
+            maximumOrderQuantity: 8.762042012749001
+            itemImages:
+            - documentUploadPreviewHeight: 3
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 2
+              height: 9
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              availabilities:
+              - imageId: 5
+                type: type
+                value: 1
+              - imageId: 5
+                type: type
+                value: 1
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 6
+              names:
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 1
+              storageProviderId: storageProviderId
+              lastUpdate: lastUpdate
+              width: 6
+              position: 4
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            - documentUploadPreviewHeight: 3
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 2
+              height: 9
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              availabilities:
+              - imageId: 5
+                type: type
+                value: 1
+              - imageId: 5
+                type: type
+                value: 1
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 6
+              names:
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 4
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 1
+              storageProviderId: storageProviderId
+              lastUpdate: lastUpdate
+              width: 6
+              position: 4
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            extraShippingCharge1: 5.944895607614016
+            unitsContained: 3.353193347011243
+            singleItemCount: 5
+            hasCalculatedBundleMovingAveragePrice: true
+            heightMM: 6
+            variationDefaultCategory:
+            - branchId: 2
+              variationId: 3
+              manually: manually
+              plentyId: 3
+            - branchId: 2
+              variationId: 3
+              manually: manually
+              plentyId: 3
+            externalId: externalId
+            priceCalculationId: 9
+            defaultShippingCosts: 7.740351818741173
+            marketVariationId: 4
+            warehouseVariationId: 1
+            lengthMM: 6
+            clientVariationId: 7
+            isInvisibleInListIfNetStockIsNotPositive: true
+            estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
+            variationSuppliers:
+            - currencyPurchasePrice: 0.58919091925136
+              itemNumber: itemNumber
+              supplierId: 0
+              isDiscountable: true
+              packagingUnit: 9.386524999783381
+              discount: 2.7977867356748476
+              minimumPurchase: 7.203794749804894
+              purchasePrice: 0.35262192099236644
+              lastPriceQuery: true
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              lastUpdateTimestamp: lastUpdateTimestamp
+              variationId: 4
+              deliveryTimeInDays: 4
+              id: 8
+              itemDescription: itemDescription
+            - currencyPurchasePrice: 0.58919091925136
+              itemNumber: itemNumber
+              supplierId: 0
+              isDiscountable: true
+              packagingUnit: 9.386524999783381
+              discount: 2.7977867356748476
+              minimumPurchase: 7.203794749804894
+              purchasePrice: 0.35262192099236644
+              lastPriceQuery: true
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              lastUpdateTimestamp: lastUpdateTimestamp
+              variationId: 4
+              deliveryTimeInDays: 4
+              id: 8
+              itemDescription: itemDescription
+            supplierVariationId: 1
+            storageCosts: 6.519180951018382
+            movingAveragePrice: 3.0205796992916243
+            properties:
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              relationTargetId: 4
+              selectionRelationId: 0
+              markup: 4
+              relationTypeIdentifier: relationTypeIdentifier
+              groupId: 6
+              id: 0.5199002018724985
+              relationValues:
+              - createdAt: 2000-01-23T04:56:07.000+00:00
+                description: description
+                propertyRelationId: 1
+                id: 4
+                lang: lang
+                value: value
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - createdAt: 2000-01-23T04:56:07.000+00:00
+                description: description
+                propertyRelationId: 1
+                id: 4
+                lang: lang
+                value: value
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              propertyId: 3
+              propertyRelation:
+                cast: cast
+                createdAt: 2000-01-23T04:56:07.000+00:00
+                typeIdentifier: typeIdentifier
+                propertyGroupId: 9
+                position: 7
+                id: 9
+                propertyId: 0
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - createdAt: 2000-01-23T04:56:07.000+00:00
+              relationTargetId: 4
+              selectionRelationId: 0
+              markup: 4
+              relationTypeIdentifier: relationTypeIdentifier
+              groupId: 6
+              id: 0.5199002018724985
+              relationValues:
+              - createdAt: 2000-01-23T04:56:07.000+00:00
+                description: description
+                propertyRelationId: 1
+                id: 4
+                lang: lang
+                value: value
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - createdAt: 2000-01-23T04:56:07.000+00:00
+                description: description
+                propertyRelationId: 1
+                id: 4
+                lang: lang
+                value: value
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              propertyId: 3
+              propertyRelation:
+                cast: cast
+                createdAt: 2000-01-23T04:56:07.000+00:00
+                typeIdentifier: typeIdentifier
+                propertyGroupId: 9
+                position: 7
+                id: 9
+                propertyId: 0
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+        failed:
+          key:
+          - failed
+          - failed
+      properties:
+        success:
+          additionalProperties:
+            $ref: '#/components/schemas/Variation'
+          type: object
+        failed:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+      type: object
+    MultipleVariationsUpdatedResponseVariation:
+      additionalProperties:
+        $ref: '#/components/schemas/Variation'
       type: object
     ItemPagination:
       description: pagination response containing items

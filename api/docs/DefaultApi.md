@@ -18,6 +18,7 @@ Method | HTTP request | Description
 [**RestItemsManufacturersPost**](DefaultApi.md#RestItemsManufacturersPost) | **Post** /rest/items/manufacturers | creates a manufacturer
 [**RestItemsPost**](DefaultApi.md#RestItemsPost) | **Post** /rest/items | creates items
 [**RestItemsVariationsGet**](DefaultApi.md#RestItemsVariationsGet) | **Get** /rest/items/variations | fetching variations with pagination and the possibility to fetch additional related data by &#39;with&#39; query param
+[**RestItemsVariationsPut**](DefaultApi.md#RestItemsVariationsPut) | **Put** /rest/items/variations | updating up to 50 variations
 [**RestLoginPost**](DefaultApi.md#RestLoginPost) | **Post** /rest/login | login for authentication at rest api
 
 
@@ -1059,6 +1060,72 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestItemsVariationsPut
+
+> MultipleVariationsUpdatedResponse RestItemsVariationsPut(ctx).Variation(variation).Execute()
+
+updating up to 50 variations
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    variation := []openapiclient.Variation{*openapiclient.NewVariation()} // []Variation |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestItemsVariationsPut(context.Background()).Variation(variation).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsVariationsPut``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestItemsVariationsPut`: MultipleVariationsUpdatedResponse
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsVariationsPut`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestItemsVariationsPutRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **variation** | [**[]Variation**](Variation.md) |  | 
+
+### Return type
+
+[**MultipleVariationsUpdatedResponse**](MultipleVariationsUpdatedResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/json;charset=utf-8
 - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

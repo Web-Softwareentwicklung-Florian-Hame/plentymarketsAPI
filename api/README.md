@@ -92,6 +92,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**RestItemsManufacturersPost**](docs/DefaultApi.md#restitemsmanufacturerspost) | **Post** /rest/items/manufacturers | creates a manufacturer
 *DefaultApi* | [**RestItemsPost**](docs/DefaultApi.md#restitemspost) | **Post** /rest/items | creates items
 *DefaultApi* | [**RestItemsVariationsGet**](docs/DefaultApi.md#restitemsvariationsget) | **Get** /rest/items/variations | fetching variations with pagination and the possibility to fetch additional related data by &#39;with&#39; query param
+*DefaultApi* | [**RestItemsVariationsPut**](docs/DefaultApi.md#restitemsvariationsput) | **Put** /rest/items/variations | updating up to 50 variations
 *DefaultApi* | [**RestLoginPost**](docs/DefaultApi.md#restloginpost) | **Post** /rest/login | login for authentication at rest api
 
 
@@ -116,6 +117,7 @@ Class | Method | HTTP request | Description
  - [Manufacturer](docs/Manufacturer.md)
  - [ManufacturersPagination](docs/ManufacturersPagination.md)
  - [MultipleItemsCreatedResponse](docs/MultipleItemsCreatedResponse.md)
+ - [MultipleVariationsUpdatedResponse](docs/MultipleVariationsUpdatedResponse.md)
  - [Property](docs/Property.md)
  - [PropertyRelation](docs/PropertyRelation.md)
  - [PropertyRelationValues](docs/PropertyRelationValues.md)

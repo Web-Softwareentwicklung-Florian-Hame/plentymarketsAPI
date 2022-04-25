@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**Quantity** | Pointer to **float32** |  | [optional] 
+**StorageLocationId** | Pointer to **int32** |  | [optional] 
 **PurchasePrice** | Pointer to **float32** |  | [optional] 
 **ReservedListing** | Pointer to **float32** |  | [optional] 
 **ReservedBundles** | Pointer to **float32** |  | [optional] 
@@ -34,6 +36,56 @@ will change when the set of required properties is changed
 NewVariationStockWithDefaults instantiates a new VariationStock object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetQuantity
+
+`func (o *VariationStock) GetQuantity() float32`
+
+GetQuantity returns the Quantity field if non-nil, zero value otherwise.
+
+### GetQuantityOk
+
+`func (o *VariationStock) GetQuantityOk() (*float32, bool)`
+
+GetQuantityOk returns a tuple with the Quantity field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuantity
+
+`func (o *VariationStock) SetQuantity(v float32)`
+
+SetQuantity sets Quantity field to given value.
+
+### HasQuantity
+
+`func (o *VariationStock) HasQuantity() bool`
+
+HasQuantity returns a boolean if a field has been set.
+
+### GetStorageLocationId
+
+`func (o *VariationStock) GetStorageLocationId() int32`
+
+GetStorageLocationId returns the StorageLocationId field if non-nil, zero value otherwise.
+
+### GetStorageLocationIdOk
+
+`func (o *VariationStock) GetStorageLocationIdOk() (*int32, bool)`
+
+GetStorageLocationIdOk returns a tuple with the StorageLocationId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStorageLocationId
+
+`func (o *VariationStock) SetStorageLocationId(v int32)`
+
+SetStorageLocationId sets StorageLocationId field to given value.
+
+### HasStorageLocationId
+
+`func (o *VariationStock) HasStorageLocationId() bool`
+
+HasStorageLocationId returns a boolean if a field has been set.
 
 ### GetPurchasePrice
 

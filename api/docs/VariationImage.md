@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **StorageProviderId** | Pointer to **string** |  | [optional] 
 **Md5ChecksumOriginal** | Pointer to **string** |  | [optional] 
 **CleanImageName** | Pointer to **string** |  | [optional] 
+**UploadUrl** | Pointer to **string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] 
 **UrlMiddle** | Pointer to **string** |  | [optional] 
 **UrlPreview** | Pointer to **string** |  | [optional] 
@@ -424,6 +425,31 @@ SetCleanImageName sets CleanImageName field to given value.
 `func (o *VariationImage) HasCleanImageName() bool`
 
 HasCleanImageName returns a boolean if a field has been set.
+
+### GetUploadUrl
+
+`func (o *VariationImage) GetUploadUrl() string`
+
+GetUploadUrl returns the UploadUrl field if non-nil, zero value otherwise.
+
+### GetUploadUrlOk
+
+`func (o *VariationImage) GetUploadUrlOk() (*string, bool)`
+
+GetUploadUrlOk returns a tuple with the UploadUrl field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUploadUrl
+
+`func (o *VariationImage) SetUploadUrl(v string)`
+
+SetUploadUrl sets UploadUrl field to given value.
+
+### HasUploadUrl
+
+`func (o *VariationImage) HasUploadUrl() bool`
+
+HasUploadUrl returns a boolean if a field has been set.
 
 ### GetUrl
 

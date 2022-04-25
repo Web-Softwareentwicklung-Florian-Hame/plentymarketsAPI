@@ -865,6 +865,10 @@ components:
       type: object
       description: variation stock model
       properties:
+        quantity:
+          type: number
+        storageLocationId:
+          type: integer
         purchasePrice:
           type: number
         reservedListing:
@@ -1176,6 +1180,8 @@ components:
         md5ChecksumOriginal:
           type: string
         cleanImageName:
+          type: string
+        uploadUrl:
           type: string
         url:
           type: string

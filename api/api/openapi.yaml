@@ -948,28 +948,32 @@ components:
         model: model
         id: 7
         stock:
-        - reorderLevel: 1.9626702727164813
-          deltaReorderLevel: 5.573385265048522
-          itemId: 4
+        - deltaReorderLevel: 8.250639315618633
+          quantity: 7.390706075830692
+          reservedStock: 1.9626702727164813
+          reservedBundles: 4.1661834558007
+          netStock: 5.573385265048522
+          storageLocationId: 1
+          purchasePrice: 6.176386745020588
+          reorderLevel: 3.0269458094096646
+          itemId: 3
           variationId: 2
-          warehouseId: 2
-          physicalStock: 3.196820582978078
-          reservedStock: 5.296102445648278
-          reservedBundles: 6.176386745020588
-          netStock: 3.8156682252305574
-          purchasePrice: 7.390706075830692
-          reservedListing: 1.0502890910539986
-        - reorderLevel: 1.9626702727164813
-          deltaReorderLevel: 5.573385265048522
-          itemId: 4
+          warehouseId: 5
+          physicalStock: 3.8156682252305574
+          reservedListing: 2.0981949483881577
+        - deltaReorderLevel: 8.250639315618633
+          quantity: 7.390706075830692
+          reservedStock: 1.9626702727164813
+          reservedBundles: 4.1661834558007
+          netStock: 5.573385265048522
+          storageLocationId: 1
+          purchasePrice: 6.176386745020588
+          reorderLevel: 3.0269458094096646
+          itemId: 3
           variationId: 2
-          warehouseId: 2
-          physicalStock: 3.196820582978078
-          reservedStock: 5.296102445648278
-          reservedBundles: 6.176386745020588
-          netStock: 3.8156682252305574
-          purchasePrice: 7.390706075830692
-          reservedListing: 1.0502890910539986
+          warehouseId: 5
+          physicalStock: 3.8156682252305574
+          reservedListing: 2.0981949483881577
         updatedAt: 2000-01-23T04:56:07.000+00:00
         hasCalculatedBundlePurchasePrice: true
         images:
@@ -1007,6 +1011,7 @@ components:
             lang: lang
           size: 9
           storageProviderId: storageProviderId
+          uploadUrl: uploadUrl
           lastUpdate: lastUpdate
           width: 4
           position: 6
@@ -1047,6 +1052,7 @@ components:
             lang: lang
           size: 9
           storageProviderId: storageProviderId
+          uploadUrl: uploadUrl
           lastUpdate: lastUpdate
           width: 4
           position: 6
@@ -1414,6 +1420,7 @@ components:
             lang: lang
           size: 9
           storageProviderId: storageProviderId
+          uploadUrl: uploadUrl
           lastUpdate: lastUpdate
           width: 4
           position: 6
@@ -1454,6 +1461,7 @@ components:
             lang: lang
           size: 9
           storageProviderId: storageProviderId
+          uploadUrl: uploadUrl
           lastUpdate: lastUpdate
           width: 4
           position: 6
@@ -1803,18 +1811,24 @@ components:
     VariationStock:
       description: variation stock model
       example:
-        reorderLevel: 1.9626702727164813
-        deltaReorderLevel: 5.573385265048522
-        itemId: 4
+        deltaReorderLevel: 8.250639315618633
+        quantity: 7.390706075830692
+        reservedStock: 1.9626702727164813
+        reservedBundles: 4.1661834558007
+        netStock: 5.573385265048522
+        storageLocationId: 1
+        purchasePrice: 6.176386745020588
+        reorderLevel: 3.0269458094096646
+        itemId: 3
         variationId: 2
-        warehouseId: 2
-        physicalStock: 3.196820582978078
-        reservedStock: 5.296102445648278
-        reservedBundles: 6.176386745020588
-        netStock: 3.8156682252305574
-        purchasePrice: 7.390706075830692
-        reservedListing: 1.0502890910539986
+        warehouseId: 5
+        physicalStock: 3.8156682252305574
+        reservedListing: 2.0981949483881577
       properties:
+        quantity:
+          type: number
+        storageLocationId:
+          type: integer
         purchasePrice:
           type: number
         reservedListing:
@@ -2329,6 +2343,7 @@ components:
           lang: lang
         size: 9
         storageProviderId: storageProviderId
+        uploadUrl: uploadUrl
         lastUpdate: lastUpdate
         width: 4
         position: 6
@@ -2365,6 +2380,8 @@ components:
         md5ChecksumOriginal:
           type: string
         cleanImageName:
+          type: string
+        uploadUrl:
           type: string
         url:
           type: string
@@ -3133,28 +3150,32 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -3192,6 +3213,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -3232,6 +3254,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -3599,6 +3622,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -3639,6 +3663,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -3836,28 +3861,32 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -3895,6 +3924,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -3935,6 +3965,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -4302,6 +4333,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -4342,6 +4374,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -5027,28 +5060,32 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -5086,6 +5123,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -5126,6 +5164,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -5493,6 +5532,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -5533,6 +5573,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -5794,28 +5835,32 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -5853,6 +5898,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -5893,6 +5939,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -6260,6 +6307,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -6300,6 +6348,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -6497,28 +6546,32 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -6556,6 +6609,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -6596,6 +6650,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -6963,6 +7018,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -7003,6 +7059,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -7285,28 +7342,32 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -7344,6 +7405,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -7384,6 +7446,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -7751,6 +7814,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -7791,6 +7855,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -7988,28 +8053,32 @@ components:
             model: model
             id: 7
             stock:
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
-            - reorderLevel: 1.9626702727164813
-              deltaReorderLevel: 5.573385265048522
-              itemId: 4
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
+            - deltaReorderLevel: 8.250639315618633
+              quantity: 7.390706075830692
+              reservedStock: 1.9626702727164813
+              reservedBundles: 4.1661834558007
+              netStock: 5.573385265048522
+              storageLocationId: 1
+              purchasePrice: 6.176386745020588
+              reorderLevel: 3.0269458094096646
+              itemId: 3
               variationId: 2
-              warehouseId: 2
-              physicalStock: 3.196820582978078
-              reservedStock: 5.296102445648278
-              reservedBundles: 6.176386745020588
-              netStock: 3.8156682252305574
-              purchasePrice: 7.390706075830692
-              reservedListing: 1.0502890910539986
+              warehouseId: 5
+              physicalStock: 3.8156682252305574
+              reservedListing: 2.0981949483881577
             updatedAt: 2000-01-23T04:56:07.000+00:00
             hasCalculatedBundlePurchasePrice: true
             images:
@@ -8047,6 +8116,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -8087,6 +8157,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -8454,6 +8525,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -8494,6 +8566,7 @@ components:
                 lang: lang
               size: 9
               storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
               lastUpdate: lastUpdate
               width: 4
               position: 6
@@ -8769,28 +8842,32 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -8828,6 +8905,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -8868,6 +8946,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -9235,6 +9314,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -9275,6 +9355,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -9472,28 +9553,32 @@ components:
           model: model
           id: 7
           stock:
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
-          - reorderLevel: 1.9626702727164813
-            deltaReorderLevel: 5.573385265048522
-            itemId: 4
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
+          - deltaReorderLevel: 8.250639315618633
+            quantity: 7.390706075830692
+            reservedStock: 1.9626702727164813
+            reservedBundles: 4.1661834558007
+            netStock: 5.573385265048522
+            storageLocationId: 1
+            purchasePrice: 6.176386745020588
+            reorderLevel: 3.0269458094096646
+            itemId: 3
             variationId: 2
-            warehouseId: 2
-            physicalStock: 3.196820582978078
-            reservedStock: 5.296102445648278
-            reservedBundles: 6.176386745020588
-            netStock: 3.8156682252305574
-            purchasePrice: 7.390706075830692
-            reservedListing: 1.0502890910539986
+            warehouseId: 5
+            physicalStock: 3.8156682252305574
+            reservedListing: 2.0981949483881577
           updatedAt: 2000-01-23T04:56:07.000+00:00
           hasCalculatedBundlePurchasePrice: true
           images:
@@ -9531,6 +9616,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -9571,6 +9657,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -9938,6 +10025,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6
@@ -9978,6 +10066,7 @@ components:
               lang: lang
             size: 9
             storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
             lastUpdate: lastUpdate
             width: 4
             position: 6

@@ -16,6 +16,8 @@ import (
 
 // VariationStock variation stock model
 type VariationStock struct {
+	Quantity *float32 `json:"quantity,omitempty"`
+	StorageLocationId *int32 `json:"storageLocationId,omitempty"`
 	PurchasePrice *float32 `json:"purchasePrice,omitempty"`
 	ReservedListing *float32 `json:"reservedListing,omitempty"`
 	ReservedBundles *float32 `json:"reservedBundles,omitempty"`
@@ -44,6 +46,70 @@ func NewVariationStock() *VariationStock {
 func NewVariationStockWithDefaults() *VariationStock {
 	this := VariationStock{}
 	return &this
+}
+
+// GetQuantity returns the Quantity field value if set, zero value otherwise.
+func (o *VariationStock) GetQuantity() float32 {
+	if o == nil || o.Quantity == nil {
+		var ret float32
+		return ret
+	}
+	return *o.Quantity
+}
+
+// GetQuantityOk returns a tuple with the Quantity field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VariationStock) GetQuantityOk() (*float32, bool) {
+	if o == nil || o.Quantity == nil {
+		return nil, false
+	}
+	return o.Quantity, true
+}
+
+// HasQuantity returns a boolean if a field has been set.
+func (o *VariationStock) HasQuantity() bool {
+	if o != nil && o.Quantity != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetQuantity gets a reference to the given float32 and assigns it to the Quantity field.
+func (o *VariationStock) SetQuantity(v float32) {
+	o.Quantity = &v
+}
+
+// GetStorageLocationId returns the StorageLocationId field value if set, zero value otherwise.
+func (o *VariationStock) GetStorageLocationId() int32 {
+	if o == nil || o.StorageLocationId == nil {
+		var ret int32
+		return ret
+	}
+	return *o.StorageLocationId
+}
+
+// GetStorageLocationIdOk returns a tuple with the StorageLocationId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VariationStock) GetStorageLocationIdOk() (*int32, bool) {
+	if o == nil || o.StorageLocationId == nil {
+		return nil, false
+	}
+	return o.StorageLocationId, true
+}
+
+// HasStorageLocationId returns a boolean if a field has been set.
+func (o *VariationStock) HasStorageLocationId() bool {
+	if o != nil && o.StorageLocationId != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetStorageLocationId gets a reference to the given int32 and assigns it to the StorageLocationId field.
+func (o *VariationStock) SetStorageLocationId(v int32) {
+	o.StorageLocationId = &v
 }
 
 // GetPurchasePrice returns the PurchasePrice field value if set, zero value otherwise.
@@ -400,6 +466,12 @@ func (o *VariationStock) SetDeltaReorderLevel(v float32) {
 
 func (o VariationStock) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.Quantity != nil {
+		toSerialize["quantity"] = o.Quantity
+	}
+	if o.StorageLocationId != nil {
+		toSerialize["storageLocationId"] = o.StorageLocationId
+	}
 	if o.PurchasePrice != nil {
 		toSerialize["purchasePrice"] = o.PurchasePrice
 	}

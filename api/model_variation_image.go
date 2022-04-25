@@ -31,6 +31,7 @@ type VariationImage struct {
 	StorageProviderId *string `json:"storageProviderId,omitempty"`
 	Md5ChecksumOriginal *string `json:"md5ChecksumOriginal,omitempty"`
 	CleanImageName *string `json:"cleanImageName,omitempty"`
+	UploadUrl *string `json:"uploadUrl,omitempty"`
 	Url *string `json:"url,omitempty"`
 	UrlMiddle *string `json:"urlMiddle,omitempty"`
 	UrlPreview *string `json:"urlPreview,omitempty"`
@@ -541,6 +542,38 @@ func (o *VariationImage) SetCleanImageName(v string) {
 	o.CleanImageName = &v
 }
 
+// GetUploadUrl returns the UploadUrl field value if set, zero value otherwise.
+func (o *VariationImage) GetUploadUrl() string {
+	if o == nil || o.UploadUrl == nil {
+		var ret string
+		return ret
+	}
+	return *o.UploadUrl
+}
+
+// GetUploadUrlOk returns a tuple with the UploadUrl field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VariationImage) GetUploadUrlOk() (*string, bool) {
+	if o == nil || o.UploadUrl == nil {
+		return nil, false
+	}
+	return o.UploadUrl, true
+}
+
+// HasUploadUrl returns a boolean if a field has been set.
+func (o *VariationImage) HasUploadUrl() bool {
+	if o != nil && o.UploadUrl != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetUploadUrl gets a reference to the given string and assigns it to the UploadUrl field.
+func (o *VariationImage) SetUploadUrl(v string) {
+	o.UploadUrl = &v
+}
+
 // GetUrl returns the Url field value if set, zero value otherwise.
 func (o *VariationImage) GetUrl() string {
 	if o == nil || o.Url == nil {
@@ -939,6 +972,9 @@ func (o VariationImage) MarshalJSON() ([]byte, error) {
 	}
 	if o.CleanImageName != nil {
 		toSerialize["cleanImageName"] = o.CleanImageName
+	}
+	if o.UploadUrl != nil {
+		toSerialize["uploadUrl"] = o.UploadUrl
 	}
 	if o.Url != nil {
 		toSerialize["url"] = o.Url

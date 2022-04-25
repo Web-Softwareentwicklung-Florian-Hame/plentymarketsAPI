@@ -4931,7 +4931,7 @@ components:
           type: string
       type: object
     CreateItemsResponse:
-      oneOf:
+      allOf:
       - $ref: '#/components/schemas/Item'
       - $ref: '#/components/schemas/MultipleItemsCreatedResponse'
       type: object

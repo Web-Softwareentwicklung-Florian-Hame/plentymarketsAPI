@@ -1915,7 +1915,7 @@ components:
     # responses
     CreateItemsResponse:
       type: object
-      oneOf:
+      allOf:
         - $ref: '#/components/schemas/Item'
         - $ref: "#/components/schemas/MultipleItemsCreatedResponse"
 

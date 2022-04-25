@@ -25,6 +25,7 @@ docs/ItemShippingProfile.md
 docs/ItemTexts.md
 docs/Manufacturer.md
 docs/ManufacturersPagination.md
+docs/MultipleItemsCreatedResponse.md
 docs/Property.md
 docs/PropertyRelation.md
 docs/PropertyRelationValues.md
@@ -70,6 +71,7 @@ model_item_shipping_profile.go
 model_item_texts.go
 model_manufacturer.go
 model_manufacturers_pagination.go
+model_multiple_items_created_response.go
 model_property.go
 model_property_relation.go
 model_property_relation_values.go

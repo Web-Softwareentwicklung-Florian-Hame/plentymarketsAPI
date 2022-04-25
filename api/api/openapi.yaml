@@ -589,9 +589,9 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                items:
-                  $ref: '#/components/schemas/Item'
-                type: array
+                oneOf:
+                - $ref: '#/components/schemas/Item'
+                - $ref: '#/components/schemas/MultipleItemsCreatedResponse'
           description: successfuly created item
       summary: creates items
   /rest/items/attributes:
@@ -4913,6 +4913,24 @@ components:
           type: string
         updatedAt:
           type: string
+      type: object
+    MultipleItemsCreatedResponse:
+      description: format of the response when multiple items gots created
+      properties:
+        success:
+          additionalProperties:
+            $ref: '#/components/schemas/Item'
+          type: object
+        failed:
+          additionalProperties:
+            items:
+              type: string
+            type: array
+          type: object
+      type: object
+    MultipleItemsCreatedResponseItem:
+      additionalProperties:
+        $ref: '#/components/schemas/Item'
       type: object
     ItemPagination:
       description: pagination response containing items

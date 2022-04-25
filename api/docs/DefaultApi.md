@@ -880,7 +880,7 @@ No authorization required
 
 ## RestItemsPost
 
-> []Item RestItemsPost(ctx).Item(item).Execute()
+> OneOfItemMultipleItemsCreatedResponse RestItemsPost(ctx).Item(item).Execute()
 
 creates items
 
@@ -908,7 +908,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RestItemsPost`: []Item
+    // response from `RestItemsPost`: OneOfItemMultipleItemsCreatedResponse
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestItemsPost`: %v\n", resp)
 }
 ```
@@ -928,7 +928,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]Item**](Item.md)
+[**OneOfItemMultipleItemsCreatedResponse**](oneOf&lt;Item,MultipleItemsCreatedResponse&gt;.md)
 
 ### Authorization
 

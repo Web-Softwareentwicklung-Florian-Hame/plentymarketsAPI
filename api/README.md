@@ -115,6 +115,7 @@ Class | Method | HTTP request | Description
  - [ItemTexts](docs/ItemTexts.md)
  - [Manufacturer](docs/Manufacturer.md)
  - [ManufacturersPagination](docs/ManufacturersPagination.md)
+ - [MultipleItemsCreatedResponse](docs/MultipleItemsCreatedResponse.md)
  - [Property](docs/Property.md)
  - [PropertyRelation](docs/PropertyRelation.md)
  - [PropertyRelationValues](docs/PropertyRelationValues.md)

@@ -396,9 +396,10 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Item'
+                oneOf:
+                  - $ref: '#/components/schemas/Item'
+                  - $ref: "#/components/schemas/MultipleItemsCreatedResponse"
+
   /rest/items/attributes:
     get:
       summary: "fetching attributes with pagination"
@@ -1893,6 +1894,25 @@ components:
           type: string
         updatedAt:
           type: string
+
+    # responses
+    MultipleItemsCreatedResponse:
+      type: object
+      description: format of the response when multiple items gots created
+      properties:
+        success:
+          $ref: "#/components/schemas/MultipleItemsCreatedResponseItem"
+        failed:
+          additionalProperties:
+            type: array
+            items:
+              type: string
+
+    MultipleItemsCreatedResponseItem:
+      type: object
+      additionalProperties:
+        $ref: "#/components/schemas/Item"
+
 
     # paginations
     ItemPagination:

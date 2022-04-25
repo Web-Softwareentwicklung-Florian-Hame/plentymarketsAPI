@@ -77,6 +77,7 @@ type Item struct {
 	// The id of the property selection
 	PropertySelectionId *int32 `json:"propertySelectionId,omitempty"`
 	Id *int32 `json:"id,omitempty"`
+	Texts *[]ItemTexts `json:"texts,omitempty"`
 	Variations []Variation `json:"variations"`
 }
 
@@ -1165,6 +1166,38 @@ func (o *Item) SetId(v int32) {
 	o.Id = &v
 }
 
+// GetTexts returns the Texts field value if set, zero value otherwise.
+func (o *Item) GetTexts() []ItemTexts {
+	if o == nil || o.Texts == nil {
+		var ret []ItemTexts
+		return ret
+	}
+	return *o.Texts
+}
+
+// GetTextsOk returns a tuple with the Texts field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Item) GetTextsOk() (*[]ItemTexts, bool) {
+	if o == nil || o.Texts == nil {
+		return nil, false
+	}
+	return o.Texts, true
+}
+
+// HasTexts returns a boolean if a field has been set.
+func (o *Item) HasTexts() bool {
+	if o != nil && o.Texts != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetTexts gets a reference to the given []ItemTexts and assigns it to the Texts field.
+func (o *Item) SetTexts(v []ItemTexts) {
+	o.Texts = &v
+}
+
 // GetVariations returns the Variations field value
 func (o *Item) GetVariations() []Variation {
 	if o == nil {
@@ -1292,6 +1325,9 @@ func (o Item) MarshalJSON() ([]byte, error) {
 	}
 	if o.Id != nil {
 		toSerialize["id"] = o.Id
+	}
+	if o.Texts != nil {
+		toSerialize["texts"] = o.Texts
 	}
 	if true {
 		toSerialize["variations"] = o.Variations

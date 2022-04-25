@@ -38,6 +38,7 @@ Name | Type | Description | Notes
 **PropertyId** | **int32** | The id of the property item | 
 **PropertySelectionId** | Pointer to **int32** | The id of the property selection | [optional] 
 **Id** | Pointer to **int32** |  | [optional] 
+**Texts** | Pointer to [**[]ItemTexts**](ItemTexts.md) |  | [optional] 
 **Variations** | [**[]Variation**](Variation.md) |  | 
 
 ## Methods
@@ -893,6 +894,31 @@ SetId sets Id field to given value.
 `func (o *Item) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetTexts
+
+`func (o *Item) GetTexts() []ItemTexts`
+
+GetTexts returns the Texts field if non-nil, zero value otherwise.
+
+### GetTextsOk
+
+`func (o *Item) GetTextsOk() (*[]ItemTexts, bool)`
+
+GetTextsOk returns a tuple with the Texts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTexts
+
+`func (o *Item) SetTexts(v []ItemTexts)`
+
+SetTexts sets Texts field to given value.
+
+### HasTexts
+
+`func (o *Item) HasTexts() bool`
+
+HasTexts returns a boolean if a field has been set.
 
 ### GetVariations
 

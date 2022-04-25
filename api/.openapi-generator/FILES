@@ -22,6 +22,7 @@ docs/ItemEbayTitle.md
 docs/ItemPagination.md
 docs/ItemProperty.md
 docs/ItemShippingProfile.md
+docs/ItemTexts.md
 docs/Property.md
 docs/PropertyRelation.md
 docs/PropertyRelationValues.md
@@ -64,6 +65,7 @@ model_item_ebay_title.go
 model_item_pagination.go
 model_item_property.go
 model_item_shipping_profile.go
+model_item_texts.go
 model_property.go
 model_property_relation.go
 model_property_relation_values.go

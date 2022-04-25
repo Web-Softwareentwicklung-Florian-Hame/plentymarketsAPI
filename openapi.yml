@@ -1723,6 +1723,10 @@ components:
           description: "The id of the property selection"
         id:
           type: integer
+        texts:
+          type: array
+          items:
+            $ref: "#/components/schemas/ItemTexts"
         variations:
           type: array
           items:
@@ -1771,6 +1775,30 @@ components:
           type: string
         name:
           type: string
+    ItemTexts:
+      type: object
+      properties:
+        lang:
+          type: string
+        name1:
+          type: string
+        name2:
+          type: string
+        name3:
+          type: string
+        shortDescription:
+          type: string
+        description:
+          type: string
+        metaDescription:
+          type: string
+        technicalData:
+          type: string
+        urlPath:
+          type: string
+        keywords:
+          type: string
+
 
     # paginations
     ItemPagination:

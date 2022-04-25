@@ -4402,6 +4402,27 @@ components:
         amazonFedas: amazonFedas
         condition: 1
         rakutenCategoryId: 9
+        texts:
+        - name3: name3
+          keywords: keywords
+          technicalData: technicalData
+          description: description
+          shortDescription: shortDescription
+          lang: lang
+          name2: name2
+          name1: name1
+          metaDescription: metaDescription
+          urlPath: urlPath
+        - name3: name3
+          keywords: keywords
+          technicalData: technicalData
+          description: description
+          shortDescription: shortDescription
+          lang: lang
+          name2: name2
+          name1: name1
+          metaDescription: metaDescription
+          urlPath: urlPath
         ebayTitles:
         - itemId: 6
           id: 3
@@ -4651,6 +4672,10 @@ components:
           type: integer
         id:
           type: integer
+        texts:
+          items:
+            $ref: '#/components/schemas/ItemTexts'
+          type: array
         variations:
           items:
             $ref: '#/components/schemas/Variation'
@@ -4723,6 +4748,40 @@ components:
         lang:
           type: string
         name:
+          type: string
+      type: object
+    ItemTexts:
+      example:
+        name3: name3
+        keywords: keywords
+        technicalData: technicalData
+        description: description
+        shortDescription: shortDescription
+        lang: lang
+        name2: name2
+        name1: name1
+        metaDescription: metaDescription
+        urlPath: urlPath
+      properties:
+        lang:
+          type: string
+        name1:
+          type: string
+        name2:
+          type: string
+        name3:
+          type: string
+        shortDescription:
+          type: string
+        description:
+          type: string
+        metaDescription:
+          type: string
+        technicalData:
+          type: string
+        urlPath:
+          type: string
+        keywords:
           type: string
       type: object
     ItemPagination:
@@ -6187,6 +6246,27 @@ components:
           amazonFedas: amazonFedas
           condition: 1
           rakutenCategoryId: 9
+          texts:
+          - name3: name3
+            keywords: keywords
+            technicalData: technicalData
+            description: description
+            shortDescription: shortDescription
+            lang: lang
+            name2: name2
+            name1: name1
+            metaDescription: metaDescription
+            urlPath: urlPath
+          - name3: name3
+            keywords: keywords
+            technicalData: technicalData
+            description: description
+            shortDescription: shortDescription
+            lang: lang
+            name2: name2
+            name1: name1
+            metaDescription: metaDescription
+            urlPath: urlPath
           ebayTitles:
           - itemId: 6
             id: 3
@@ -7656,6 +7736,27 @@ components:
           amazonFedas: amazonFedas
           condition: 1
           rakutenCategoryId: 9
+          texts:
+          - name3: name3
+            keywords: keywords
+            technicalData: technicalData
+            description: description
+            shortDescription: shortDescription
+            lang: lang
+            name2: name2
+            name1: name1
+            metaDescription: metaDescription
+            urlPath: urlPath
+          - name3: name3
+            keywords: keywords
+            technicalData: technicalData
+            description: description
+            shortDescription: shortDescription
+            lang: lang
+            name2: name2
+            name1: name1
+            metaDescription: metaDescription
+            urlPath: urlPath
           ebayTitles:
           - itemId: 6
             id: 3

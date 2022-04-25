@@ -110,6 +110,7 @@ Class | Method | HTTP request | Description
  - [ItemPagination](docs/ItemPagination.md)
  - [ItemProperty](docs/ItemProperty.md)
  - [ItemShippingProfile](docs/ItemShippingProfile.md)
+ - [ItemTexts](docs/ItemTexts.md)
  - [Property](docs/Property.md)
  - [PropertyRelation](docs/PropertyRelation.md)
  - [PropertyRelationValues](docs/PropertyRelationValues.md)

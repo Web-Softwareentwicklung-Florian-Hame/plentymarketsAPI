@@ -607,9 +607,7 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                oneOf:
-                - $ref: '#/components/schemas/Item'
-                - $ref: '#/components/schemas/MultipleItemsCreatedResponse'
+                $ref: '#/components/schemas/CreateItemsResponse'
           description: successfuly created item
       summary: creates items
   /rest/items/attributes:
@@ -4931,6 +4929,11 @@ components:
           type: string
         updatedAt:
           type: string
+      type: object
+    CreateItemsResponse:
+      oneOf:
+      - $ref: '#/components/schemas/Item'
+      - $ref: '#/components/schemas/MultipleItemsCreatedResponse'
       type: object
     MultipleItemsCreatedResponse:
       description: format of the response when multiple items gots created

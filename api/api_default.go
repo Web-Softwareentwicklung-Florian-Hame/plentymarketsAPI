@@ -1551,7 +1551,7 @@ func (r ApiRestItemsPostRequest) Item(item []Item) ApiRestItemsPostRequest {
 	return r
 }
 
-func (r ApiRestItemsPostRequest) Execute() (OneOfItemMultipleItemsCreatedResponse, *_nethttp.Response, error) {
+func (r ApiRestItemsPostRequest) Execute() (CreateItemsResponse, *_nethttp.Response, error) {
 	return r.ApiService.RestItemsPostExecute(r)
 }
 
@@ -1571,15 +1571,15 @@ func (a *DefaultApiService) RestItemsPost(ctx _context.Context) ApiRestItemsPost
 }
 
 // Execute executes the request
-//  @return OneOfItemMultipleItemsCreatedResponse
-func (a *DefaultApiService) RestItemsPostExecute(r ApiRestItemsPostRequest) (OneOfItemMultipleItemsCreatedResponse, *_nethttp.Response, error) {
+//  @return CreateItemsResponse
+func (a *DefaultApiService) RestItemsPostExecute(r ApiRestItemsPostRequest) (CreateItemsResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPost
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  OneOfItemMultipleItemsCreatedResponse
+		localVarReturnValue  CreateItemsResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestItemsPost")

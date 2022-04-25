@@ -106,6 +106,7 @@ Class | Method | HTTP request | Description
  - [Category](docs/Category.md)
  - [CategoryDetails](docs/CategoryDetails.md)
  - [CategoryPagination](docs/CategoryPagination.md)
+ - [CreateItemsResponse](docs/CreateItemsResponse.md)
  - [ImageAvailability](docs/ImageAvailability.md)
  - [ImageName](docs/ImageName.md)
  - [Item](docs/Item.md)

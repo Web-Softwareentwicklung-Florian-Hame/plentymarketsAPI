@@ -14,6 +14,7 @@ docs/AttributeValuePagination.md
 docs/Category.md
 docs/CategoryDetails.md
 docs/CategoryPagination.md
+docs/CreateItemsResponse.md
 docs/DefaultApi.md
 docs/ImageAvailability.md
 docs/ImageName.md
@@ -62,6 +63,7 @@ model_attribute_value_pagination.go
 model_category.go
 model_category_details.go
 model_category_pagination.go
+model_create_items_response.go
 model_image_availability.go
 model_image_name.go
 model_item.go

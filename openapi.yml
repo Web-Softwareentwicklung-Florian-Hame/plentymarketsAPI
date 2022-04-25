@@ -414,9 +414,8 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                oneOf:
-                  - $ref: '#/components/schemas/Item'
-                  - $ref: "#/components/schemas/MultipleItemsCreatedResponse"
+                $ref: '#/components/schemas/CreateItemsResponse'
+
 
   /rest/items/attributes:
     get:
@@ -1914,6 +1913,12 @@ components:
           type: string
 
     # responses
+    CreateItemsResponse:
+      type: object
+      oneOf:
+        - $ref: '#/components/schemas/Item'
+        - $ref: "#/components/schemas/MultipleItemsCreatedResponse"
+
     MultipleItemsCreatedResponse:
       type: object
       description: format of the response when multiple items gots created

@@ -42,7 +42,7 @@ Name | Type | Description | Notes
 **Texts** | Pointer to [**[]ItemTexts**](ItemTexts.md) |  | [optional] 
 **Variations** | [**[]Variation**](Variation.md) |  | 
 **Success** | Pointer to [**map[string]Item**](Item.md) |  | [optional] 
-**Failed** | Pointer to **map[string][]string** |  | [optional] 
+**Failed** | Pointer to [**map[string]map[string][]string**](map.md) |  | [optional] 
 
 ## Methods
 
@@ -995,20 +995,20 @@ HasSuccess returns a boolean if a field has been set.
 
 ### GetFailed
 
-`func (o *CreateItemsResponse) GetFailed() map[string][]string`
+`func (o *CreateItemsResponse) GetFailed() map[string]map[string][]string`
 
 GetFailed returns the Failed field if non-nil, zero value otherwise.
 
 ### GetFailedOk
 
-`func (o *CreateItemsResponse) GetFailedOk() (*map[string][]string, bool)`
+`func (o *CreateItemsResponse) GetFailedOk() (*map[string]map[string][]string, bool)`
 
 GetFailedOk returns a tuple with the Failed field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetFailed
 
-`func (o *CreateItemsResponse) SetFailed(v map[string][]string)`
+`func (o *CreateItemsResponse) SetFailed(v map[string]map[string][]string)`
 
 SetFailed sets Failed field to given value.
 

@@ -81,7 +81,7 @@ type CreateItemsResponse struct {
 	Texts *[]ItemTexts `json:"texts,omitempty"`
 	Variations []Variation `json:"variations"`
 	Success *map[string]Item `json:"success,omitempty"`
-	Failed *map[string][]string `json:"failed,omitempty"`
+	Failed *map[string]map[string][]string `json:"failed,omitempty"`
 }
 
 // NewCreateItemsResponse instantiates a new CreateItemsResponse object
@@ -1290,9 +1290,9 @@ func (o *CreateItemsResponse) SetSuccess(v map[string]Item) {
 }
 
 // GetFailed returns the Failed field value if set, zero value otherwise.
-func (o *CreateItemsResponse) GetFailed() map[string][]string {
+func (o *CreateItemsResponse) GetFailed() map[string]map[string][]string {
 	if o == nil || o.Failed == nil {
-		var ret map[string][]string
+		var ret map[string]map[string][]string
 		return ret
 	}
 	return *o.Failed
@@ -1300,7 +1300,7 @@ func (o *CreateItemsResponse) GetFailed() map[string][]string {
 
 // GetFailedOk returns a tuple with the Failed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateItemsResponse) GetFailedOk() (*map[string][]string, bool) {
+func (o *CreateItemsResponse) GetFailedOk() (*map[string]map[string][]string, bool) {
 	if o == nil || o.Failed == nil {
 		return nil, false
 	}
@@ -1316,8 +1316,8 @@ func (o *CreateItemsResponse) HasFailed() bool {
 	return false
 }
 
-// SetFailed gets a reference to the given map[string][]string and assigns it to the Failed field.
-func (o *CreateItemsResponse) SetFailed(v map[string][]string) {
+// SetFailed gets a reference to the given map[string]map[string][]string and assigns it to the Failed field.
+func (o *CreateItemsResponse) SetFailed(v map[string]map[string][]string) {
 	o.Failed = &v
 }
 

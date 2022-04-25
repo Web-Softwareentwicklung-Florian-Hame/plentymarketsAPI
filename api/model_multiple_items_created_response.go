@@ -17,7 +17,7 @@ import (
 // MultipleItemsCreatedResponse format of the response when multiple items gots created
 type MultipleItemsCreatedResponse struct {
 	Success *map[string]Item `json:"success,omitempty"`
-	Failed *map[string][]string `json:"failed,omitempty"`
+	Failed *map[string]map[string][]string `json:"failed,omitempty"`
 }
 
 // NewMultipleItemsCreatedResponse instantiates a new MultipleItemsCreatedResponse object
@@ -70,9 +70,9 @@ func (o *MultipleItemsCreatedResponse) SetSuccess(v map[string]Item) {
 }
 
 // GetFailed returns the Failed field value if set, zero value otherwise.
-func (o *MultipleItemsCreatedResponse) GetFailed() map[string][]string {
+func (o *MultipleItemsCreatedResponse) GetFailed() map[string]map[string][]string {
 	if o == nil || o.Failed == nil {
-		var ret map[string][]string
+		var ret map[string]map[string][]string
 		return ret
 	}
 	return *o.Failed
@@ -80,7 +80,7 @@ func (o *MultipleItemsCreatedResponse) GetFailed() map[string][]string {
 
 // GetFailedOk returns a tuple with the Failed field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *MultipleItemsCreatedResponse) GetFailedOk() (*map[string][]string, bool) {
+func (o *MultipleItemsCreatedResponse) GetFailedOk() (*map[string]map[string][]string, bool) {
 	if o == nil || o.Failed == nil {
 		return nil, false
 	}
@@ -96,8 +96,8 @@ func (o *MultipleItemsCreatedResponse) HasFailed() bool {
 	return false
 }
 
-// SetFailed gets a reference to the given map[string][]string and assigns it to the Failed field.
-func (o *MultipleItemsCreatedResponse) SetFailed(v map[string][]string) {
+// SetFailed gets a reference to the given map[string]map[string][]string and assigns it to the Failed field.
+func (o *MultipleItemsCreatedResponse) SetFailed(v map[string]map[string][]string) {
 	o.Failed = &v
 }
 

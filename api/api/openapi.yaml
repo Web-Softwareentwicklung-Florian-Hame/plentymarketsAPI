@@ -4944,9 +4944,11 @@ components:
           type: object
         failed:
           additionalProperties:
-            items:
-              type: string
-            type: array
+            additionalProperties:
+              items:
+                type: string
+              type: array
+            type: object
           type: object
       type: object
     MultipleItemsCreatedResponseItem:

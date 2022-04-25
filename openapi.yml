@@ -1927,9 +1927,12 @@ components:
           $ref: "#/components/schemas/MultipleItemsCreatedResponseItem"
         failed:
           additionalProperties:
-            type: array
-            items:
-              type: string
+            type: object
+            additionalProperties:
+              type: array
+              items:
+                type: string
+
     MultipleItemsCreatedResponseItem:
       type: object
       additionalProperties:

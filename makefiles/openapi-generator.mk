@@ -1,9 +1,3 @@
-#
-# Makefile include for sqlboiler
-# desc: generate sqlboiler structs
-# link: https://github.com/golang/mock/gomock
-#
-
 .PHONY: generate-plentymarkets-api
 generate-plentymarkets-api:
 	rm -rf api

@@ -3051,32 +3051,32 @@ components:
         itemType: itemType
         itemShippingProfiles:
         - itemId: 2
-          profileId: profileId
+          profileId: 6
           id: 1
         - itemId: 2
-          profileId: profileId
+          profileId: 6
           id: 1
-        propertySelectionId: 6
+        propertySelectionId: 0
         couponRestriction: 1
         ebayCategory2: 9
         amazonFbaPlatform: 7
         itemProperties:
-        - surcharge: 0.8851374739011653
-          itemId: 5
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
-        - surcharge: 0.8851374739011653
-          itemId: 5
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
         ownerId: 4
         flagTwo: 8
         feedback: 6
@@ -4506,9 +4506,9 @@ components:
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
         flagOne: 6
-        id: 0
+        id: 4
         isShippingPackage: true
-        propertyId: 7
+        propertyId: 6
         ebayPresetId: 4
         updatedAt: 2000-01-23T04:56:07.000+00:00
         ebayCategory: 5
@@ -4820,7 +4820,7 @@ components:
     ItemShippingProfile:
       example:
         itemId: 2
-        profileId: profileId
+        profileId: 6
         id: 1
       properties:
         id:
@@ -4828,18 +4828,18 @@ components:
         itemId:
           type: integer
         profileId:
-          type: string
+          type: integer
       type: object
     ItemProperty:
       example:
-        surcharge: 0.8851374739011653
-        itemId: 5
+        surcharge: 7.058770351582356
+        itemId: 6
         propertySelectionId: 3
         valuefile: valuefile
-        id: 6
-        valueInt: 3
-        propertyId: 6
-        valueFloat: 7.143538047012306
+        id: 5
+        valueInt: 7
+        propertyId: 3
+        valueFloat: 0.8851374739011653
       properties:
         id:
           type: integer
@@ -5736,32 +5736,32 @@ components:
           itemType: itemType
           itemShippingProfiles:
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
-          propertySelectionId: 6
+          propertySelectionId: 0
           couponRestriction: 1
           ebayCategory2: 9
           amazonFbaPlatform: 7
           itemProperties:
-          - surcharge: 0.8851374739011653
-            itemId: 5
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          - surcharge: 0.8851374739011653
-            itemId: 5
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
           ownerId: 4
           flagTwo: 8
           feedback: 6
@@ -7191,9 +7191,9 @@ components:
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               updatedAt: 2000-01-23T04:56:07.000+00:00
           flagOne: 6
-          id: 0
+          id: 4
           isShippingPackage: true
-          propertyId: 7
+          propertyId: 6
           ebayPresetId: 4
           updatedAt: 2000-01-23T04:56:07.000+00:00
           ebayCategory: 5
@@ -7243,32 +7243,32 @@ components:
           itemType: itemType
           itemShippingProfiles:
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
-          propertySelectionId: 6
+          propertySelectionId: 0
           couponRestriction: 1
           ebayCategory2: 9
           amazonFbaPlatform: 7
           itemProperties:
-          - surcharge: 0.8851374739011653
-            itemId: 5
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          - surcharge: 0.8851374739011653
-            itemId: 5
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
           ownerId: 4
           flagTwo: 8
           feedback: 6
@@ -8698,9 +8698,9 @@ components:
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               updatedAt: 2000-01-23T04:56:07.000+00:00
           flagOne: 6
-          id: 0
+          id: 4
           isShippingPackage: true
-          propertyId: 7
+          propertyId: 6
           ebayPresetId: 4
           updatedAt: 2000-01-23T04:56:07.000+00:00
           ebayCategory: 5

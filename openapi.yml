@@ -1826,7 +1826,7 @@ components:
         itemId:
           type: integer
         profileId:
-          type: string
+          type: integer
     ItemProperty:
       type: object
       properties:

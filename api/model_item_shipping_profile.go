@@ -18,7 +18,7 @@ import (
 type ItemShippingProfile struct {
 	Id *int32 `json:"id,omitempty"`
 	ItemId *int32 `json:"itemId,omitempty"`
-	ProfileId *string `json:"profileId,omitempty"`
+	ProfileId *int32 `json:"profileId,omitempty"`
 }
 
 // NewItemShippingProfile instantiates a new ItemShippingProfile object
@@ -103,9 +103,9 @@ func (o *ItemShippingProfile) SetItemId(v int32) {
 }
 
 // GetProfileId returns the ProfileId field value if set, zero value otherwise.
-func (o *ItemShippingProfile) GetProfileId() string {
+func (o *ItemShippingProfile) GetProfileId() int32 {
 	if o == nil || o.ProfileId == nil {
-		var ret string
+		var ret int32
 		return ret
 	}
 	return *o.ProfileId
@@ -113,7 +113,7 @@ func (o *ItemShippingProfile) GetProfileId() string {
 
 // GetProfileIdOk returns a tuple with the ProfileId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ItemShippingProfile) GetProfileIdOk() (*string, bool) {
+func (o *ItemShippingProfile) GetProfileIdOk() (*int32, bool) {
 	if o == nil || o.ProfileId == nil {
 		return nil, false
 	}
@@ -129,8 +129,8 @@ func (o *ItemShippingProfile) HasProfileId() bool {
 	return false
 }
 
-// SetProfileId gets a reference to the given string and assigns it to the ProfileId field.
-func (o *ItemShippingProfile) SetProfileId(v string) {
+// SetProfileId gets a reference to the given int32 and assigns it to the ProfileId field.
+func (o *ItemShippingProfile) SetProfileId(v int32) {
 	o.ProfileId = &v
 }
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **int32** |  | [optional] 
 **ItemId** | Pointer to **int32** |  | [optional] 
-**ProfileId** | Pointer to **int32** |  | [optional] 
+**ProfileId** | Pointer to **string** |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasItemId returns a boolean if a field has been set.
 
 ### GetProfileId
 
-`func (o *ItemShippingProfile) GetProfileId() int32`
+`func (o *ItemShippingProfile) GetProfileId() string`
 
 GetProfileId returns the ProfileId field if non-nil, zero value otherwise.
 
 ### GetProfileIdOk
 
-`func (o *ItemShippingProfile) GetProfileIdOk() (*int32, bool)`
+`func (o *ItemShippingProfile) GetProfileIdOk() (*string, bool)`
 
 GetProfileIdOk returns a tuple with the ProfileId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetProfileId
 
-`func (o *ItemShippingProfile) SetProfileId(v int32)`
+`func (o *ItemShippingProfile) SetProfileId(v string)`
 
 SetProfileId sets ProfileId field to given value.
 

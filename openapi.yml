@@ -406,7 +406,7 @@ paths:
             schema:
               type: array
               items:
-                $ref: '#/components/schemas/Item'
+                $ref: '#/components/schemas/ItemRequest'
 
       responses:
         200:
@@ -1587,7 +1587,7 @@ components:
           type: string
         plentyId:
           type: integer
-    Item:
+    ItemRequest:
       type: object
       description: item type
       required:
@@ -1785,7 +1785,229 @@ components:
         itemShippingProfiles:
           type: array
           items:
-            $ref: '#/components/schemas/ItemShippingProfile'
+            $ref: '#/components/schemas/ItemShippingProfileRequest'
+        profileId:
+          type: integer
+          description: "The unique ID of the shipping profile"
+        itemProperties:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemProperty'
+        propertyId:
+          type: integer
+          description: "The id of the property item"
+        propertySelectionId:
+          type: integer
+          description: "The id of the property selection"
+        id:
+          type: integer
+        texts:
+          type: array
+          items:
+            $ref: "#/components/schemas/ItemTexts"
+        variations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Variation'
+    ItemResponse:
+      type: object
+      description: item type
+      required:
+        - ageRestriction
+        - profileId
+        - propertyId
+        - variations
+      properties:
+        producingCountryId:
+          type: integer
+        position:
+          type: integer
+        stockType:
+          type: integer
+          description: "values: 0 = Stocked item (default)1 = Production item2 = Colli 3 = Special order item"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+        storeSpecial:
+          type: integer
+          description: "Option to present items more prominently in the online store. 1 = Special offer 2 = New items 3 = Top items"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+        ownerId:
+          type: integer
+          description: "The plentymarkets user that is assigned as owner of this item."
+        manufacturerId:
+          type: integer
+          description: "The ID of the manufacturer of the item"
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        customsTariffNumber:
+          type: string
+          description: "Deprecated: The customs tariff number of the item; usually a 11 digit code number based on the Harmonised System"
+        revenueAccount:
+          type: integer
+          description: "The revenue account the item is linked to. An individual revenue account can be saved for each item in plentymarkets. If this is not done, plentymarkets automatically determines a revenue account based on the VAT rate."
+        couponRestriction:
+          type: integer
+          description: "Indicates if the item can be purchased using a promotional coupon. 0 = Permitted 1 = Not permitted 2 = Purchasable with coupon only"
+          enum:
+            - 0
+            - 1
+            - 2
+        condition:
+          type: integer
+          description: "The condition of the item. Possible values: 0 = New 1 = Used 2 = Boxed as new 3 = New with label 4 = Factory seconds"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+        conditionApi:
+          type: integer
+          description: "The condition of the item that is transferred to markets via API. 0 = New 1 = Used but as new 2 = Used but very good 3 = Used but good 4 = Used but acceptable 5 = Factory seconds"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+        isSubscribable:
+          type: boolean
+          description: "Flag that indicates if the item can be ordered as a subscription item. If yes, the item can be ordered for delivery at regular intervals."
+        isShippingPackage:
+          type: boolean
+          description: "Flag that indicates if a shipping package is to be used for this item. If yes and the variation's dimensions are entered in the Settings tab of a variation, the correct shipping package is assigned automatically."
+        amazonFbaPlatform:
+          type: integer
+          description: "Indicates the platform used for Fulfilment by Amazon (FBA). 0 = Do not use 1 = AMAZON EU (Europe) 2 = AMAZON FE (Far East) 3 = AMAZON NA (North America)"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+        isShippableByAmazon:
+          type: boolean
+        amazonProductType:
+          type: integer
+          description: "The Amazon product type of the item. List of IDs: https://www.plentymarkets.co.uk/manual/data-exchange/data-formats/item/"
+        amazonFedas:
+          type: string
+          description: "The FEDAS product classification key of the item."
+        ebayPresetId:
+          type: integer
+          description: "The eBay preset ID. This plentymarkets ID must be specified to save values for $ebayCategory, $ebayCategory2, $ebayStoreCategory and $ebayStoreCategory2"
+        ebayCategory:
+          type: integer
+          description: "The eBay category 1 of the item. This category is used when a new listing is created."
+        ebayCategory2:
+          type: integer
+          description: "The eBay category 2 of the item. This category is used when a new listing is created."
+        rakutenCategoryId:
+          type: integer
+          description: "The ID of the Rakuten category of this item."
+        flagOne:
+          type: integer
+          description: "Flag 1 of the item. Flags can be used to organise and filter items. Each item can be assigned up to two flags. 0 = no flag"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+            - 12
+            - 13
+            - 14
+            - 15
+            - 16
+            - 17
+            - 18
+            - 19
+            - 20
+            - 21
+            - 22
+            - 23
+            - 24
+            - 25
+            - 26
+            - 27
+            - 28
+            - 29
+            - 30
+            - 31
+        flagTwo:
+          type: integer
+          description: "Flag 2 of the item. Flags can be used to organise and filter items. Each item can be assigned up to two flags. 0 = no flag"
+          enum:
+            - 0
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+            - 11
+        ageRestriction:
+          type: integer
+          description: "The age customers must be to purchase the item. Items with an age rating of 18+ must be linked to a shipping profile for which the PostIdent option is activated. 0 = None available 3 = Released for ages 3 and up 6 = Ages 6 and up 9 = Ages 9 and up 12 = Ages 12 and up 14 = Ages 14 and up 16 = Ages 16 and up 18 = Ages 18 and up 50 = Not marked 88 = Not 99 = Unknown"
+          enum:
+            - 0
+            - 3
+            - 6
+            - 9
+            - 12
+            - 14
+            - 16
+            - 18
+            - 50
+            - 88
+            - 99
+        feedback:
+          type: integer
+          description: "The feedback, i.e. rating, that this item received. Possible values are 1 to 5 or 1 to 10 depending on the maximum rating setting. An initial feedback can be saved for items. The saved value will then be displayed as the initial feedback. Every time new feedback is submitted, the average value will be recalculated automatically."
+          enum:
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+            - 6
+            - 7
+            - 8
+            - 9
+            - 10
+        itemType:
+          type: string
+          description: "The type of the item. Because Set items are managed using a separate route, this value is always Default. optional allowed values are default, multiPack, set"
+        ebayTitles:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemEbayTitle'
+        itemShippingProfiles:
+          type: array
+          items:
+            $ref: '#/components/schemas/ItemShippingProfileRequest'
         profileId:
           type: integer
           description: "The unique ID of the shipping profile"
@@ -1818,7 +2040,7 @@ components:
           type: integer
         id:
           type: integer
-    ItemShippingProfile:
+    ItemShippingProfileResponse:
       type: object
       properties:
         id:
@@ -1827,6 +2049,15 @@ components:
           type: integer
         profileId:
           type: integer
+    ItemShippingProfileRequest:
+      type: object
+      properties:
+        id:
+          type: integer
+        itemId:
+          type: integer
+        profileId:
+          type: string
     ItemProperty:
       type: object
       properties:
@@ -1922,7 +2153,7 @@ components:
     CreateItemsResponse:
       type: object
       allOf:
-        - $ref: '#/components/schemas/Item'
+        - $ref: '#/components/schemas/ItemResponse'
         - $ref: "#/components/schemas/MultipleItemsCreatedResponse"
 
     MultipleItemsCreatedResponse:
@@ -1983,7 +2214,7 @@ components:
         entries:
           type: array
           items:
-            $ref: '#/components/schemas/Item'
+            $ref: '#/components/schemas/ItemResponse'
     VariationPagination:
       type: object
       description: pagination response containing variations

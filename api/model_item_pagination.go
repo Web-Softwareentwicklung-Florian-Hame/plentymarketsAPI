@@ -23,7 +23,7 @@ type ItemPagination struct {
 	FirstOnPage *int32 `json:"firstOnPage,omitempty"`
 	LastOnPage *int32 `json:"lastOnPage,omitempty"`
 	ItemsPerPage *int32 `json:"itemsPerPage,omitempty"`
-	Entries *[]Item `json:"entries,omitempty"`
+	Entries *[]ItemResponse `json:"entries,omitempty"`
 }
 
 // NewItemPagination instantiates a new ItemPagination object
@@ -268,9 +268,9 @@ func (o *ItemPagination) SetItemsPerPage(v int32) {
 }
 
 // GetEntries returns the Entries field value if set, zero value otherwise.
-func (o *ItemPagination) GetEntries() []Item {
+func (o *ItemPagination) GetEntries() []ItemResponse {
 	if o == nil || o.Entries == nil {
-		var ret []Item
+		var ret []ItemResponse
 		return ret
 	}
 	return *o.Entries
@@ -278,7 +278,7 @@ func (o *ItemPagination) GetEntries() []Item {
 
 // GetEntriesOk returns a tuple with the Entries field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ItemPagination) GetEntriesOk() (*[]Item, bool) {
+func (o *ItemPagination) GetEntriesOk() (*[]ItemResponse, bool) {
 	if o == nil || o.Entries == nil {
 		return nil, false
 	}
@@ -294,8 +294,8 @@ func (o *ItemPagination) HasEntries() bool {
 	return false
 }
 
-// SetEntries gets a reference to the given []Item and assigns it to the Entries field.
-func (o *ItemPagination) SetEntries(v []Item) {
+// SetEntries gets a reference to the given []ItemResponse and assigns it to the Entries field.
+func (o *ItemPagination) SetEntries(v []ItemResponse) {
 	o.Entries = &v
 }
 

@@ -1543,11 +1543,11 @@ func (a *DefaultApiService) RestItemsManufacturersPostExecute(r ApiRestItemsManu
 type ApiRestItemsPostRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
-	item *[]Item
+	itemRequest *[]ItemRequest
 }
 
-func (r ApiRestItemsPostRequest) Item(item []Item) ApiRestItemsPostRequest {
-	r.item = &item
+func (r ApiRestItemsPostRequest) ItemRequest(itemRequest []ItemRequest) ApiRestItemsPostRequest {
+	r.itemRequest = &itemRequest
 	return r
 }
 
@@ -1611,7 +1611,7 @@ func (a *DefaultApiService) RestItemsPostExecute(r ApiRestItemsPostRequest) (Cre
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.item
+	localVarPostBody = r.itemRequest
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

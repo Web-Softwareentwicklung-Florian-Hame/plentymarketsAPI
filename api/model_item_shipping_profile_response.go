@@ -14,32 +14,32 @@ import (
 	"encoding/json"
 )
 
-// ItemShippingProfile struct for ItemShippingProfile
-type ItemShippingProfile struct {
+// ItemShippingProfileResponse struct for ItemShippingProfileResponse
+type ItemShippingProfileResponse struct {
 	Id *int32 `json:"id,omitempty"`
 	ItemId *int32 `json:"itemId,omitempty"`
 	ProfileId *int32 `json:"profileId,omitempty"`
 }
 
-// NewItemShippingProfile instantiates a new ItemShippingProfile object
+// NewItemShippingProfileResponse instantiates a new ItemShippingProfileResponse object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewItemShippingProfile() *ItemShippingProfile {
-	this := ItemShippingProfile{}
+func NewItemShippingProfileResponse() *ItemShippingProfileResponse {
+	this := ItemShippingProfileResponse{}
 	return &this
 }
 
-// NewItemShippingProfileWithDefaults instantiates a new ItemShippingProfile object
+// NewItemShippingProfileResponseWithDefaults instantiates a new ItemShippingProfileResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewItemShippingProfileWithDefaults() *ItemShippingProfile {
-	this := ItemShippingProfile{}
+func NewItemShippingProfileResponseWithDefaults() *ItemShippingProfileResponse {
+	this := ItemShippingProfileResponse{}
 	return &this
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
-func (o *ItemShippingProfile) GetId() int32 {
+func (o *ItemShippingProfileResponse) GetId() int32 {
 	if o == nil || o.Id == nil {
 		var ret int32
 		return ret
@@ -49,7 +49,7 @@ func (o *ItemShippingProfile) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ItemShippingProfile) GetIdOk() (*int32, bool) {
+func (o *ItemShippingProfileResponse) GetIdOk() (*int32, bool) {
 	if o == nil || o.Id == nil {
 		return nil, false
 	}
@@ -57,7 +57,7 @@ func (o *ItemShippingProfile) GetIdOk() (*int32, bool) {
 }
 
 // HasId returns a boolean if a field has been set.
-func (o *ItemShippingProfile) HasId() bool {
+func (o *ItemShippingProfileResponse) HasId() bool {
 	if o != nil && o.Id != nil {
 		return true
 	}
@@ -66,12 +66,12 @@ func (o *ItemShippingProfile) HasId() bool {
 }
 
 // SetId gets a reference to the given int32 and assigns it to the Id field.
-func (o *ItemShippingProfile) SetId(v int32) {
+func (o *ItemShippingProfileResponse) SetId(v int32) {
 	o.Id = &v
 }
 
 // GetItemId returns the ItemId field value if set, zero value otherwise.
-func (o *ItemShippingProfile) GetItemId() int32 {
+func (o *ItemShippingProfileResponse) GetItemId() int32 {
 	if o == nil || o.ItemId == nil {
 		var ret int32
 		return ret
@@ -81,7 +81,7 @@ func (o *ItemShippingProfile) GetItemId() int32 {
 
 // GetItemIdOk returns a tuple with the ItemId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ItemShippingProfile) GetItemIdOk() (*int32, bool) {
+func (o *ItemShippingProfileResponse) GetItemIdOk() (*int32, bool) {
 	if o == nil || o.ItemId == nil {
 		return nil, false
 	}
@@ -89,7 +89,7 @@ func (o *ItemShippingProfile) GetItemIdOk() (*int32, bool) {
 }
 
 // HasItemId returns a boolean if a field has been set.
-func (o *ItemShippingProfile) HasItemId() bool {
+func (o *ItemShippingProfileResponse) HasItemId() bool {
 	if o != nil && o.ItemId != nil {
 		return true
 	}
@@ -98,12 +98,12 @@ func (o *ItemShippingProfile) HasItemId() bool {
 }
 
 // SetItemId gets a reference to the given int32 and assigns it to the ItemId field.
-func (o *ItemShippingProfile) SetItemId(v int32) {
+func (o *ItemShippingProfileResponse) SetItemId(v int32) {
 	o.ItemId = &v
 }
 
 // GetProfileId returns the ProfileId field value if set, zero value otherwise.
-func (o *ItemShippingProfile) GetProfileId() int32 {
+func (o *ItemShippingProfileResponse) GetProfileId() int32 {
 	if o == nil || o.ProfileId == nil {
 		var ret int32
 		return ret
@@ -113,7 +113,7 @@ func (o *ItemShippingProfile) GetProfileId() int32 {
 
 // GetProfileIdOk returns a tuple with the ProfileId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ItemShippingProfile) GetProfileIdOk() (*int32, bool) {
+func (o *ItemShippingProfileResponse) GetProfileIdOk() (*int32, bool) {
 	if o == nil || o.ProfileId == nil {
 		return nil, false
 	}
@@ -121,7 +121,7 @@ func (o *ItemShippingProfile) GetProfileIdOk() (*int32, bool) {
 }
 
 // HasProfileId returns a boolean if a field has been set.
-func (o *ItemShippingProfile) HasProfileId() bool {
+func (o *ItemShippingProfileResponse) HasProfileId() bool {
 	if o != nil && o.ProfileId != nil {
 		return true
 	}
@@ -130,11 +130,11 @@ func (o *ItemShippingProfile) HasProfileId() bool {
 }
 
 // SetProfileId gets a reference to the given int32 and assigns it to the ProfileId field.
-func (o *ItemShippingProfile) SetProfileId(v int32) {
+func (o *ItemShippingProfileResponse) SetProfileId(v int32) {
 	o.ProfileId = &v
 }
 
-func (o ItemShippingProfile) MarshalJSON() ([]byte, error) {
+func (o ItemShippingProfileResponse) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Id != nil {
 		toSerialize["id"] = o.Id
@@ -148,38 +148,38 @@ func (o ItemShippingProfile) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableItemShippingProfile struct {
-	value *ItemShippingProfile
+type NullableItemShippingProfileResponse struct {
+	value *ItemShippingProfileResponse
 	isSet bool
 }
 
-func (v NullableItemShippingProfile) Get() *ItemShippingProfile {
+func (v NullableItemShippingProfileResponse) Get() *ItemShippingProfileResponse {
 	return v.value
 }
 
-func (v *NullableItemShippingProfile) Set(val *ItemShippingProfile) {
+func (v *NullableItemShippingProfileResponse) Set(val *ItemShippingProfileResponse) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableItemShippingProfile) IsSet() bool {
+func (v NullableItemShippingProfileResponse) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableItemShippingProfile) Unset() {
+func (v *NullableItemShippingProfileResponse) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableItemShippingProfile(val *ItemShippingProfile) *NullableItemShippingProfile {
-	return &NullableItemShippingProfile{value: val, isSet: true}
+func NewNullableItemShippingProfileResponse(val *ItemShippingProfileResponse) *NullableItemShippingProfileResponse {
+	return &NullableItemShippingProfileResponse{value: val, isSet: true}
 }
 
-func (v NullableItemShippingProfile) MarshalJSON() ([]byte, error) {
+func (v NullableItemShippingProfileResponse) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableItemShippingProfile) UnmarshalJSON(src []byte) error {
+func (v *NullableItemShippingProfileResponse) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

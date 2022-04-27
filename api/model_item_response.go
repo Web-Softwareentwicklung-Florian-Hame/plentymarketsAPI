@@ -15,8 +15,8 @@ import (
 	"time"
 )
 
-// Item item type
-type Item struct {
+// ItemResponse item type
+type ItemResponse struct {
 	ProducingCountryId *int32 `json:"producingCountryId,omitempty"`
 	Position *int32 `json:"position,omitempty"`
 	// values: 0 = Stocked item (default)1 = Production item2 = Colli 3 = Special order item
@@ -69,7 +69,7 @@ type Item struct {
 	// The type of the item. Because Set items are managed using a separate route, this value is always Default. optional allowed values are default, multiPack, set
 	ItemType *string `json:"itemType,omitempty"`
 	EbayTitles *[]ItemEbayTitle `json:"ebayTitles,omitempty"`
-	ItemShippingProfiles *[]ItemShippingProfile `json:"itemShippingProfiles,omitempty"`
+	ItemShippingProfiles *[]ItemShippingProfileRequest `json:"itemShippingProfiles,omitempty"`
 	// The unique ID of the shipping profile
 	ProfileId int32 `json:"profileId"`
 	ItemProperties *[]ItemProperty `json:"itemProperties,omitempty"`
@@ -82,12 +82,12 @@ type Item struct {
 	Variations []Variation `json:"variations"`
 }
 
-// NewItem instantiates a new Item object
+// NewItemResponse instantiates a new ItemResponse object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewItem(ageRestriction int32, profileId int32, propertyId int32, variations []Variation) *Item {
-	this := Item{}
+func NewItemResponse(ageRestriction int32, profileId int32, propertyId int32, variations []Variation) *ItemResponse {
+	this := ItemResponse{}
 	this.AgeRestriction = ageRestriction
 	this.ProfileId = profileId
 	this.PropertyId = propertyId
@@ -95,16 +95,16 @@ func NewItem(ageRestriction int32, profileId int32, propertyId int32, variations
 	return &this
 }
 
-// NewItemWithDefaults instantiates a new Item object
+// NewItemResponseWithDefaults instantiates a new ItemResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewItemWithDefaults() *Item {
-	this := Item{}
+func NewItemResponseWithDefaults() *ItemResponse {
+	this := ItemResponse{}
 	return &this
 }
 
 // GetProducingCountryId returns the ProducingCountryId field value if set, zero value otherwise.
-func (o *Item) GetProducingCountryId() int32 {
+func (o *ItemResponse) GetProducingCountryId() int32 {
 	if o == nil || o.ProducingCountryId == nil {
 		var ret int32
 		return ret
@@ -114,7 +114,7 @@ func (o *Item) GetProducingCountryId() int32 {
 
 // GetProducingCountryIdOk returns a tuple with the ProducingCountryId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetProducingCountryIdOk() (*int32, bool) {
+func (o *ItemResponse) GetProducingCountryIdOk() (*int32, bool) {
 	if o == nil || o.ProducingCountryId == nil {
 		return nil, false
 	}
@@ -122,7 +122,7 @@ func (o *Item) GetProducingCountryIdOk() (*int32, bool) {
 }
 
 // HasProducingCountryId returns a boolean if a field has been set.
-func (o *Item) HasProducingCountryId() bool {
+func (o *ItemResponse) HasProducingCountryId() bool {
 	if o != nil && o.ProducingCountryId != nil {
 		return true
 	}
@@ -131,12 +131,12 @@ func (o *Item) HasProducingCountryId() bool {
 }
 
 // SetProducingCountryId gets a reference to the given int32 and assigns it to the ProducingCountryId field.
-func (o *Item) SetProducingCountryId(v int32) {
+func (o *ItemResponse) SetProducingCountryId(v int32) {
 	o.ProducingCountryId = &v
 }
 
 // GetPosition returns the Position field value if set, zero value otherwise.
-func (o *Item) GetPosition() int32 {
+func (o *ItemResponse) GetPosition() int32 {
 	if o == nil || o.Position == nil {
 		var ret int32
 		return ret
@@ -146,7 +146,7 @@ func (o *Item) GetPosition() int32 {
 
 // GetPositionOk returns a tuple with the Position field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetPositionOk() (*int32, bool) {
+func (o *ItemResponse) GetPositionOk() (*int32, bool) {
 	if o == nil || o.Position == nil {
 		return nil, false
 	}
@@ -154,7 +154,7 @@ func (o *Item) GetPositionOk() (*int32, bool) {
 }
 
 // HasPosition returns a boolean if a field has been set.
-func (o *Item) HasPosition() bool {
+func (o *ItemResponse) HasPosition() bool {
 	if o != nil && o.Position != nil {
 		return true
 	}
@@ -163,12 +163,12 @@ func (o *Item) HasPosition() bool {
 }
 
 // SetPosition gets a reference to the given int32 and assigns it to the Position field.
-func (o *Item) SetPosition(v int32) {
+func (o *ItemResponse) SetPosition(v int32) {
 	o.Position = &v
 }
 
 // GetStockType returns the StockType field value if set, zero value otherwise.
-func (o *Item) GetStockType() int32 {
+func (o *ItemResponse) GetStockType() int32 {
 	if o == nil || o.StockType == nil {
 		var ret int32
 		return ret
@@ -178,7 +178,7 @@ func (o *Item) GetStockType() int32 {
 
 // GetStockTypeOk returns a tuple with the StockType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetStockTypeOk() (*int32, bool) {
+func (o *ItemResponse) GetStockTypeOk() (*int32, bool) {
 	if o == nil || o.StockType == nil {
 		return nil, false
 	}
@@ -186,7 +186,7 @@ func (o *Item) GetStockTypeOk() (*int32, bool) {
 }
 
 // HasStockType returns a boolean if a field has been set.
-func (o *Item) HasStockType() bool {
+func (o *ItemResponse) HasStockType() bool {
 	if o != nil && o.StockType != nil {
 		return true
 	}
@@ -195,12 +195,12 @@ func (o *Item) HasStockType() bool {
 }
 
 // SetStockType gets a reference to the given int32 and assigns it to the StockType field.
-func (o *Item) SetStockType(v int32) {
+func (o *ItemResponse) SetStockType(v int32) {
 	o.StockType = &v
 }
 
 // GetStoreSpecial returns the StoreSpecial field value if set, zero value otherwise.
-func (o *Item) GetStoreSpecial() int32 {
+func (o *ItemResponse) GetStoreSpecial() int32 {
 	if o == nil || o.StoreSpecial == nil {
 		var ret int32
 		return ret
@@ -210,7 +210,7 @@ func (o *Item) GetStoreSpecial() int32 {
 
 // GetStoreSpecialOk returns a tuple with the StoreSpecial field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetStoreSpecialOk() (*int32, bool) {
+func (o *ItemResponse) GetStoreSpecialOk() (*int32, bool) {
 	if o == nil || o.StoreSpecial == nil {
 		return nil, false
 	}
@@ -218,7 +218,7 @@ func (o *Item) GetStoreSpecialOk() (*int32, bool) {
 }
 
 // HasStoreSpecial returns a boolean if a field has been set.
-func (o *Item) HasStoreSpecial() bool {
+func (o *ItemResponse) HasStoreSpecial() bool {
 	if o != nil && o.StoreSpecial != nil {
 		return true
 	}
@@ -227,12 +227,12 @@ func (o *Item) HasStoreSpecial() bool {
 }
 
 // SetStoreSpecial gets a reference to the given int32 and assigns it to the StoreSpecial field.
-func (o *Item) SetStoreSpecial(v int32) {
+func (o *ItemResponse) SetStoreSpecial(v int32) {
 	o.StoreSpecial = &v
 }
 
 // GetOwnerId returns the OwnerId field value if set, zero value otherwise.
-func (o *Item) GetOwnerId() int32 {
+func (o *ItemResponse) GetOwnerId() int32 {
 	if o == nil || o.OwnerId == nil {
 		var ret int32
 		return ret
@@ -242,7 +242,7 @@ func (o *Item) GetOwnerId() int32 {
 
 // GetOwnerIdOk returns a tuple with the OwnerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetOwnerIdOk() (*int32, bool) {
+func (o *ItemResponse) GetOwnerIdOk() (*int32, bool) {
 	if o == nil || o.OwnerId == nil {
 		return nil, false
 	}
@@ -250,7 +250,7 @@ func (o *Item) GetOwnerIdOk() (*int32, bool) {
 }
 
 // HasOwnerId returns a boolean if a field has been set.
-func (o *Item) HasOwnerId() bool {
+func (o *ItemResponse) HasOwnerId() bool {
 	if o != nil && o.OwnerId != nil {
 		return true
 	}
@@ -259,12 +259,12 @@ func (o *Item) HasOwnerId() bool {
 }
 
 // SetOwnerId gets a reference to the given int32 and assigns it to the OwnerId field.
-func (o *Item) SetOwnerId(v int32) {
+func (o *ItemResponse) SetOwnerId(v int32) {
 	o.OwnerId = &v
 }
 
 // GetManufacturerId returns the ManufacturerId field value if set, zero value otherwise.
-func (o *Item) GetManufacturerId() int32 {
+func (o *ItemResponse) GetManufacturerId() int32 {
 	if o == nil || o.ManufacturerId == nil {
 		var ret int32
 		return ret
@@ -274,7 +274,7 @@ func (o *Item) GetManufacturerId() int32 {
 
 // GetManufacturerIdOk returns a tuple with the ManufacturerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetManufacturerIdOk() (*int32, bool) {
+func (o *ItemResponse) GetManufacturerIdOk() (*int32, bool) {
 	if o == nil || o.ManufacturerId == nil {
 		return nil, false
 	}
@@ -282,7 +282,7 @@ func (o *Item) GetManufacturerIdOk() (*int32, bool) {
 }
 
 // HasManufacturerId returns a boolean if a field has been set.
-func (o *Item) HasManufacturerId() bool {
+func (o *ItemResponse) HasManufacturerId() bool {
 	if o != nil && o.ManufacturerId != nil {
 		return true
 	}
@@ -291,12 +291,12 @@ func (o *Item) HasManufacturerId() bool {
 }
 
 // SetManufacturerId gets a reference to the given int32 and assigns it to the ManufacturerId field.
-func (o *Item) SetManufacturerId(v int32) {
+func (o *ItemResponse) SetManufacturerId(v int32) {
 	o.ManufacturerId = &v
 }
 
 // GetCreatedAt returns the CreatedAt field value if set, zero value otherwise.
-func (o *Item) GetCreatedAt() time.Time {
+func (o *ItemResponse) GetCreatedAt() time.Time {
 	if o == nil || o.CreatedAt == nil {
 		var ret time.Time
 		return ret
@@ -306,7 +306,7 @@ func (o *Item) GetCreatedAt() time.Time {
 
 // GetCreatedAtOk returns a tuple with the CreatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetCreatedAtOk() (*time.Time, bool) {
+func (o *ItemResponse) GetCreatedAtOk() (*time.Time, bool) {
 	if o == nil || o.CreatedAt == nil {
 		return nil, false
 	}
@@ -314,7 +314,7 @@ func (o *Item) GetCreatedAtOk() (*time.Time, bool) {
 }
 
 // HasCreatedAt returns a boolean if a field has been set.
-func (o *Item) HasCreatedAt() bool {
+func (o *ItemResponse) HasCreatedAt() bool {
 	if o != nil && o.CreatedAt != nil {
 		return true
 	}
@@ -323,12 +323,12 @@ func (o *Item) HasCreatedAt() bool {
 }
 
 // SetCreatedAt gets a reference to the given time.Time and assigns it to the CreatedAt field.
-func (o *Item) SetCreatedAt(v time.Time) {
+func (o *ItemResponse) SetCreatedAt(v time.Time) {
 	o.CreatedAt = &v
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *Item) GetUpdatedAt() time.Time {
+func (o *ItemResponse) GetUpdatedAt() time.Time {
 	if o == nil || o.UpdatedAt == nil {
 		var ret time.Time
 		return ret
@@ -338,7 +338,7 @@ func (o *Item) GetUpdatedAt() time.Time {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetUpdatedAtOk() (*time.Time, bool) {
+func (o *ItemResponse) GetUpdatedAtOk() (*time.Time, bool) {
 	if o == nil || o.UpdatedAt == nil {
 		return nil, false
 	}
@@ -346,7 +346,7 @@ func (o *Item) GetUpdatedAtOk() (*time.Time, bool) {
 }
 
 // HasUpdatedAt returns a boolean if a field has been set.
-func (o *Item) HasUpdatedAt() bool {
+func (o *ItemResponse) HasUpdatedAt() bool {
 	if o != nil && o.UpdatedAt != nil {
 		return true
 	}
@@ -355,12 +355,12 @@ func (o *Item) HasUpdatedAt() bool {
 }
 
 // SetUpdatedAt gets a reference to the given time.Time and assigns it to the UpdatedAt field.
-func (o *Item) SetUpdatedAt(v time.Time) {
+func (o *ItemResponse) SetUpdatedAt(v time.Time) {
 	o.UpdatedAt = &v
 }
 
 // GetCustomsTariffNumber returns the CustomsTariffNumber field value if set, zero value otherwise.
-func (o *Item) GetCustomsTariffNumber() string {
+func (o *ItemResponse) GetCustomsTariffNumber() string {
 	if o == nil || o.CustomsTariffNumber == nil {
 		var ret string
 		return ret
@@ -370,7 +370,7 @@ func (o *Item) GetCustomsTariffNumber() string {
 
 // GetCustomsTariffNumberOk returns a tuple with the CustomsTariffNumber field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetCustomsTariffNumberOk() (*string, bool) {
+func (o *ItemResponse) GetCustomsTariffNumberOk() (*string, bool) {
 	if o == nil || o.CustomsTariffNumber == nil {
 		return nil, false
 	}
@@ -378,7 +378,7 @@ func (o *Item) GetCustomsTariffNumberOk() (*string, bool) {
 }
 
 // HasCustomsTariffNumber returns a boolean if a field has been set.
-func (o *Item) HasCustomsTariffNumber() bool {
+func (o *ItemResponse) HasCustomsTariffNumber() bool {
 	if o != nil && o.CustomsTariffNumber != nil {
 		return true
 	}
@@ -387,12 +387,12 @@ func (o *Item) HasCustomsTariffNumber() bool {
 }
 
 // SetCustomsTariffNumber gets a reference to the given string and assigns it to the CustomsTariffNumber field.
-func (o *Item) SetCustomsTariffNumber(v string) {
+func (o *ItemResponse) SetCustomsTariffNumber(v string) {
 	o.CustomsTariffNumber = &v
 }
 
 // GetRevenueAccount returns the RevenueAccount field value if set, zero value otherwise.
-func (o *Item) GetRevenueAccount() int32 {
+func (o *ItemResponse) GetRevenueAccount() int32 {
 	if o == nil || o.RevenueAccount == nil {
 		var ret int32
 		return ret
@@ -402,7 +402,7 @@ func (o *Item) GetRevenueAccount() int32 {
 
 // GetRevenueAccountOk returns a tuple with the RevenueAccount field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetRevenueAccountOk() (*int32, bool) {
+func (o *ItemResponse) GetRevenueAccountOk() (*int32, bool) {
 	if o == nil || o.RevenueAccount == nil {
 		return nil, false
 	}
@@ -410,7 +410,7 @@ func (o *Item) GetRevenueAccountOk() (*int32, bool) {
 }
 
 // HasRevenueAccount returns a boolean if a field has been set.
-func (o *Item) HasRevenueAccount() bool {
+func (o *ItemResponse) HasRevenueAccount() bool {
 	if o != nil && o.RevenueAccount != nil {
 		return true
 	}
@@ -419,12 +419,12 @@ func (o *Item) HasRevenueAccount() bool {
 }
 
 // SetRevenueAccount gets a reference to the given int32 and assigns it to the RevenueAccount field.
-func (o *Item) SetRevenueAccount(v int32) {
+func (o *ItemResponse) SetRevenueAccount(v int32) {
 	o.RevenueAccount = &v
 }
 
 // GetCouponRestriction returns the CouponRestriction field value if set, zero value otherwise.
-func (o *Item) GetCouponRestriction() int32 {
+func (o *ItemResponse) GetCouponRestriction() int32 {
 	if o == nil || o.CouponRestriction == nil {
 		var ret int32
 		return ret
@@ -434,7 +434,7 @@ func (o *Item) GetCouponRestriction() int32 {
 
 // GetCouponRestrictionOk returns a tuple with the CouponRestriction field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetCouponRestrictionOk() (*int32, bool) {
+func (o *ItemResponse) GetCouponRestrictionOk() (*int32, bool) {
 	if o == nil || o.CouponRestriction == nil {
 		return nil, false
 	}
@@ -442,7 +442,7 @@ func (o *Item) GetCouponRestrictionOk() (*int32, bool) {
 }
 
 // HasCouponRestriction returns a boolean if a field has been set.
-func (o *Item) HasCouponRestriction() bool {
+func (o *ItemResponse) HasCouponRestriction() bool {
 	if o != nil && o.CouponRestriction != nil {
 		return true
 	}
@@ -451,12 +451,12 @@ func (o *Item) HasCouponRestriction() bool {
 }
 
 // SetCouponRestriction gets a reference to the given int32 and assigns it to the CouponRestriction field.
-func (o *Item) SetCouponRestriction(v int32) {
+func (o *ItemResponse) SetCouponRestriction(v int32) {
 	o.CouponRestriction = &v
 }
 
 // GetCondition returns the Condition field value if set, zero value otherwise.
-func (o *Item) GetCondition() int32 {
+func (o *ItemResponse) GetCondition() int32 {
 	if o == nil || o.Condition == nil {
 		var ret int32
 		return ret
@@ -466,7 +466,7 @@ func (o *Item) GetCondition() int32 {
 
 // GetConditionOk returns a tuple with the Condition field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetConditionOk() (*int32, bool) {
+func (o *ItemResponse) GetConditionOk() (*int32, bool) {
 	if o == nil || o.Condition == nil {
 		return nil, false
 	}
@@ -474,7 +474,7 @@ func (o *Item) GetConditionOk() (*int32, bool) {
 }
 
 // HasCondition returns a boolean if a field has been set.
-func (o *Item) HasCondition() bool {
+func (o *ItemResponse) HasCondition() bool {
 	if o != nil && o.Condition != nil {
 		return true
 	}
@@ -483,12 +483,12 @@ func (o *Item) HasCondition() bool {
 }
 
 // SetCondition gets a reference to the given int32 and assigns it to the Condition field.
-func (o *Item) SetCondition(v int32) {
+func (o *ItemResponse) SetCondition(v int32) {
 	o.Condition = &v
 }
 
 // GetConditionApi returns the ConditionApi field value if set, zero value otherwise.
-func (o *Item) GetConditionApi() int32 {
+func (o *ItemResponse) GetConditionApi() int32 {
 	if o == nil || o.ConditionApi == nil {
 		var ret int32
 		return ret
@@ -498,7 +498,7 @@ func (o *Item) GetConditionApi() int32 {
 
 // GetConditionApiOk returns a tuple with the ConditionApi field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetConditionApiOk() (*int32, bool) {
+func (o *ItemResponse) GetConditionApiOk() (*int32, bool) {
 	if o == nil || o.ConditionApi == nil {
 		return nil, false
 	}
@@ -506,7 +506,7 @@ func (o *Item) GetConditionApiOk() (*int32, bool) {
 }
 
 // HasConditionApi returns a boolean if a field has been set.
-func (o *Item) HasConditionApi() bool {
+func (o *ItemResponse) HasConditionApi() bool {
 	if o != nil && o.ConditionApi != nil {
 		return true
 	}
@@ -515,12 +515,12 @@ func (o *Item) HasConditionApi() bool {
 }
 
 // SetConditionApi gets a reference to the given int32 and assigns it to the ConditionApi field.
-func (o *Item) SetConditionApi(v int32) {
+func (o *ItemResponse) SetConditionApi(v int32) {
 	o.ConditionApi = &v
 }
 
 // GetIsSubscribable returns the IsSubscribable field value if set, zero value otherwise.
-func (o *Item) GetIsSubscribable() bool {
+func (o *ItemResponse) GetIsSubscribable() bool {
 	if o == nil || o.IsSubscribable == nil {
 		var ret bool
 		return ret
@@ -530,7 +530,7 @@ func (o *Item) GetIsSubscribable() bool {
 
 // GetIsSubscribableOk returns a tuple with the IsSubscribable field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetIsSubscribableOk() (*bool, bool) {
+func (o *ItemResponse) GetIsSubscribableOk() (*bool, bool) {
 	if o == nil || o.IsSubscribable == nil {
 		return nil, false
 	}
@@ -538,7 +538,7 @@ func (o *Item) GetIsSubscribableOk() (*bool, bool) {
 }
 
 // HasIsSubscribable returns a boolean if a field has been set.
-func (o *Item) HasIsSubscribable() bool {
+func (o *ItemResponse) HasIsSubscribable() bool {
 	if o != nil && o.IsSubscribable != nil {
 		return true
 	}
@@ -547,12 +547,12 @@ func (o *Item) HasIsSubscribable() bool {
 }
 
 // SetIsSubscribable gets a reference to the given bool and assigns it to the IsSubscribable field.
-func (o *Item) SetIsSubscribable(v bool) {
+func (o *ItemResponse) SetIsSubscribable(v bool) {
 	o.IsSubscribable = &v
 }
 
 // GetIsShippingPackage returns the IsShippingPackage field value if set, zero value otherwise.
-func (o *Item) GetIsShippingPackage() bool {
+func (o *ItemResponse) GetIsShippingPackage() bool {
 	if o == nil || o.IsShippingPackage == nil {
 		var ret bool
 		return ret
@@ -562,7 +562,7 @@ func (o *Item) GetIsShippingPackage() bool {
 
 // GetIsShippingPackageOk returns a tuple with the IsShippingPackage field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetIsShippingPackageOk() (*bool, bool) {
+func (o *ItemResponse) GetIsShippingPackageOk() (*bool, bool) {
 	if o == nil || o.IsShippingPackage == nil {
 		return nil, false
 	}
@@ -570,7 +570,7 @@ func (o *Item) GetIsShippingPackageOk() (*bool, bool) {
 }
 
 // HasIsShippingPackage returns a boolean if a field has been set.
-func (o *Item) HasIsShippingPackage() bool {
+func (o *ItemResponse) HasIsShippingPackage() bool {
 	if o != nil && o.IsShippingPackage != nil {
 		return true
 	}
@@ -579,12 +579,12 @@ func (o *Item) HasIsShippingPackage() bool {
 }
 
 // SetIsShippingPackage gets a reference to the given bool and assigns it to the IsShippingPackage field.
-func (o *Item) SetIsShippingPackage(v bool) {
+func (o *ItemResponse) SetIsShippingPackage(v bool) {
 	o.IsShippingPackage = &v
 }
 
 // GetAmazonFbaPlatform returns the AmazonFbaPlatform field value if set, zero value otherwise.
-func (o *Item) GetAmazonFbaPlatform() int32 {
+func (o *ItemResponse) GetAmazonFbaPlatform() int32 {
 	if o == nil || o.AmazonFbaPlatform == nil {
 		var ret int32
 		return ret
@@ -594,7 +594,7 @@ func (o *Item) GetAmazonFbaPlatform() int32 {
 
 // GetAmazonFbaPlatformOk returns a tuple with the AmazonFbaPlatform field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetAmazonFbaPlatformOk() (*int32, bool) {
+func (o *ItemResponse) GetAmazonFbaPlatformOk() (*int32, bool) {
 	if o == nil || o.AmazonFbaPlatform == nil {
 		return nil, false
 	}
@@ -602,7 +602,7 @@ func (o *Item) GetAmazonFbaPlatformOk() (*int32, bool) {
 }
 
 // HasAmazonFbaPlatform returns a boolean if a field has been set.
-func (o *Item) HasAmazonFbaPlatform() bool {
+func (o *ItemResponse) HasAmazonFbaPlatform() bool {
 	if o != nil && o.AmazonFbaPlatform != nil {
 		return true
 	}
@@ -611,12 +611,12 @@ func (o *Item) HasAmazonFbaPlatform() bool {
 }
 
 // SetAmazonFbaPlatform gets a reference to the given int32 and assigns it to the AmazonFbaPlatform field.
-func (o *Item) SetAmazonFbaPlatform(v int32) {
+func (o *ItemResponse) SetAmazonFbaPlatform(v int32) {
 	o.AmazonFbaPlatform = &v
 }
 
 // GetIsShippableByAmazon returns the IsShippableByAmazon field value if set, zero value otherwise.
-func (o *Item) GetIsShippableByAmazon() bool {
+func (o *ItemResponse) GetIsShippableByAmazon() bool {
 	if o == nil || o.IsShippableByAmazon == nil {
 		var ret bool
 		return ret
@@ -626,7 +626,7 @@ func (o *Item) GetIsShippableByAmazon() bool {
 
 // GetIsShippableByAmazonOk returns a tuple with the IsShippableByAmazon field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetIsShippableByAmazonOk() (*bool, bool) {
+func (o *ItemResponse) GetIsShippableByAmazonOk() (*bool, bool) {
 	if o == nil || o.IsShippableByAmazon == nil {
 		return nil, false
 	}
@@ -634,7 +634,7 @@ func (o *Item) GetIsShippableByAmazonOk() (*bool, bool) {
 }
 
 // HasIsShippableByAmazon returns a boolean if a field has been set.
-func (o *Item) HasIsShippableByAmazon() bool {
+func (o *ItemResponse) HasIsShippableByAmazon() bool {
 	if o != nil && o.IsShippableByAmazon != nil {
 		return true
 	}
@@ -643,12 +643,12 @@ func (o *Item) HasIsShippableByAmazon() bool {
 }
 
 // SetIsShippableByAmazon gets a reference to the given bool and assigns it to the IsShippableByAmazon field.
-func (o *Item) SetIsShippableByAmazon(v bool) {
+func (o *ItemResponse) SetIsShippableByAmazon(v bool) {
 	o.IsShippableByAmazon = &v
 }
 
 // GetAmazonProductType returns the AmazonProductType field value if set, zero value otherwise.
-func (o *Item) GetAmazonProductType() int32 {
+func (o *ItemResponse) GetAmazonProductType() int32 {
 	if o == nil || o.AmazonProductType == nil {
 		var ret int32
 		return ret
@@ -658,7 +658,7 @@ func (o *Item) GetAmazonProductType() int32 {
 
 // GetAmazonProductTypeOk returns a tuple with the AmazonProductType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetAmazonProductTypeOk() (*int32, bool) {
+func (o *ItemResponse) GetAmazonProductTypeOk() (*int32, bool) {
 	if o == nil || o.AmazonProductType == nil {
 		return nil, false
 	}
@@ -666,7 +666,7 @@ func (o *Item) GetAmazonProductTypeOk() (*int32, bool) {
 }
 
 // HasAmazonProductType returns a boolean if a field has been set.
-func (o *Item) HasAmazonProductType() bool {
+func (o *ItemResponse) HasAmazonProductType() bool {
 	if o != nil && o.AmazonProductType != nil {
 		return true
 	}
@@ -675,12 +675,12 @@ func (o *Item) HasAmazonProductType() bool {
 }
 
 // SetAmazonProductType gets a reference to the given int32 and assigns it to the AmazonProductType field.
-func (o *Item) SetAmazonProductType(v int32) {
+func (o *ItemResponse) SetAmazonProductType(v int32) {
 	o.AmazonProductType = &v
 }
 
 // GetAmazonFedas returns the AmazonFedas field value if set, zero value otherwise.
-func (o *Item) GetAmazonFedas() string {
+func (o *ItemResponse) GetAmazonFedas() string {
 	if o == nil || o.AmazonFedas == nil {
 		var ret string
 		return ret
@@ -690,7 +690,7 @@ func (o *Item) GetAmazonFedas() string {
 
 // GetAmazonFedasOk returns a tuple with the AmazonFedas field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetAmazonFedasOk() (*string, bool) {
+func (o *ItemResponse) GetAmazonFedasOk() (*string, bool) {
 	if o == nil || o.AmazonFedas == nil {
 		return nil, false
 	}
@@ -698,7 +698,7 @@ func (o *Item) GetAmazonFedasOk() (*string, bool) {
 }
 
 // HasAmazonFedas returns a boolean if a field has been set.
-func (o *Item) HasAmazonFedas() bool {
+func (o *ItemResponse) HasAmazonFedas() bool {
 	if o != nil && o.AmazonFedas != nil {
 		return true
 	}
@@ -707,12 +707,12 @@ func (o *Item) HasAmazonFedas() bool {
 }
 
 // SetAmazonFedas gets a reference to the given string and assigns it to the AmazonFedas field.
-func (o *Item) SetAmazonFedas(v string) {
+func (o *ItemResponse) SetAmazonFedas(v string) {
 	o.AmazonFedas = &v
 }
 
 // GetEbayPresetId returns the EbayPresetId field value if set, zero value otherwise.
-func (o *Item) GetEbayPresetId() int32 {
+func (o *ItemResponse) GetEbayPresetId() int32 {
 	if o == nil || o.EbayPresetId == nil {
 		var ret int32
 		return ret
@@ -722,7 +722,7 @@ func (o *Item) GetEbayPresetId() int32 {
 
 // GetEbayPresetIdOk returns a tuple with the EbayPresetId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetEbayPresetIdOk() (*int32, bool) {
+func (o *ItemResponse) GetEbayPresetIdOk() (*int32, bool) {
 	if o == nil || o.EbayPresetId == nil {
 		return nil, false
 	}
@@ -730,7 +730,7 @@ func (o *Item) GetEbayPresetIdOk() (*int32, bool) {
 }
 
 // HasEbayPresetId returns a boolean if a field has been set.
-func (o *Item) HasEbayPresetId() bool {
+func (o *ItemResponse) HasEbayPresetId() bool {
 	if o != nil && o.EbayPresetId != nil {
 		return true
 	}
@@ -739,12 +739,12 @@ func (o *Item) HasEbayPresetId() bool {
 }
 
 // SetEbayPresetId gets a reference to the given int32 and assigns it to the EbayPresetId field.
-func (o *Item) SetEbayPresetId(v int32) {
+func (o *ItemResponse) SetEbayPresetId(v int32) {
 	o.EbayPresetId = &v
 }
 
 // GetEbayCategory returns the EbayCategory field value if set, zero value otherwise.
-func (o *Item) GetEbayCategory() int32 {
+func (o *ItemResponse) GetEbayCategory() int32 {
 	if o == nil || o.EbayCategory == nil {
 		var ret int32
 		return ret
@@ -754,7 +754,7 @@ func (o *Item) GetEbayCategory() int32 {
 
 // GetEbayCategoryOk returns a tuple with the EbayCategory field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetEbayCategoryOk() (*int32, bool) {
+func (o *ItemResponse) GetEbayCategoryOk() (*int32, bool) {
 	if o == nil || o.EbayCategory == nil {
 		return nil, false
 	}
@@ -762,7 +762,7 @@ func (o *Item) GetEbayCategoryOk() (*int32, bool) {
 }
 
 // HasEbayCategory returns a boolean if a field has been set.
-func (o *Item) HasEbayCategory() bool {
+func (o *ItemResponse) HasEbayCategory() bool {
 	if o != nil && o.EbayCategory != nil {
 		return true
 	}
@@ -771,12 +771,12 @@ func (o *Item) HasEbayCategory() bool {
 }
 
 // SetEbayCategory gets a reference to the given int32 and assigns it to the EbayCategory field.
-func (o *Item) SetEbayCategory(v int32) {
+func (o *ItemResponse) SetEbayCategory(v int32) {
 	o.EbayCategory = &v
 }
 
 // GetEbayCategory2 returns the EbayCategory2 field value if set, zero value otherwise.
-func (o *Item) GetEbayCategory2() int32 {
+func (o *ItemResponse) GetEbayCategory2() int32 {
 	if o == nil || o.EbayCategory2 == nil {
 		var ret int32
 		return ret
@@ -786,7 +786,7 @@ func (o *Item) GetEbayCategory2() int32 {
 
 // GetEbayCategory2Ok returns a tuple with the EbayCategory2 field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetEbayCategory2Ok() (*int32, bool) {
+func (o *ItemResponse) GetEbayCategory2Ok() (*int32, bool) {
 	if o == nil || o.EbayCategory2 == nil {
 		return nil, false
 	}
@@ -794,7 +794,7 @@ func (o *Item) GetEbayCategory2Ok() (*int32, bool) {
 }
 
 // HasEbayCategory2 returns a boolean if a field has been set.
-func (o *Item) HasEbayCategory2() bool {
+func (o *ItemResponse) HasEbayCategory2() bool {
 	if o != nil && o.EbayCategory2 != nil {
 		return true
 	}
@@ -803,12 +803,12 @@ func (o *Item) HasEbayCategory2() bool {
 }
 
 // SetEbayCategory2 gets a reference to the given int32 and assigns it to the EbayCategory2 field.
-func (o *Item) SetEbayCategory2(v int32) {
+func (o *ItemResponse) SetEbayCategory2(v int32) {
 	o.EbayCategory2 = &v
 }
 
 // GetRakutenCategoryId returns the RakutenCategoryId field value if set, zero value otherwise.
-func (o *Item) GetRakutenCategoryId() int32 {
+func (o *ItemResponse) GetRakutenCategoryId() int32 {
 	if o == nil || o.RakutenCategoryId == nil {
 		var ret int32
 		return ret
@@ -818,7 +818,7 @@ func (o *Item) GetRakutenCategoryId() int32 {
 
 // GetRakutenCategoryIdOk returns a tuple with the RakutenCategoryId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetRakutenCategoryIdOk() (*int32, bool) {
+func (o *ItemResponse) GetRakutenCategoryIdOk() (*int32, bool) {
 	if o == nil || o.RakutenCategoryId == nil {
 		return nil, false
 	}
@@ -826,7 +826,7 @@ func (o *Item) GetRakutenCategoryIdOk() (*int32, bool) {
 }
 
 // HasRakutenCategoryId returns a boolean if a field has been set.
-func (o *Item) HasRakutenCategoryId() bool {
+func (o *ItemResponse) HasRakutenCategoryId() bool {
 	if o != nil && o.RakutenCategoryId != nil {
 		return true
 	}
@@ -835,12 +835,12 @@ func (o *Item) HasRakutenCategoryId() bool {
 }
 
 // SetRakutenCategoryId gets a reference to the given int32 and assigns it to the RakutenCategoryId field.
-func (o *Item) SetRakutenCategoryId(v int32) {
+func (o *ItemResponse) SetRakutenCategoryId(v int32) {
 	o.RakutenCategoryId = &v
 }
 
 // GetFlagOne returns the FlagOne field value if set, zero value otherwise.
-func (o *Item) GetFlagOne() int32 {
+func (o *ItemResponse) GetFlagOne() int32 {
 	if o == nil || o.FlagOne == nil {
 		var ret int32
 		return ret
@@ -850,7 +850,7 @@ func (o *Item) GetFlagOne() int32 {
 
 // GetFlagOneOk returns a tuple with the FlagOne field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetFlagOneOk() (*int32, bool) {
+func (o *ItemResponse) GetFlagOneOk() (*int32, bool) {
 	if o == nil || o.FlagOne == nil {
 		return nil, false
 	}
@@ -858,7 +858,7 @@ func (o *Item) GetFlagOneOk() (*int32, bool) {
 }
 
 // HasFlagOne returns a boolean if a field has been set.
-func (o *Item) HasFlagOne() bool {
+func (o *ItemResponse) HasFlagOne() bool {
 	if o != nil && o.FlagOne != nil {
 		return true
 	}
@@ -867,12 +867,12 @@ func (o *Item) HasFlagOne() bool {
 }
 
 // SetFlagOne gets a reference to the given int32 and assigns it to the FlagOne field.
-func (o *Item) SetFlagOne(v int32) {
+func (o *ItemResponse) SetFlagOne(v int32) {
 	o.FlagOne = &v
 }
 
 // GetFlagTwo returns the FlagTwo field value if set, zero value otherwise.
-func (o *Item) GetFlagTwo() int32 {
+func (o *ItemResponse) GetFlagTwo() int32 {
 	if o == nil || o.FlagTwo == nil {
 		var ret int32
 		return ret
@@ -882,7 +882,7 @@ func (o *Item) GetFlagTwo() int32 {
 
 // GetFlagTwoOk returns a tuple with the FlagTwo field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetFlagTwoOk() (*int32, bool) {
+func (o *ItemResponse) GetFlagTwoOk() (*int32, bool) {
 	if o == nil || o.FlagTwo == nil {
 		return nil, false
 	}
@@ -890,7 +890,7 @@ func (o *Item) GetFlagTwoOk() (*int32, bool) {
 }
 
 // HasFlagTwo returns a boolean if a field has been set.
-func (o *Item) HasFlagTwo() bool {
+func (o *ItemResponse) HasFlagTwo() bool {
 	if o != nil && o.FlagTwo != nil {
 		return true
 	}
@@ -899,12 +899,12 @@ func (o *Item) HasFlagTwo() bool {
 }
 
 // SetFlagTwo gets a reference to the given int32 and assigns it to the FlagTwo field.
-func (o *Item) SetFlagTwo(v int32) {
+func (o *ItemResponse) SetFlagTwo(v int32) {
 	o.FlagTwo = &v
 }
 
 // GetAgeRestriction returns the AgeRestriction field value
-func (o *Item) GetAgeRestriction() int32 {
+func (o *ItemResponse) GetAgeRestriction() int32 {
 	if o == nil {
 		var ret int32
 		return ret
@@ -915,7 +915,7 @@ func (o *Item) GetAgeRestriction() int32 {
 
 // GetAgeRestrictionOk returns a tuple with the AgeRestriction field value
 // and a boolean to check if the value has been set.
-func (o *Item) GetAgeRestrictionOk() (*int32, bool) {
+func (o *ItemResponse) GetAgeRestrictionOk() (*int32, bool) {
 	if o == nil  {
 		return nil, false
 	}
@@ -923,12 +923,12 @@ func (o *Item) GetAgeRestrictionOk() (*int32, bool) {
 }
 
 // SetAgeRestriction sets field value
-func (o *Item) SetAgeRestriction(v int32) {
+func (o *ItemResponse) SetAgeRestriction(v int32) {
 	o.AgeRestriction = v
 }
 
 // GetFeedback returns the Feedback field value if set, zero value otherwise.
-func (o *Item) GetFeedback() int32 {
+func (o *ItemResponse) GetFeedback() int32 {
 	if o == nil || o.Feedback == nil {
 		var ret int32
 		return ret
@@ -938,7 +938,7 @@ func (o *Item) GetFeedback() int32 {
 
 // GetFeedbackOk returns a tuple with the Feedback field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetFeedbackOk() (*int32, bool) {
+func (o *ItemResponse) GetFeedbackOk() (*int32, bool) {
 	if o == nil || o.Feedback == nil {
 		return nil, false
 	}
@@ -946,7 +946,7 @@ func (o *Item) GetFeedbackOk() (*int32, bool) {
 }
 
 // HasFeedback returns a boolean if a field has been set.
-func (o *Item) HasFeedback() bool {
+func (o *ItemResponse) HasFeedback() bool {
 	if o != nil && o.Feedback != nil {
 		return true
 	}
@@ -955,12 +955,12 @@ func (o *Item) HasFeedback() bool {
 }
 
 // SetFeedback gets a reference to the given int32 and assigns it to the Feedback field.
-func (o *Item) SetFeedback(v int32) {
+func (o *ItemResponse) SetFeedback(v int32) {
 	o.Feedback = &v
 }
 
 // GetItemType returns the ItemType field value if set, zero value otherwise.
-func (o *Item) GetItemType() string {
+func (o *ItemResponse) GetItemType() string {
 	if o == nil || o.ItemType == nil {
 		var ret string
 		return ret
@@ -970,7 +970,7 @@ func (o *Item) GetItemType() string {
 
 // GetItemTypeOk returns a tuple with the ItemType field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetItemTypeOk() (*string, bool) {
+func (o *ItemResponse) GetItemTypeOk() (*string, bool) {
 	if o == nil || o.ItemType == nil {
 		return nil, false
 	}
@@ -978,7 +978,7 @@ func (o *Item) GetItemTypeOk() (*string, bool) {
 }
 
 // HasItemType returns a boolean if a field has been set.
-func (o *Item) HasItemType() bool {
+func (o *ItemResponse) HasItemType() bool {
 	if o != nil && o.ItemType != nil {
 		return true
 	}
@@ -987,12 +987,12 @@ func (o *Item) HasItemType() bool {
 }
 
 // SetItemType gets a reference to the given string and assigns it to the ItemType field.
-func (o *Item) SetItemType(v string) {
+func (o *ItemResponse) SetItemType(v string) {
 	o.ItemType = &v
 }
 
 // GetEbayTitles returns the EbayTitles field value if set, zero value otherwise.
-func (o *Item) GetEbayTitles() []ItemEbayTitle {
+func (o *ItemResponse) GetEbayTitles() []ItemEbayTitle {
 	if o == nil || o.EbayTitles == nil {
 		var ret []ItemEbayTitle
 		return ret
@@ -1002,7 +1002,7 @@ func (o *Item) GetEbayTitles() []ItemEbayTitle {
 
 // GetEbayTitlesOk returns a tuple with the EbayTitles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetEbayTitlesOk() (*[]ItemEbayTitle, bool) {
+func (o *ItemResponse) GetEbayTitlesOk() (*[]ItemEbayTitle, bool) {
 	if o == nil || o.EbayTitles == nil {
 		return nil, false
 	}
@@ -1010,7 +1010,7 @@ func (o *Item) GetEbayTitlesOk() (*[]ItemEbayTitle, bool) {
 }
 
 // HasEbayTitles returns a boolean if a field has been set.
-func (o *Item) HasEbayTitles() bool {
+func (o *ItemResponse) HasEbayTitles() bool {
 	if o != nil && o.EbayTitles != nil {
 		return true
 	}
@@ -1019,14 +1019,14 @@ func (o *Item) HasEbayTitles() bool {
 }
 
 // SetEbayTitles gets a reference to the given []ItemEbayTitle and assigns it to the EbayTitles field.
-func (o *Item) SetEbayTitles(v []ItemEbayTitle) {
+func (o *ItemResponse) SetEbayTitles(v []ItemEbayTitle) {
 	o.EbayTitles = &v
 }
 
 // GetItemShippingProfiles returns the ItemShippingProfiles field value if set, zero value otherwise.
-func (o *Item) GetItemShippingProfiles() []ItemShippingProfile {
+func (o *ItemResponse) GetItemShippingProfiles() []ItemShippingProfileRequest {
 	if o == nil || o.ItemShippingProfiles == nil {
-		var ret []ItemShippingProfile
+		var ret []ItemShippingProfileRequest
 		return ret
 	}
 	return *o.ItemShippingProfiles
@@ -1034,7 +1034,7 @@ func (o *Item) GetItemShippingProfiles() []ItemShippingProfile {
 
 // GetItemShippingProfilesOk returns a tuple with the ItemShippingProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetItemShippingProfilesOk() (*[]ItemShippingProfile, bool) {
+func (o *ItemResponse) GetItemShippingProfilesOk() (*[]ItemShippingProfileRequest, bool) {
 	if o == nil || o.ItemShippingProfiles == nil {
 		return nil, false
 	}
@@ -1042,7 +1042,7 @@ func (o *Item) GetItemShippingProfilesOk() (*[]ItemShippingProfile, bool) {
 }
 
 // HasItemShippingProfiles returns a boolean if a field has been set.
-func (o *Item) HasItemShippingProfiles() bool {
+func (o *ItemResponse) HasItemShippingProfiles() bool {
 	if o != nil && o.ItemShippingProfiles != nil {
 		return true
 	}
@@ -1050,13 +1050,13 @@ func (o *Item) HasItemShippingProfiles() bool {
 	return false
 }
 
-// SetItemShippingProfiles gets a reference to the given []ItemShippingProfile and assigns it to the ItemShippingProfiles field.
-func (o *Item) SetItemShippingProfiles(v []ItemShippingProfile) {
+// SetItemShippingProfiles gets a reference to the given []ItemShippingProfileRequest and assigns it to the ItemShippingProfiles field.
+func (o *ItemResponse) SetItemShippingProfiles(v []ItemShippingProfileRequest) {
 	o.ItemShippingProfiles = &v
 }
 
 // GetProfileId returns the ProfileId field value
-func (o *Item) GetProfileId() int32 {
+func (o *ItemResponse) GetProfileId() int32 {
 	if o == nil {
 		var ret int32
 		return ret
@@ -1067,7 +1067,7 @@ func (o *Item) GetProfileId() int32 {
 
 // GetProfileIdOk returns a tuple with the ProfileId field value
 // and a boolean to check if the value has been set.
-func (o *Item) GetProfileIdOk() (*int32, bool) {
+func (o *ItemResponse) GetProfileIdOk() (*int32, bool) {
 	if o == nil  {
 		return nil, false
 	}
@@ -1075,12 +1075,12 @@ func (o *Item) GetProfileIdOk() (*int32, bool) {
 }
 
 // SetProfileId sets field value
-func (o *Item) SetProfileId(v int32) {
+func (o *ItemResponse) SetProfileId(v int32) {
 	o.ProfileId = v
 }
 
 // GetItemProperties returns the ItemProperties field value if set, zero value otherwise.
-func (o *Item) GetItemProperties() []ItemProperty {
+func (o *ItemResponse) GetItemProperties() []ItemProperty {
 	if o == nil || o.ItemProperties == nil {
 		var ret []ItemProperty
 		return ret
@@ -1090,7 +1090,7 @@ func (o *Item) GetItemProperties() []ItemProperty {
 
 // GetItemPropertiesOk returns a tuple with the ItemProperties field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetItemPropertiesOk() (*[]ItemProperty, bool) {
+func (o *ItemResponse) GetItemPropertiesOk() (*[]ItemProperty, bool) {
 	if o == nil || o.ItemProperties == nil {
 		return nil, false
 	}
@@ -1098,7 +1098,7 @@ func (o *Item) GetItemPropertiesOk() (*[]ItemProperty, bool) {
 }
 
 // HasItemProperties returns a boolean if a field has been set.
-func (o *Item) HasItemProperties() bool {
+func (o *ItemResponse) HasItemProperties() bool {
 	if o != nil && o.ItemProperties != nil {
 		return true
 	}
@@ -1107,12 +1107,12 @@ func (o *Item) HasItemProperties() bool {
 }
 
 // SetItemProperties gets a reference to the given []ItemProperty and assigns it to the ItemProperties field.
-func (o *Item) SetItemProperties(v []ItemProperty) {
+func (o *ItemResponse) SetItemProperties(v []ItemProperty) {
 	o.ItemProperties = &v
 }
 
 // GetPropertyId returns the PropertyId field value
-func (o *Item) GetPropertyId() int32 {
+func (o *ItemResponse) GetPropertyId() int32 {
 	if o == nil {
 		var ret int32
 		return ret
@@ -1123,7 +1123,7 @@ func (o *Item) GetPropertyId() int32 {
 
 // GetPropertyIdOk returns a tuple with the PropertyId field value
 // and a boolean to check if the value has been set.
-func (o *Item) GetPropertyIdOk() (*int32, bool) {
+func (o *ItemResponse) GetPropertyIdOk() (*int32, bool) {
 	if o == nil  {
 		return nil, false
 	}
@@ -1131,12 +1131,12 @@ func (o *Item) GetPropertyIdOk() (*int32, bool) {
 }
 
 // SetPropertyId sets field value
-func (o *Item) SetPropertyId(v int32) {
+func (o *ItemResponse) SetPropertyId(v int32) {
 	o.PropertyId = v
 }
 
 // GetPropertySelectionId returns the PropertySelectionId field value if set, zero value otherwise.
-func (o *Item) GetPropertySelectionId() int32 {
+func (o *ItemResponse) GetPropertySelectionId() int32 {
 	if o == nil || o.PropertySelectionId == nil {
 		var ret int32
 		return ret
@@ -1146,7 +1146,7 @@ func (o *Item) GetPropertySelectionId() int32 {
 
 // GetPropertySelectionIdOk returns a tuple with the PropertySelectionId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetPropertySelectionIdOk() (*int32, bool) {
+func (o *ItemResponse) GetPropertySelectionIdOk() (*int32, bool) {
 	if o == nil || o.PropertySelectionId == nil {
 		return nil, false
 	}
@@ -1154,7 +1154,7 @@ func (o *Item) GetPropertySelectionIdOk() (*int32, bool) {
 }
 
 // HasPropertySelectionId returns a boolean if a field has been set.
-func (o *Item) HasPropertySelectionId() bool {
+func (o *ItemResponse) HasPropertySelectionId() bool {
 	if o != nil && o.PropertySelectionId != nil {
 		return true
 	}
@@ -1163,12 +1163,12 @@ func (o *Item) HasPropertySelectionId() bool {
 }
 
 // SetPropertySelectionId gets a reference to the given int32 and assigns it to the PropertySelectionId field.
-func (o *Item) SetPropertySelectionId(v int32) {
+func (o *ItemResponse) SetPropertySelectionId(v int32) {
 	o.PropertySelectionId = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
-func (o *Item) GetId() int32 {
+func (o *ItemResponse) GetId() int32 {
 	if o == nil || o.Id == nil {
 		var ret int32
 		return ret
@@ -1178,7 +1178,7 @@ func (o *Item) GetId() int32 {
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetIdOk() (*int32, bool) {
+func (o *ItemResponse) GetIdOk() (*int32, bool) {
 	if o == nil || o.Id == nil {
 		return nil, false
 	}
@@ -1186,7 +1186,7 @@ func (o *Item) GetIdOk() (*int32, bool) {
 }
 
 // HasId returns a boolean if a field has been set.
-func (o *Item) HasId() bool {
+func (o *ItemResponse) HasId() bool {
 	if o != nil && o.Id != nil {
 		return true
 	}
@@ -1195,12 +1195,12 @@ func (o *Item) HasId() bool {
 }
 
 // SetId gets a reference to the given int32 and assigns it to the Id field.
-func (o *Item) SetId(v int32) {
+func (o *ItemResponse) SetId(v int32) {
 	o.Id = &v
 }
 
 // GetTexts returns the Texts field value if set, zero value otherwise.
-func (o *Item) GetTexts() []ItemTexts {
+func (o *ItemResponse) GetTexts() []ItemTexts {
 	if o == nil || o.Texts == nil {
 		var ret []ItemTexts
 		return ret
@@ -1210,7 +1210,7 @@ func (o *Item) GetTexts() []ItemTexts {
 
 // GetTextsOk returns a tuple with the Texts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Item) GetTextsOk() (*[]ItemTexts, bool) {
+func (o *ItemResponse) GetTextsOk() (*[]ItemTexts, bool) {
 	if o == nil || o.Texts == nil {
 		return nil, false
 	}
@@ -1218,7 +1218,7 @@ func (o *Item) GetTextsOk() (*[]ItemTexts, bool) {
 }
 
 // HasTexts returns a boolean if a field has been set.
-func (o *Item) HasTexts() bool {
+func (o *ItemResponse) HasTexts() bool {
 	if o != nil && o.Texts != nil {
 		return true
 	}
@@ -1227,12 +1227,12 @@ func (o *Item) HasTexts() bool {
 }
 
 // SetTexts gets a reference to the given []ItemTexts and assigns it to the Texts field.
-func (o *Item) SetTexts(v []ItemTexts) {
+func (o *ItemResponse) SetTexts(v []ItemTexts) {
 	o.Texts = &v
 }
 
 // GetVariations returns the Variations field value
-func (o *Item) GetVariations() []Variation {
+func (o *ItemResponse) GetVariations() []Variation {
 	if o == nil {
 		var ret []Variation
 		return ret
@@ -1243,7 +1243,7 @@ func (o *Item) GetVariations() []Variation {
 
 // GetVariationsOk returns a tuple with the Variations field value
 // and a boolean to check if the value has been set.
-func (o *Item) GetVariationsOk() (*[]Variation, bool) {
+func (o *ItemResponse) GetVariationsOk() (*[]Variation, bool) {
 	if o == nil  {
 		return nil, false
 	}
@@ -1251,11 +1251,11 @@ func (o *Item) GetVariationsOk() (*[]Variation, bool) {
 }
 
 // SetVariations sets field value
-func (o *Item) SetVariations(v []Variation) {
+func (o *ItemResponse) SetVariations(v []Variation) {
 	o.Variations = v
 }
 
-func (o Item) MarshalJSON() ([]byte, error) {
+func (o ItemResponse) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.ProducingCountryId != nil {
 		toSerialize["producingCountryId"] = o.ProducingCountryId
@@ -1371,38 +1371,38 @@ func (o Item) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableItem struct {
-	value *Item
+type NullableItemResponse struct {
+	value *ItemResponse
 	isSet bool
 }
 
-func (v NullableItem) Get() *Item {
+func (v NullableItemResponse) Get() *ItemResponse {
 	return v.value
 }
 
-func (v *NullableItem) Set(val *Item) {
+func (v *NullableItemResponse) Set(val *ItemResponse) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableItem) IsSet() bool {
+func (v NullableItemResponse) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableItem) Unset() {
+func (v *NullableItemResponse) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableItem(val *Item) *NullableItem {
-	return &NullableItem{value: val, isSet: true}
+func NewNullableItemResponse(val *ItemResponse) *NullableItemResponse {
+	return &NullableItemResponse{value: val, isSet: true}
 }
 
-func (v NullableItem) MarshalJSON() ([]byte, error) {
+func (v NullableItemResponse) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableItem) UnmarshalJSON(src []byte) error {
+func (v *NullableItemResponse) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

@@ -881,7 +881,7 @@ No authorization required
 
 ## RestItemsPost
 
-> CreateItemsResponse RestItemsPost(ctx).Item(item).Execute()
+> CreateItemsResponse RestItemsPost(ctx).ItemRequest(itemRequest).Execute()
 
 creates items
 
@@ -900,11 +900,11 @@ import (
 )
 
 func main() {
-    item := []openapiclient.Item{*openapiclient.NewItem(int32(123), int32(123), int32(123), []openapiclient.Variation{*openapiclient.NewVariation()})} // []Item |  (optional)
+    itemRequest := []openapiclient.ItemRequest{*openapiclient.NewItemRequest(int32(123), int32(123), int32(123), []openapiclient.Variation{*openapiclient.NewVariation()})} // []ItemRequest |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.DefaultApi.RestItemsPost(context.Background()).Item(item).Execute()
+    resp, r, err := api_client.DefaultApi.RestItemsPost(context.Background()).ItemRequest(itemRequest).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestItemsPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -925,7 +925,7 @@ Other parameters are passed through a pointer to a apiRestItemsPostRequest struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **item** | [**[]Item**](Item.md) |  | 
+ **itemRequest** | [**[]ItemRequest**](ItemRequest.md) |  | 
 
 ### Return type
 

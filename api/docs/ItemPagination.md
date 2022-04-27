@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **FirstOnPage** | Pointer to **int32** |  | [optional] 
 **LastOnPage** | Pointer to **int32** |  | [optional] 
 **ItemsPerPage** | Pointer to **int32** |  | [optional] 
-**Entries** | Pointer to [**[]Item**](Item.md) |  | [optional] 
+**Entries** | Pointer to [**[]ItemResponse**](ItemResponse.md) |  | [optional] 
 
 ## Methods
 
@@ -209,20 +209,20 @@ HasItemsPerPage returns a boolean if a field has been set.
 
 ### GetEntries
 
-`func (o *ItemPagination) GetEntries() []Item`
+`func (o *ItemPagination) GetEntries() []ItemResponse`
 
 GetEntries returns the Entries field if non-nil, zero value otherwise.
 
 ### GetEntriesOk
 
-`func (o *ItemPagination) GetEntriesOk() (*[]Item, bool)`
+`func (o *ItemPagination) GetEntriesOk() (*[]ItemResponse, bool)`
 
 GetEntriesOk returns a tuple with the Entries field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEntries
 
-`func (o *ItemPagination) SetEntries(v []Item)`
+`func (o *ItemPagination) SetEntries(v []ItemResponse)`
 
 SetEntries sets Entries field to given value.
 

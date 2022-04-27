@@ -3050,33 +3050,33 @@ components:
         customsTariffNumber: customsTariffNumber
         itemType: itemType
         itemShippingProfiles:
-        - itemId: 2
+        - itemId: 9
           profileId: profileId
-          id: 1
-        - itemId: 2
+          id: 9
+        - itemId: 9
           profileId: profileId
-          id: 1
-        propertySelectionId: 6
+          id: 9
+        propertySelectionId: 9
         couponRestriction: 9
         ebayCategory2: 1
         amazonFbaPlatform: 4
         itemProperties:
-        - surcharge: 0.8851374739011653
-          itemId: 5
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
-        - surcharge: 0.8851374739011653
-          itemId: 5
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
         ownerId: 5
         flagTwo: 1
         feedback: 5
@@ -4506,9 +4506,9 @@ components:
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
         flagOne: 7
-        id: 8
+        id: 6
         isShippingPackage: true
-        propertyId: 9
+        propertyId: 8
         ebayPresetId: 1
         updatedAt: 2000-01-23T04:56:07.000+00:00
         ebayCategory: 1
@@ -4547,7 +4547,7 @@ components:
           id: 6
           title: title
         isShippableByAmazon: true
-        profileId: 9
+        profileId: 6
         isSubscribable: true
         ageRestriction: 4
         position: 6
@@ -4813,32 +4813,32 @@ components:
         itemType: itemType
         itemShippingProfiles:
         - itemId: 2
-          profileId: profileId
+          profileId: 6
           id: 1
         - itemId: 2
-          profileId: profileId
+          profileId: 6
           id: 1
-        propertySelectionId: 6
+        propertySelectionId: 0
         couponRestriction: 1
         ebayCategory2: 9
         amazonFbaPlatform: 7
         itemProperties:
-        - surcharge: 0.8851374739011653
-          itemId: 5
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
-        - surcharge: 0.8851374739011653
-          itemId: 5
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
+        - surcharge: 7.058770351582356
+          itemId: 6
           propertySelectionId: 3
           valuefile: valuefile
-          id: 6
-          valueInt: 3
-          propertyId: 6
-          valueFloat: 7.143538047012306
+          id: 5
+          valueInt: 7
+          propertyId: 3
+          valueFloat: 0.8851374739011653
         ownerId: 4
         flagTwo: 8
         feedback: 6
@@ -6268,9 +6268,9 @@ components:
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
         flagOne: 6
-        id: 0
+        id: 4
         isShippingPackage: true
-        propertyId: 7
+        propertyId: 6
         ebayPresetId: 4
         updatedAt: 2000-01-23T04:56:07.000+00:00
         ebayCategory: 5
@@ -6535,7 +6535,7 @@ components:
           type: array
         itemShippingProfiles:
           items:
-            $ref: '#/components/schemas/ItemShippingProfileRequest'
+            $ref: '#/components/schemas/ItemShippingProfileResponse'
           type: array
         profileId:
           description: The unique ID of the shipping profile
@@ -6580,6 +6580,10 @@ components:
           type: integer
       type: object
     ItemShippingProfileResponse:
+      example:
+        itemId: 2
+        profileId: 6
+        id: 1
       properties:
         id:
           type: integer
@@ -6590,9 +6594,9 @@ components:
       type: object
     ItemShippingProfileRequest:
       example:
-        itemId: 2
+        itemId: 9
         profileId: profileId
-        id: 1
+        id: 9
       properties:
         id:
           type: integer
@@ -6603,14 +6607,14 @@ components:
       type: object
     ItemProperty:
       example:
-        surcharge: 0.8851374739011653
-        itemId: 5
+        surcharge: 7.058770351582356
+        itemId: 6
         propertySelectionId: 3
         valuefile: valuefile
-        id: 6
-        valueInt: 3
-        propertyId: 6
-        valueFloat: 7.143538047012306
+        id: 5
+        valueInt: 7
+        propertyId: 3
+        valueFloat: 0.8851374739011653
       properties:
         id:
           type: integer
@@ -7507,32 +7511,32 @@ components:
           itemType: itemType
           itemShippingProfiles:
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
-          propertySelectionId: 6
+          propertySelectionId: 0
           couponRestriction: 1
           ebayCategory2: 9
           amazonFbaPlatform: 7
           itemProperties:
-          - surcharge: 0.8851374739011653
-            itemId: 5
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          - surcharge: 0.8851374739011653
-            itemId: 5
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
           ownerId: 4
           flagTwo: 8
           feedback: 6
@@ -8962,9 +8966,9 @@ components:
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               updatedAt: 2000-01-23T04:56:07.000+00:00
           flagOne: 6
-          id: 0
+          id: 4
           isShippingPackage: true
-          propertyId: 7
+          propertyId: 6
           ebayPresetId: 4
           updatedAt: 2000-01-23T04:56:07.000+00:00
           ebayCategory: 5
@@ -9014,32 +9018,32 @@ components:
           itemType: itemType
           itemShippingProfiles:
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
           - itemId: 2
-            profileId: profileId
+            profileId: 6
             id: 1
-          propertySelectionId: 6
+          propertySelectionId: 0
           couponRestriction: 1
           ebayCategory2: 9
           amazonFbaPlatform: 7
           itemProperties:
-          - surcharge: 0.8851374739011653
-            itemId: 5
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
-          - surcharge: 0.8851374739011653
-            itemId: 5
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
+          - surcharge: 7.058770351582356
+            itemId: 6
             propertySelectionId: 3
             valuefile: valuefile
-            id: 6
-            valueInt: 3
-            propertyId: 6
-            valueFloat: 7.143538047012306
+            id: 5
+            valueInt: 7
+            propertyId: 3
+            valueFloat: 0.8851374739011653
           ownerId: 4
           flagTwo: 8
           feedback: 6
@@ -10469,9 +10473,9 @@ components:
                 updatedAt: 2000-01-23T04:56:07.000+00:00
               updatedAt: 2000-01-23T04:56:07.000+00:00
           flagOne: 6
-          id: 0
+          id: 4
           isShippingPackage: true
-          propertyId: 7
+          propertyId: 6
           ebayPresetId: 4
           updatedAt: 2000-01-23T04:56:07.000+00:00
           ebayCategory: 5

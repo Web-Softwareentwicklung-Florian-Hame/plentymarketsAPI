@@ -33,7 +33,7 @@ Name | Type | Description | Notes
 **Feedback** | Pointer to **int32** | The feedback, i.e. rating, that this item received. Possible values are 1 to 5 or 1 to 10 depending on the maximum rating setting. An initial feedback can be saved for items. The saved value will then be displayed as the initial feedback. Every time new feedback is submitted, the average value will be recalculated automatically. | [optional] 
 **ItemType** | Pointer to **string** | The type of the item. Because Set items are managed using a separate route, this value is always Default. optional allowed values are default, multiPack, set | [optional] 
 **EbayTitles** | Pointer to [**[]ItemEbayTitle**](ItemEbayTitle.md) |  | [optional] 
-**ItemShippingProfiles** | Pointer to [**[]ItemShippingProfileRequest**](ItemShippingProfileRequest.md) |  | [optional] 
+**ItemShippingProfiles** | Pointer to [**[]ItemShippingProfileResponse**](ItemShippingProfileResponse.md) |  | [optional] 
 **ProfileId** | **int32** | The unique ID of the shipping profile | 
 **ItemProperties** | Pointer to [**[]ItemProperty**](ItemProperty.md) |  | [optional] 
 **PropertyId** | **int32** | The id of the property item | 
@@ -785,20 +785,20 @@ HasEbayTitles returns a boolean if a field has been set.
 
 ### GetItemShippingProfiles
 
-`func (o *CreateItemsResponse) GetItemShippingProfiles() []ItemShippingProfileRequest`
+`func (o *CreateItemsResponse) GetItemShippingProfiles() []ItemShippingProfileResponse`
 
 GetItemShippingProfiles returns the ItemShippingProfiles field if non-nil, zero value otherwise.
 
 ### GetItemShippingProfilesOk
 
-`func (o *CreateItemsResponse) GetItemShippingProfilesOk() (*[]ItemShippingProfileRequest, bool)`
+`func (o *CreateItemsResponse) GetItemShippingProfilesOk() (*[]ItemShippingProfileResponse, bool)`
 
 GetItemShippingProfilesOk returns a tuple with the ItemShippingProfiles field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetItemShippingProfiles
 
-`func (o *CreateItemsResponse) SetItemShippingProfiles(v []ItemShippingProfileRequest)`
+`func (o *CreateItemsResponse) SetItemShippingProfiles(v []ItemShippingProfileResponse)`
 
 SetItemShippingProfiles sets ItemShippingProfiles field to given value.
 

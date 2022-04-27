@@ -2007,7 +2007,7 @@ components:
         itemShippingProfiles:
           type: array
           items:
-            $ref: '#/components/schemas/ItemShippingProfileRequest'
+            $ref: '#/components/schemas/ItemShippingProfileResponse'
         profileId:
           type: integer
           description: "The unique ID of the shipping profile"

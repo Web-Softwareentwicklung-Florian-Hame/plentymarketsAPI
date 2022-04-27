@@ -69,7 +69,7 @@ type ItemResponse struct {
 	// The type of the item. Because Set items are managed using a separate route, this value is always Default. optional allowed values are default, multiPack, set
 	ItemType *string `json:"itemType,omitempty"`
 	EbayTitles *[]ItemEbayTitle `json:"ebayTitles,omitempty"`
-	ItemShippingProfiles *[]ItemShippingProfileRequest `json:"itemShippingProfiles,omitempty"`
+	ItemShippingProfiles *[]ItemShippingProfileResponse `json:"itemShippingProfiles,omitempty"`
 	// The unique ID of the shipping profile
 	ProfileId int32 `json:"profileId"`
 	ItemProperties *[]ItemProperty `json:"itemProperties,omitempty"`
@@ -1024,9 +1024,9 @@ func (o *ItemResponse) SetEbayTitles(v []ItemEbayTitle) {
 }
 
 // GetItemShippingProfiles returns the ItemShippingProfiles field value if set, zero value otherwise.
-func (o *ItemResponse) GetItemShippingProfiles() []ItemShippingProfileRequest {
+func (o *ItemResponse) GetItemShippingProfiles() []ItemShippingProfileResponse {
 	if o == nil || o.ItemShippingProfiles == nil {
-		var ret []ItemShippingProfileRequest
+		var ret []ItemShippingProfileResponse
 		return ret
 	}
 	return *o.ItemShippingProfiles
@@ -1034,7 +1034,7 @@ func (o *ItemResponse) GetItemShippingProfiles() []ItemShippingProfileRequest {
 
 // GetItemShippingProfilesOk returns a tuple with the ItemShippingProfiles field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ItemResponse) GetItemShippingProfilesOk() (*[]ItemShippingProfileRequest, bool) {
+func (o *ItemResponse) GetItemShippingProfilesOk() (*[]ItemShippingProfileResponse, bool) {
 	if o == nil || o.ItemShippingProfiles == nil {
 		return nil, false
 	}
@@ -1050,8 +1050,8 @@ func (o *ItemResponse) HasItemShippingProfiles() bool {
 	return false
 }
 
-// SetItemShippingProfiles gets a reference to the given []ItemShippingProfileRequest and assigns it to the ItemShippingProfiles field.
-func (o *ItemResponse) SetItemShippingProfiles(v []ItemShippingProfileRequest) {
+// SetItemShippingProfiles gets a reference to the given []ItemShippingProfileResponse and assigns it to the ItemShippingProfiles field.
+func (o *ItemResponse) SetItemShippingProfiles(v []ItemShippingProfileResponse) {
 	o.ItemShippingProfiles = &v
 }
 

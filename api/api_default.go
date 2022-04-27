@@ -2228,3 +2228,105 @@ func (a *DefaultApiService) RestLoginPostExecute(r ApiRestLoginPostRequest) (Res
 
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
+
+type ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest struct {
+	ctx _context.Context
+	ApiService *DefaultApiService
+	warehouseId int32
+	stockCorrections *StockCorrections
+}
+
+func (r ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest) StockCorrections(stockCorrections StockCorrections) ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest {
+	r.stockCorrections = &stockCorrections
+	return r
+}
+
+func (r ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest) Execute() (*_nethttp.Response, error) {
+	return r.ApiService.RestStockmanagementWarehousesWarehouseIdStockCorrectionPutExecute(r)
+}
+
+/*
+RestStockmanagementWarehousesWarehouseIdStockCorrectionPut set stocks
+
+set stocks
+
+ @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @param warehouseId
+ @return ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest
+*/
+func (a *DefaultApiService) RestStockmanagementWarehousesWarehouseIdStockCorrectionPut(ctx _context.Context, warehouseId int32) ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest {
+	return ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest{
+		ApiService: a,
+		ctx: ctx,
+		warehouseId: warehouseId,
+	}
+}
+
+// Execute executes the request
+func (a *DefaultApiService) RestStockmanagementWarehousesWarehouseIdStockCorrectionPutExecute(r ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest) (*_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodPut
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestStockmanagementWarehousesWarehouseIdStockCorrectionPut")
+	if err != nil {
+		return nil, GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/rest/stockmanagement/warehouses/{warehouseId}/stock/correction"
+	localVarPath = strings.Replace(localVarPath, "{"+"warehouseId"+"}", _neturl.PathEscape(parameterToString(r.warehouseId, "")), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{"application/json;charset=utf-8"}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	// body params
+	localVarPostBody = r.stockCorrections
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = _ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarHTTPResponse, newErr
+	}
+
+	return localVarHTTPResponse, nil
+}

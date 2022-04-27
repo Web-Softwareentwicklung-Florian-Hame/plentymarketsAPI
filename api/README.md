@@ -94,6 +94,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**RestItemsVariationsGet**](docs/DefaultApi.md#restitemsvariationsget) | **Get** /rest/items/variations | fetching variations with pagination and the possibility to fetch additional related data by &#39;with&#39; query param
 *DefaultApi* | [**RestItemsVariationsPut**](docs/DefaultApi.md#restitemsvariationsput) | **Put** /rest/items/variations | updating up to 50 variations
 *DefaultApi* | [**RestLoginPost**](docs/DefaultApi.md#restloginpost) | **Post** /rest/login | login for authentication at rest api
+*DefaultApi* | [**RestStockmanagementWarehousesWarehouseIdStockCorrectionPut**](docs/DefaultApi.md#reststockmanagementwarehouseswarehouseidstockcorrectionput) | **Put** /rest/stockmanagement/warehouses/{warehouseId}/stock/correction | set stocks
 
 
 ## Documentation For Models
@@ -126,6 +127,8 @@ Class | Method | HTTP request | Description
  - [PropertyRelationValues](docs/PropertyRelationValues.md)
  - [RestLoginBody](docs/RestLoginBody.md)
  - [RestLoginResponse](docs/RestLoginResponse.md)
+ - [StockCorrectionEntry](docs/StockCorrectionEntry.md)
+ - [StockCorrections](docs/StockCorrections.md)
  - [Variation](docs/Variation.md)
  - [VariationAttributeValue](docs/VariationAttributeValue.md)
  - [VariationBarcode](docs/VariationBarcode.md)

@@ -243,7 +243,6 @@ paths:
             application/json;charset=utf-8:
               schema:
                 $ref: '#/components/schemas/MultipleVariationsUpdatedResponse'
-
   /rest/items/{itemId}/variations:
     post:
       summary: creating variations for an item
@@ -413,8 +412,6 @@ paths:
             application/json;charset=utf-8:
               schema:
                 $ref: '#/components/schemas/CreateItemsResponse'
-
-
   /rest/items/attributes:
     get:
       summary: "fetching attributes with pagination"
@@ -609,9 +606,47 @@ paths:
             application/json;charset=utf-8:
               schema:
                 $ref: "#/components/schemas/Manufacturer"
+  /rest/stockmanagement/warehouses/{warehouseId}/stock/correction:
+    parameters:
+      - in: path
+        name: warehouseId
+        required: true
+        schema:
+          type: integer
+    put:
+      summary: set stocks
+      description: set stocks
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: "#/components/schemas/StockCorrections"
+      responses:
+        200:
+          description: successfuly updated stocks - no response body
+
+
 
 components:
   schemas:
+    StockCorrections:
+      type: object
+      properties:
+        corrections:
+          type: array
+          items:
+            $ref: "#/components/schemas/StockCorrectionEntry"
+    StockCorrectionEntry:
+      type: object
+      properties:
+        variationid:
+          type: integer
+        reasonId:
+          type: integer
+        quantity:
+          type: integer
+        storageLocationId:
+          type: integer
     RestLoginBody:
       type: object
       description: payload for authenticate at the rest api

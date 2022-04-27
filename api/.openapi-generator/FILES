@@ -35,6 +35,8 @@ docs/PropertyRelation.md
 docs/PropertyRelationValues.md
 docs/RestLoginBody.md
 docs/RestLoginResponse.md
+docs/StockCorrectionEntry.md
+docs/StockCorrections.md
 docs/Variation.md
 docs/VariationAttributeValue.md
 docs/VariationBarcode.md
@@ -85,6 +87,8 @@ model_property_relation.go
 model_property_relation_values.go
 model_rest_login_body.go
 model_rest_login_response.go
+model_stock_correction_entry.go
+model_stock_corrections.go
 model_variation.go
 model_variation_attribute_value.go
 model_variation_barcode.go

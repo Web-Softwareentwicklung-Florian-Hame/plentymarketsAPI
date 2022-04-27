@@ -834,8 +834,61 @@ paths:
                 $ref: '#/components/schemas/Manufacturer'
           description: successfuly created manufacturer
       summary: creates a manufacturer
+  /rest/stockmanagement/warehouses/{warehouseId}/stock/correction:
+    put:
+      description: set stocks
+      parameters:
+      - explode: false
+        in: path
+        name: warehouseId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              $ref: '#/components/schemas/StockCorrections'
+      responses:
+        "200":
+          description: successfuly updated stocks - no response body
+      summary: set stocks
 components:
   schemas:
+    StockCorrections:
+      example:
+        corrections:
+        - variationid: 0
+          quantity: 1
+          reasonId: 6
+          storageLocationId: 5
+        - variationid: 0
+          quantity: 1
+          reasonId: 6
+          storageLocationId: 5
+      properties:
+        corrections:
+          items:
+            $ref: '#/components/schemas/StockCorrectionEntry'
+          type: array
+      type: object
+    StockCorrectionEntry:
+      example:
+        variationid: 0
+        quantity: 1
+        reasonId: 6
+        storageLocationId: 5
+      properties:
+        variationid:
+          type: integer
+        reasonId:
+          type: integer
+        quantity:
+          type: integer
+        storageLocationId:
+          type: integer
+      type: object
     RestLoginBody:
       description: payload for authenticate at the rest api
       example:

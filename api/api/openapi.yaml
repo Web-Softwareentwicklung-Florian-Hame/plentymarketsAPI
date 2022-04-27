@@ -6744,7 +6744,7 @@ components:
       properties:
         success:
           additionalProperties:
-            $ref: '#/components/schemas/Item'
+            $ref: '#/components/schemas/ItemResponse'
           type: object
         failed:
           additionalProperties:
@@ -6757,7 +6757,7 @@ components:
       type: object
     MultipleItemsCreatedResponseItem:
       additionalProperties:
-        $ref: '#/components/schemas/Item'
+        $ref: '#/components/schemas/ItemResponse'
       type: object
     MultipleVariationsUpdatedResponse:
       description: format of the response when multiple variations gots updated

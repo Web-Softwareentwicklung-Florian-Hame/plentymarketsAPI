@@ -2173,7 +2173,7 @@ components:
     MultipleItemsCreatedResponseItem:
       type: object
       additionalProperties:
-        $ref: "#/components/schemas/Item"
+        $ref: "#/components/schemas/ItemResponse"
 
     MultipleVariationsUpdatedResponse:
       type: object

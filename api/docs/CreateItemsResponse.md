@@ -41,7 +41,7 @@ Name | Type | Description | Notes
 **Id** | Pointer to **int32** |  | [optional] 
 **Texts** | Pointer to [**[]ItemTexts**](ItemTexts.md) |  | [optional] 
 **Variations** | [**[]Variation**](Variation.md) |  | 
-**Success** | Pointer to [**map[string]Item**](Item.md) |  | [optional] 
+**Success** | Pointer to [**map[string]ItemResponse**](ItemResponse.md) |  | [optional] 
 **Failed** | Pointer to [**map[string]map[string][]string**](map.md) |  | [optional] 
 
 ## Methods
@@ -970,20 +970,20 @@ SetVariations sets Variations field to given value.
 
 ### GetSuccess
 
-`func (o *CreateItemsResponse) GetSuccess() map[string]Item`
+`func (o *CreateItemsResponse) GetSuccess() map[string]ItemResponse`
 
 GetSuccess returns the Success field if non-nil, zero value otherwise.
 
 ### GetSuccessOk
 
-`func (o *CreateItemsResponse) GetSuccessOk() (*map[string]Item, bool)`
+`func (o *CreateItemsResponse) GetSuccessOk() (*map[string]ItemResponse, bool)`
 
 GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSuccess
 
-`func (o *CreateItemsResponse) SetSuccess(v map[string]Item)`
+`func (o *CreateItemsResponse) SetSuccess(v map[string]ItemResponse)`
 
 SetSuccess sets Success field to given value.
 

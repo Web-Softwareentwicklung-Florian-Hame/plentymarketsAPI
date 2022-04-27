@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Success** | Pointer to [**map[string]Item**](Item.md) |  | [optional] 
+**Success** | Pointer to [**map[string]ItemResponse**](ItemResponse.md) |  | [optional] 
 **Failed** | Pointer to [**map[string]map[string][]string**](map.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetSuccess
 
-`func (o *MultipleItemsCreatedResponse) GetSuccess() map[string]Item`
+`func (o *MultipleItemsCreatedResponse) GetSuccess() map[string]ItemResponse`
 
 GetSuccess returns the Success field if non-nil, zero value otherwise.
 
 ### GetSuccessOk
 
-`func (o *MultipleItemsCreatedResponse) GetSuccessOk() (*map[string]Item, bool)`
+`func (o *MultipleItemsCreatedResponse) GetSuccessOk() (*map[string]ItemResponse, bool)`
 
 GetSuccessOk returns a tuple with the Success field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSuccess
 
-`func (o *MultipleItemsCreatedResponse) SetSuccess(v map[string]Item)`
+`func (o *MultipleItemsCreatedResponse) SetSuccess(v map[string]ItemResponse)`
 
 SetSuccess sets Success field to given value.
 

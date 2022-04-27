@@ -80,7 +80,7 @@ type CreateItemsResponse struct {
 	Id *int32 `json:"id,omitempty"`
 	Texts *[]ItemTexts `json:"texts,omitempty"`
 	Variations []Variation `json:"variations"`
-	Success *map[string]Item `json:"success,omitempty"`
+	Success *map[string]ItemResponse `json:"success,omitempty"`
 	Failed *map[string]map[string][]string `json:"failed,omitempty"`
 }
 
@@ -1258,9 +1258,9 @@ func (o *CreateItemsResponse) SetVariations(v []Variation) {
 }
 
 // GetSuccess returns the Success field value if set, zero value otherwise.
-func (o *CreateItemsResponse) GetSuccess() map[string]Item {
+func (o *CreateItemsResponse) GetSuccess() map[string]ItemResponse {
 	if o == nil || o.Success == nil {
-		var ret map[string]Item
+		var ret map[string]ItemResponse
 		return ret
 	}
 	return *o.Success
@@ -1268,7 +1268,7 @@ func (o *CreateItemsResponse) GetSuccess() map[string]Item {
 
 // GetSuccessOk returns a tuple with the Success field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateItemsResponse) GetSuccessOk() (*map[string]Item, bool) {
+func (o *CreateItemsResponse) GetSuccessOk() (*map[string]ItemResponse, bool) {
 	if o == nil || o.Success == nil {
 		return nil, false
 	}
@@ -1284,8 +1284,8 @@ func (o *CreateItemsResponse) HasSuccess() bool {
 	return false
 }
 
-// SetSuccess gets a reference to the given map[string]Item and assigns it to the Success field.
-func (o *CreateItemsResponse) SetSuccess(v map[string]Item) {
+// SetSuccess gets a reference to the given map[string]ItemResponse and assigns it to the Success field.
+func (o *CreateItemsResponse) SetSuccess(v map[string]ItemResponse) {
 	o.Success = &v
 }
 

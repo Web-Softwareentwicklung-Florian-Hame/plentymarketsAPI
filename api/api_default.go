@@ -1185,10 +1185,10 @@ type ApiRestItemsItemIdVariationsPostRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService
 	itemId int32
-	variation *[]Variation
+	variation *Variation
 }
 
-func (r ApiRestItemsItemIdVariationsPostRequest) Variation(variation []Variation) ApiRestItemsItemIdVariationsPostRequest {
+func (r ApiRestItemsItemIdVariationsPostRequest) Variation(variation Variation) ApiRestItemsItemIdVariationsPostRequest {
 	r.variation = &variation
 	return r
 }

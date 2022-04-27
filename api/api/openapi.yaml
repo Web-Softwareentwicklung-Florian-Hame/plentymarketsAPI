@@ -386,9 +386,7 @@ paths:
         content:
           application/json;charset=utf-8:
             schema:
-              items:
-                $ref: '#/components/schemas/Variation'
-              type: array
+              $ref: '#/components/schemas/Variation'
       responses:
         "200":
           content:

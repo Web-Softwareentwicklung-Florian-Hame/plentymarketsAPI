@@ -691,7 +691,7 @@ import (
 
 func main() {
     itemId := int32(56) // int32 | numeric itemId of the item where the variations belongs to
-    variation := []openapiclient.Variation{*openapiclient.NewVariation()} // []Variation |  (optional)
+    variation := *openapiclient.NewVariation() // Variation |  (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -721,7 +721,7 @@ Other parameters are passed through a pointer to a apiRestItemsItemIdVariationsP
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **variation** | [**[]Variation**](Variation.md) |  | 
+ **variation** | [**Variation**](Variation.md) |  | 
 
 ### Return type
 

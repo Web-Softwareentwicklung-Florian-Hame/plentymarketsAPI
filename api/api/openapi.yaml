@@ -854,6 +854,21 @@ paths:
         "200":
           description: successfuly updated stocks - no response body
       summary: set stocks
+  /rest/elastic-sync/sync/{syncId}/run:
+    post:
+      description: runs an existing elastic sync
+      parameters:
+      - explode: false
+        in: path
+        name: syncId
+        required: true
+        schema:
+          type: integer
+        style: simple
+      responses:
+        "200":
+          description: successfuly started sync
+      summary: runs an existing elastic sync
 components:
   schemas:
     StockCorrections:

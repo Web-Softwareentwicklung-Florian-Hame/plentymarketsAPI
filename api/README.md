@@ -80,6 +80,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**RestCategoriesGet**](docs/DefaultApi.md#restcategoriesget) | **Get** /rest/categories | fetching categories with pagination and optional filter queries
 *DefaultApi* | [**RestCategoriesPost**](docs/DefaultApi.md#restcategoriespost) | **Post** /rest/categories | creating new categories
+*DefaultApi* | [**RestElasticSyncSyncSyncIdRunPost**](docs/DefaultApi.md#restelasticsyncsyncsyncidrunpost) | **Post** /rest/elastic-sync/sync/{syncId}/run | runs an existing elastic sync
 *DefaultApi* | [**RestItemsAttributeValuesValueIdNamesPost**](docs/DefaultApi.md#restitemsattributevaluesvalueidnamespost) | **Post** /rest/items/attribute_values/{valueId}/names | creating attribute values names
 *DefaultApi* | [**RestItemsAttributesAttributeIdNamesPost**](docs/DefaultApi.md#restitemsattributesattributeidnamespost) | **Post** /rest/items/attributes/{attributeId}/names | creating names for attribute
 *DefaultApi* | [**RestItemsAttributesAttributeIdValuesGet**](docs/DefaultApi.md#restitemsattributesattributeidvaluesget) | **Get** /rest/items/attributes/{attributeId}/values | fetching attributes values with pagination

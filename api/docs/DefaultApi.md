@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**RestCategoriesGet**](DefaultApi.md#RestCategoriesGet) | **Get** /rest/categories | fetching categories with pagination and optional filter queries
 [**RestCategoriesPost**](DefaultApi.md#RestCategoriesPost) | **Post** /rest/categories | creating new categories
+[**RestElasticSyncSyncSyncIdRunPost**](DefaultApi.md#RestElasticSyncSyncSyncIdRunPost) | **Post** /rest/elastic-sync/sync/{syncId}/run | runs an existing elastic sync
 [**RestItemsAttributeValuesValueIdNamesPost**](DefaultApi.md#RestItemsAttributeValuesValueIdNamesPost) | **Post** /rest/items/attribute_values/{valueId}/names | creating attribute values names
 [**RestItemsAttributesAttributeIdNamesPost**](DefaultApi.md#RestItemsAttributesAttributeIdNamesPost) | **Post** /rest/items/attributes/{attributeId}/names | creating names for attribute
 [**RestItemsAttributesAttributeIdValuesGet**](DefaultApi.md#RestItemsAttributesAttributeIdValuesGet) | **Get** /rest/items/attributes/{attributeId}/values | fetching attributes values with pagination
@@ -150,6 +151,74 @@ No authorization required
 
 - **Content-Type**: application/json;charset=utf-8
 - **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestElasticSyncSyncSyncIdRunPost
+
+> RestElasticSyncSyncSyncIdRunPost(ctx, syncId).Execute()
+
+runs an existing elastic sync
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    syncId := int32(56) // int32 | 
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestElasticSyncSyncSyncIdRunPost(context.Background(), syncId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestElasticSyncSyncSyncIdRunPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**syncId** | **int32** |  | 
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestElasticSyncSyncSyncIdRunPostRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

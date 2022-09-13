@@ -95,6 +95,8 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**RestItemsVariationsGet**](docs/DefaultApi.md#restitemsvariationsget) | **Get** /rest/items/variations | fetching variations with pagination and the possibility to fetch additional related data by &#39;with&#39; query param
 *DefaultApi* | [**RestItemsVariationsPut**](docs/DefaultApi.md#restitemsvariationsput) | **Put** /rest/items/variations | updating up to 50 variations
 *DefaultApi* | [**RestLoginPost**](docs/DefaultApi.md#restloginpost) | **Post** /rest/login | login for authentication at rest api
+*DefaultApi* | [**RestPimVariationsGet**](docs/DefaultApi.md#restpimvariationsget) | **Get** /rest/pim/variations | Lists variations
+*DefaultApi* | [**RestPimVariationsPut**](docs/DefaultApi.md#restpimvariationsput) | **Put** /rest/pim/variations | Create a list of variations and their related data
 *DefaultApi* | [**RestStockmanagementWarehousesWarehouseIdStockCorrectionPut**](docs/DefaultApi.md#reststockmanagementwarehouseswarehouseidstockcorrectionput) | **Put** /rest/stockmanagement/warehouses/{warehouseId}/stock/correction | set stocks
 
 
@@ -111,6 +113,7 @@ Class | Method | HTTP request | Description
  - [CreateItemsResponse](docs/CreateItemsResponse.md)
  - [ImageAvailability](docs/ImageAvailability.md)
  - [ImageName](docs/ImageName.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
  - [ItemEbayTitle](docs/ItemEbayTitle.md)
  - [ItemPagination](docs/ItemPagination.md)
  - [ItemProperty](docs/ItemProperty.md)
@@ -123,6 +126,16 @@ Class | Method | HTTP request | Description
  - [ManufacturersPagination](docs/ManufacturersPagination.md)
  - [MultipleItemsCreatedResponse](docs/MultipleItemsCreatedResponse.md)
  - [MultipleVariationsUpdatedResponse](docs/MultipleVariationsUpdatedResponse.md)
+ - [PimVariation](docs/PimVariation.md)
+ - [PimVariationAdditionalSku](docs/PimVariationAdditionalSku.md)
+ - [PimVariationBase](docs/PimVariationBase.md)
+ - [PimVariationBundleComponent](docs/PimVariationBundleComponent.md)
+ - [PimVariationComment](docs/PimVariationComment.md)
+ - [PimVariationProperty](docs/PimVariationProperty.md)
+ - [PimVariationPropertySelectionValues](docs/PimVariationPropertySelectionValues.md)
+ - [PimVariationTag](docs/PimVariationTag.md)
+ - [PimVariationUnit](docs/PimVariationUnit.md)
+ - [PimVariationWarehouse](docs/PimVariationWarehouse.md)
  - [Property](docs/Property.md)
  - [PropertyRelation](docs/PropertyRelation.md)
  - [PropertyRelationValues](docs/PropertyRelationValues.md)

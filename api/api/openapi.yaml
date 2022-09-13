@@ -869,8 +869,1428 @@ paths:
         "200":
           description: successfuly started sync
       summary: runs an existing elastic sync
+  /rest/pim/variations:
+    get:
+      description: Lists variations with the specified data.
+      parameters:
+      - description: Includes the specified information in the results. More than
+          one parameter should be separated by commas. The following parameters are
+          available:<ul><li>'additionalSkus' = The additional skus of the variation.</li><li>'attributeValues'
+          = The attribute values of the variation.</li><li>'attributeValues.attribute'/b>
+          = Includes attributeValues. The attribute data to the related attribute
+          ID.</li><li>'attributeValues.attributeValue' = Includes attributeValues.
+          The attribute value data to the related attribute value ID.</li><li>'barcodes'
+          = The barcodes of the variation.</li><li>'barcodes.barcode' = Includes barcodes.
+          The barcode data to the related barcode ID.</li><li>'base' = The variation
+          base.</li><li>'base.item' = Includes base. The item data of the variation.</li><li>'base.itemSerialNumber'
+          = Includes base. The item serial numbers of the variation.</li><li>'base.feedback'
+          = Includes base. The feedback of the variation.</li><li>'base.characteristics'
+          = Includes base. The characteristics of the variation.</li><li>'base.crossSelling'
+          = Includes base. The cross selling items of the variation.</li><li>'base.texts'
+          = Includes base. The texts of the variation.</li><li>'base.availability'
+          = Includes base. The availability data related to the variation's availability
+          ID.</li><li>'base.images' = Includes base. The images linked to the item.</li><li>'base.shippingProfiles'
+          = Includes base. The shipping profiles linked to the item.</li><li>'base.stock'
+          = Includes base. The stock of the variation.</li><li>'base.stockStorageLocations'
+          = Includes base. The stock storage locations of the variation.</li><li>'bundleComponents'
+          = The bundle components of the variation.</li><li>'categories' = The categories
+          of the variation.</li><li>'categories.category' = Includes categories. The
+          related category data for each category ID.</li><li>'categories.categoryBranch'
+          = Includes categories. The related category branch data for each category
+          ID.</li><li>'clients' = The clients of the variation.</li><li>'defaultCategories'
+          = The default categories of the variation</li><li>'defaultCategories.category'
+          = Includes defaultCategories. The category data to the related category
+          ID.</li><li>'images' = The images of the variation</li><li>'images.image'
+          = Includes images. The image data to the related image ID.</li><li>'markets'
+          = The markets of the variation.</li><li>'marketIdentNumbers' = The market
+          ident numbers of the variation</li><li>'salesPrices' = The sales prices
+          of the variation.</li><li>'salesPrices.salesPrice' = Includes salesPrices.
+          The sales price data to the related sales price ID.</li><li>'skus' = The
+          skus of the variation.</li><li>'supplier' = The supplier of the variation.</li><li>'supplier.supplier'
+          = Includes supplier. The contact data to the related supplier ID.</li><li>'timestamps'
+          = The timetamps of the variation.</li><li>'warehouses' = The warehouses
+          of the variation</li><li>'warehouses.warehouse' = Includes warehouses. The
+          warehouse data to the related warehouse ID.</li><li>'unit' = The unit of
+          the variation</li><li>'unit.unit' = Includes unit. The unit data of the
+          related unit ID.</li><li>'tags' = The tags of the variation.</li><li>'tags.tag'
+          = Includes tags. The tag data to the related tag ID.</li><li>'properties'
+          = The properties of the variation.</li><li>'properties.property' = Includes
+          properties. The property data to the related property ID.</li></ul>
+        explode: true
+        in: query
+        name: with
+        required: false
+        schema:
+          items:
+            enum:
+            - additionalSkus
+            - attributeValues
+            - attributeValues.attribute
+            - attributeValues.attributeValue
+            - barcodes
+            - barcodes.barcode
+            - base
+            - base.item
+            - base.itemSerialNumber
+            - base.feedback
+            - base.characteristics
+            - base.crossSelling
+            - base.texts
+            - base.availability
+            - base.images
+            - base.shippingProfiles
+            - base.stock
+            - base.stockStorageLocations
+            - bundleComponents
+            - categories
+            - categories.category
+            - categories.categoryBranch
+            - clients
+            - defaultCategories
+            - defaultCategories.category
+            - images
+            - images.image
+            - markets
+            - marketIdentNumbers
+            - salesPrices
+            - salesPrices.salesPrice
+            - skus
+            - supplier
+            - supplier.supplier
+            - timestamps
+            - warehouses
+            - warehouses.warehouse
+            - unit
+            - tags
+            - tags.tag
+            - properties
+            - properties.property
+            type: string
+          type: array
+        style: form
+      - description: Sorts the results. Append '_asc' or '_desc' to specify the sorting
+          order. '_desc' is the default value if no other is specified. More than
+          one parameter should be separated by commas. The following parameters are
+          available:<ul><li>'id'</li><li>'itemId'</li><li>'isMain'</li><li>'position'</li><li>'availabilityId'</li><li>'createdAt'</li><li>'updatedAt'</li><li>'itemUpdatedAt'</li><li>'relatedUpdatedAt'</li><li>'variationName'</li><li>'number'</li></ul>
+        explode: true
+        in: query
+        name: sortBy
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Groups the result. The following parameters are available:<ul><li>'itemId'
+          = Groups the result by the item ID.</li><li>'itemAttributeValue' = Groups
+          the result by the attribute with the flag 'isGroupable'.</li></ul>
+        explode: true
+        in: query
+        name: groupBy
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          IDs. More than one parameter should be separated by commas.
+        explode: true
+        in: query
+        name: ids
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          item ID.
+        explode: true
+        in: query
+        name: itemId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          item IDs. More than one parameter should be separated by commas.
+        explode: true
+        in: query
+        name: itemIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which are
+          active/inactive.
+        explode: true
+        in: query
+        name: isActive
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Filter restricts the list of results to variations which are
+          main/not main.
+        explode: true
+        in: query
+        name: isMain
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Filter restricts the list of results to variations which are
+          salable.
+        explode: true
+        in: query
+        name: isSalable
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          the given supplier ID.
+        explode: true
+        in: query
+        name: supplierId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          availability IDs. More than one parameter should be separated by commas.
+        explode: true
+        in: query
+        name: availabilityIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          children.
+        explode: true
+        in: query
+        name: hasChildren
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          active children.
+        explode: true
+        in: query
+        name: hasActiveChildren
+        required: false
+        schema:
+          type: boolean
+        style: form
+      - description: ' Filter restricts the list of results to variations which have
+          the specified attribute ID.'
+        explode: true
+        in: query
+        name: attributeId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified attribute IDs. More than one parameter should be separated
+          by commas.
+        explode: true
+        in: query
+        name: anyAttributeId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          all specified attribute IDs. More than one parameter should be separated
+          by commas.
+        explode: true
+        in: query
+        name: allAttributeIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: ' Filter restricts the list of results to variations which have
+          the specified attribute value ID.'
+        explode: true
+        in: query
+        name: attributeValueId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: ' Filter restricts the list of results to variations which have
+          the any of the specified attribute value IDs. More than one parameter should
+          be separated by commas.'
+        explode: true
+        in: query
+        name: anyAttributeValueId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          all specified attribute value IDs. More than one parameter should be separated
+          by commas.
+        explode: true
+        in: query
+        name: allAttributeValueIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          a barcode with the specified code.
+        explode: true
+        in: query
+        name: barcodeCode
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          a barcode with the specified ID.
+        explode: true
+        in: query
+        name: barcodeId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          bundle type.
+        explode: true
+        in: query
+        name: bundleType
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          the specified category ID.
+        explode: true
+        in: query
+        name: categoryId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified category IDs. More than one parameter should be separated
+          by commas.
+        explode: true
+        in: query
+        name: anyCategoryId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          all specified category IDs. More than one parameter should be separated
+          by commas.
+        explode: true
+        in: query
+        name: allCategoryIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified characteristic IDs.
+        explode: true
+        in: query
+        name: anyCharacteristicId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          all specified characteristic IDs.
+        explode: true
+        in: query
+        name: allCharacteristicIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          the specified client ID.
+        explode: true
+        in: query
+        name: clientId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified client IDs. More than one parameter should be separated
+          by commas.
+        explode: true
+        in: query
+        name: anyClientId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          all specified client IDs. More than one parameter should be separated by
+          commas.
+        explode: true
+        in: query
+        name: allClientIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified automatic client visibilities. More than one parameter
+          should be separated by commas.
+        explode: true
+        in: query
+        name: automaticClientVisibilities
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: ' Filter restricts the list of results to variations which have
+          an image available for the specified market ID.'
+        explode: true
+        in: query
+        name: imageHasMarketId
+        required: false
+        schema:
+          type: number
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          flag one.
+        explode: true
+        in: query
+        name: flag1
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          flag two.
+        explode: true
+        in: query
+        name: flag2
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations with the specified
+          manufacturer ID.
+        explode: true
+        in: query
+        name: manufacturerId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations with any of
+          the specified manufacturer IDs.
+        explode: true
+        in: query
+        name: anyManufacturerId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          the specified item type.
+        explode: true
+        in: query
+        name: itemType
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          the specified market ID.
+        explode: true
+        in: query
+        name: marketId
+        required: false
+        schema:
+          type: number
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified market IDs.
+        explode: true
+        in: query
+        name: anyMarketId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          all specified market IDs.
+        explode: true
+        in: query
+        name: allMarketIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          a sales price between the specified minimum and maximum value. Minimum and
+          maximum value should be separated by a comma.
+        explode: true
+        in: query
+        name: priceBetween
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations where the
+          specified sales price is between the specified minimum and maximum value.
+          Sales price ID, Minimum and maximum value should be separated by a comma.
+        explode: true
+        in: query
+        name: priceBetweenById
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified sales price IDs. More than one parameter should be
+          separated by commas.
+        explode: true
+        in: query
+        name: anySalesPriceId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          the specified property selection ID.
+        explode: true
+        in: query
+        name: propertySelectionId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          any of the specified property selection IDs.
+        explode: true
+        in: query
+        name: anyPropertySelectionId
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          all specified property selection IDs.
+        explode: true
+        in: query
+        name: allPropertySelectionIds
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          a name in the specified language.
+        explode: true
+        in: query
+        name: hasNameInLanguage
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          been created in the specified time frame. The from and to parameter should
+          be separated by a comma. If there is no to value, the current time is used
+          instead.
+        explode: true
+        in: query
+        name: createdAt
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          been updated in the specified time frame. The from and to parameter should
+          be separated by a comma. If there is no to value, the current time is used
+          instead.
+        explode: true
+        in: query
+        name: updatedAt
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations whose item
+          has been created in the specified time frame. The from and to parameter
+          should be separated by a comma. If there is no to value, the current time
+          is used instead.
+        explode: true
+        in: query
+        name: itemCreatedAt
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations whose item
+          has been updated in the specified time frame. The from and to parameter
+          should be separated by a comma. If there is no to value, the current time
+          is used instead.
+        explode: true
+        in: query
+        name: itemUpdatedAt
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations whose availablity
+          has been updated in the specified time frame. The from and to parameter
+          should be separated by a comma. If there is no to value, the current time
+          is used instead.
+        explode: true
+        in: query
+        name: availabilityUpdatedAt
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations whose stock
+          has been updated in the specified time frame. The from and to parameter
+          should be separated by a comma. If there is no to value, the current time
+          is used instead.
+        explode: true
+        in: query
+        name: stockUpdatedAt
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: The requested page of results. Default value is 1.
+        explode: true
+        in: query
+        name: page
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: The number of results per page. Maximum value is 250. Default
+          value is 50.
+        explode: true
+        in: query
+        name: itemsPerPage
+        required: false
+        schema:
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/inline_response_200'
+          description: OK
+        "401":
+          description: The resource owner or authorization server denied the request.
+            - The request is missing a required parameter, includes an invalid parameter
+            value, includes a parameter more than once, or is otherwise malformed.
+            Check the "access token" parameter.
+      summary: Lists variations
+    put:
+      description: ' Creates a list of variations and their related data.'
+      requestBody:
+        content:
+          application/json;charset=utf-8:
+            schema:
+              items:
+                $ref: '#/components/schemas/PimVariation'
+              type: array
+      responses:
+        "200":
+          description: OK
+        "401":
+          description: The resource owner or authorization server denied the request.
+            - The request is missing a required parameter, includes an invalid parameter
+            value, includes a parameter more than once, or is otherwise malformed.
+            Check the "access token" parameter.
+      summary: Create a list of variations and their related data
 components:
   schemas:
+    PimVariationAdditionalSku:
+      example:
+        marketAccountId: 3.616076749251911
+        sku: sku
+        marketId: 9.301444243932576
+      properties:
+        marketId:
+          type: number
+        marketAccountId:
+          type: number
+        sku:
+          type: string
+      type: object
+    PimVariationBundleComponent:
+      example:
+        componentVariationId: 2.027123023002322
+        componentQuantity: 4.145608029883936
+      properties:
+        componentVariationId:
+          type: number
+        componentQuantity:
+          type: number
+      type: object
+    PimVariationWarehouse:
+      example:
+        reorderLevel: 1
+        stockTurnoverInDays: 6
+        warehouseId: 7
+        zoneId: 1
+        storageLocationType: storageLocationType
+        storageLocation: 7
+        stockBuffer: 1
+        isBatch: true
+        maximumStock: 1
+        isBestBeforeDate: true
+      properties:
+        warehouseId:
+          type: integer
+        zoneId:
+          type: integer
+        storageLocationType:
+          type: string
+        reorderLevel:
+          type: integer
+        maximumStock:
+          type: integer
+        stockTurnoverInDays:
+          type: integer
+        storageLocation:
+          type: integer
+        stockBuffer:
+          type: integer
+        isBatch:
+          type: boolean
+        isBestBeforeDate:
+          type: boolean
+      type: object
+    PimVariationProperty:
+      example:
+        selectionValues:
+        - selectionId: 5
+        - selectionId: 5
+        propertyId: 4
+        value: ""
+      properties:
+        propertyId:
+          type: integer
+        value:
+          description: can have any type
+        selectionValues:
+          items:
+            $ref: '#/components/schemas/PimVariationProperty_selectionValues'
+          type: array
+      type: object
+    PimVariationTag:
+      example:
+        tagId: 9
+      properties:
+        tagId:
+          type: integer
+      type: object
+    PimVariationComment:
+      example:
+        id: 9
+        text: text
+        isVisibleForContact: true
+        userId: 6
+      properties:
+        id:
+          type: integer
+        userId:
+          type: integer
+        text:
+          type: string
+        isVisibleForContact:
+          type: boolean
+      type: object
+    PimVariationUnit:
+      example:
+        unitId: 8
+        content: 6.438423552598547
+        unitCombinationId: 9
+      properties:
+        unitId:
+          type: integer
+        unitCombinationId:
+          type: integer
+        content:
+          type: number
+      type: object
+    PimVariationBase:
+      example:
+        intervalOrderQuantity: 3.0937452626664474
+        releasedAt: 2000-01-23T04:56:07.000+00:00
+        weightNetG: 0
+        transportationCosts: 5.533258397034986
+        automaticClientVisibility: true
+        packingUnitTypeId: 7
+        stockLimitation: 6
+        minimumOrderQuantity: 3.353193347011243
+        isUnavailableIfNetStockIsNotPositive: true
+        packingUnits: 3
+        vatId: 6
+        isAvailableIfNetStockIsPositive: true
+        isHiddenInCategoryList: true
+        relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
+        availability: 1
+        purchasePrice: 2.8841621266687802
+        bundleType: bundleType
+        isActive: true
+        widthMM: 7.058770351582356
+        number: number
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        availableUntil: 2000-01-23T04:56:07.000+00:00
+        maximumOrderQuantity: 6.704019297950036
+        isInvisibleIfNetStockIsNotPositive: true
+        weightG: 7
+        customs: 4.078845849666752
+        model: model
+        extraShippingCharge1: 4.652396432933246
+        unitsContained: 7
+        updatedAt: 2000-01-23T04:56:07.000+00:00
+        heightMM: 0.10263654006109402
+        extraShippingCharge2: 8.969578798196912
+        isMain: true
+        externalId: externalId
+        priceCalculationId: 6
+        picking: picking
+        lengthMM: 6.519180951018382
+        palletTypeId: 3
+        isVisibleIfNetStockIsPositive: true
+        itemId: 3
+        estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
+        operatingCosts: 0.2025324113236393
+        mainWarehouseId: 5
+        name: name
+        storageCosts: 3.2588565619047607
+        position: 6
+      properties:
+        isMain:
+          type: boolean
+        itemId:
+          type: integer
+        position:
+          type: integer
+        isActive:
+          type: boolean
+        number:
+          type: string
+        model:
+          type: string
+        externalId:
+          type: string
+        availability:
+          type: integer
+        estimatedAvailableAt:
+          format: date-time
+          type: string
+        purchasePrice:
+          type: number
+        createdAt:
+          format: date-time
+          type: string
+        updatedAt:
+          format: date-time
+          type: string
+        relatedUpdatedAt:
+          format: date-time
+          type: string
+        priceCalculationId:
+          type: integer
+        picking:
+          type: string
+        stockLimitation:
+          type: integer
+        isVisibleIfNetStockIsPositive:
+          type: boolean
+        isInvisibleIfNetStockIsNotPositive:
+          type: boolean
+        isAvailableIfNetStockIsPositive:
+          type: boolean
+        isUnavailableIfNetStockIsNotPositive:
+          type: boolean
+        mainWarehouseId:
+          type: integer
+        maximumOrderQuantity:
+          type: number
+        minimumOrderQuantity:
+          type: number
+        intervalOrderQuantity:
+          type: number
+        availableUntil:
+          format: date-time
+          type: string
+        releasedAt:
+          format: date-time
+          type: string
+        name:
+          type: string
+        weightG:
+          type: integer
+        weightNetG:
+          type: integer
+        widthMM:
+          type: number
+        lengthMM:
+          type: number
+        heightMM:
+          type: number
+        extraShippingCharge1:
+          type: number
+        extraShippingCharge2:
+          type: number
+        unitsContained:
+          type: integer
+        palletTypeId:
+          type: integer
+        packingUnits:
+          type: integer
+        packingUnitTypeId:
+          type: integer
+        transportationCosts:
+          type: number
+        storageCosts:
+          type: number
+        customs:
+          type: number
+        operatingCosts:
+          type: number
+        vatId:
+          type: integer
+        bundleType:
+          type: string
+        automaticClientVisibility:
+          type: boolean
+        isHiddenInCategoryList:
+          type: boolean
+      type: object
+    PimVariation:
+      example:
+        images:
+        - documentUploadPreviewHeight: 1
+          insert: insert
+          type: type
+          md5Checksum: md5Checksum
+          path: path
+          cleanImageName: cleanImageName
+          urlPreview: urlPreview
+          id: 0
+          height: 6
+          documentUploadPreviewWidth: 1
+          hasVariationLink: true
+          availabilities:
+          - imageId: 3
+            type: type
+            value: 5
+          - imageId: 3
+            type: type
+            value: 5
+          urlMiddle: urlMiddle
+          url: url
+          urlSecondPreview: urlSecondPreview
+          documentUploadPathPreview: documentUploadPathPreview
+          itemId: 2
+          names:
+          - imageId: 1
+            name: name
+            alternate: alternate
+            lang: lang
+          - imageId: 1
+            name: name
+            alternate: alternate
+            lang: lang
+          size: 9
+          storageProviderId: storageProviderId
+          uploadUrl: uploadUrl
+          lastUpdate: lastUpdate
+          width: 4
+          position: 6
+          documentUploadPath: documentUploadPath
+          fileType: fileType
+          md5ChecksumOriginal: md5ChecksumOriginal
+        - documentUploadPreviewHeight: 1
+          insert: insert
+          type: type
+          md5Checksum: md5Checksum
+          path: path
+          cleanImageName: cleanImageName
+          urlPreview: urlPreview
+          id: 0
+          height: 6
+          documentUploadPreviewWidth: 1
+          hasVariationLink: true
+          availabilities:
+          - imageId: 3
+            type: type
+            value: 5
+          - imageId: 3
+            type: type
+            value: 5
+          urlMiddle: urlMiddle
+          url: url
+          urlSecondPreview: urlSecondPreview
+          documentUploadPathPreview: documentUploadPathPreview
+          itemId: 2
+          names:
+          - imageId: 1
+            name: name
+            alternate: alternate
+            lang: lang
+          - imageId: 1
+            name: name
+            alternate: alternate
+            lang: lang
+          size: 9
+          storageProviderId: storageProviderId
+          uploadUrl: uploadUrl
+          lastUpdate: lastUpdate
+          width: 4
+          position: 6
+          documentUploadPath: documentUploadPath
+          fileType: fileType
+          md5ChecksumOriginal: md5ChecksumOriginal
+        clients:
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 3
+          plentyId: 9
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 3
+          plentyId: 9
+        skus:
+        - additionalInformation: additionalInformation
+          isActive: true
+          marketId: 8
+          accountId: 2
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          initialSku: initialSku
+          deletedAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 3
+          parentSku: parentSku
+          stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+          exportedAt: 2000-01-23T04:56:07.000+00:00
+          id: 4
+          sku: sku
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+          status: status
+        - additionalInformation: additionalInformation
+          isActive: true
+          marketId: 8
+          accountId: 2
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          initialSku: initialSku
+          deletedAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 3
+          parentSku: parentSku
+          stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+          exportedAt: 2000-01-23T04:56:07.000+00:00
+          id: 4
+          sku: sku
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+          status: status
+        comments:
+        - id: 9
+          text: text
+          isVisibleForContact: true
+          userId: 6
+        - id: 9
+          text: text
+          isVisibleForContact: true
+          userId: 6
+        attributeValues:
+        - attributeId: 5
+          isLinkableToImage: true
+          valueId: 5
+          attributeValue:
+            image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          attribute:
+            isLinkableToImage: true
+            neckermannAtEpAttribute: 9
+            laRedouteAttribute: 7
+            isSurchargePercental: true
+            values:
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            amazonAttribute: amazonAttribute
+            pixmaniaAttribute: 3
+            typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+            fruugoAttribute: fruugoAttribute
+            googleShoppingAttribute: googleShoppingAttribute
+            isGroupable: true
+            backendName: backendName
+            id: 3
+            position: 1
+            ottoAttribute: ottoAttribute
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          attributeValueSetId: 4
+        - attributeId: 5
+          isLinkableToImage: true
+          valueId: 5
+          attributeValue:
+            image: image
+            percentageDistribution: 1
+            ottoValue: ottoValue
+            laRedouteValue: laRedouteValue
+            attributeId: 7
+            tracdelightValue: tracdelightValue
+            amazonValue: amazonValue
+            backendName: backendName
+            comment: comment
+            id: 7
+            position: 9
+            neckermannAtEpValue: neckermannAtEpValue
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          attribute:
+            isLinkableToImage: true
+            neckermannAtEpAttribute: 9
+            laRedouteAttribute: 7
+            isSurchargePercental: true
+            values:
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            amazonAttribute: amazonAttribute
+            pixmaniaAttribute: 3
+            typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+            fruugoAttribute: fruugoAttribute
+            googleShoppingAttribute: googleShoppingAttribute
+            isGroupable: true
+            backendName: backendName
+            id: 3
+            position: 1
+            ottoAttribute: ottoAttribute
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          attributeValueSetId: 4
+        warehouses:
+        - reorderLevel: 1
+          stockTurnoverInDays: 6
+          warehouseId: 7
+          zoneId: 1
+          storageLocationType: storageLocationType
+          storageLocation: 7
+          stockBuffer: 1
+          isBatch: true
+          maximumStock: 1
+          isBestBeforeDate: true
+        - reorderLevel: 1
+          stockTurnoverInDays: 6
+          warehouseId: 7
+          zoneId: 1
+          storageLocationType: storageLocationType
+          storageLocation: 7
+          stockBuffer: 1
+          isBatch: true
+          maximumStock: 1
+          isBestBeforeDate: true
+        additionalSkus:
+        - marketAccountId: 3.616076749251911
+          sku: sku
+          marketId: 9.301444243932576
+        - marketAccountId: 3.616076749251911
+          sku: sku
+          marketId: 9.301444243932576
+        barcodes:
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 9
+          code: code
+          barcodeId: 8
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 9
+          code: code
+          barcodeId: 8
+        tags:
+        - tagId: 9
+        - tagId: 9
+        marketIdentNumbers:
+        - variationId: 0
+          id: 8
+          position: 5
+          type: type
+          value: value
+          countryId: 5
+        - variationId: 0
+          id: 8
+          position: 5
+          type: type
+          value: value
+          countryId: 5
+        markets:
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 5
+          marketId: 7.835035282970782
+        - createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 5
+          marketId: 7.835035282970782
+        unit:
+          unitId: 8
+          content: 6.438423552598547
+          unitCombinationId: 9
+        bundleComponents:
+        - componentVariationId: 2.027123023002322
+          componentQuantity: 4.145608029883936
+        - componentVariationId: 2.027123023002322
+          componentQuantity: 4.145608029883936
+        defaultCategories:
+        - branchId: 3
+          variationId: 0
+          manually: manually
+          plentyId: 2
+        - branchId: 3
+          variationId: 0
+          manually: manually
+          plentyId: 2
+        supplier:
+        - currencyPurchasePrice: 9.386524999783381
+          itemNumber: itemNumber
+          supplierId: 4
+          isDiscountable: true
+          packagingUnit: 2.7977867356748476
+          discount: 4.332304821875894
+          minimumPurchase: 0.35262192099236644
+          purchasePrice: 0.4833312865174044
+          lastPriceQuery: true
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          lastUpdateTimestamp: lastUpdateTimestamp
+          variationId: 8
+          deliveryTimeInDays: 7
+          id: 3
+          itemDescription: itemDescription
+        - currencyPurchasePrice: 9.386524999783381
+          itemNumber: itemNumber
+          supplierId: 4
+          isDiscountable: true
+          packagingUnit: 2.7977867356748476
+          discount: 4.332304821875894
+          minimumPurchase: 0.35262192099236644
+          purchasePrice: 0.4833312865174044
+          lastPriceQuery: true
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          lastUpdateTimestamp: lastUpdateTimestamp
+          variationId: 8
+          deliveryTimeInDays: 7
+          id: 3
+          itemDescription: itemDescription
+        id: 7
+        categories:
+        - variationId: 8
+          position: 3
+          categoryId: 7
+          isNeckermannPrimary: true
+        - variationId: 8
+          position: 3
+          categoryId: 7
+          isNeckermannPrimary: true
+        salesPrices:
+        - salesPriceId: 3
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 1
+          price: 9.183123594773994
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        - salesPriceId: 3
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          variationId: 1
+          price: 9.183123594773994
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        properties:
+        - selectionValues:
+          - selectionId: 5
+          - selectionId: 5
+          propertyId: 4
+          value: ""
+        - selectionValues:
+          - selectionId: 5
+          - selectionId: 5
+          propertyId: 4
+          value: ""
+        base:
+          intervalOrderQuantity: 3.0937452626664474
+          releasedAt: 2000-01-23T04:56:07.000+00:00
+          weightNetG: 0
+          transportationCosts: 5.533258397034986
+          automaticClientVisibility: true
+          packingUnitTypeId: 7
+          stockLimitation: 6
+          minimumOrderQuantity: 3.353193347011243
+          isUnavailableIfNetStockIsNotPositive: true
+          packingUnits: 3
+          vatId: 6
+          isAvailableIfNetStockIsPositive: true
+          isHiddenInCategoryList: true
+          relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
+          availability: 1
+          purchasePrice: 2.8841621266687802
+          bundleType: bundleType
+          isActive: true
+          widthMM: 7.058770351582356
+          number: number
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          availableUntil: 2000-01-23T04:56:07.000+00:00
+          maximumOrderQuantity: 6.704019297950036
+          isInvisibleIfNetStockIsNotPositive: true
+          weightG: 7
+          customs: 4.078845849666752
+          model: model
+          extraShippingCharge1: 4.652396432933246
+          unitsContained: 7
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+          heightMM: 0.10263654006109402
+          extraShippingCharge2: 8.969578798196912
+          isMain: true
+          externalId: externalId
+          priceCalculationId: 6
+          picking: picking
+          lengthMM: 6.519180951018382
+          palletTypeId: 3
+          isVisibleIfNetStockIsPositive: true
+          itemId: 3
+          estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
+          operatingCosts: 0.2025324113236393
+          mainWarehouseId: 5
+          name: name
+          storageCosts: 3.2588565619047607
+          position: 6
+      properties:
+        id:
+          description: The id of the variation. optional
+          type: integer
+        additionalSkus:
+          items:
+            $ref: '#/components/schemas/PimVariationAdditionalSku'
+          type: array
+        attributeValues:
+          items:
+            $ref: '#/components/schemas/VariationAttributeValue'
+          type: array
+        barcodes:
+          items:
+            $ref: '#/components/schemas/VariationBarcode'
+          type: array
+        bundleComponents:
+          items:
+            $ref: '#/components/schemas/PimVariationBundleComponent'
+          type: array
+        categories:
+          items:
+            $ref: '#/components/schemas/VariationCategory'
+          type: array
+        clients:
+          items:
+            $ref: '#/components/schemas/VariationClient'
+          type: array
+        defaultCategories:
+          items:
+            $ref: '#/components/schemas/VariationDefaultCategory'
+          type: array
+        images:
+          items:
+            $ref: '#/components/schemas/VariationImage'
+          type: array
+        markets:
+          items:
+            $ref: '#/components/schemas/VariationMarket'
+          type: array
+        marketIdentNumbers:
+          items:
+            $ref: '#/components/schemas/VariationMarketItemNumber'
+          type: array
+        salesPrices:
+          items:
+            $ref: '#/components/schemas/VariationSalesPrice'
+          type: array
+        skus:
+          items:
+            $ref: '#/components/schemas/VariationSku'
+          type: array
+        supplier:
+          items:
+            $ref: '#/components/schemas/VariationSupplier'
+          type: array
+        warehouses:
+          items:
+            $ref: '#/components/schemas/PimVariationWarehouse'
+          type: array
+        properties:
+          items:
+            $ref: '#/components/schemas/PimVariationProperty'
+          type: array
+        tags:
+          items:
+            $ref: '#/components/schemas/PimVariationTag'
+          type: array
+        comments:
+          items:
+            $ref: '#/components/schemas/PimVariationComment'
+          type: array
+        unit:
+          $ref: '#/components/schemas/PimVariationUnit'
+        base:
+          $ref: '#/components/schemas/PimVariationBase'
+      type: object
     StockCorrections:
       example:
         corrections:
@@ -12452,4 +13872,932 @@ components:
           items:
             $ref: '#/components/schemas/Manufacturer'
           type: array
+      type: object
+    inline_response_200:
+      example:
+        totalsCount: 6
+        lastOnPage: 5
+        entries:
+        - images:
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5
+            - imageId: 3
+              type: type
+              value: 5
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5
+            - imageId: 3
+              type: type
+              value: 5
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          clients:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 9
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 9
+          skus:
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          comments:
+          - id: 9
+            text: text
+            isVisibleForContact: true
+            userId: 6
+          - id: 9
+            text: text
+            isVisibleForContact: true
+            userId: 6
+          attributeValues:
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          warehouses:
+          - reorderLevel: 1
+            stockTurnoverInDays: 6
+            warehouseId: 7
+            zoneId: 1
+            storageLocationType: storageLocationType
+            storageLocation: 7
+            stockBuffer: 1
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          - reorderLevel: 1
+            stockTurnoverInDays: 6
+            warehouseId: 7
+            zoneId: 1
+            storageLocationType: storageLocationType
+            storageLocation: 7
+            stockBuffer: 1
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          additionalSkus:
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          barcodes:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            code: code
+            barcodeId: 8
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            code: code
+            barcodeId: 8
+          tags:
+          - tagId: 9
+          - tagId: 9
+          marketIdentNumbers:
+          - variationId: 0
+            id: 8
+            position: 5
+            type: type
+            value: value
+            countryId: 5
+          - variationId: 0
+            id: 8
+            position: 5
+            type: type
+            value: value
+            countryId: 5
+          markets:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 5
+            marketId: 7.835035282970782
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 5
+            marketId: 7.835035282970782
+          unit:
+            unitId: 8
+            content: 6.438423552598547
+            unitCombinationId: 9
+          bundleComponents:
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          defaultCategories:
+          - branchId: 3
+            variationId: 0
+            manually: manually
+            plentyId: 2
+          - branchId: 3
+            variationId: 0
+            manually: manually
+            plentyId: 2
+          supplier:
+          - currencyPurchasePrice: 9.386524999783381
+            itemNumber: itemNumber
+            supplierId: 4
+            isDiscountable: true
+            packagingUnit: 2.7977867356748476
+            discount: 4.332304821875894
+            minimumPurchase: 0.35262192099236644
+            purchasePrice: 0.4833312865174044
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 8
+            deliveryTimeInDays: 7
+            id: 3
+            itemDescription: itemDescription
+          - currencyPurchasePrice: 9.386524999783381
+            itemNumber: itemNumber
+            supplierId: 4
+            isDiscountable: true
+            packagingUnit: 2.7977867356748476
+            discount: 4.332304821875894
+            minimumPurchase: 0.35262192099236644
+            purchasePrice: 0.4833312865174044
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 8
+            deliveryTimeInDays: 7
+            id: 3
+            itemDescription: itemDescription
+          id: 7
+          categories:
+          - variationId: 8
+            position: 3
+            categoryId: 7
+            isNeckermannPrimary: true
+          - variationId: 8
+            position: 3
+            categoryId: 7
+            isNeckermannPrimary: true
+          salesPrices:
+          - salesPriceId: 3
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 1
+            price: 9.183123594773994
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - salesPriceId: 3
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 1
+            price: 9.183123594773994
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          properties:
+          - selectionValues:
+            - selectionId: 5
+            - selectionId: 5
+            propertyId: 4
+            value: ""
+          - selectionValues:
+            - selectionId: 5
+            - selectionId: 5
+            propertyId: 4
+            value: ""
+          base:
+            intervalOrderQuantity: 3.0937452626664474
+            releasedAt: 2000-01-23T04:56:07.000+00:00
+            weightNetG: 0
+            transportationCosts: 5.533258397034986
+            automaticClientVisibility: true
+            packingUnitTypeId: 7
+            stockLimitation: 6
+            minimumOrderQuantity: 3.353193347011243
+            isUnavailableIfNetStockIsNotPositive: true
+            packingUnits: 3
+            vatId: 6
+            isAvailableIfNetStockIsPositive: true
+            isHiddenInCategoryList: true
+            relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            availability: 1
+            purchasePrice: 2.8841621266687802
+            bundleType: bundleType
+            isActive: true
+            widthMM: 7.058770351582356
+            number: number
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            availableUntil: 2000-01-23T04:56:07.000+00:00
+            maximumOrderQuantity: 6.704019297950036
+            isInvisibleIfNetStockIsNotPositive: true
+            weightG: 7
+            customs: 4.078845849666752
+            model: model
+            extraShippingCharge1: 4.652396432933246
+            unitsContained: 7
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            heightMM: 0.10263654006109402
+            extraShippingCharge2: 8.969578798196912
+            isMain: true
+            externalId: externalId
+            priceCalculationId: 6
+            picking: picking
+            lengthMM: 6.519180951018382
+            palletTypeId: 3
+            isVisibleIfNetStockIsPositive: true
+            itemId: 3
+            estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
+            operatingCosts: 0.2025324113236393
+            mainWarehouseId: 5
+            name: name
+            storageCosts: 3.2588565619047607
+            position: 6
+        - images:
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5
+            - imageId: 3
+              type: type
+              value: 5
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5
+            - imageId: 3
+              type: type
+              value: 5
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          clients:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 9
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 9
+          skus:
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          comments:
+          - id: 9
+            text: text
+            isVisibleForContact: true
+            userId: 6
+          - id: 9
+            text: text
+            isVisibleForContact: true
+            userId: 6
+          attributeValues:
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          warehouses:
+          - reorderLevel: 1
+            stockTurnoverInDays: 6
+            warehouseId: 7
+            zoneId: 1
+            storageLocationType: storageLocationType
+            storageLocation: 7
+            stockBuffer: 1
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          - reorderLevel: 1
+            stockTurnoverInDays: 6
+            warehouseId: 7
+            zoneId: 1
+            storageLocationType: storageLocationType
+            storageLocation: 7
+            stockBuffer: 1
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          additionalSkus:
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          barcodes:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            code: code
+            barcodeId: 8
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            code: code
+            barcodeId: 8
+          tags:
+          - tagId: 9
+          - tagId: 9
+          marketIdentNumbers:
+          - variationId: 0
+            id: 8
+            position: 5
+            type: type
+            value: value
+            countryId: 5
+          - variationId: 0
+            id: 8
+            position: 5
+            type: type
+            value: value
+            countryId: 5
+          markets:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 5
+            marketId: 7.835035282970782
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 5
+            marketId: 7.835035282970782
+          unit:
+            unitId: 8
+            content: 6.438423552598547
+            unitCombinationId: 9
+          bundleComponents:
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          defaultCategories:
+          - branchId: 3
+            variationId: 0
+            manually: manually
+            plentyId: 2
+          - branchId: 3
+            variationId: 0
+            manually: manually
+            plentyId: 2
+          supplier:
+          - currencyPurchasePrice: 9.386524999783381
+            itemNumber: itemNumber
+            supplierId: 4
+            isDiscountable: true
+            packagingUnit: 2.7977867356748476
+            discount: 4.332304821875894
+            minimumPurchase: 0.35262192099236644
+            purchasePrice: 0.4833312865174044
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 8
+            deliveryTimeInDays: 7
+            id: 3
+            itemDescription: itemDescription
+          - currencyPurchasePrice: 9.386524999783381
+            itemNumber: itemNumber
+            supplierId: 4
+            isDiscountable: true
+            packagingUnit: 2.7977867356748476
+            discount: 4.332304821875894
+            minimumPurchase: 0.35262192099236644
+            purchasePrice: 0.4833312865174044
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 8
+            deliveryTimeInDays: 7
+            id: 3
+            itemDescription: itemDescription
+          id: 7
+          categories:
+          - variationId: 8
+            position: 3
+            categoryId: 7
+            isNeckermannPrimary: true
+          - variationId: 8
+            position: 3
+            categoryId: 7
+            isNeckermannPrimary: true
+          salesPrices:
+          - salesPriceId: 3
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 1
+            price: 9.183123594773994
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - salesPriceId: 3
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 1
+            price: 9.183123594773994
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          properties:
+          - selectionValues:
+            - selectionId: 5
+            - selectionId: 5
+            propertyId: 4
+            value: ""
+          - selectionValues:
+            - selectionId: 5
+            - selectionId: 5
+            propertyId: 4
+            value: ""
+          base:
+            intervalOrderQuantity: 3.0937452626664474
+            releasedAt: 2000-01-23T04:56:07.000+00:00
+            weightNetG: 0
+            transportationCosts: 5.533258397034986
+            automaticClientVisibility: true
+            packingUnitTypeId: 7
+            stockLimitation: 6
+            minimumOrderQuantity: 3.353193347011243
+            isUnavailableIfNetStockIsNotPositive: true
+            packingUnits: 3
+            vatId: 6
+            isAvailableIfNetStockIsPositive: true
+            isHiddenInCategoryList: true
+            relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            availability: 1
+            purchasePrice: 2.8841621266687802
+            bundleType: bundleType
+            isActive: true
+            widthMM: 7.058770351582356
+            number: number
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            availableUntil: 2000-01-23T04:56:07.000+00:00
+            maximumOrderQuantity: 6.704019297950036
+            isInvisibleIfNetStockIsNotPositive: true
+            weightG: 7
+            customs: 4.078845849666752
+            model: model
+            extraShippingCharge1: 4.652396432933246
+            unitsContained: 7
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            heightMM: 0.10263654006109402
+            extraShippingCharge2: 8.969578798196912
+            isMain: true
+            externalId: externalId
+            priceCalculationId: 6
+            picking: picking
+            lengthMM: 6.519180951018382
+            palletTypeId: 3
+            isVisibleIfNetStockIsPositive: true
+            itemId: 3
+            estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
+            operatingCosts: 0.2025324113236393
+            mainWarehouseId: 5
+            name: name
+            storageCosts: 3.2588565619047607
+            position: 6
+        itemsPerPage: 2
+        isLastPage: true
+        firstOnPage: 5
+        page: 0
+        lastPageNumber: 1
+      properties:
+        page:
+          description: Current page of the response
+          type: integer
+        totalsCount:
+          description: The total number of entries in the response
+          type: integer
+        isLastPage:
+          description: Flag that indicates if the page shown is the last page of the
+            response
+          type: boolean
+        lastPageNumber:
+          description: The last page number
+          type: integer
+        firstOnPage:
+          description: The index of the first item of the current page result
+          type: integer
+        lastOnPage:
+          description: The index of the last item of the current page result
+          type: integer
+        itemsPerPage:
+          description: The requested amount of items per result page
+          type: integer
+        entries:
+          description: List of Variation
+          items:
+            $ref: '#/components/schemas/PimVariation'
+          type: array
+      type: object
+    PimVariationProperty_selectionValues:
+      example:
+        selectionId: 5
+      properties:
+        selectionId:
+          type: integer
       type: object

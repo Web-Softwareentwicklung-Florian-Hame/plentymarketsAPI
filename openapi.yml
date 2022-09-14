@@ -1190,6 +1190,8 @@ components:
           type: integer
         value:
           description: "can have any type"
+        groupId:
+          type: integer
         selectionValues:
           type: array
           items:

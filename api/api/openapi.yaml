@@ -1572,9 +1572,10 @@ components:
       type: object
     PimVariationProperty:
       example:
+        groupId: 5
         selectionValues:
-        - selectionId: 5
-        - selectionId: 5
+        - selectionId: 9
+        - selectionId: 9
         propertyId: 4
         value: ""
       properties:
@@ -1582,6 +1583,8 @@ components:
           type: integer
         value:
           description: can have any type
+        groupId:
+          type: integer
         selectionValues:
           items:
             $ref: '#/components/schemas/PimVariationProperty_selectionValues'
@@ -1596,10 +1599,10 @@ components:
       type: object
     PimVariationComment:
       example:
-        id: 9
+        id: 6
         text: text
         isVisibleForContact: true
-        userId: 6
+        userId: 8
       properties:
         id:
           type: integer
@@ -1612,9 +1615,9 @@ components:
       type: object
     PimVariationUnit:
       example:
-        unitId: 8
-        content: 6.438423552598547
-        unitCombinationId: 9
+        unitId: 9
+        content: 3.5571952270680973
+        unitCombinationId: 6
       properties:
         unitId:
           type: integer
@@ -1625,52 +1628,52 @@ components:
       type: object
     PimVariationBase:
       example:
-        intervalOrderQuantity: 3.0937452626664474
+        intervalOrderQuantity: 7.143538047012306
         releasedAt: 2000-01-23T04:56:07.000+00:00
-        weightNetG: 0
-        transportationCosts: 5.533258397034986
+        weightNetG: 7
+        transportationCosts: 3.2588565619047607
         automaticClientVisibility: true
-        packingUnitTypeId: 7
-        stockLimitation: 6
-        minimumOrderQuantity: 3.353193347011243
+        packingUnitTypeId: 5
+        stockLimitation: 5
+        minimumOrderQuantity: 3.0937452626664474
         isUnavailableIfNetStockIsNotPositive: true
-        packingUnits: 3
-        vatId: 6
+        packingUnits: 7
+        vatId: 4
         isAvailableIfNetStockIsPositive: true
         isHiddenInCategoryList: true
         relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-        availability: 1
-        purchasePrice: 2.8841621266687802
+        availability: 2
+        purchasePrice: 6.778324963048013
         bundleType: bundleType
         isActive: true
-        widthMM: 7.058770351582356
+        widthMM: 6.519180951018382
         number: number
         createdAt: 2000-01-23T04:56:07.000+00:00
         availableUntil: 2000-01-23T04:56:07.000+00:00
-        maximumOrderQuantity: 6.704019297950036
+        maximumOrderQuantity: 3.353193347011243
         isInvisibleIfNetStockIsNotPositive: true
-        weightG: 7
-        customs: 4.078845849666752
+        weightG: 0
+        customs: 0.2025324113236393
         model: model
-        extraShippingCharge1: 4.652396432933246
-        unitsContained: 7
+        extraShippingCharge1: 8.969578798196912
+        unitsContained: 3
         updatedAt: 2000-01-23T04:56:07.000+00:00
-        heightMM: 0.10263654006109402
-        extraShippingCharge2: 8.969578798196912
+        heightMM: 4.652396432933246
+        extraShippingCharge2: 7.740351818741173
         isMain: true
         externalId: externalId
         priceCalculationId: 6
         picking: picking
-        lengthMM: 6.519180951018382
+        lengthMM: 0.10263654006109402
         palletTypeId: 3
         isVisibleIfNetStockIsPositive: true
-        itemId: 3
+        itemId: 6
         estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
-        operatingCosts: 0.2025324113236393
-        mainWarehouseId: 5
+        operatingCosts: 6.628464275087742
+        mainWarehouseId: 6
         name: name
-        storageCosts: 3.2588565619047607
-        position: 6
+        storageCosts: 4.078845849666752
+        position: 1
       properties:
         isMain:
           type: boolean
@@ -1895,14 +1898,14 @@ components:
           updatedAt: 2000-01-23T04:56:07.000+00:00
           status: status
         comments:
-        - id: 9
+        - id: 6
           text: text
           isVisibleForContact: true
-          userId: 6
-        - id: 9
+          userId: 8
+        - id: 6
           text: text
           isVisibleForContact: true
-          userId: 6
+          userId: 8
         attributeValues:
         - attributeId: 5
           isLinkableToImage: true
@@ -2087,9 +2090,9 @@ components:
           variationId: 5
           marketId: 7.835035282970782
         unit:
-          unitId: 8
-          content: 6.438423552598547
-          unitCombinationId: 9
+          unitId: 9
+          content: 3.5571952270680973
+          unitCombinationId: 6
         bundleComponents:
         - componentVariationId: 2.027123023002322
           componentQuantity: 4.145608029883936
@@ -2157,63 +2160,65 @@ components:
           price: 9.183123594773994
           updatedAt: 2000-01-23T04:56:07.000+00:00
         properties:
-        - selectionValues:
-          - selectionId: 5
-          - selectionId: 5
+        - groupId: 5
+          selectionValues:
+          - selectionId: 9
+          - selectionId: 9
           propertyId: 4
           value: ""
-        - selectionValues:
-          - selectionId: 5
-          - selectionId: 5
+        - groupId: 5
+          selectionValues:
+          - selectionId: 9
+          - selectionId: 9
           propertyId: 4
           value: ""
         base:
-          intervalOrderQuantity: 3.0937452626664474
+          intervalOrderQuantity: 7.143538047012306
           releasedAt: 2000-01-23T04:56:07.000+00:00
-          weightNetG: 0
-          transportationCosts: 5.533258397034986
+          weightNetG: 7
+          transportationCosts: 3.2588565619047607
           automaticClientVisibility: true
-          packingUnitTypeId: 7
-          stockLimitation: 6
-          minimumOrderQuantity: 3.353193347011243
+          packingUnitTypeId: 5
+          stockLimitation: 5
+          minimumOrderQuantity: 3.0937452626664474
           isUnavailableIfNetStockIsNotPositive: true
-          packingUnits: 3
-          vatId: 6
+          packingUnits: 7
+          vatId: 4
           isAvailableIfNetStockIsPositive: true
           isHiddenInCategoryList: true
           relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-          availability: 1
-          purchasePrice: 2.8841621266687802
+          availability: 2
+          purchasePrice: 6.778324963048013
           bundleType: bundleType
           isActive: true
-          widthMM: 7.058770351582356
+          widthMM: 6.519180951018382
           number: number
           createdAt: 2000-01-23T04:56:07.000+00:00
           availableUntil: 2000-01-23T04:56:07.000+00:00
-          maximumOrderQuantity: 6.704019297950036
+          maximumOrderQuantity: 3.353193347011243
           isInvisibleIfNetStockIsNotPositive: true
-          weightG: 7
-          customs: 4.078845849666752
+          weightG: 0
+          customs: 0.2025324113236393
           model: model
-          extraShippingCharge1: 4.652396432933246
-          unitsContained: 7
+          extraShippingCharge1: 8.969578798196912
+          unitsContained: 3
           updatedAt: 2000-01-23T04:56:07.000+00:00
-          heightMM: 0.10263654006109402
-          extraShippingCharge2: 8.969578798196912
+          heightMM: 4.652396432933246
+          extraShippingCharge2: 7.740351818741173
           isMain: true
           externalId: externalId
           priceCalculationId: 6
           picking: picking
-          lengthMM: 6.519180951018382
+          lengthMM: 0.10263654006109402
           palletTypeId: 3
           isVisibleIfNetStockIsPositive: true
-          itemId: 3
+          itemId: 6
           estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
-          operatingCosts: 0.2025324113236393
-          mainWarehouseId: 5
+          operatingCosts: 6.628464275087742
+          mainWarehouseId: 6
           name: name
-          storageCosts: 3.2588565619047607
-          position: 6
+          storageCosts: 4.078845849666752
+          position: 1
       properties:
         id:
           description: The id of the variation. optional
@@ -14000,14 +14005,14 @@ components:
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
           comments:
-          - id: 9
+          - id: 6
             text: text
             isVisibleForContact: true
-            userId: 6
-          - id: 9
+            userId: 8
+          - id: 6
             text: text
             isVisibleForContact: true
-            userId: 6
+            userId: 8
           attributeValues:
           - attributeId: 5
             isLinkableToImage: true
@@ -14192,9 +14197,9 @@ components:
             variationId: 5
             marketId: 7.835035282970782
           unit:
-            unitId: 8
-            content: 6.438423552598547
-            unitCombinationId: 9
+            unitId: 9
+            content: 3.5571952270680973
+            unitCombinationId: 6
           bundleComponents:
           - componentVariationId: 2.027123023002322
             componentQuantity: 4.145608029883936
@@ -14262,63 +14267,65 @@ components:
             price: 9.183123594773994
             updatedAt: 2000-01-23T04:56:07.000+00:00
           properties:
-          - selectionValues:
-            - selectionId: 5
-            - selectionId: 5
+          - groupId: 5
+            selectionValues:
+            - selectionId: 9
+            - selectionId: 9
             propertyId: 4
             value: ""
-          - selectionValues:
-            - selectionId: 5
-            - selectionId: 5
+          - groupId: 5
+            selectionValues:
+            - selectionId: 9
+            - selectionId: 9
             propertyId: 4
             value: ""
           base:
-            intervalOrderQuantity: 3.0937452626664474
+            intervalOrderQuantity: 7.143538047012306
             releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 0
-            transportationCosts: 5.533258397034986
+            weightNetG: 7
+            transportationCosts: 3.2588565619047607
             automaticClientVisibility: true
-            packingUnitTypeId: 7
-            stockLimitation: 6
-            minimumOrderQuantity: 3.353193347011243
+            packingUnitTypeId: 5
+            stockLimitation: 5
+            minimumOrderQuantity: 3.0937452626664474
             isUnavailableIfNetStockIsNotPositive: true
-            packingUnits: 3
-            vatId: 6
+            packingUnits: 7
+            vatId: 4
             isAvailableIfNetStockIsPositive: true
             isHiddenInCategoryList: true
             relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            availability: 1
-            purchasePrice: 2.8841621266687802
+            availability: 2
+            purchasePrice: 6.778324963048013
             bundleType: bundleType
             isActive: true
-            widthMM: 7.058770351582356
+            widthMM: 6.519180951018382
             number: number
             createdAt: 2000-01-23T04:56:07.000+00:00
             availableUntil: 2000-01-23T04:56:07.000+00:00
-            maximumOrderQuantity: 6.704019297950036
+            maximumOrderQuantity: 3.353193347011243
             isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 4.078845849666752
+            weightG: 0
+            customs: 0.2025324113236393
             model: model
-            extraShippingCharge1: 4.652396432933246
-            unitsContained: 7
+            extraShippingCharge1: 8.969578798196912
+            unitsContained: 3
             updatedAt: 2000-01-23T04:56:07.000+00:00
-            heightMM: 0.10263654006109402
-            extraShippingCharge2: 8.969578798196912
+            heightMM: 4.652396432933246
+            extraShippingCharge2: 7.740351818741173
             isMain: true
             externalId: externalId
             priceCalculationId: 6
             picking: picking
-            lengthMM: 6.519180951018382
+            lengthMM: 0.10263654006109402
             palletTypeId: 3
             isVisibleIfNetStockIsPositive: true
-            itemId: 3
+            itemId: 6
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
-            operatingCosts: 0.2025324113236393
-            mainWarehouseId: 5
+            operatingCosts: 6.628464275087742
+            mainWarehouseId: 6
             name: name
-            storageCosts: 3.2588565619047607
-            position: 6
+            storageCosts: 4.078845849666752
+            position: 1
         - images:
           - documentUploadPreviewHeight: 1
             insert: insert
@@ -14441,14 +14448,14 @@ components:
             updatedAt: 2000-01-23T04:56:07.000+00:00
             status: status
           comments:
-          - id: 9
+          - id: 6
             text: text
             isVisibleForContact: true
-            userId: 6
-          - id: 9
+            userId: 8
+          - id: 6
             text: text
             isVisibleForContact: true
-            userId: 6
+            userId: 8
           attributeValues:
           - attributeId: 5
             isLinkableToImage: true
@@ -14633,9 +14640,9 @@ components:
             variationId: 5
             marketId: 7.835035282970782
           unit:
-            unitId: 8
-            content: 6.438423552598547
-            unitCombinationId: 9
+            unitId: 9
+            content: 3.5571952270680973
+            unitCombinationId: 6
           bundleComponents:
           - componentVariationId: 2.027123023002322
             componentQuantity: 4.145608029883936
@@ -14703,63 +14710,65 @@ components:
             price: 9.183123594773994
             updatedAt: 2000-01-23T04:56:07.000+00:00
           properties:
-          - selectionValues:
-            - selectionId: 5
-            - selectionId: 5
+          - groupId: 5
+            selectionValues:
+            - selectionId: 9
+            - selectionId: 9
             propertyId: 4
             value: ""
-          - selectionValues:
-            - selectionId: 5
-            - selectionId: 5
+          - groupId: 5
+            selectionValues:
+            - selectionId: 9
+            - selectionId: 9
             propertyId: 4
             value: ""
           base:
-            intervalOrderQuantity: 3.0937452626664474
+            intervalOrderQuantity: 7.143538047012306
             releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 0
-            transportationCosts: 5.533258397034986
+            weightNetG: 7
+            transportationCosts: 3.2588565619047607
             automaticClientVisibility: true
-            packingUnitTypeId: 7
-            stockLimitation: 6
-            minimumOrderQuantity: 3.353193347011243
+            packingUnitTypeId: 5
+            stockLimitation: 5
+            minimumOrderQuantity: 3.0937452626664474
             isUnavailableIfNetStockIsNotPositive: true
-            packingUnits: 3
-            vatId: 6
+            packingUnits: 7
+            vatId: 4
             isAvailableIfNetStockIsPositive: true
             isHiddenInCategoryList: true
             relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            availability: 1
-            purchasePrice: 2.8841621266687802
+            availability: 2
+            purchasePrice: 6.778324963048013
             bundleType: bundleType
             isActive: true
-            widthMM: 7.058770351582356
+            widthMM: 6.519180951018382
             number: number
             createdAt: 2000-01-23T04:56:07.000+00:00
             availableUntil: 2000-01-23T04:56:07.000+00:00
-            maximumOrderQuantity: 6.704019297950036
+            maximumOrderQuantity: 3.353193347011243
             isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 4.078845849666752
+            weightG: 0
+            customs: 0.2025324113236393
             model: model
-            extraShippingCharge1: 4.652396432933246
-            unitsContained: 7
+            extraShippingCharge1: 8.969578798196912
+            unitsContained: 3
             updatedAt: 2000-01-23T04:56:07.000+00:00
-            heightMM: 0.10263654006109402
-            extraShippingCharge2: 8.969578798196912
+            heightMM: 4.652396432933246
+            extraShippingCharge2: 7.740351818741173
             isMain: true
             externalId: externalId
             priceCalculationId: 6
             picking: picking
-            lengthMM: 6.519180951018382
+            lengthMM: 0.10263654006109402
             palletTypeId: 3
             isVisibleIfNetStockIsPositive: true
-            itemId: 3
+            itemId: 6
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
-            operatingCosts: 0.2025324113236393
-            mainWarehouseId: 5
+            operatingCosts: 6.628464275087742
+            mainWarehouseId: 6
             name: name
-            storageCosts: 3.2588565619047607
-            position: 6
+            storageCosts: 4.078845849666752
+            position: 1
         itemsPerPage: 2
         isLastPage: true
         firstOnPage: 5
@@ -14796,7 +14805,7 @@ components:
       type: object
     PimVariationProperty_selectionValues:
       example:
-        selectionId: 5
+        selectionId: 9
       properties:
         selectionId:
           type: integer

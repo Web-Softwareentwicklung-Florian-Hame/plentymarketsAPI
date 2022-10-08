@@ -17,6 +17,7 @@ const (
 	KauflandDe        MarketName = "Kaufland.de"
 	Limango           MarketName = "Limango"
 	ManuelleEingabe   MarketName = "Manuelle Eingabe"
+	MyToys            MarketName = "MyToys"
 	OttoMarket        MarketName = "Otto Market"
 	Shopify           MarketName = "Shopify"
 	WebApi            MarketName = "WebApi"
@@ -43,6 +44,7 @@ var MarketIdMap = map[MarketName]float32{
 	KauflandDe:        102,
 	Limango:           12,
 	ManuelleEingabe:   0,
+	MyToys:            14,
 	OttoMarket:        160.1,
 	Shopify:           13,
 	WebApi:            148,

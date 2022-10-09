@@ -40,7 +40,7 @@ type Variation struct {
 	CreatedAt *time.Time `json:"createdAt,omitempty"`
 	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
 	RelatedUpdatedAt *time.Time `json:"relatedUpdatedAt,omitempty"`
-	PriceCalculationId *int32 `json:"priceCalculationId,omitempty"`
+	PriceCalculationId *string `json:"priceCalculationId,omitempty"`
 	PriceCalculationUUID *string `json:"priceCalculationUUID,omitempty"`
 	Picking *string `json:"picking,omitempty"`
 	StockLimitation *int32 `json:"stockLimitation,omitempty"`
@@ -862,9 +862,9 @@ func (o *Variation) SetRelatedUpdatedAt(v time.Time) {
 }
 
 // GetPriceCalculationId returns the PriceCalculationId field value if set, zero value otherwise.
-func (o *Variation) GetPriceCalculationId() int32 {
+func (o *Variation) GetPriceCalculationId() string {
 	if o == nil || o.PriceCalculationId == nil {
-		var ret int32
+		var ret string
 		return ret
 	}
 	return *o.PriceCalculationId
@@ -872,7 +872,7 @@ func (o *Variation) GetPriceCalculationId() int32 {
 
 // GetPriceCalculationIdOk returns a tuple with the PriceCalculationId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Variation) GetPriceCalculationIdOk() (*int32, bool) {
+func (o *Variation) GetPriceCalculationIdOk() (*string, bool) {
 	if o == nil || o.PriceCalculationId == nil {
 		return nil, false
 	}
@@ -888,8 +888,8 @@ func (o *Variation) HasPriceCalculationId() bool {
 	return false
 }
 
-// SetPriceCalculationId gets a reference to the given int32 and assigns it to the PriceCalculationId field.
-func (o *Variation) SetPriceCalculationId(v int32) {
+// SetPriceCalculationId gets a reference to the given string and assigns it to the PriceCalculationId field.
+func (o *Variation) SetPriceCalculationId(v string) {
 	o.PriceCalculationId = &v
 }
 

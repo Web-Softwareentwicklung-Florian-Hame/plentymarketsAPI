@@ -1517,7 +1517,7 @@ components:
           type: string
           format: date-time
         priceCalculationId:
-          type: integer
+          type: string
         priceCalculationUUID:
           type: string
         picking:

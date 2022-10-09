@@ -27,7 +27,7 @@ Name | Type | Description | Notes
 **CreatedAt** | Pointer to **time.Time** |  | [optional] 
 **UpdatedAt** | Pointer to **time.Time** |  | [optional] 
 **RelatedUpdatedAt** | Pointer to **time.Time** |  | [optional] 
-**PriceCalculationId** | Pointer to **int32** |  | [optional] 
+**PriceCalculationId** | Pointer to **string** |  | [optional] 
 **PriceCalculationUUID** | Pointer to **string** |  | [optional] 
 **Picking** | Pointer to **string** |  | [optional] 
 **StockLimitation** | Pointer to **int32** |  | [optional] 
@@ -690,20 +690,20 @@ HasRelatedUpdatedAt returns a boolean if a field has been set.
 
 ### GetPriceCalculationId
 
-`func (o *Variation) GetPriceCalculationId() int32`
+`func (o *Variation) GetPriceCalculationId() string`
 
 GetPriceCalculationId returns the PriceCalculationId field if non-nil, zero value otherwise.
 
 ### GetPriceCalculationIdOk
 
-`func (o *Variation) GetPriceCalculationIdOk() (*int32, bool)`
+`func (o *Variation) GetPriceCalculationIdOk() (*string, bool)`
 
 GetPriceCalculationIdOk returns a tuple with the PriceCalculationId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriceCalculationId
 
-`func (o *Variation) SetPriceCalculationId(v int32)`
+`func (o *Variation) SetPriceCalculationId(v string)`
 
 SetPriceCalculationId sets PriceCalculationId field to given value.
 

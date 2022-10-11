@@ -1447,7 +1447,7 @@ No authorization required
 
 ## RestPimVariationsPut
 
-> RestPimVariationsPut(ctx).PimVariation(pimVariation).Execute()
+> []PimVariation RestPimVariationsPut(ctx).PimVariation(pimVariation).Execute()
 
 Create a list of variations and their related data
 
@@ -1475,6 +1475,8 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestPimVariationsPut``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
+    // response from `RestPimVariationsPut`: []PimVariation
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestPimVariationsPut`: %v\n", resp)
 }
 ```
 
@@ -1493,7 +1495,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
- (empty response body)
+[**[]PimVariation**](PimVariation.md)
 
 ### Authorization
 
@@ -1502,7 +1504,7 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json;charset=utf-8
-- **Accept**: Not defined
+- **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)

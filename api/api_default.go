@@ -2940,7 +2940,7 @@ func (r ApiRestPimVariationsPutRequest) PimVariation(pimVariation []PimVariation
 	return r
 }
 
-func (r ApiRestPimVariationsPutRequest) Execute() (*_nethttp.Response, error) {
+func (r ApiRestPimVariationsPutRequest) Execute() ([]PimVariation, *_nethttp.Response, error) {
 	return r.ApiService.RestPimVariationsPutExecute(r)
 }
 
@@ -2960,18 +2960,20 @@ func (a *DefaultApiService) RestPimVariationsPut(ctx _context.Context) ApiRestPi
 }
 
 // Execute executes the request
-func (a *DefaultApiService) RestPimVariationsPutExecute(r ApiRestPimVariationsPutRequest) (*_nethttp.Response, error) {
+//  @return []PimVariation
+func (a *DefaultApiService) RestPimVariationsPutExecute(r ApiRestPimVariationsPutRequest) ([]PimVariation, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPut
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
+		localVarReturnValue  []PimVariation
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestPimVariationsPut")
 	if err != nil {
-		return nil, GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/rest/pim/variations"
@@ -2990,7 +2992,7 @@ func (a *DefaultApiService) RestPimVariationsPutExecute(r ApiRestPimVariationsPu
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{}
+	localVarHTTPHeaderAccepts := []string{"application/json;charset=utf-8"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -3001,19 +3003,19 @@ func (a *DefaultApiService) RestPimVariationsPutExecute(r ApiRestPimVariationsPu
 	localVarPostBody = r.pimVariation
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = _ioutil.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -3021,10 +3023,19 @@ func (a *DefaultApiService) RestPimVariationsPutExecute(r ApiRestPimVariationsPu
 			body:  localVarBody,
 			error: localVarHTTPResponse.Status,
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest struct {

@@ -1504,6 +1504,12 @@ paths:
               type: array
       responses:
         "200":
+          content:
+            application/json;charset=utf-8:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PimVariation'
+                type: array
           description: OK
         "401":
           description: The resource owner or authorization server denied the request.

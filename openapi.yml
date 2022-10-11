@@ -1123,6 +1123,12 @@ paths:
       responses:
         200:
           description: "OK"
+          content:
+            application/json;charset=utf-8:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PimVariation'
         401:
           description: "The resource owner or authorization server denied the request. - The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed. Check the \"access token\" parameter."
 

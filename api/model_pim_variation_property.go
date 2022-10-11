@@ -19,6 +19,7 @@ type PimVariationProperty struct {
 	PropertyId *int32 `json:"propertyId,omitempty"`
 	// can have any type
 	Value interface{} `json:"value,omitempty"`
+	Values *[]PimVariationPropertyValues `json:"values,omitempty"`
 	GroupId *int32 `json:"groupId,omitempty"`
 	SelectionValues *[]PimVariationPropertySelectionValues `json:"selectionValues,omitempty"`
 }
@@ -105,6 +106,38 @@ func (o *PimVariationProperty) SetValue(v interface{}) {
 	o.Value = v
 }
 
+// GetValues returns the Values field value if set, zero value otherwise.
+func (o *PimVariationProperty) GetValues() []PimVariationPropertyValues {
+	if o == nil || o.Values == nil {
+		var ret []PimVariationPropertyValues
+		return ret
+	}
+	return *o.Values
+}
+
+// GetValuesOk returns a tuple with the Values field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationProperty) GetValuesOk() (*[]PimVariationPropertyValues, bool) {
+	if o == nil || o.Values == nil {
+		return nil, false
+	}
+	return o.Values, true
+}
+
+// HasValues returns a boolean if a field has been set.
+func (o *PimVariationProperty) HasValues() bool {
+	if o != nil && o.Values != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetValues gets a reference to the given []PimVariationPropertyValues and assigns it to the Values field.
+func (o *PimVariationProperty) SetValues(v []PimVariationPropertyValues) {
+	o.Values = &v
+}
+
 // GetGroupId returns the GroupId field value if set, zero value otherwise.
 func (o *PimVariationProperty) GetGroupId() int32 {
 	if o == nil || o.GroupId == nil {
@@ -176,6 +209,9 @@ func (o PimVariationProperty) MarshalJSON() ([]byte, error) {
 	}
 	if o.Value != nil {
 		toSerialize["value"] = o.Value
+	}
+	if o.Values != nil {
+		toSerialize["values"] = o.Values
 	}
 	if o.GroupId != nil {
 		toSerialize["groupId"] = o.GroupId

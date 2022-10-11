@@ -133,6 +133,7 @@ Class | Method | HTTP request | Description
  - [PimVariationComment](docs/PimVariationComment.md)
  - [PimVariationProperty](docs/PimVariationProperty.md)
  - [PimVariationPropertySelectionValues](docs/PimVariationPropertySelectionValues.md)
+ - [PimVariationPropertyValues](docs/PimVariationPropertyValues.md)
  - [PimVariationTag](docs/PimVariationTag.md)
  - [PimVariationUnit](docs/PimVariationUnit.md)
  - [PimVariationWarehouse](docs/PimVariationWarehouse.md)

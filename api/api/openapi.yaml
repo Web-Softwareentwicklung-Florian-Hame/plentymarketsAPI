@@ -1572,6 +1572,13 @@ components:
       type: object
     PimVariationProperty:
       example:
+        values:
+        - description: description
+          lang: lang
+          value: value
+        - description: description
+          lang: lang
+          value: value
         groupId: 5
         selectionValues:
         - selectionId: 9
@@ -1583,6 +1590,10 @@ components:
           type: integer
         value:
           description: can have any type
+        values:
+          items:
+            $ref: '#/components/schemas/PimVariationProperty_values'
+          type: array
         groupId:
           type: integer
         selectionValues:
@@ -2160,13 +2171,27 @@ components:
           price: 3.502657762086401
           updatedAt: 2000-01-23T04:56:07.000+00:00
         properties:
-        - groupId: 5
+        - values:
+          - description: description
+            lang: lang
+            value: value
+          - description: description
+            lang: lang
+            value: value
+          groupId: 5
           selectionValues:
           - selectionId: 9
           - selectionId: 9
           propertyId: 4
           value: ""
-        - groupId: 5
+        - values:
+          - description: description
+            lang: lang
+            value: value
+          - description: description
+            lang: lang
+            value: value
+          groupId: 5
           selectionValues:
           - selectionId: 9
           - selectionId: 9
@@ -14267,13 +14292,27 @@ components:
             price: 3.502657762086401
             updatedAt: 2000-01-23T04:56:07.000+00:00
           properties:
-          - groupId: 5
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 5
             selectionValues:
             - selectionId: 9
             - selectionId: 9
             propertyId: 4
             value: ""
-          - groupId: 5
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 5
             selectionValues:
             - selectionId: 9
             - selectionId: 9
@@ -14710,13 +14749,27 @@ components:
             price: 3.502657762086401
             updatedAt: 2000-01-23T04:56:07.000+00:00
           properties:
-          - groupId: 5
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 5
             selectionValues:
             - selectionId: 9
             - selectionId: 9
             propertyId: 4
             value: ""
-          - groupId: 5
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 5
             selectionValues:
             - selectionId: 9
             - selectionId: 9
@@ -14802,6 +14855,19 @@ components:
           items:
             $ref: '#/components/schemas/PimVariation'
           type: array
+      type: object
+    PimVariationProperty_values:
+      example:
+        description: description
+        lang: lang
+        value: value
+      properties:
+        lang:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
       type: object
     PimVariationProperty_selectionValues:
       example:

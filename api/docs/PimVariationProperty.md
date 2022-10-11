@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **PropertyId** | Pointer to **int32** |  | [optional] 
 **Value** | Pointer to **interface{}** | can have any type | [optional] 
+**Values** | Pointer to [**[]PimVariationPropertyValues**](PimVariationPropertyValues.md) |  | [optional] 
 **GroupId** | Pointer to **int32** |  | [optional] 
 **SelectionValues** | Pointer to [**[]PimVariationPropertySelectionValues**](PimVariationPropertySelectionValues.md) |  | [optional] 
 
@@ -88,6 +89,31 @@ HasValue returns a boolean if a field has been set.
 `func (o *PimVariationProperty) UnsetValue()`
 
 UnsetValue ensures that no value is present for Value, not even an explicit nil
+### GetValues
+
+`func (o *PimVariationProperty) GetValues() []PimVariationPropertyValues`
+
+GetValues returns the Values field if non-nil, zero value otherwise.
+
+### GetValuesOk
+
+`func (o *PimVariationProperty) GetValuesOk() (*[]PimVariationPropertyValues, bool)`
+
+GetValuesOk returns a tuple with the Values field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetValues
+
+`func (o *PimVariationProperty) SetValues(v []PimVariationPropertyValues)`
+
+SetValues sets Values field to given value.
+
+### HasValues
+
+`func (o *PimVariationProperty) HasValues() bool`
+
+HasValues returns a boolean if a field has been set.
+
 ### GetGroupId
 
 `func (o *PimVariationProperty) GetGroupId() int32`

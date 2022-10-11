@@ -38,6 +38,7 @@ docs/PimVariationBundleComponent.md
 docs/PimVariationComment.md
 docs/PimVariationProperty.md
 docs/PimVariationPropertySelectionValues.md
+docs/PimVariationPropertyValues.md
 docs/PimVariationTag.md
 docs/PimVariationUnit.md
 docs/PimVariationWarehouse.md
@@ -101,6 +102,7 @@ model_pim_variation_bundle_component.go
 model_pim_variation_comment.go
 model_pim_variation_property.go
 model_pim_variation_property_selection_values.go
+model_pim_variation_property_values.go
 model_pim_variation_tag.go
 model_pim_variation_unit.go
 model_pim_variation_warehouse.go

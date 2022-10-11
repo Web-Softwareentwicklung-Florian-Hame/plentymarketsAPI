@@ -61,7 +61,7 @@ type PimVariationBase struct {
 	OperatingCosts *float32 `json:"operatingCosts,omitempty"`
 	VatId *int32 `json:"vatId,omitempty"`
 	BundleType *string `json:"bundleType,omitempty"`
-	AutomaticClientVisibility *bool `json:"automaticClientVisibility,omitempty"`
+	AutomaticClientVisibility *int32 `json:"automaticClientVisibility,omitempty"`
 	IsHiddenInCategoryList *bool `json:"isHiddenInCategoryList,omitempty"`
 }
 
@@ -1491,9 +1491,9 @@ func (o *PimVariationBase) SetBundleType(v string) {
 }
 
 // GetAutomaticClientVisibility returns the AutomaticClientVisibility field value if set, zero value otherwise.
-func (o *PimVariationBase) GetAutomaticClientVisibility() bool {
+func (o *PimVariationBase) GetAutomaticClientVisibility() int32 {
 	if o == nil || o.AutomaticClientVisibility == nil {
-		var ret bool
+		var ret int32
 		return ret
 	}
 	return *o.AutomaticClientVisibility
@@ -1501,7 +1501,7 @@ func (o *PimVariationBase) GetAutomaticClientVisibility() bool {
 
 // GetAutomaticClientVisibilityOk returns a tuple with the AutomaticClientVisibility field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PimVariationBase) GetAutomaticClientVisibilityOk() (*bool, bool) {
+func (o *PimVariationBase) GetAutomaticClientVisibilityOk() (*int32, bool) {
 	if o == nil || o.AutomaticClientVisibility == nil {
 		return nil, false
 	}
@@ -1517,8 +1517,8 @@ func (o *PimVariationBase) HasAutomaticClientVisibility() bool {
 	return false
 }
 
-// SetAutomaticClientVisibility gets a reference to the given bool and assigns it to the AutomaticClientVisibility field.
-func (o *PimVariationBase) SetAutomaticClientVisibility(v bool) {
+// SetAutomaticClientVisibility gets a reference to the given int32 and assigns it to the AutomaticClientVisibility field.
+func (o *PimVariationBase) SetAutomaticClientVisibility(v int32) {
 	o.AutomaticClientVisibility = &v
 }
 

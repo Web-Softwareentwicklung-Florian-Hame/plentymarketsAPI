@@ -1649,7 +1649,7 @@ components:
         releasedAt: 2000-01-23T04:56:07.000+00:00
         weightNetG: 4
         transportationCosts: 6.628464275087742
-        automaticClientVisibility: true
+        automaticClientVisibility: 9
         packingUnitTypeId: 0
         stockLimitation: 3
         minimumOrderQuantity: 7.058770351582356
@@ -1787,7 +1787,7 @@ components:
         bundleType:
           type: string
         automaticClientVisibility:
-          type: boolean
+          type: integer
         isHiddenInCategoryList:
           type: boolean
       type: object
@@ -2208,7 +2208,7 @@ components:
           releasedAt: 2000-01-23T04:56:07.000+00:00
           weightNetG: 4
           transportationCosts: 6.628464275087742
-          automaticClientVisibility: true
+          automaticClientVisibility: 9
           packingUnitTypeId: 0
           stockLimitation: 3
           minimumOrderQuantity: 7.058770351582356
@@ -14346,7 +14346,7 @@ components:
             releasedAt: 2000-01-23T04:56:07.000+00:00
             weightNetG: 4
             transportationCosts: 6.628464275087742
-            automaticClientVisibility: true
+            automaticClientVisibility: 9
             packingUnitTypeId: 0
             stockLimitation: 3
             minimumOrderQuantity: 7.058770351582356
@@ -14803,7 +14803,7 @@ components:
             releasedAt: 2000-01-23T04:56:07.000+00:00
             weightNetG: 4
             transportationCosts: 6.628464275087742
-            automaticClientVisibility: true
+            automaticClientVisibility: 9
             packingUnitTypeId: 0
             stockLimitation: 3
             minimumOrderQuantity: 7.058770351582356

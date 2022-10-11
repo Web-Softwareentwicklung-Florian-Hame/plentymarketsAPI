@@ -1344,7 +1344,7 @@ components:
         bundleType:
           type: string
         automaticClientVisibility:
-          type: boolean
+          type: integer
         isHiddenInCategoryList:
           type: boolean
 

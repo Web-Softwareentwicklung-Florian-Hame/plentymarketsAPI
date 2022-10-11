@@ -48,7 +48,7 @@ Name | Type | Description | Notes
 **OperatingCosts** | Pointer to **float32** |  | [optional] 
 **VatId** | Pointer to **int32** |  | [optional] 
 **BundleType** | Pointer to **string** |  | [optional] 
-**AutomaticClientVisibility** | Pointer to **bool** |  | [optional] 
+**AutomaticClientVisibility** | Pointer to **int32** |  | [optional] 
 **IsHiddenInCategoryList** | Pointer to **bool** |  | [optional] 
 
 ## Methods
@@ -1172,20 +1172,20 @@ HasBundleType returns a boolean if a field has been set.
 
 ### GetAutomaticClientVisibility
 
-`func (o *PimVariationBase) GetAutomaticClientVisibility() bool`
+`func (o *PimVariationBase) GetAutomaticClientVisibility() int32`
 
 GetAutomaticClientVisibility returns the AutomaticClientVisibility field if non-nil, zero value otherwise.
 
 ### GetAutomaticClientVisibilityOk
 
-`func (o *PimVariationBase) GetAutomaticClientVisibilityOk() (*bool, bool)`
+`func (o *PimVariationBase) GetAutomaticClientVisibilityOk() (*int32, bool)`
 
 GetAutomaticClientVisibilityOk returns a tuple with the AutomaticClientVisibility field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAutomaticClientVisibility
 
-`func (o *PimVariationBase) SetAutomaticClientVisibility(v bool)`
+`func (o *PimVariationBase) SetAutomaticClientVisibility(v int32)`
 
 SetAutomaticClientVisibility sets AutomaticClientVisibility field to given value.
 

@@ -1381,7 +1381,7 @@ components:
         defaultCategories:
           type: array
           items:
-            $ref: '#/components/schemas/VariationDefaultCategory'
+            $ref: '#/components/schemas/PimVariationDefaultCategory'
         images:
           type: array
           items:
@@ -2114,6 +2114,18 @@ components:
           type: integer
         manually:
           type: string
+    PimVariationDefaultCategory:
+      type: object
+      description: variation default category model
+      properties:
+        variationId:
+          type: integer
+        branchId:
+          type: integer
+        plentyId:
+          type: integer
+        manually:
+          type: boolean
     VariationMarket:
       type: object
       description: variation market link model

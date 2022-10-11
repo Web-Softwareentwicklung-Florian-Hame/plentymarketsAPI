@@ -24,7 +24,7 @@ type PimVariation struct {
 	BundleComponents *[]PimVariationBundleComponent `json:"bundleComponents,omitempty"`
 	Categories *[]VariationCategory `json:"categories,omitempty"`
 	Clients *[]VariationClient `json:"clients,omitempty"`
-	DefaultCategories *[]VariationDefaultCategory `json:"defaultCategories,omitempty"`
+	DefaultCategories *[]PimVariationDefaultCategory `json:"defaultCategories,omitempty"`
 	Images *[]VariationImage `json:"images,omitempty"`
 	Markets *[]VariationMarket `json:"markets,omitempty"`
 	MarketIdentNumbers *[]VariationMarketItemNumber `json:"marketIdentNumbers,omitempty"`
@@ -281,9 +281,9 @@ func (o *PimVariation) SetClients(v []VariationClient) {
 }
 
 // GetDefaultCategories returns the DefaultCategories field value if set, zero value otherwise.
-func (o *PimVariation) GetDefaultCategories() []VariationDefaultCategory {
+func (o *PimVariation) GetDefaultCategories() []PimVariationDefaultCategory {
 	if o == nil || o.DefaultCategories == nil {
-		var ret []VariationDefaultCategory
+		var ret []PimVariationDefaultCategory
 		return ret
 	}
 	return *o.DefaultCategories
@@ -291,7 +291,7 @@ func (o *PimVariation) GetDefaultCategories() []VariationDefaultCategory {
 
 // GetDefaultCategoriesOk returns a tuple with the DefaultCategories field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *PimVariation) GetDefaultCategoriesOk() (*[]VariationDefaultCategory, bool) {
+func (o *PimVariation) GetDefaultCategoriesOk() (*[]PimVariationDefaultCategory, bool) {
 	if o == nil || o.DefaultCategories == nil {
 		return nil, false
 	}
@@ -307,8 +307,8 @@ func (o *PimVariation) HasDefaultCategories() bool {
 	return false
 }
 
-// SetDefaultCategories gets a reference to the given []VariationDefaultCategory and assigns it to the DefaultCategories field.
-func (o *PimVariation) SetDefaultCategories(v []VariationDefaultCategory) {
+// SetDefaultCategories gets a reference to the given []PimVariationDefaultCategory and assigns it to the DefaultCategories field.
+func (o *PimVariation) SetDefaultCategories(v []PimVariationDefaultCategory) {
 	o.DefaultCategories = &v
 }
 

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **BundleComponents** | Pointer to [**[]PimVariationBundleComponent**](PimVariationBundleComponent.md) |  | [optional] 
 **Categories** | Pointer to [**[]VariationCategory**](VariationCategory.md) |  | [optional] 
 **Clients** | Pointer to [**[]VariationClient**](VariationClient.md) |  | [optional] 
-**DefaultCategories** | Pointer to [**[]VariationDefaultCategory**](VariationDefaultCategory.md) |  | [optional] 
+**DefaultCategories** | Pointer to [**[]PimVariationDefaultCategory**](PimVariationDefaultCategory.md) |  | [optional] 
 **Images** | Pointer to [**[]VariationImage**](VariationImage.md) |  | [optional] 
 **Markets** | Pointer to [**[]VariationMarket**](VariationMarket.md) |  | [optional] 
 **MarketIdentNumbers** | Pointer to [**[]VariationMarketItemNumber**](VariationMarketItemNumber.md) |  | [optional] 
@@ -221,20 +221,20 @@ HasClients returns a boolean if a field has been set.
 
 ### GetDefaultCategories
 
-`func (o *PimVariation) GetDefaultCategories() []VariationDefaultCategory`
+`func (o *PimVariation) GetDefaultCategories() []PimVariationDefaultCategory`
 
 GetDefaultCategories returns the DefaultCategories field if non-nil, zero value otherwise.
 
 ### GetDefaultCategoriesOk
 
-`func (o *PimVariation) GetDefaultCategoriesOk() (*[]VariationDefaultCategory, bool)`
+`func (o *PimVariation) GetDefaultCategoriesOk() (*[]PimVariationDefaultCategory, bool)`
 
 GetDefaultCategoriesOk returns a tuple with the DefaultCategories field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetDefaultCategories
 
-`func (o *PimVariation) SetDefaultCategories(v []VariationDefaultCategory)`
+`func (o *PimVariation) SetDefaultCategories(v []PimVariationDefaultCategory)`
 
 SetDefaultCategories sets DefaultCategories field to given value.
 

@@ -131,6 +131,7 @@ Class | Method | HTTP request | Description
  - [PimVariationBase](docs/PimVariationBase.md)
  - [PimVariationBundleComponent](docs/PimVariationBundleComponent.md)
  - [PimVariationComment](docs/PimVariationComment.md)
+ - [PimVariationDefaultCategory](docs/PimVariationDefaultCategory.md)
  - [PimVariationProperty](docs/PimVariationProperty.md)
  - [PimVariationPropertySelectionValues](docs/PimVariationPropertySelectionValues.md)
  - [PimVariationPropertyValues](docs/PimVariationPropertyValues.md)

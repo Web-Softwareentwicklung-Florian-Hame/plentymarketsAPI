@@ -36,6 +36,7 @@ docs/PimVariationAdditionalSku.md
 docs/PimVariationBase.md
 docs/PimVariationBundleComponent.md
 docs/PimVariationComment.md
+docs/PimVariationDefaultCategory.md
 docs/PimVariationProperty.md
 docs/PimVariationPropertySelectionValues.md
 docs/PimVariationPropertyValues.md
@@ -100,6 +101,7 @@ model_pim_variation_additional_sku.go
 model_pim_variation_base.go
 model_pim_variation_bundle_component.go
 model_pim_variation_comment.go
+model_pim_variation_default_category.go
 model_pim_variation_property.go
 model_pim_variation_property_selection_values.go
 model_pim_variation_property_values.go

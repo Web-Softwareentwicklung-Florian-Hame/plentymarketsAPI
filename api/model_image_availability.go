@@ -18,7 +18,7 @@ import (
 type ImageAvailability struct {
 	ImageId *int32 `json:"imageId,omitempty"`
 	Type *string `json:"type,omitempty"`
-	Value *int32 `json:"value,omitempty"`
+	Value *float32 `json:"value,omitempty"`
 }
 
 // NewImageAvailability instantiates a new ImageAvailability object
@@ -103,9 +103,9 @@ func (o *ImageAvailability) SetType(v string) {
 }
 
 // GetValue returns the Value field value if set, zero value otherwise.
-func (o *ImageAvailability) GetValue() int32 {
+func (o *ImageAvailability) GetValue() float32 {
 	if o == nil || o.Value == nil {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.Value
@@ -113,7 +113,7 @@ func (o *ImageAvailability) GetValue() int32 {
 
 // GetValueOk returns a tuple with the Value field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *ImageAvailability) GetValueOk() (*int32, bool) {
+func (o *ImageAvailability) GetValueOk() (*float32, bool) {
 	if o == nil || o.Value == nil {
 		return nil, false
 	}
@@ -129,8 +129,8 @@ func (o *ImageAvailability) HasValue() bool {
 	return false
 }
 
-// SetValue gets a reference to the given int32 and assigns it to the Value field.
-func (o *ImageAvailability) SetValue(v int32) {
+// SetValue gets a reference to the given float32 and assigns it to the Value field.
+func (o *ImageAvailability) SetValue(v float32) {
 	o.Value = &v
 }
 

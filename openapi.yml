@@ -2066,7 +2066,7 @@ components:
         type:
           type: string
         value:
-          type: integer
+          type: number
     VariationSupplier:
       type: object
       description: variation supplier model

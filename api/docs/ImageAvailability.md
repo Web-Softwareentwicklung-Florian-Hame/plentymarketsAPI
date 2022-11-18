@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ImageId** | Pointer to **int32** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
-**Value** | Pointer to **int32** |  | [optional] 
+**Value** | Pointer to **float32** |  | [optional] 
 
 ## Methods
 
@@ -79,20 +79,20 @@ HasType returns a boolean if a field has been set.
 
 ### GetValue
 
-`func (o *ImageAvailability) GetValue() int32`
+`func (o *ImageAvailability) GetValue() float32`
 
 GetValue returns the Value field if non-nil, zero value otherwise.
 
 ### GetValueOk
 
-`func (o *ImageAvailability) GetValueOk() (*int32, bool)`
+`func (o *ImageAvailability) GetValueOk() (*float32, bool)`
 
 GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetValue
 
-`func (o *ImageAvailability) SetValue(v int32)`
+`func (o *ImageAvailability) SetValue(v float32)`
 
 SetValue sets Value field to given value.
 

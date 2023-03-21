@@ -17,7 +17,7 @@ import (
 
 // CategoryDetails category details model
 type CategoryDetails struct {
-	CategoryId *int32 `json:"categoryId,omitempty"`
+	CategoryId *string `json:"categoryId,omitempty"`
 	Lang *string `json:"lang,omitempty"`
 	Name *string `json:"name,omitempty"`
 	Description *string `json:"description,omitempty"`
@@ -62,9 +62,9 @@ func NewCategoryDetailsWithDefaults() *CategoryDetails {
 }
 
 // GetCategoryId returns the CategoryId field value if set, zero value otherwise.
-func (o *CategoryDetails) GetCategoryId() int32 {
+func (o *CategoryDetails) GetCategoryId() string {
 	if o == nil || o.CategoryId == nil {
-		var ret int32
+		var ret string
 		return ret
 	}
 	return *o.CategoryId
@@ -72,7 +72,7 @@ func (o *CategoryDetails) GetCategoryId() int32 {
 
 // GetCategoryIdOk returns a tuple with the CategoryId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CategoryDetails) GetCategoryIdOk() (*int32, bool) {
+func (o *CategoryDetails) GetCategoryIdOk() (*string, bool) {
 	if o == nil || o.CategoryId == nil {
 		return nil, false
 	}
@@ -88,8 +88,8 @@ func (o *CategoryDetails) HasCategoryId() bool {
 	return false
 }
 
-// SetCategoryId gets a reference to the given int32 and assigns it to the CategoryId field.
-func (o *CategoryDetails) SetCategoryId(v int32) {
+// SetCategoryId gets a reference to the given string and assigns it to the CategoryId field.
+func (o *CategoryDetails) SetCategoryId(v string) {
 	o.CategoryId = &v
 }
 

@@ -2385,7 +2385,7 @@ components:
       description: category details model
       properties:
         categoryId:
-          type: integer
+          type: string
         lang:
           type: string
         name:

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CategoryId** | Pointer to **int32** |  | [optional] 
+**CategoryId** | Pointer to **string** |  | [optional] 
 **Lang** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
 **Description** | Pointer to **string** |  | [optional] 
@@ -51,20 +51,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetCategoryId
 
-`func (o *CategoryDetails) GetCategoryId() int32`
+`func (o *CategoryDetails) GetCategoryId() string`
 
 GetCategoryId returns the CategoryId field if non-nil, zero value otherwise.
 
 ### GetCategoryIdOk
 
-`func (o *CategoryDetails) GetCategoryIdOk() (*int32, bool)`
+`func (o *CategoryDetails) GetCategoryIdOk() (*string, bool)`
 
 GetCategoryIdOk returns a tuple with the CategoryId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetCategoryId
 
-`func (o *CategoryDetails) SetCategoryId(v int32)`
+`func (o *CategoryDetails) SetCategoryId(v string)`
 
 SetCategoryId sets CategoryId field to given value.
 

@@ -4438,7 +4438,7 @@ components:
           updatedAt: 2000-01-23T04:56:07.000+00:00
           image: image
           updatedBy: updatedBy
-          plentyId: 4
+          plentyId: 2
           shortDescription: shortDescription
           image2: image2
           pageView: pageView
@@ -4447,7 +4447,7 @@ components:
           name: name
           position: position
           itemListView: itemListView
-          categoryId: 2
+          categoryId: categoryId
           singleItemView: singleItemView
         - previewUrl: previewUrl
           nameUrl: nameUrl
@@ -4463,7 +4463,7 @@ components:
           updatedAt: 2000-01-23T04:56:07.000+00:00
           image: image
           updatedBy: updatedBy
-          plentyId: 4
+          plentyId: 2
           shortDescription: shortDescription
           image2: image2
           pageView: pageView
@@ -4472,7 +4472,7 @@ components:
           name: name
           position: position
           itemListView: itemListView
-          categoryId: 2
+          categoryId: categoryId
           singleItemView: singleItemView
         id: 7
         right: right
@@ -4517,7 +4517,7 @@ components:
         updatedAt: 2000-01-23T04:56:07.000+00:00
         image: image
         updatedBy: updatedBy
-        plentyId: 4
+        plentyId: 2
         shortDescription: shortDescription
         image2: image2
         pageView: pageView
@@ -4526,11 +4526,11 @@ components:
         name: name
         position: position
         itemListView: itemListView
-        categoryId: 2
+        categoryId: categoryId
         singleItemView: singleItemView
       properties:
         categoryId:
-          type: integer
+          type: string
         lang:
           type: string
         name:
@@ -13561,7 +13561,7 @@ components:
             updatedAt: 2000-01-23T04:56:07.000+00:00
             image: image
             updatedBy: updatedBy
-            plentyId: 4
+            plentyId: 2
             shortDescription: shortDescription
             image2: image2
             pageView: pageView
@@ -13570,7 +13570,7 @@ components:
             name: name
             position: position
             itemListView: itemListView
-            categoryId: 2
+            categoryId: categoryId
             singleItemView: singleItemView
           - previewUrl: previewUrl
             nameUrl: nameUrl
@@ -13586,7 +13586,7 @@ components:
             updatedAt: 2000-01-23T04:56:07.000+00:00
             image: image
             updatedBy: updatedBy
-            plentyId: 4
+            plentyId: 2
             shortDescription: shortDescription
             image2: image2
             pageView: pageView
@@ -13595,7 +13595,7 @@ components:
             name: name
             position: position
             itemListView: itemListView
-            categoryId: 2
+            categoryId: categoryId
             singleItemView: singleItemView
           id: 7
           right: right
@@ -13620,7 +13620,7 @@ components:
             updatedAt: 2000-01-23T04:56:07.000+00:00
             image: image
             updatedBy: updatedBy
-            plentyId: 4
+            plentyId: 2
             shortDescription: shortDescription
             image2: image2
             pageView: pageView
@@ -13629,7 +13629,7 @@ components:
             name: name
             position: position
             itemListView: itemListView
-            categoryId: 2
+            categoryId: categoryId
             singleItemView: singleItemView
           - previewUrl: previewUrl
             nameUrl: nameUrl
@@ -13645,7 +13645,7 @@ components:
             updatedAt: 2000-01-23T04:56:07.000+00:00
             image: image
             updatedBy: updatedBy
-            plentyId: 4
+            plentyId: 2
             shortDescription: shortDescription
             image2: image2
             pageView: pageView
@@ -13654,7 +13654,7 @@ components:
             name: name
             position: position
             itemListView: itemListView
-            categoryId: 2
+            categoryId: categoryId
             singleItemView: singleItemView
           id: 7
           right: right

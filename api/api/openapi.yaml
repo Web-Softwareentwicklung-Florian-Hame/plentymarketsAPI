@@ -935,7 +935,6 @@ paths:
         name: createdAt
         required: false
         schema:
-          format: date-time
           type: string
         style: form
       - explode: true

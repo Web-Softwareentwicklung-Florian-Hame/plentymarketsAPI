@@ -2336,7 +2336,7 @@ type ApiRestOrdersSearchGetRequest struct {
 	ownerId *int32
 	locationId *int32
 	updatedAt *time.Time
-	createdAt *time.Time
+	createdAt *string
 	lockStatus *string
 	orderAddressData *string
 	contactData *string
@@ -2407,7 +2407,7 @@ func (r ApiRestOrdersSearchGetRequest) UpdatedAt(updatedAt time.Time) ApiRestOrd
 	r.updatedAt = &updatedAt
 	return r
 }
-func (r ApiRestOrdersSearchGetRequest) CreatedAt(createdAt time.Time) ApiRestOrdersSearchGetRequest {
+func (r ApiRestOrdersSearchGetRequest) CreatedAt(createdAt string) ApiRestOrdersSearchGetRequest {
 	r.createdAt = &createdAt
 	return r
 }

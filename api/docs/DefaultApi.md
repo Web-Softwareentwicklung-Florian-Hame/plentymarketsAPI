@@ -1302,7 +1302,7 @@ func main() {
     ownerId := int32(56) // int32 |  (optional)
     locationId := int32(56) // int32 |  (optional)
     updatedAt := time.Now() // time.Time |  (optional)
-    createdAt := time.Now() // time.Time |  (optional)
+    createdAt := "createdAt_example" // string |  (optional)
     lockStatus := "lockStatus_example" // string |  (optional)
     orderAddressData := "orderAddressData_example" // string |  (optional)
     contactData := "contactData_example" // string |  (optional)
@@ -1371,7 +1371,7 @@ Name | Type | Description  | Notes
  **ownerId** | **int32** |  | 
  **locationId** | **int32** |  | 
  **updatedAt** | **time.Time** |  | 
- **createdAt** | **time.Time** |  | 
+ **createdAt** | **string** |  | 
  **lockStatus** | **string** |  | 
  **orderAddressData** | **string** |  | 
  **contactData** | **string** |  | 

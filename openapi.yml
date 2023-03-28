@@ -637,6 +637,228 @@ paths:
       responses:
         200:
           description: successfuly started sync
+  /rest/orders/search:
+    get:
+      summary: searches for orders. The results can be restricted by using filters
+      description: search for orders
+      parameters:
+        - in: query
+          name: orderId
+          schema:
+            type: integer
+        - in: query
+          name: plentyId
+          schema:
+            type: integer
+        - in: query
+          name: orderTypeId
+          schema:
+            type: string
+        - in: query
+          name: statusId
+          schema:
+            type: number
+        - in: query
+          name: referrerId
+          schema:
+            type: number
+        - in: query
+          name: ownerId
+          schema:
+            type: integer
+        - in: query
+          name: locationId
+          schema:
+            type: integer
+        - in: query
+          name: updatedAt
+          schema:
+            format: date-time
+            type: string
+        - in: query
+          name: createdAt
+          schema:
+            format: date-time
+            type: string
+        - in: query
+          name: lockStatus
+          schema:
+            type: string
+        - in: query
+          name: orderAddressData
+          schema:
+            type: string
+        - in: query
+          name: contactData
+          schema:
+            type: string
+        - in: query
+          name: orderItemTypeId
+          schema:
+            type: integer
+        - in: query
+          name: itemId
+          schema:
+            type: integer
+        - in: query
+          name: itemVariationId
+          schema:
+            type: integer
+        - in: query
+          name: variationNumber
+          schema:
+            type: string
+        - in: query
+          name: orderItemName
+          schema:
+            type: string
+        - in: query
+          name: documentNumber
+          schema:
+            type: string
+        - in: query
+          name: hasValidInvoice
+          schema:
+            type: boolean
+        - in: query
+          name: packageNumbber
+          schema:
+            type: string
+        - in: query
+          name: contactClassId
+          schema:
+            type: string
+        - in: query
+          name: itemManufacturerId
+          schema:
+            type: integer
+        - in: query
+          name: orderItemWarehouseId
+          schema:
+            type: integer
+        - in: query
+          name: invoiceTotalSystemCurrency
+          schema:
+            type: number
+        - in: query
+          name: isDeliveryAddressPackingStation
+          schema:
+            type: boolean
+        - in: query
+          name: serialNumber
+          schema:
+            type: string
+        - in: query
+          name: isGuestContact
+          schema:
+            type: boolean
+        - in: query
+          name: variationSupplierId
+          schema:
+            type: integer
+        - in: query
+          name: orderItemReferrerId
+          schema:
+            type: integer
+        - in: query
+          name: tag
+          schema:
+            type: integer
+        - in: query
+          name: excludeMainOrders
+          schema:
+            type: boolean
+        - in: query
+          name: soldCouponCode
+          schema:
+            type: string
+        - in: query
+          name: redeemedCouponCode
+          schema:
+            type: string
+        - in: query
+          name: orderBillingAddressCountryId
+          schema:
+            type: integer
+        - in: query
+          name: orderDeliveryAddressCountryId
+          schema:
+            type: integer
+        - in: query
+          name: shippingServiceProviderId
+          schema:
+            type: integer
+        - in: query
+          name: shippingServiceProviderType
+          schema:
+            type: string
+        - in: query
+          name: shippingStatus
+          schema:
+            type: string
+        - in: query
+          name: shippingShipmentDate
+          schema:
+            type: string
+        - in: query
+          name: sortBy
+          schema:
+            type: string
+        - in: query
+          name: sortOrder
+          schema:
+            type: string
+        - in: query
+          name: page
+          schema:
+            type: integer
+        - in: query
+          name: itemsPerPage
+          schema:
+            type: integer
+        - in: query
+          name: with
+          explode: false
+          style: form
+          schema:
+            type: array
+            items:
+              type: string
+              enum:
+                - addresses
+                - relations
+                - comments
+                - location
+                - payments
+                - documents
+                - contactSender
+                - contactReceiver
+                - warehouseSender
+                - warehouseReceiver
+                - orderItems.variation
+                - orderItems.variation.propertiesV2
+                - orderItems.giftCardCodes
+                - orderItems.transactions
+                - orderItems.serialNumbers
+                - orderItems.variationBarcodes
+                - orderItems.comments
+                - originOrderReferences
+                - shippingPackages
+                - shippingPackages.items
+                - shippingInformation
+                - paymentTerms
+        - in: query
+          name: lazyLoaded
+          schema:
+            type: boolean
+
+      responses:
+        200:
+          description: "OK"
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/SearchOrderPagination'
 
 
   /rest/pim/variations:
@@ -1347,7 +1569,6 @@ components:
           type: integer
         isHiddenInCategoryList:
           type: boolean
-
     PimVariation:
       type: object
       properties:
@@ -1426,12 +1647,6 @@ components:
           $ref: "#/components/schemas/PimVariationUnit"
         base:
           $ref: "#/components/schemas/PimVariationBase"
-    
-    
-    
-    
-    
-    
     StockCorrections:
       type: object
       properties:
@@ -1697,6 +1912,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/VariationStock'
+        propertiesV2:
+          type: array
+          items:
+            $ref: '#/components/schemas/PropertyV2'
+
     VariationStock:
       type: object
       description: variation stock model
@@ -2996,6 +3216,503 @@ components:
           type: string
         updatedAt:
           type: string
+    PropertyV2:
+      type: object
+      properties:
+        id:
+          type: integer
+        propertyId:
+          type: integer
+        groupId:
+          type: integer
+        type:
+          type: string
+        targetId:
+          type: integer
+        value:
+          type: string
+        markup:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        values:
+          type: array
+          items:
+            $ref: '#/components/schemas/PropertiesV2Values'
+        selectionValues:
+          type: array
+          items:
+            $ref: '#/components/schemas/PropertiesV2SelectionValues'
+        property:
+          $ref: '#/components/schemas/PropertyV2Property'
+    PropertyV2Property:
+      type: object
+      properties:
+        id:
+          type: integer
+        cast:
+          type: string
+        type:
+          type: string
+        position:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    PropertiesV2SelectionValues:
+      type: object
+      properties:
+        id:
+          type: integer
+        relationId:
+          type: integer
+        selectionId:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+    PropertiesV2Values:
+      type: object
+      properties:
+        id:
+          type: integer
+        relationId:
+          type: integer
+        lang:
+          type: string
+        value:
+          type: string
+        description:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+    Order:
+      type: object
+      properties:
+        id:
+          type: integer
+        referrerId:
+          type: integer
+        roundTotalsOnly:
+          type: boolean
+        numberOfDecimals:
+          type: integer
+        contactReceiver:
+          $ref: '#/components/schemas/Contact'
+        contactSender:
+          $ref: '#/components/schemas/Contact'
+        warehouseReceiver:
+          $ref: '#/components/schemas/WarehouseContact'
+        warehouseSender:
+          $ref: '#/components/schemas/WarehouseContact'
+        plentyId:
+          type: integer
+        typeid:
+          type: integer
+        lockStatus:
+          type: string
+        locationId:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        statusId:
+          type: number
+        ownerId:
+          type: string
+        relations:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderRelation'
+        addresses:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderAddress'
+        location:
+          $ref: '#/components/schemas/OrderLocation'
+        documents:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderDocument'
+        orderItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderItem'
+
+    OrderItem:
+      type: object
+      properties:
+        id:
+          type: integer
+        orderId:
+          type: integer
+        typeId:
+          type: integer
+        referrerId:
+          type: number
+        itemVariationId:
+          type: integer
+        quantity:
+          type: number
+        orderItemName:
+          type: string
+        attributeValues:
+          type: string
+        shippingProfileId:
+          type: integer
+        countryVatId:
+          type: integer
+        vatField:
+          type: integer
+        vatRate:
+          type: number
+        position:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        warehouseId:
+          type: integer
+        variation:
+          $ref: '#/components/schemas/Variation'
+        variationBarcodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/VariationBarcode'
+
+    OrderDocument:
+      type: object
+      properties:
+        id:
+          type: integer
+        type:
+          type: string
+        number:
+          type: string
+        numberWithPrefix:
+          type: string
+        path:
+          type: string
+        userId:
+          type: string
+        source:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        displayDate:
+          type: string
+          format: date-time
+        newOrderArchitecture:
+          type: string
+        status:
+          type: string
+        pivot:
+          type: object
+          properties:
+            plenty_document_reference_value:
+              type: string
+            plenty_document_reference_document_id:
+              type: string
+
+
+    OrderLocation:
+      type: object
+      properties:
+        id:
+          type: integer
+        countryId:
+          type: integer
+        name:
+          type: string
+        clientId:
+          type: integer
+        plentyId:
+          type: integer
+
+    OrderAddress:
+      type: object
+      properties:
+        id:
+          type: integer
+        gender:
+          type: string
+        name1:
+          type: string
+        name2:
+          type: string
+        name3:
+          type: string
+        name4:
+          type: string
+        address1:
+          type: string
+        address2:
+          type: string
+        address3:
+          type: string
+        address4:
+          type: string
+        postalCode:
+          type: string
+        town:
+          type: string
+        countryId:
+          type: integer
+        stateId:
+          type: integer
+        readOnly:
+          type: boolean
+        checkedAt:
+          type: string
+          format: date-time
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        title:
+          type: string
+        contactPerson:
+          type: string
+        taxIdNumber:
+          type: string
+        pivot:
+          type: object
+          properties:
+            orderId:
+              type: string
+            addressId:
+              type: integer
+            typeid:
+              type: integer
+
+
+    OrderRelation:
+      type: object
+      properties:
+        orderId:
+          type: integer
+        referenceType:
+          type: string
+        referenceId:
+          type: integer
+        relation:
+          type: number
+
+    WarehouseContact:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        note:
+          type: string
+        typeId:
+          type: integer
+        onStockAvailability:
+          type: integer
+        outOfStockAvailability:
+          type: integer
+        splitByShippingProfile:
+          type: boolean
+        storageLocationType:
+          type: string
+        storageLocationZone:
+          type: integer
+        repairWarehouseId:
+          type: integer
+        isInventoryModeActive:
+          type: boolean
+        logisticsType:
+          type: string
+        average_price_source:
+          type: string
+        reorder_level_dynamic:
+          type: string
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+        allocationReferrerIds:
+          type: array
+          items:
+            type: string
+        address:
+          $ref: '#/components/schemas/WarehouseContactAddress'
+
+
+    WarehouseContactAddress:
+      type: object
+      properties:
+        name1:
+          type: string
+        address1:
+          type: string
+        address2:
+          type: string
+        postalCode:
+          type: string
+        town:
+          type: string
+        countryId:
+          type: integer
+        options:
+          type: array
+          items:
+            type: object
+            properties:
+              typeId:
+                type: integer
+              value:
+                type: string
+        title:
+          type: string
+        contactPerson:
+          type: string
+        taxIdNumber:
+          type: string
+
+    Contact:
+      type: object
+      properties:
+        id:
+          type: integer
+        number:
+          type: string
+        externalId:
+          type: string
+        typeId:
+          type: integer
+        firstName:
+          type: string
+        lastName:
+          type: string
+        gender:
+          type: string
+        title:
+          type: string
+        formOfAddress:
+          type: string
+        newsletterAllowanceAt:
+          type: string
+        classId:
+          type: integer
+        blocked:
+          type: integer
+        rating:
+          type: string
+        bookAccount:
+          type: string
+        lang:
+          type: string
+        referrerId:
+          type: integer
+        userId:
+          type: integer
+        birthdayAt:
+          type: string
+        lastLoginAt:
+          type: string
+        lastOrderAt:
+          type: string
+        createdAt:
+          type: string
+        updatedAt:
+          type: string
+        valuta:
+          type: string
+        isLead:
+          type: boolean
+        leadStatusKey:
+          type: string
+        plentyId:
+          type: integer
+        email:
+          type: string
+        ebayName:
+          type: string
+        privatePhone:
+          type: string
+        privateFax:
+          type: string
+        privateMobile:
+          type: string
+        paypalEmail:
+          type: string
+        paypalPayerId:
+          type: string
+        klarnaPersonalId:
+          type: string
+        dhlPostIdent:
+          type: string
+        singleAccess:
+          type: string
+        contactPerson:
+          type: string
+        marketplacePartner:
+          type: string
+        fullName:
+          type: string
+        inLeadStatusSince:
+          type: integer
+        options:
+          type: array
+          items:
+            $ref: '#/components/schemas/ContactOption'
+
+    ContactOption:
+      type: object
+      properties:
+        id:
+          type: integer
+        contactId:
+          type: integer
+        typeId:
+          type: integer
+        subTypeId:
+          type: integer
+        value:
+          type: string
+        priority:
+          type: integer
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
+
+
+
 
     # responses
     CreateItemsResponse:
@@ -3041,6 +3758,28 @@ components:
 
 
     # paginations
+    SearchOrderPagination:
+      type: object
+      properties:
+        page:
+          type: integer
+        totalsCount:
+          type: integer
+        isLastPage:
+          type: boolean
+        lastPageNumber:
+          type: integer
+        firstOnPage:
+          type: integer
+        lastOnPage:
+          type: integer
+        itemsPerPage:
+          type: integer
+        entries:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
+
     ItemPagination:
       type: object
       description: pagination response containing items

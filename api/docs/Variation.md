@@ -93,6 +93,7 @@ Name | Type | Description | Notes
 **Parent** | Pointer to [**Variation**](Variation.md) |  | [optional] 
 **Item** | Pointer to [**VariationItem**](VariationItem.md) |  | [optional] 
 **Stock** | Pointer to [**[]VariationStock**](VariationStock.md) |  | [optional] 
+**PropertiesV2** | Pointer to [**[]PropertyV2**](PropertyV2.md) |  | [optional] 
 
 ## Methods
 
@@ -2337,6 +2338,31 @@ SetStock sets Stock field to given value.
 `func (o *Variation) HasStock() bool`
 
 HasStock returns a boolean if a field has been set.
+
+### GetPropertiesV2
+
+`func (o *Variation) GetPropertiesV2() []PropertyV2`
+
+GetPropertiesV2 returns the PropertiesV2 field if non-nil, zero value otherwise.
+
+### GetPropertiesV2Ok
+
+`func (o *Variation) GetPropertiesV2Ok() (*[]PropertyV2, bool)`
+
+GetPropertiesV2Ok returns a tuple with the PropertiesV2 field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPropertiesV2
+
+`func (o *Variation) SetPropertiesV2(v []PropertyV2)`
+
+SetPropertiesV2 sets PropertiesV2 field to given value.
+
+### HasPropertiesV2
+
+`func (o *Variation) HasPropertiesV2() bool`
+
+HasPropertiesV2 returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

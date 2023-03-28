@@ -106,6 +106,7 @@ type Variation struct {
 	Parent *Variation `json:"parent,omitempty"`
 	Item *VariationItem `json:"item,omitempty"`
 	Stock *[]VariationStock `json:"stock,omitempty"`
+	PropertiesV2 *[]PropertyV2 `json:"propertiesV2,omitempty"`
 }
 
 // NewVariation instantiates a new Variation object
@@ -2973,6 +2974,38 @@ func (o *Variation) SetStock(v []VariationStock) {
 	o.Stock = &v
 }
 
+// GetPropertiesV2 returns the PropertiesV2 field value if set, zero value otherwise.
+func (o *Variation) GetPropertiesV2() []PropertyV2 {
+	if o == nil || o.PropertiesV2 == nil {
+		var ret []PropertyV2
+		return ret
+	}
+	return *o.PropertiesV2
+}
+
+// GetPropertiesV2Ok returns a tuple with the PropertiesV2 field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Variation) GetPropertiesV2Ok() (*[]PropertyV2, bool) {
+	if o == nil || o.PropertiesV2 == nil {
+		return nil, false
+	}
+	return o.PropertiesV2, true
+}
+
+// HasPropertiesV2 returns a boolean if a field has been set.
+func (o *Variation) HasPropertiesV2() bool {
+	if o != nil && o.PropertiesV2 != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetPropertiesV2 gets a reference to the given []PropertyV2 and assigns it to the PropertiesV2 field.
+func (o *Variation) SetPropertiesV2(v []PropertyV2) {
+	o.PropertiesV2 = &v
+}
+
 func (o Variation) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Id != nil {
@@ -3241,6 +3274,9 @@ func (o Variation) MarshalJSON() ([]byte, error) {
 	}
 	if o.Stock != nil {
 		toSerialize["stock"] = o.Stock
+	}
+	if o.PropertiesV2 != nil {
+		toSerialize["propertiesV2"] = o.PropertiesV2
 	}
 	return json.Marshal(toSerialize)
 }

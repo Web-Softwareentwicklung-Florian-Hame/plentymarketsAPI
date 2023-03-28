@@ -18,6 +18,7 @@ import (
 	_neturl "net/url"
 	"strings"
 	"reflect"
+	"time"
 )
 
 // Linger please
@@ -2287,6 +2288,468 @@ func (a *DefaultApiService) RestLoginPostExecute(r ApiRestLoginPostRequest) (Res
 	}
 	// body params
 	localVarPostBody = r.restLoginBody
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = _ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiRestOrdersSearchGetRequest struct {
+	ctx _context.Context
+	ApiService *DefaultApiService
+	orderId *int32
+	plentyId *int32
+	orderTypeId *string
+	statusId *float32
+	referrerId *float32
+	ownerId *int32
+	locationId *int32
+	updatedAt *time.Time
+	createdAt *time.Time
+	lockStatus *string
+	orderAddressData *string
+	contactData *string
+	orderItemTypeId *int32
+	itemId *int32
+	itemVariationId *int32
+	variationNumber *string
+	orderItemName *string
+	documentNumber *string
+	hasValidInvoice *bool
+	packageNumbber *string
+	contactClassId *string
+	itemManufacturerId *int32
+	orderItemWarehouseId *int32
+	invoiceTotalSystemCurrency *float32
+	isDeliveryAddressPackingStation *bool
+	serialNumber *string
+	isGuestContact *bool
+	variationSupplierId *int32
+	orderItemReferrerId *int32
+	tag *int32
+	excludeMainOrders *bool
+	soldCouponCode *string
+	redeemedCouponCode *string
+	orderBillingAddressCountryId *int32
+	orderDeliveryAddressCountryId *int32
+	shippingServiceProviderId *int32
+	shippingServiceProviderType *string
+	shippingStatus *string
+	shippingShipmentDate *string
+	sortBy *string
+	sortOrder *string
+	page *int32
+	itemsPerPage *int32
+	with *[]string
+	lazyLoaded *bool
+}
+
+func (r ApiRestOrdersSearchGetRequest) OrderId(orderId int32) ApiRestOrdersSearchGetRequest {
+	r.orderId = &orderId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) PlentyId(plentyId int32) ApiRestOrdersSearchGetRequest {
+	r.plentyId = &plentyId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderTypeId(orderTypeId string) ApiRestOrdersSearchGetRequest {
+	r.orderTypeId = &orderTypeId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) StatusId(statusId float32) ApiRestOrdersSearchGetRequest {
+	r.statusId = &statusId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ReferrerId(referrerId float32) ApiRestOrdersSearchGetRequest {
+	r.referrerId = &referrerId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OwnerId(ownerId int32) ApiRestOrdersSearchGetRequest {
+	r.ownerId = &ownerId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) LocationId(locationId int32) ApiRestOrdersSearchGetRequest {
+	r.locationId = &locationId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) UpdatedAt(updatedAt time.Time) ApiRestOrdersSearchGetRequest {
+	r.updatedAt = &updatedAt
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) CreatedAt(createdAt time.Time) ApiRestOrdersSearchGetRequest {
+	r.createdAt = &createdAt
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) LockStatus(lockStatus string) ApiRestOrdersSearchGetRequest {
+	r.lockStatus = &lockStatus
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderAddressData(orderAddressData string) ApiRestOrdersSearchGetRequest {
+	r.orderAddressData = &orderAddressData
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ContactData(contactData string) ApiRestOrdersSearchGetRequest {
+	r.contactData = &contactData
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderItemTypeId(orderItemTypeId int32) ApiRestOrdersSearchGetRequest {
+	r.orderItemTypeId = &orderItemTypeId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ItemId(itemId int32) ApiRestOrdersSearchGetRequest {
+	r.itemId = &itemId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ItemVariationId(itemVariationId int32) ApiRestOrdersSearchGetRequest {
+	r.itemVariationId = &itemVariationId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) VariationNumber(variationNumber string) ApiRestOrdersSearchGetRequest {
+	r.variationNumber = &variationNumber
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderItemName(orderItemName string) ApiRestOrdersSearchGetRequest {
+	r.orderItemName = &orderItemName
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) DocumentNumber(documentNumber string) ApiRestOrdersSearchGetRequest {
+	r.documentNumber = &documentNumber
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) HasValidInvoice(hasValidInvoice bool) ApiRestOrdersSearchGetRequest {
+	r.hasValidInvoice = &hasValidInvoice
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) PackageNumbber(packageNumbber string) ApiRestOrdersSearchGetRequest {
+	r.packageNumbber = &packageNumbber
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ContactClassId(contactClassId string) ApiRestOrdersSearchGetRequest {
+	r.contactClassId = &contactClassId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ItemManufacturerId(itemManufacturerId int32) ApiRestOrdersSearchGetRequest {
+	r.itemManufacturerId = &itemManufacturerId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderItemWarehouseId(orderItemWarehouseId int32) ApiRestOrdersSearchGetRequest {
+	r.orderItemWarehouseId = &orderItemWarehouseId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) InvoiceTotalSystemCurrency(invoiceTotalSystemCurrency float32) ApiRestOrdersSearchGetRequest {
+	r.invoiceTotalSystemCurrency = &invoiceTotalSystemCurrency
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) IsDeliveryAddressPackingStation(isDeliveryAddressPackingStation bool) ApiRestOrdersSearchGetRequest {
+	r.isDeliveryAddressPackingStation = &isDeliveryAddressPackingStation
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) SerialNumber(serialNumber string) ApiRestOrdersSearchGetRequest {
+	r.serialNumber = &serialNumber
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) IsGuestContact(isGuestContact bool) ApiRestOrdersSearchGetRequest {
+	r.isGuestContact = &isGuestContact
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) VariationSupplierId(variationSupplierId int32) ApiRestOrdersSearchGetRequest {
+	r.variationSupplierId = &variationSupplierId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderItemReferrerId(orderItemReferrerId int32) ApiRestOrdersSearchGetRequest {
+	r.orderItemReferrerId = &orderItemReferrerId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) Tag(tag int32) ApiRestOrdersSearchGetRequest {
+	r.tag = &tag
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ExcludeMainOrders(excludeMainOrders bool) ApiRestOrdersSearchGetRequest {
+	r.excludeMainOrders = &excludeMainOrders
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) SoldCouponCode(soldCouponCode string) ApiRestOrdersSearchGetRequest {
+	r.soldCouponCode = &soldCouponCode
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) RedeemedCouponCode(redeemedCouponCode string) ApiRestOrdersSearchGetRequest {
+	r.redeemedCouponCode = &redeemedCouponCode
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderBillingAddressCountryId(orderBillingAddressCountryId int32) ApiRestOrdersSearchGetRequest {
+	r.orderBillingAddressCountryId = &orderBillingAddressCountryId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) OrderDeliveryAddressCountryId(orderDeliveryAddressCountryId int32) ApiRestOrdersSearchGetRequest {
+	r.orderDeliveryAddressCountryId = &orderDeliveryAddressCountryId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ShippingServiceProviderId(shippingServiceProviderId int32) ApiRestOrdersSearchGetRequest {
+	r.shippingServiceProviderId = &shippingServiceProviderId
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ShippingServiceProviderType(shippingServiceProviderType string) ApiRestOrdersSearchGetRequest {
+	r.shippingServiceProviderType = &shippingServiceProviderType
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ShippingStatus(shippingStatus string) ApiRestOrdersSearchGetRequest {
+	r.shippingStatus = &shippingStatus
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ShippingShipmentDate(shippingShipmentDate string) ApiRestOrdersSearchGetRequest {
+	r.shippingShipmentDate = &shippingShipmentDate
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) SortBy(sortBy string) ApiRestOrdersSearchGetRequest {
+	r.sortBy = &sortBy
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) SortOrder(sortOrder string) ApiRestOrdersSearchGetRequest {
+	r.sortOrder = &sortOrder
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) Page(page int32) ApiRestOrdersSearchGetRequest {
+	r.page = &page
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) ItemsPerPage(itemsPerPage int32) ApiRestOrdersSearchGetRequest {
+	r.itemsPerPage = &itemsPerPage
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) With(with []string) ApiRestOrdersSearchGetRequest {
+	r.with = &with
+	return r
+}
+func (r ApiRestOrdersSearchGetRequest) LazyLoaded(lazyLoaded bool) ApiRestOrdersSearchGetRequest {
+	r.lazyLoaded = &lazyLoaded
+	return r
+}
+
+func (r ApiRestOrdersSearchGetRequest) Execute() (SearchOrderPagination, *_nethttp.Response, error) {
+	return r.ApiService.RestOrdersSearchGetExecute(r)
+}
+
+/*
+RestOrdersSearchGet searches for orders. The results can be restricted by using filters
+
+search for orders
+
+ @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiRestOrdersSearchGetRequest
+*/
+func (a *DefaultApiService) RestOrdersSearchGet(ctx _context.Context) ApiRestOrdersSearchGetRequest {
+	return ApiRestOrdersSearchGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return SearchOrderPagination
+func (a *DefaultApiService) RestOrdersSearchGetExecute(r ApiRestOrdersSearchGetRequest) (SearchOrderPagination, *_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodGet
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+		localVarReturnValue  SearchOrderPagination
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestOrdersSearchGet")
+	if err != nil {
+		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/rest/orders/search"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	if r.orderId != nil {
+		localVarQueryParams.Add("orderId", parameterToString(*r.orderId, ""))
+	}
+	if r.plentyId != nil {
+		localVarQueryParams.Add("plentyId", parameterToString(*r.plentyId, ""))
+	}
+	if r.orderTypeId != nil {
+		localVarQueryParams.Add("orderTypeId", parameterToString(*r.orderTypeId, ""))
+	}
+	if r.statusId != nil {
+		localVarQueryParams.Add("statusId", parameterToString(*r.statusId, ""))
+	}
+	if r.referrerId != nil {
+		localVarQueryParams.Add("referrerId", parameterToString(*r.referrerId, ""))
+	}
+	if r.ownerId != nil {
+		localVarQueryParams.Add("ownerId", parameterToString(*r.ownerId, ""))
+	}
+	if r.locationId != nil {
+		localVarQueryParams.Add("locationId", parameterToString(*r.locationId, ""))
+	}
+	if r.updatedAt != nil {
+		localVarQueryParams.Add("updatedAt", parameterToString(*r.updatedAt, ""))
+	}
+	if r.createdAt != nil {
+		localVarQueryParams.Add("createdAt", parameterToString(*r.createdAt, ""))
+	}
+	if r.lockStatus != nil {
+		localVarQueryParams.Add("lockStatus", parameterToString(*r.lockStatus, ""))
+	}
+	if r.orderAddressData != nil {
+		localVarQueryParams.Add("orderAddressData", parameterToString(*r.orderAddressData, ""))
+	}
+	if r.contactData != nil {
+		localVarQueryParams.Add("contactData", parameterToString(*r.contactData, ""))
+	}
+	if r.orderItemTypeId != nil {
+		localVarQueryParams.Add("orderItemTypeId", parameterToString(*r.orderItemTypeId, ""))
+	}
+	if r.itemId != nil {
+		localVarQueryParams.Add("itemId", parameterToString(*r.itemId, ""))
+	}
+	if r.itemVariationId != nil {
+		localVarQueryParams.Add("itemVariationId", parameterToString(*r.itemVariationId, ""))
+	}
+	if r.variationNumber != nil {
+		localVarQueryParams.Add("variationNumber", parameterToString(*r.variationNumber, ""))
+	}
+	if r.orderItemName != nil {
+		localVarQueryParams.Add("orderItemName", parameterToString(*r.orderItemName, ""))
+	}
+	if r.documentNumber != nil {
+		localVarQueryParams.Add("documentNumber", parameterToString(*r.documentNumber, ""))
+	}
+	if r.hasValidInvoice != nil {
+		localVarQueryParams.Add("hasValidInvoice", parameterToString(*r.hasValidInvoice, ""))
+	}
+	if r.packageNumbber != nil {
+		localVarQueryParams.Add("packageNumbber", parameterToString(*r.packageNumbber, ""))
+	}
+	if r.contactClassId != nil {
+		localVarQueryParams.Add("contactClassId", parameterToString(*r.contactClassId, ""))
+	}
+	if r.itemManufacturerId != nil {
+		localVarQueryParams.Add("itemManufacturerId", parameterToString(*r.itemManufacturerId, ""))
+	}
+	if r.orderItemWarehouseId != nil {
+		localVarQueryParams.Add("orderItemWarehouseId", parameterToString(*r.orderItemWarehouseId, ""))
+	}
+	if r.invoiceTotalSystemCurrency != nil {
+		localVarQueryParams.Add("invoiceTotalSystemCurrency", parameterToString(*r.invoiceTotalSystemCurrency, ""))
+	}
+	if r.isDeliveryAddressPackingStation != nil {
+		localVarQueryParams.Add("isDeliveryAddressPackingStation", parameterToString(*r.isDeliveryAddressPackingStation, ""))
+	}
+	if r.serialNumber != nil {
+		localVarQueryParams.Add("serialNumber", parameterToString(*r.serialNumber, ""))
+	}
+	if r.isGuestContact != nil {
+		localVarQueryParams.Add("isGuestContact", parameterToString(*r.isGuestContact, ""))
+	}
+	if r.variationSupplierId != nil {
+		localVarQueryParams.Add("variationSupplierId", parameterToString(*r.variationSupplierId, ""))
+	}
+	if r.orderItemReferrerId != nil {
+		localVarQueryParams.Add("orderItemReferrerId", parameterToString(*r.orderItemReferrerId, ""))
+	}
+	if r.tag != nil {
+		localVarQueryParams.Add("tag", parameterToString(*r.tag, ""))
+	}
+	if r.excludeMainOrders != nil {
+		localVarQueryParams.Add("excludeMainOrders", parameterToString(*r.excludeMainOrders, ""))
+	}
+	if r.soldCouponCode != nil {
+		localVarQueryParams.Add("soldCouponCode", parameterToString(*r.soldCouponCode, ""))
+	}
+	if r.redeemedCouponCode != nil {
+		localVarQueryParams.Add("redeemedCouponCode", parameterToString(*r.redeemedCouponCode, ""))
+	}
+	if r.orderBillingAddressCountryId != nil {
+		localVarQueryParams.Add("orderBillingAddressCountryId", parameterToString(*r.orderBillingAddressCountryId, ""))
+	}
+	if r.orderDeliveryAddressCountryId != nil {
+		localVarQueryParams.Add("orderDeliveryAddressCountryId", parameterToString(*r.orderDeliveryAddressCountryId, ""))
+	}
+	if r.shippingServiceProviderId != nil {
+		localVarQueryParams.Add("shippingServiceProviderId", parameterToString(*r.shippingServiceProviderId, ""))
+	}
+	if r.shippingServiceProviderType != nil {
+		localVarQueryParams.Add("shippingServiceProviderType", parameterToString(*r.shippingServiceProviderType, ""))
+	}
+	if r.shippingStatus != nil {
+		localVarQueryParams.Add("shippingStatus", parameterToString(*r.shippingStatus, ""))
+	}
+	if r.shippingShipmentDate != nil {
+		localVarQueryParams.Add("shippingShipmentDate", parameterToString(*r.shippingShipmentDate, ""))
+	}
+	if r.sortBy != nil {
+		localVarQueryParams.Add("sortBy", parameterToString(*r.sortBy, ""))
+	}
+	if r.sortOrder != nil {
+		localVarQueryParams.Add("sortOrder", parameterToString(*r.sortOrder, ""))
+	}
+	if r.page != nil {
+		localVarQueryParams.Add("page", parameterToString(*r.page, ""))
+	}
+	if r.itemsPerPage != nil {
+		localVarQueryParams.Add("itemsPerPage", parameterToString(*r.itemsPerPage, ""))
+	}
+	if r.with != nil {
+		localVarQueryParams.Add("with", parameterToString(*r.with, "csv"))
+	}
+	if r.lazyLoaded != nil {
+		localVarQueryParams.Add("lazyLoaded", parameterToString(*r.lazyLoaded, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json;charset=utf-8"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
 	if err != nil {
 		return localVarReturnValue, nil, err

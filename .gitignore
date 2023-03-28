@@ -20,3 +20,4 @@
 cmd/
 bin/
 openapi_bu.json
+test.json

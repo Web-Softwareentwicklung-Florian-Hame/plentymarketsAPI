@@ -21,6 +21,7 @@ Method | HTTP request | Description
 [**RestItemsVariationsGet**](DefaultApi.md#RestItemsVariationsGet) | **Get** /rest/items/variations | fetching variations with pagination and the possibility to fetch additional related data by &#39;with&#39; query param
 [**RestItemsVariationsPut**](DefaultApi.md#RestItemsVariationsPut) | **Put** /rest/items/variations | updating up to 50 variations
 [**RestLoginPost**](DefaultApi.md#RestLoginPost) | **Post** /rest/login | login for authentication at rest api
+[**RestOrdersSearchGet**](DefaultApi.md#RestOrdersSearchGet) | **Get** /rest/orders/search | searches for orders. The results can be restricted by using filters
 [**RestPimVariationsGet**](DefaultApi.md#RestPimVariationsGet) | **Get** /rest/pim/variations | Lists variations
 [**RestPimVariationsPut**](DefaultApi.md#RestPimVariationsPut) | **Put** /rest/pim/variations | Create a list of variations and their related data
 [**RestStockmanagementWarehousesWarehouseIdStockCorrectionPut**](DefaultApi.md#RestStockmanagementWarehousesWarehouseIdStockCorrectionPut) | **Put** /rest/stockmanagement/warehouses/{warehouseId}/stock/correction | set stocks
@@ -1264,6 +1265,161 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestOrdersSearchGet
+
+> SearchOrderPagination RestOrdersSearchGet(ctx).OrderId(orderId).PlentyId(plentyId).OrderTypeId(orderTypeId).StatusId(statusId).ReferrerId(referrerId).OwnerId(ownerId).LocationId(locationId).UpdatedAt(updatedAt).CreatedAt(createdAt).LockStatus(lockStatus).OrderAddressData(orderAddressData).ContactData(contactData).OrderItemTypeId(orderItemTypeId).ItemId(itemId).ItemVariationId(itemVariationId).VariationNumber(variationNumber).OrderItemName(orderItemName).DocumentNumber(documentNumber).HasValidInvoice(hasValidInvoice).PackageNumbber(packageNumbber).ContactClassId(contactClassId).ItemManufacturerId(itemManufacturerId).OrderItemWarehouseId(orderItemWarehouseId).InvoiceTotalSystemCurrency(invoiceTotalSystemCurrency).IsDeliveryAddressPackingStation(isDeliveryAddressPackingStation).SerialNumber(serialNumber).IsGuestContact(isGuestContact).VariationSupplierId(variationSupplierId).OrderItemReferrerId(orderItemReferrerId).Tag(tag).ExcludeMainOrders(excludeMainOrders).SoldCouponCode(soldCouponCode).RedeemedCouponCode(redeemedCouponCode).OrderBillingAddressCountryId(orderBillingAddressCountryId).OrderDeliveryAddressCountryId(orderDeliveryAddressCountryId).ShippingServiceProviderId(shippingServiceProviderId).ShippingServiceProviderType(shippingServiceProviderType).ShippingStatus(shippingStatus).ShippingShipmentDate(shippingShipmentDate).SortBy(sortBy).SortOrder(sortOrder).Page(page).ItemsPerPage(itemsPerPage).With(with).LazyLoaded(lazyLoaded).Execute()
+
+searches for orders. The results can be restricted by using filters
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    orderId := int32(56) // int32 |  (optional)
+    plentyId := int32(56) // int32 |  (optional)
+    orderTypeId := "orderTypeId_example" // string |  (optional)
+    statusId := float32(8.14) // float32 |  (optional)
+    referrerId := float32(8.14) // float32 |  (optional)
+    ownerId := int32(56) // int32 |  (optional)
+    locationId := int32(56) // int32 |  (optional)
+    updatedAt := time.Now() // time.Time |  (optional)
+    createdAt := time.Now() // time.Time |  (optional)
+    lockStatus := "lockStatus_example" // string |  (optional)
+    orderAddressData := "orderAddressData_example" // string |  (optional)
+    contactData := "contactData_example" // string |  (optional)
+    orderItemTypeId := int32(56) // int32 |  (optional)
+    itemId := int32(56) // int32 |  (optional)
+    itemVariationId := int32(56) // int32 |  (optional)
+    variationNumber := "variationNumber_example" // string |  (optional)
+    orderItemName := "orderItemName_example" // string |  (optional)
+    documentNumber := "documentNumber_example" // string |  (optional)
+    hasValidInvoice := true // bool |  (optional)
+    packageNumbber := "packageNumbber_example" // string |  (optional)
+    contactClassId := "contactClassId_example" // string |  (optional)
+    itemManufacturerId := int32(56) // int32 |  (optional)
+    orderItemWarehouseId := int32(56) // int32 |  (optional)
+    invoiceTotalSystemCurrency := float32(8.14) // float32 |  (optional)
+    isDeliveryAddressPackingStation := true // bool |  (optional)
+    serialNumber := "serialNumber_example" // string |  (optional)
+    isGuestContact := true // bool |  (optional)
+    variationSupplierId := int32(56) // int32 |  (optional)
+    orderItemReferrerId := int32(56) // int32 |  (optional)
+    tag := int32(56) // int32 |  (optional)
+    excludeMainOrders := true // bool |  (optional)
+    soldCouponCode := "soldCouponCode_example" // string |  (optional)
+    redeemedCouponCode := "redeemedCouponCode_example" // string |  (optional)
+    orderBillingAddressCountryId := int32(56) // int32 |  (optional)
+    orderDeliveryAddressCountryId := int32(56) // int32 |  (optional)
+    shippingServiceProviderId := int32(56) // int32 |  (optional)
+    shippingServiceProviderType := "shippingServiceProviderType_example" // string |  (optional)
+    shippingStatus := "shippingStatus_example" // string |  (optional)
+    shippingShipmentDate := "shippingShipmentDate_example" // string |  (optional)
+    sortBy := "sortBy_example" // string |  (optional)
+    sortOrder := "sortOrder_example" // string |  (optional)
+    page := int32(56) // int32 |  (optional)
+    itemsPerPage := int32(56) // int32 |  (optional)
+    with := []string{"With_example"} // []string |  (optional)
+    lazyLoaded := true // bool |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestOrdersSearchGet(context.Background()).OrderId(orderId).PlentyId(plentyId).OrderTypeId(orderTypeId).StatusId(statusId).ReferrerId(referrerId).OwnerId(ownerId).LocationId(locationId).UpdatedAt(updatedAt).CreatedAt(createdAt).LockStatus(lockStatus).OrderAddressData(orderAddressData).ContactData(contactData).OrderItemTypeId(orderItemTypeId).ItemId(itemId).ItemVariationId(itemVariationId).VariationNumber(variationNumber).OrderItemName(orderItemName).DocumentNumber(documentNumber).HasValidInvoice(hasValidInvoice).PackageNumbber(packageNumbber).ContactClassId(contactClassId).ItemManufacturerId(itemManufacturerId).OrderItemWarehouseId(orderItemWarehouseId).InvoiceTotalSystemCurrency(invoiceTotalSystemCurrency).IsDeliveryAddressPackingStation(isDeliveryAddressPackingStation).SerialNumber(serialNumber).IsGuestContact(isGuestContact).VariationSupplierId(variationSupplierId).OrderItemReferrerId(orderItemReferrerId).Tag(tag).ExcludeMainOrders(excludeMainOrders).SoldCouponCode(soldCouponCode).RedeemedCouponCode(redeemedCouponCode).OrderBillingAddressCountryId(orderBillingAddressCountryId).OrderDeliveryAddressCountryId(orderDeliveryAddressCountryId).ShippingServiceProviderId(shippingServiceProviderId).ShippingServiceProviderType(shippingServiceProviderType).ShippingStatus(shippingStatus).ShippingShipmentDate(shippingShipmentDate).SortBy(sortBy).SortOrder(sortOrder).Page(page).ItemsPerPage(itemsPerPage).With(with).LazyLoaded(lazyLoaded).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestOrdersSearchGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestOrdersSearchGet`: SearchOrderPagination
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestOrdersSearchGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestOrdersSearchGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **orderId** | **int32** |  | 
+ **plentyId** | **int32** |  | 
+ **orderTypeId** | **string** |  | 
+ **statusId** | **float32** |  | 
+ **referrerId** | **float32** |  | 
+ **ownerId** | **int32** |  | 
+ **locationId** | **int32** |  | 
+ **updatedAt** | **time.Time** |  | 
+ **createdAt** | **time.Time** |  | 
+ **lockStatus** | **string** |  | 
+ **orderAddressData** | **string** |  | 
+ **contactData** | **string** |  | 
+ **orderItemTypeId** | **int32** |  | 
+ **itemId** | **int32** |  | 
+ **itemVariationId** | **int32** |  | 
+ **variationNumber** | **string** |  | 
+ **orderItemName** | **string** |  | 
+ **documentNumber** | **string** |  | 
+ **hasValidInvoice** | **bool** |  | 
+ **packageNumbber** | **string** |  | 
+ **contactClassId** | **string** |  | 
+ **itemManufacturerId** | **int32** |  | 
+ **orderItemWarehouseId** | **int32** |  | 
+ **invoiceTotalSystemCurrency** | **float32** |  | 
+ **isDeliveryAddressPackingStation** | **bool** |  | 
+ **serialNumber** | **string** |  | 
+ **isGuestContact** | **bool** |  | 
+ **variationSupplierId** | **int32** |  | 
+ **orderItemReferrerId** | **int32** |  | 
+ **tag** | **int32** |  | 
+ **excludeMainOrders** | **bool** |  | 
+ **soldCouponCode** | **string** |  | 
+ **redeemedCouponCode** | **string** |  | 
+ **orderBillingAddressCountryId** | **int32** |  | 
+ **orderDeliveryAddressCountryId** | **int32** |  | 
+ **shippingServiceProviderId** | **int32** |  | 
+ **shippingServiceProviderType** | **string** |  | 
+ **shippingStatus** | **string** |  | 
+ **shippingShipmentDate** | **string** |  | 
+ **sortBy** | **string** |  | 
+ **sortOrder** | **string** |  | 
+ **page** | **int32** |  | 
+ **itemsPerPage** | **int32** |  | 
+ **with** | **[]string** |  | 
+ **lazyLoaded** | **bool** |  | 
+
+### Return type
+
+[**SearchOrderPagination**](SearchOrderPagination.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

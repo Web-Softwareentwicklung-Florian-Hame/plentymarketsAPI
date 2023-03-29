@@ -1767,7 +1767,7 @@ type ApiRestItemsVariationsGetRequest struct {
 	numberFuzzy *string
 	isBundle *bool
 	plentyId *[]int32
-	referrerId *[]int32
+	referrerId *[]float32
 	supplierNumber *string
 	sku *string
 	manufacturerId *int32
@@ -1874,7 +1874,7 @@ func (r ApiRestItemsVariationsGetRequest) PlentyId(plentyId []int32) ApiRestItem
 	return r
 }
 // Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas.
-func (r ApiRestItemsVariationsGetRequest) ReferrerId(referrerId []int32) ApiRestItemsVariationsGetRequest {
+func (r ApiRestItemsVariationsGetRequest) ReferrerId(referrerId []float32) ApiRestItemsVariationsGetRequest {
 	r.referrerId = &referrerId
 	return r
 }
@@ -2356,7 +2356,7 @@ type ApiRestOrdersSearchGetRequest struct {
 	serialNumber *string
 	isGuestContact *bool
 	variationSupplierId *int32
-	orderItemReferrerId *int32
+	orderItemReferrerId *float32
 	tag *int32
 	excludeMainOrders *bool
 	soldCouponCode *string
@@ -2487,7 +2487,7 @@ func (r ApiRestOrdersSearchGetRequest) VariationSupplierId(variationSupplierId i
 	r.variationSupplierId = &variationSupplierId
 	return r
 }
-func (r ApiRestOrdersSearchGetRequest) OrderItemReferrerId(orderItemReferrerId int32) ApiRestOrdersSearchGetRequest {
+func (r ApiRestOrdersSearchGetRequest) OrderItemReferrerId(orderItemReferrerId float32) ApiRestOrdersSearchGetRequest {
 	r.orderItemReferrerId = &orderItemReferrerId
 	return r
 }

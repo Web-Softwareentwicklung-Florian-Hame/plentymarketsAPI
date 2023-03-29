@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **Rating** | Pointer to **string** |  | [optional] 
 **BookAccount** | Pointer to **string** |  | [optional] 
 **Lang** | Pointer to **string** |  | [optional] 
-**ReferrerId** | Pointer to **int32** |  | [optional] 
+**ReferrerId** | Pointer to **float32** |  | [optional] 
 **UserId** | Pointer to **int32** |  | [optional] 
 **BirthdayAt** | Pointer to **string** |  | [optional] 
 **LastLoginAt** | Pointer to **string** |  | [optional] 
@@ -442,20 +442,20 @@ HasLang returns a boolean if a field has been set.
 
 ### GetReferrerId
 
-`func (o *Contact) GetReferrerId() int32`
+`func (o *Contact) GetReferrerId() float32`
 
 GetReferrerId returns the ReferrerId field if non-nil, zero value otherwise.
 
 ### GetReferrerIdOk
 
-`func (o *Contact) GetReferrerIdOk() (*int32, bool)`
+`func (o *Contact) GetReferrerIdOk() (*float32, bool)`
 
 GetReferrerIdOk returns a tuple with the ReferrerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReferrerId
 
-`func (o *Contact) SetReferrerId(v int32)`
+`func (o *Contact) SetReferrerId(v float32)`
 
 SetReferrerId sets ReferrerId field to given value.
 

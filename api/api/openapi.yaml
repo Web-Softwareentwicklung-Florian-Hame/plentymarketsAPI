@@ -241,7 +241,7 @@ paths:
         required: false
         schema:
           items:
-            type: integer
+            type: number
           type: array
         style: form
       - description: Filter restricts the list of results to variations with the specified
@@ -1075,7 +1075,7 @@ paths:
         name: orderItemReferrerId
         required: false
         schema:
-          type: integer
+          type: number
         style: form
       - explode: true
         in: query
@@ -9260,7 +9260,7 @@ components:
           name2: name2
           name1: name1
           updatedAt: 2000-01-23T04:56:07.000+00:00
-        referrerId: 9
+        referrerId: 9.301444243932576
         documents:
         - numberWithPrefix: numberWithPrefix
           source: source
@@ -9370,7 +9370,7 @@ components:
           singleAccess: singleAccess
           updatedAt: updatedAt
           inLeadStatusSince: 7
-          referrerId: 1
+          referrerId: 1.0246457001441578
           newsletterAllowanceAt: newsletterAllowanceAt
           plentyId: 6
           externalId: externalId
@@ -9429,7 +9429,7 @@ components:
           singleAccess: singleAccess
           updatedAt: updatedAt
           inLeadStatusSince: 7
-          referrerId: 1
+          referrerId: 1.0246457001441578
           newsletterAllowanceAt: newsletterAllowanceAt
           plentyId: 6
           externalId: externalId
@@ -11153,7 +11153,7 @@ components:
         id:
           type: integer
         referrerId:
-          type: integer
+          type: number
         roundTotalsOnly:
           type: boolean
         numberOfDecimals:
@@ -12389,7 +12389,7 @@ components:
         singleAccess: singleAccess
         updatedAt: updatedAt
         inLeadStatusSince: 7
-        referrerId: 1
+        referrerId: 1.0246457001441578
         newsletterAllowanceAt: newsletterAllowanceAt
         plentyId: 6
         externalId: externalId
@@ -12437,7 +12437,7 @@ components:
         lang:
           type: string
         referrerId:
-          type: integer
+          type: number
         userId:
           type: integer
         birthdayAt:
@@ -13423,7 +13423,7 @@ components:
             name2: name2
             name1: name1
             updatedAt: 2000-01-23T04:56:07.000+00:00
-          referrerId: 9
+          referrerId: 9.301444243932576
           documents:
           - numberWithPrefix: numberWithPrefix
             source: source
@@ -13533,7 +13533,7 @@ components:
             singleAccess: singleAccess
             updatedAt: updatedAt
             inLeadStatusSince: 7
-            referrerId: 1
+            referrerId: 1.0246457001441578
             newsletterAllowanceAt: newsletterAllowanceAt
             plentyId: 6
             externalId: externalId
@@ -13592,7 +13592,7 @@ components:
             singleAccess: singleAccess
             updatedAt: updatedAt
             inLeadStatusSince: 7
-            referrerId: 1
+            referrerId: 1.0246457001441578
             newsletterAllowanceAt: newsletterAllowanceAt
             plentyId: 6
             externalId: externalId
@@ -15363,7 +15363,7 @@ components:
             name2: name2
             name1: name1
             updatedAt: 2000-01-23T04:56:07.000+00:00
-          referrerId: 9
+          referrerId: 9.301444243932576
           documents:
           - numberWithPrefix: numberWithPrefix
             source: source
@@ -15473,7 +15473,7 @@ components:
             singleAccess: singleAccess
             updatedAt: updatedAt
             inLeadStatusSince: 7
-            referrerId: 1
+            referrerId: 1.0246457001441578
             newsletterAllowanceAt: newsletterAllowanceAt
             plentyId: 6
             externalId: externalId
@@ -15532,7 +15532,7 @@ components:
             singleAccess: singleAccess
             updatedAt: updatedAt
             inLeadStatusSince: 7
-            referrerId: 1
+            referrerId: 1.0246457001441578
             newsletterAllowanceAt: newsletterAllowanceAt
             plentyId: 6
             externalId: externalId

@@ -1058,7 +1058,7 @@ func main() {
     numberFuzzy := "numberFuzzy_example" // string | Filter restricts the list of results to variations with numbers that contain the variation number specified (SQL LIKE operator). For example, if variations with variation numbers 1 to 400 exist in the system, filtering by 12 will list variation numbers 12, 112, 120-129, 212 and 312. (optional)
     isBundle := true // bool | Filter restricts the list of results to variations to which variations were added to create a bundle. (optional)
     plentyId := []int32{int32(123)} // []int32 | Filter restricts the list of results to variations that are visible in specified clients. Separate more than one client by commas. (optional)
-    referrerId := []int32{int32(123)} // []int32 | Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas. (optional)
+    referrerId := []float32{float32(123)} // []float32 | Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas. (optional)
     supplierNumber := "supplierNumber_example" // string | Filter restricts the list of results to variations with the specified supplier number. (optional)
     sku := "sku_example" // string | Filter restricts the list of results to variations with the specified SKU. In additional, results can also be restricted to a specific referrer by specifying the referrer ID after a colon. Example: L0R3MIP5UM:104.1 (optional)
     manufacturerId := int32(56) // int32 | Filter restricts the list of results to variations with the specified manufacturer ID. (optional)
@@ -1111,7 +1111,7 @@ Name | Type | Description  | Notes
  **numberFuzzy** | **string** | Filter restricts the list of results to variations with numbers that contain the variation number specified (SQL LIKE operator). For example, if variations with variation numbers 1 to 400 exist in the system, filtering by 12 will list variation numbers 12, 112, 120-129, 212 and 312. | 
  **isBundle** | **bool** | Filter restricts the list of results to variations to which variations were added to create a bundle. | 
  **plentyId** | **[]int32** | Filter restricts the list of results to variations that are visible in specified clients. Separate more than one client by commas. | 
- **referrerId** | **[]int32** | Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas. | 
+ **referrerId** | **[]float32** | Filter restricts the list of results to variations that are visible in specified markets. Separate more than one referrer by commas. | 
  **supplierNumber** | **string** | Filter restricts the list of results to variations with the specified supplier number. | 
  **sku** | **string** | Filter restricts the list of results to variations with the specified SKU. In additional, results can also be restricted to a specific referrer by specifying the referrer ID after a colon. Example: L0R3MIP5UM:104.1 | 
  **manufacturerId** | **int32** | Filter restricts the list of results to variations with the specified manufacturer ID. | 
@@ -1322,7 +1322,7 @@ func main() {
     serialNumber := "serialNumber_example" // string |  (optional)
     isGuestContact := true // bool |  (optional)
     variationSupplierId := int32(56) // int32 |  (optional)
-    orderItemReferrerId := int32(56) // int32 |  (optional)
+    orderItemReferrerId := float32(8.14) // float32 |  (optional)
     tag := int32(56) // int32 |  (optional)
     excludeMainOrders := true // bool |  (optional)
     soldCouponCode := "soldCouponCode_example" // string |  (optional)
@@ -1391,7 +1391,7 @@ Name | Type | Description  | Notes
  **serialNumber** | **string** |  | 
  **isGuestContact** | **bool** |  | 
  **variationSupplierId** | **int32** |  | 
- **orderItemReferrerId** | **int32** |  | 
+ **orderItemReferrerId** | **float32** |  | 
  **tag** | **int32** |  | 
  **excludeMainOrders** | **bool** |  | 
  **soldCouponCode** | **string** |  | 

@@ -18,7 +18,7 @@ import (
 // Order struct for Order
 type Order struct {
 	Id *int32 `json:"id,omitempty"`
-	ReferrerId *int32 `json:"referrerId,omitempty"`
+	ReferrerId *float32 `json:"referrerId,omitempty"`
 	RoundTotalsOnly *bool `json:"roundTotalsOnly,omitempty"`
 	NumberOfDecimals *int32 `json:"numberOfDecimals,omitempty"`
 	ContactReceiver *Contact `json:"contactReceiver,omitempty"`
@@ -90,9 +90,9 @@ func (o *Order) SetId(v int32) {
 }
 
 // GetReferrerId returns the ReferrerId field value if set, zero value otherwise.
-func (o *Order) GetReferrerId() int32 {
+func (o *Order) GetReferrerId() float32 {
 	if o == nil || o.ReferrerId == nil {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.ReferrerId
@@ -100,7 +100,7 @@ func (o *Order) GetReferrerId() int32 {
 
 // GetReferrerIdOk returns a tuple with the ReferrerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Order) GetReferrerIdOk() (*int32, bool) {
+func (o *Order) GetReferrerIdOk() (*float32, bool) {
 	if o == nil || o.ReferrerId == nil {
 		return nil, false
 	}
@@ -116,8 +116,8 @@ func (o *Order) HasReferrerId() bool {
 	return false
 }
 
-// SetReferrerId gets a reference to the given int32 and assigns it to the ReferrerId field.
-func (o *Order) SetReferrerId(v int32) {
+// SetReferrerId gets a reference to the given float32 and assigns it to the ReferrerId field.
+func (o *Order) SetReferrerId(v float32) {
 	o.ReferrerId = &v
 }
 

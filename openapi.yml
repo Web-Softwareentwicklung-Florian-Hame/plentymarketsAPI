@@ -171,7 +171,7 @@ paths:
           schema:
             type: array
             items:
-              type: integer
+              type: number
           explode: false
         - in: query
           name: supplierNumber
@@ -758,7 +758,7 @@ paths:
         - in: query
           name: orderItemReferrerId
           schema:
-            type: integer
+            type: number
         - in: query
           name: tag
           schema:
@@ -3306,7 +3306,7 @@ components:
         id:
           type: integer
         referrerId:
-          type: integer
+          type: number
         roundTotalsOnly:
           type: boolean
         numberOfDecimals:
@@ -3634,7 +3634,7 @@ components:
         lang:
           type: string
         referrerId:
-          type: integer
+          type: number
         userId:
           type: integer
         birthdayAt:

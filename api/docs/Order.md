@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **int32** |  | [optional] 
-**ReferrerId** | Pointer to **int32** |  | [optional] 
+**ReferrerId** | Pointer to **float32** |  | [optional] 
 **RoundTotalsOnly** | Pointer to **bool** |  | [optional] 
 **NumberOfDecimals** | Pointer to **int32** |  | [optional] 
 **ContactReceiver** | Pointer to [**Contact**](Contact.md) |  | [optional] 
@@ -72,20 +72,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetReferrerId
 
-`func (o *Order) GetReferrerId() int32`
+`func (o *Order) GetReferrerId() float32`
 
 GetReferrerId returns the ReferrerId field if non-nil, zero value otherwise.
 
 ### GetReferrerIdOk
 
-`func (o *Order) GetReferrerIdOk() (*int32, bool)`
+`func (o *Order) GetReferrerIdOk() (*float32, bool)`
 
 GetReferrerIdOk returns a tuple with the ReferrerId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetReferrerId
 
-`func (o *Order) SetReferrerId(v int32)`
+`func (o *Order) SetReferrerId(v float32)`
 
 SetReferrerId sets ReferrerId field to given value.
 

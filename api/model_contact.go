@@ -31,7 +31,7 @@ type Contact struct {
 	Rating *string `json:"rating,omitempty"`
 	BookAccount *string `json:"bookAccount,omitempty"`
 	Lang *string `json:"lang,omitempty"`
-	ReferrerId *int32 `json:"referrerId,omitempty"`
+	ReferrerId *float32 `json:"referrerId,omitempty"`
 	UserId *int32 `json:"userId,omitempty"`
 	BirthdayAt *string `json:"birthdayAt,omitempty"`
 	LastLoginAt *string `json:"lastLoginAt,omitempty"`
@@ -557,9 +557,9 @@ func (o *Contact) SetLang(v string) {
 }
 
 // GetReferrerId returns the ReferrerId field value if set, zero value otherwise.
-func (o *Contact) GetReferrerId() int32 {
+func (o *Contact) GetReferrerId() float32 {
 	if o == nil || o.ReferrerId == nil {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.ReferrerId
@@ -567,7 +567,7 @@ func (o *Contact) GetReferrerId() int32 {
 
 // GetReferrerIdOk returns a tuple with the ReferrerId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Contact) GetReferrerIdOk() (*int32, bool) {
+func (o *Contact) GetReferrerIdOk() (*float32, bool) {
 	if o == nil || o.ReferrerId == nil {
 		return nil, false
 	}
@@ -583,8 +583,8 @@ func (o *Contact) HasReferrerId() bool {
 	return false
 }
 
-// SetReferrerId gets a reference to the given int32 and assigns it to the ReferrerId field.
-func (o *Contact) SetReferrerId(v int32) {
+// SetReferrerId gets a reference to the given float32 and assigns it to the ReferrerId field.
+func (o *Contact) SetReferrerId(v float32) {
 	o.ReferrerId = &v
 }
 

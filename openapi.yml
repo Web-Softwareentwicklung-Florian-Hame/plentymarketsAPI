@@ -835,6 +835,7 @@ paths:
                 - warehouseSender
                 - warehouseReceiver
                 - orderItems.variation
+                - orderItems.amounts
                 - orderItems.variation.propertiesV2
                 - orderItems.giftCardCodes
                 - orderItems.transactions

@@ -1175,9 +1175,9 @@ paths:
         schema:
           type: integer
         style: form
-      - explode: false
+      - explode: true
         in: query
-        name: with
+        name: with[]
         required: false
         schema:
           items:

@@ -2728,7 +2728,15 @@ func (a *DefaultApiService) RestOrdersSearchGetExecute(r ApiRestOrdersSearchGetR
 		localVarQueryParams.Add("itemsPerPage", parameterToString(*r.itemsPerPage, ""))
 	}
 	if r.with != nil {
-		localVarQueryParams.Add("with", parameterToString(*r.with, "csv"))
+		t := *r.with
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				localVarQueryParams.Add("with[]", parameterToString(s.Index(i), "multi"))
+			}
+		} else {
+			localVarQueryParams.Add("with[]", parameterToString(t, "multi"))
+		}
 	}
 	if r.lazyLoaded != nil {
 		localVarQueryParams.Add("lazyLoaded", parameterToString(*r.lazyLoaded, ""))

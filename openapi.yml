@@ -816,8 +816,8 @@ paths:
           schema:
             type: integer
         - in: query
-          name: with
-          explode: false
+          name: with[]
+          explode: true
           style: form
           schema:
             type: array

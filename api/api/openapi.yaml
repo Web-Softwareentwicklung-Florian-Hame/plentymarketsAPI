@@ -10261,6 +10261,37 @@ components:
             code: code
             barcodeId: 4
           createdAt: 2000-01-23T04:56:07.000+00:00
+          amounts:
+          - surcharge: 4.459605034958679
+            orderItemId: 9
+            isSystemCurrency: true
+            priceOriginalGross: 5.507386964179881
+            discount: 3.901545264248647
+            purchasePrice: 7.933506881737151
+            priceGross: 6.073898085781152
+            priceNet: 8.251625748923757
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            exchangeRate: 0.5199002018724985
+            currency: currency
+            id: 0
+            isPercentage: true
+            priceOriginalNet: 4.86315908102884
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - surcharge: 4.459605034958679
+            orderItemId: 9
+            isSystemCurrency: true
+            priceOriginalGross: 5.507386964179881
+            discount: 3.901545264248647
+            purchasePrice: 7.933506881737151
+            priceGross: 6.073898085781152
+            priceNet: 8.251625748923757
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            exchangeRate: 0.5199002018724985
+            currency: currency
+            id: 0
+            isPercentage: true
+            priceOriginalNet: 4.86315908102884
+            updatedAt: 2000-01-23T04:56:07.000+00:00
           vatField: 4
           warehouseId: 9
           orderItemName: orderItemName
@@ -11083,6 +11114,37 @@ components:
             code: code
             barcodeId: 4
           createdAt: 2000-01-23T04:56:07.000+00:00
+          amounts:
+          - surcharge: 4.459605034958679
+            orderItemId: 9
+            isSystemCurrency: true
+            priceOriginalGross: 5.507386964179881
+            discount: 3.901545264248647
+            purchasePrice: 7.933506881737151
+            priceGross: 6.073898085781152
+            priceNet: 8.251625748923757
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            exchangeRate: 0.5199002018724985
+            currency: currency
+            id: 0
+            isPercentage: true
+            priceOriginalNet: 4.86315908102884
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - surcharge: 4.459605034958679
+            orderItemId: 9
+            isSystemCurrency: true
+            priceOriginalGross: 5.507386964179881
+            discount: 3.901545264248647
+            purchasePrice: 7.933506881737151
+            priceGross: 6.073898085781152
+            priceNet: 8.251625748923757
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            exchangeRate: 0.5199002018724985
+            currency: currency
+            id: 0
+            isPercentage: true
+            priceOriginalNet: 4.86315908102884
+            updatedAt: 2000-01-23T04:56:07.000+00:00
           vatField: 4
           warehouseId: 9
           orderItemName: orderItemName
@@ -12020,6 +12082,37 @@ components:
           code: code
           barcodeId: 4
         createdAt: 2000-01-23T04:56:07.000+00:00
+        amounts:
+        - surcharge: 4.459605034958679
+          orderItemId: 9
+          isSystemCurrency: true
+          priceOriginalGross: 5.507386964179881
+          discount: 3.901545264248647
+          purchasePrice: 7.933506881737151
+          priceGross: 6.073898085781152
+          priceNet: 8.251625748923757
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          exchangeRate: 0.5199002018724985
+          currency: currency
+          id: 0
+          isPercentage: true
+          priceOriginalNet: 4.86315908102884
+          updatedAt: 2000-01-23T04:56:07.000+00:00
+        - surcharge: 4.459605034958679
+          orderItemId: 9
+          isSystemCurrency: true
+          priceOriginalGross: 5.507386964179881
+          discount: 3.901545264248647
+          purchasePrice: 7.933506881737151
+          priceGross: 6.073898085781152
+          priceNet: 8.251625748923757
+          createdAt: 2000-01-23T04:56:07.000+00:00
+          exchangeRate: 0.5199002018724985
+          currency: currency
+          id: 0
+          isPercentage: true
+          priceOriginalNet: 4.86315908102884
+          updatedAt: 2000-01-23T04:56:07.000+00:00
         vatField: 4
         warehouseId: 9
         orderItemName: orderItemName
@@ -12068,6 +12161,61 @@ components:
           items:
             $ref: '#/components/schemas/VariationBarcode'
           type: array
+        amounts:
+          items:
+            $ref: '#/components/schemas/OrderItemAmount'
+          type: array
+      type: object
+    OrderItemAmount:
+      example:
+        surcharge: 4.459605034958679
+        orderItemId: 9
+        isSystemCurrency: true
+        priceOriginalGross: 5.507386964179881
+        discount: 3.901545264248647
+        purchasePrice: 7.933506881737151
+        priceGross: 6.073898085781152
+        priceNet: 8.251625748923757
+        createdAt: 2000-01-23T04:56:07.000+00:00
+        exchangeRate: 0.5199002018724985
+        currency: currency
+        id: 0
+        isPercentage: true
+        priceOriginalNet: 4.86315908102884
+        updatedAt: 2000-01-23T04:56:07.000+00:00
+      properties:
+        id:
+          type: integer
+        orderItemId:
+          type: integer
+        isSystemCurrency:
+          type: boolean
+        currency:
+          type: string
+        exchangeRate:
+          type: number
+        purchasePrice:
+          type: number
+        priceOriginalGross:
+          type: number
+        priceOriginalNet:
+          type: number
+        priceGross:
+          type: number
+        priceNet:
+          type: number
+        surcharge:
+          type: number
+        discount:
+          type: number
+        isPercentage:
+          type: boolean
+        createdAt:
+          format: date-time
+          type: string
+        updatedAt:
+          format: date-time
+          type: string
       type: object
     OrderDocument:
       example:
@@ -14424,6 +14572,37 @@ components:
               code: code
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
+            amounts:
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
             warehouseId: 9
             orderItemName: orderItemName
@@ -15246,6 +15425,37 @@ components:
               code: code
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
+            amounts:
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
             warehouseId: 9
             orderItemName: orderItemName
@@ -16364,6 +16574,37 @@ components:
               code: code
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
+            amounts:
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
             warehouseId: 9
             orderItemName: orderItemName
@@ -17186,6 +17427,37 @@ components:
               code: code
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
+            amounts:
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            - surcharge: 4.459605034958679
+              orderItemId: 9
+              isSystemCurrency: true
+              priceOriginalGross: 5.507386964179881
+              discount: 3.901545264248647
+              purchasePrice: 7.933506881737151
+              priceGross: 6.073898085781152
+              priceNet: 8.251625748923757
+              createdAt: 2000-01-23T04:56:07.000+00:00
+              exchangeRate: 0.5199002018724985
+              currency: currency
+              id: 0
+              isPercentage: true
+              priceOriginalNet: 4.86315908102884
+              updatedAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
             warehouseId: 9
             orderItemName: orderItemName

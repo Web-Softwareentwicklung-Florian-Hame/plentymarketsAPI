@@ -35,6 +35,7 @@ type OrderItem struct {
 	WarehouseId *int32 `json:"warehouseId,omitempty"`
 	Variation *Variation `json:"variation,omitempty"`
 	VariationBarcodes *[]VariationBarcode `json:"variationBarcodes,omitempty"`
+	Amounts *[]OrderItemAmount `json:"amounts,omitempty"`
 }
 
 // NewOrderItem instantiates a new OrderItem object
@@ -630,6 +631,38 @@ func (o *OrderItem) SetVariationBarcodes(v []VariationBarcode) {
 	o.VariationBarcodes = &v
 }
 
+// GetAmounts returns the Amounts field value if set, zero value otherwise.
+func (o *OrderItem) GetAmounts() []OrderItemAmount {
+	if o == nil || o.Amounts == nil {
+		var ret []OrderItemAmount
+		return ret
+	}
+	return *o.Amounts
+}
+
+// GetAmountsOk returns a tuple with the Amounts field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *OrderItem) GetAmountsOk() (*[]OrderItemAmount, bool) {
+	if o == nil || o.Amounts == nil {
+		return nil, false
+	}
+	return o.Amounts, true
+}
+
+// HasAmounts returns a boolean if a field has been set.
+func (o *OrderItem) HasAmounts() bool {
+	if o != nil && o.Amounts != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetAmounts gets a reference to the given []OrderItemAmount and assigns it to the Amounts field.
+func (o *OrderItem) SetAmounts(v []OrderItemAmount) {
+	o.Amounts = &v
+}
+
 func (o OrderItem) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Id != nil {
@@ -685,6 +718,9 @@ func (o OrderItem) MarshalJSON() ([]byte, error) {
 	}
 	if o.VariationBarcodes != nil {
 		toSerialize["variationBarcodes"] = o.VariationBarcodes
+	}
+	if o.Amounts != nil {
+		toSerialize["amounts"] = o.Amounts
 	}
 	return json.Marshal(toSerialize)
 }

@@ -3399,6 +3399,46 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/VariationBarcode'
+        amounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/OrderItemAmount'
+
+    OrderItemAmount:
+      type: object
+      properties:
+        id:
+          type: integer
+        orderItemId:
+          type: integer
+        isSystemCurrency:
+          type: boolean
+        currency:
+          type: string
+        exchangeRate:
+          type: number
+        purchasePrice:
+          type: number
+        priceOriginalGross:
+          type: number
+        priceOriginalNet:
+          type: number
+        priceGross:
+          type: number
+        priceNet:
+          type: number
+        surcharge:
+          type: number
+        discount:
+          type: number
+        isPercentage:
+          type: boolean
+        createdAt:
+          type: string
+          format: date-time
+        updatedAt:
+          type: string
+          format: date-time
 
     OrderDocument:
       type: object

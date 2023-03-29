@@ -39,6 +39,7 @@ docs/OrderAddressPivot.md
 docs/OrderDocument.md
 docs/OrderDocumentPivot.md
 docs/OrderItem.md
+docs/OrderItemAmount.md
 docs/OrderLocation.md
 docs/OrderRelation.md
 docs/PimVariation.md
@@ -122,6 +123,7 @@ model_order_address_pivot.go
 model_order_document.go
 model_order_document_pivot.go
 model_order_item.go
+model_order_item_amount.go
 model_order_location.go
 model_order_relation.go
 model_pim_variation.go

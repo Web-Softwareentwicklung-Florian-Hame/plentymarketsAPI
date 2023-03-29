@@ -135,6 +135,7 @@ Class | Method | HTTP request | Description
  - [OrderDocument](docs/OrderDocument.md)
  - [OrderDocumentPivot](docs/OrderDocumentPivot.md)
  - [OrderItem](docs/OrderItem.md)
+ - [OrderItemAmount](docs/OrderItemAmount.md)
  - [OrderLocation](docs/OrderLocation.md)
  - [OrderRelation](docs/OrderRelation.md)
  - [PimVariation](docs/PimVariation.md)

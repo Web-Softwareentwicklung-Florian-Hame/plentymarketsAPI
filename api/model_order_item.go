@@ -29,7 +29,7 @@ type OrderItem struct {
 	CountryVatId *int32 `json:"countryVatId,omitempty"`
 	VatField *int32 `json:"vatField,omitempty"`
 	VatRate *float32 `json:"vatRate,omitempty"`
-	Position *int32 `json:"position,omitempty"`
+	Position *string `json:"position,omitempty"`
 	CreatedAt *time.Time `json:"createdAt,omitempty"`
 	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
 	WarehouseId *int32 `json:"warehouseId,omitempty"`
@@ -439,9 +439,9 @@ func (o *OrderItem) SetVatRate(v float32) {
 }
 
 // GetPosition returns the Position field value if set, zero value otherwise.
-func (o *OrderItem) GetPosition() int32 {
+func (o *OrderItem) GetPosition() string {
 	if o == nil || o.Position == nil {
-		var ret int32
+		var ret string
 		return ret
 	}
 	return *o.Position
@@ -449,7 +449,7 @@ func (o *OrderItem) GetPosition() int32 {
 
 // GetPositionOk returns a tuple with the Position field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *OrderItem) GetPositionOk() (*int32, bool) {
+func (o *OrderItem) GetPositionOk() (*string, bool) {
 	if o == nil || o.Position == nil {
 		return nil, false
 	}
@@ -465,8 +465,8 @@ func (o *OrderItem) HasPosition() bool {
 	return false
 }
 
-// SetPosition gets a reference to the given int32 and assigns it to the Position field.
-func (o *OrderItem) SetPosition(v int32) {
+// SetPosition gets a reference to the given string and assigns it to the Position field.
+func (o *OrderItem) SetPosition(v string) {
 	o.Position = &v
 }
 

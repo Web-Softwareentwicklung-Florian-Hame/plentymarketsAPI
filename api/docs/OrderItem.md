@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **CountryVatId** | Pointer to **int32** |  | [optional] 
 **VatField** | Pointer to **int32** |  | [optional] 
 **VatRate** | Pointer to **float32** |  | [optional] 
-**Position** | Pointer to **int32** |  | [optional] 
+**Position** | Pointer to **string** |  | [optional] 
 **CreatedAt** | Pointer to **time.Time** |  | [optional] 
 **UpdatedAt** | Pointer to **time.Time** |  | [optional] 
 **WarehouseId** | Pointer to **int32** |  | [optional] 
@@ -344,20 +344,20 @@ HasVatRate returns a boolean if a field has been set.
 
 ### GetPosition
 
-`func (o *OrderItem) GetPosition() int32`
+`func (o *OrderItem) GetPosition() string`
 
 GetPosition returns the Position field if non-nil, zero value otherwise.
 
 ### GetPositionOk
 
-`func (o *OrderItem) GetPositionOk() (*int32, bool)`
+`func (o *OrderItem) GetPositionOk() (*string, bool)`
 
 GetPositionOk returns a tuple with the Position field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPosition
 
-`func (o *OrderItem) SetPosition(v int32)`
+`func (o *OrderItem) SetPosition(v string)`
 
 SetPosition sets Position field to given value.
 

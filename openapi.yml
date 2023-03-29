@@ -3384,7 +3384,7 @@ components:
         vatRate:
           type: number
         position:
-          type: integer
+          type: string
         createdAt:
           type: string
           format: date-time

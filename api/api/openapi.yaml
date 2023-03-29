@@ -10262,11 +10262,11 @@ components:
             barcodeId: 4
           createdAt: 2000-01-23T04:56:07.000+00:00
           vatField: 4
-          warehouseId: 0
+          warehouseId: 9
           orderItemName: orderItemName
           typeId: 3
           id: 7
-          position: 9
+          position: position
           updatedAt: 2000-01-23T04:56:07.000+00:00
         - itemVariationId: 0
           quantity: 6.628464275087742
@@ -11084,11 +11084,11 @@ components:
             barcodeId: 4
           createdAt: 2000-01-23T04:56:07.000+00:00
           vatField: 4
-          warehouseId: 0
+          warehouseId: 9
           orderItemName: orderItemName
           typeId: 3
           id: 7
-          position: 9
+          position: position
           updatedAt: 2000-01-23T04:56:07.000+00:00
         warehouseReceiver:
           isInventoryModeActive: true
@@ -12021,11 +12021,11 @@ components:
           barcodeId: 4
         createdAt: 2000-01-23T04:56:07.000+00:00
         vatField: 4
-        warehouseId: 0
+        warehouseId: 9
         orderItemName: orderItemName
         typeId: 3
         id: 7
-        position: 9
+        position: position
         updatedAt: 2000-01-23T04:56:07.000+00:00
       properties:
         id:
@@ -12053,7 +12053,7 @@ components:
         vatRate:
           type: number
         position:
-          type: integer
+          type: string
         createdAt:
           format: date-time
           type: string
@@ -14425,11 +14425,11 @@ components:
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
-            warehouseId: 0
+            warehouseId: 9
             orderItemName: orderItemName
             typeId: 3
             id: 7
-            position: 9
+            position: position
             updatedAt: 2000-01-23T04:56:07.000+00:00
           - itemVariationId: 0
             quantity: 6.628464275087742
@@ -15247,11 +15247,11 @@ components:
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
-            warehouseId: 0
+            warehouseId: 9
             orderItemName: orderItemName
             typeId: 3
             id: 7
-            position: 9
+            position: position
             updatedAt: 2000-01-23T04:56:07.000+00:00
           warehouseReceiver:
             isInventoryModeActive: true
@@ -16365,11 +16365,11 @@ components:
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
-            warehouseId: 0
+            warehouseId: 9
             orderItemName: orderItemName
             typeId: 3
             id: 7
-            position: 9
+            position: position
             updatedAt: 2000-01-23T04:56:07.000+00:00
           - itemVariationId: 0
             quantity: 6.628464275087742
@@ -17187,11 +17187,11 @@ components:
               barcodeId: 4
             createdAt: 2000-01-23T04:56:07.000+00:00
             vatField: 4
-            warehouseId: 0
+            warehouseId: 9
             orderItemName: orderItemName
             typeId: 3
             id: 7
-            position: 9
+            position: position
             updatedAt: 2000-01-23T04:56:07.000+00:00
           warehouseReceiver:
             isInventoryModeActive: true

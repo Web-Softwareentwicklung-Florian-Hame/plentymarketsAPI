@@ -243,7 +243,7 @@ var MarketNameByIdMap = map[float32]MarketName{
 	6:      Kelkoo,
 	7:      GoogleShopping,
 	9:      Wish,
-	16:     Limango,
+	12:     Limango,
 	101:    ricardo,
 	102:    Kaufland,
 	102.01: KauflandDe,

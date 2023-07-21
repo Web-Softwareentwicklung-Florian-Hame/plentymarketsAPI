@@ -19,6 +19,7 @@ const (
 	ManuelleEingabe   MarketName = "Manuelle Eingabe"
 	MyToys            MarketName = "MyToys"
 	OttoMarket        MarketName = "Otto Market"
+	POSLP             MarketName = "POS-LP"
 	Shopify           MarketName = "Shopify"
 	WebApi            MarketName = "WebApi"
 	WebShop           MarketName = "WebShop"

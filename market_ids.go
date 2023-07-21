@@ -187,6 +187,7 @@ var MarketIdMap = map[MarketName]float32{
 	ManuelleEingabe:   0,
 	MyToys:            14,
 	OttoMarket:        160.1,
+	POSLP:             103.01,
 	Shopify:           13,
 	WebApi:            148,
 	WebShop:           1,

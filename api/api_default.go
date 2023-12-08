@@ -3996,15 +3996,7 @@ func (a *DefaultApiService) RestPimVariationsScrollGetExecute(r ApiRestPimVariat
 	localVarFormParams := _neturl.Values{}
 
 	if r.with != nil {
-		t := *r.with
-		if reflect.TypeOf(t).Kind() == reflect.Slice {
-			s := reflect.ValueOf(t)
-			for i := 0; i < s.Len(); i++ {
-				localVarQueryParams.Add("with", parameterToString(s.Index(i), "multi"))
-			}
-		} else {
-			localVarQueryParams.Add("with", parameterToString(t, "multi"))
-		}
+		localVarQueryParams.Add("with", parameterToString(*r.with, "csv"))
 	}
 	if r.groupBy != nil {
 		localVarQueryParams.Add("groupBy", parameterToString(*r.groupBy, ""))

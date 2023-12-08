@@ -1918,7 +1918,7 @@ paths:
           = Includes tags. The tag data to the related tag ID.</li><li>'properties'
           = The properties of the variation.</li><li>'properties.property' = Includes
           properties. The property data to the related property ID.</li></ul>
-        explode: true
+        explode: false
         in: query
         name: with
         required: false

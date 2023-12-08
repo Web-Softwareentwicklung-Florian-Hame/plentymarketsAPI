@@ -52,6 +52,7 @@ docs/PimVariationProperty.md
 docs/PimVariationPropertySelectionValues.md
 docs/PimVariationPropertyValues.md
 docs/PimVariationScrollResponse.md
+docs/PimVariationStock.md
 docs/PimVariationTag.md
 docs/PimVariationUnit.md
 docs/PimVariationWarehouse.md
@@ -137,6 +138,7 @@ model_pim_variation_property.go
 model_pim_variation_property_selection_values.go
 model_pim_variation_property_values.go
 model_pim_variation_scroll_response.go
+model_pim_variation_stock.go
 model_pim_variation_tag.go
 model_pim_variation_unit.go
 model_pim_variation_warehouse.go

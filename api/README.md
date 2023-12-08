@@ -149,6 +149,7 @@ Class | Method | HTTP request | Description
  - [PimVariationPropertySelectionValues](docs/PimVariationPropertySelectionValues.md)
  - [PimVariationPropertyValues](docs/PimVariationPropertyValues.md)
  - [PimVariationScrollResponse](docs/PimVariationScrollResponse.md)
+ - [PimVariationStock](docs/PimVariationStock.md)
  - [PimVariationTag](docs/PimVariationTag.md)
  - [PimVariationUnit](docs/PimVariationUnit.md)
  - [PimVariationWarehouse](docs/PimVariationWarehouse.md)

@@ -67,6 +67,7 @@ Name | Type | Description | Notes
 **PropertiesInherited** | Pointer to **bool** |  | [optional] 
 **TagsInherited** | Pointer to **bool** |  | [optional] 
 **Images** | Pointer to [**[]VariationImage**](VariationImage.md) |  | [optional] 
+**Stock** | Pointer to [**[]PimVariationStock**](PimVariationStock.md) |  | [optional] 
 
 ## Methods
 
@@ -1661,6 +1662,31 @@ SetImages sets Images field to given value.
 `func (o *PimVariationBase) HasImages() bool`
 
 HasImages returns a boolean if a field has been set.
+
+### GetStock
+
+`func (o *PimVariationBase) GetStock() []PimVariationStock`
+
+GetStock returns the Stock field if non-nil, zero value otherwise.
+
+### GetStockOk
+
+`func (o *PimVariationBase) GetStockOk() (*[]PimVariationStock, bool)`
+
+GetStockOk returns a tuple with the Stock field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStock
+
+`func (o *PimVariationBase) SetStock(v []PimVariationStock)`
+
+SetStock sets Stock field to given value.
+
+### HasStock
+
+`func (o *PimVariationBase) HasStock() bool`
+
+HasStock returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

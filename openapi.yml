@@ -2036,6 +2036,39 @@ components:
         content:
           type: number
 
+    PimVariationStock:
+      type: object
+      properties:
+        itemId:
+          type: integer
+        warehouseId:
+          type: integer
+        stockPhysical:
+          type: number
+        reservedStock:
+          type: number
+        reservedEbay:
+          type: number
+        reorderDelta:
+          type: number
+        stockNet:
+          type: number
+        storehouse_type:
+          type: string
+        reordered:
+          type: number
+        reservedBundle:
+          type: number
+        averagePurchasePrice:
+          type: number
+        warehousePriority:
+          type: string
+        updatedAt:
+          type: string
+          format: date-time
+        variationId:
+          type: integer
+
     PimVariationBase:
       type: object
       properties:
@@ -2173,6 +2206,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/VariationImage'
+        stock:
+          type: array
+          items:
+            $ref: '#/components/schemas/PimVariationStock'
     PimVariation:
       type: object
       properties:

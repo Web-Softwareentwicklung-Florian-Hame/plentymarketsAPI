@@ -1374,16 +1374,7 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                type: object
-                properties:
-                  cursor:
-                    type: string
-                    description: "The cursor for the next page of results."
-                  entries:
-                    type: array
-                    description: "List of Variation"
-                    items:
-                      $ref: "#/components/schemas/PimVariation"
+               $ref: '#/components/schemas/PimVariationScrollResponse'
         "401":
           "description": "The resource owner or authorization server denied the request. - The request is missing a required parameter, includes an invalid parameter value, includes a parameter more than once, or is otherwise malformed. Check the \"access token\" parameter."
       parameters:
@@ -4458,6 +4449,18 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ItemResponse'
+    PimVariationScrollResponse:
+      type: object
+      description: pagination response containing variations
+      properties:
+        cursor:
+          type: string
+          description: "The cursor for the next page of results."
+        entries:
+          type: array
+          description: "List of Variation"
+          items:
+            $ref: "#/components/schemas/PimVariation"
     VariationPagination:
       type: object
       description: pagination response containing variations

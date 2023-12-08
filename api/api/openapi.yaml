@@ -2662,7 +2662,7 @@ paths:
           content:
             application/json;charset=utf-8:
               schema:
-                $ref: '#/components/schemas/inline_response_200_1'
+                $ref: '#/components/schemas/PimVariationScrollResponse'
           description: OK
         "401":
           description: The resource owner or authorization server denied the request.
@@ -22045,6 +22045,1141 @@ components:
             $ref: '#/components/schemas/ItemResponse'
           type: array
       type: object
+    PimVariationScrollResponse:
+      description: pagination response containing variations
+      example:
+        cursor: cursor
+        entries:
+        - images:
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            imageId: 9
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            imageId: 9
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          clients:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 3
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 3
+          skus:
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          comments:
+          - id: 6
+            text: text
+            isVisibleForContact: true
+            userId: 3
+          - id: 6
+            text: text
+            isVisibleForContact: true
+            userId: 3
+          attributeValues:
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          warehouses:
+          - reorderLevel: 7
+            stockTurnoverInDays: 4
+            warehouseId: 1
+            zoneId: 6
+            storageLocationType: storageLocationType
+            storageLocation: 5
+            stockBuffer: 9
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          - reorderLevel: 7
+            stockTurnoverInDays: 4
+            warehouseId: 1
+            zoneId: 6
+            storageLocationType: storageLocationType
+            storageLocation: 5
+            stockBuffer: 9
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          additionalSkus:
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          barcodes:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 8
+            code: code
+            barcodeId: 4
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 8
+            code: code
+            barcodeId: 4
+          tags:
+          - tagId: 9
+          - tagId: 9
+          marketIdentNumbers:
+          - variationId: 8
+            id: 9
+            position: 5
+            type: type
+            value: value
+            countryId: 0
+          - variationId: 8
+            id: 9
+            position: 5
+            type: type
+            value: value
+            countryId: 0
+          markets:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            marketId: 5.877124706116695
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            marketId: 5.877124706116695
+          unit:
+            unitId: 6
+            content: 2.8841621266687802
+            unitCombinationId: 1
+          bundleComponents:
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          defaultCategories:
+          - branchId: 1
+            variationId: 7
+            manually: true
+            plentyId: 1
+          - branchId: 1
+            variationId: 7
+            manually: true
+            plentyId: 1
+          supplier:
+          - currencyPurchasePrice: 2.7977867356748476
+            itemNumber: itemNumber
+            supplierId: 8
+            isDiscountable: true
+            packagingUnit: 4.332304821875894
+            discount: 7.203794749804894
+            minimumPurchase: 0.4833312865174044
+            purchasePrice: 4.518309517874243
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 3
+            deliveryTimeInDays: 0
+            id: 2
+            itemDescription: itemDescription
+          - currencyPurchasePrice: 2.7977867356748476
+            itemNumber: itemNumber
+            supplierId: 8
+            isDiscountable: true
+            packagingUnit: 4.332304821875894
+            discount: 7.203794749804894
+            minimumPurchase: 0.4833312865174044
+            purchasePrice: 4.518309517874243
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 3
+            deliveryTimeInDays: 0
+            id: 2
+            itemDescription: itemDescription
+          id: 7
+          categories:
+          - variationId: 5
+            position: 7
+            categoryId: 8
+            isNeckermannPrimary: true
+          - variationId: 5
+            position: 7
+            categoryId: 8
+            isNeckermannPrimary: true
+          salesPrices:
+          - salesPriceId: 1
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            price: 3.502657762086401
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - salesPriceId: 1
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            price: 3.502657762086401
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          properties:
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 6
+            selectionValues:
+            - selectionId: 8
+            - selectionId: 8
+            propertyId: 9
+            value: ""
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 6
+            selectionValues:
+            - selectionId: 8
+            - selectionId: 8
+            propertyId: 9
+            value: ""
+          base:
+            intervalOrderQuantity: 8.969578798196912
+            automaticClientVisibility: 0
+            stockLimitation: 7
+            minimumOrderQuantity: 4.652396432933246
+            propertiesInherited: true
+            clientsInherited: true
+            isUnavailableIfNetStockIsNotPositive: true
+            packingUnits: 4
+            vatId: 9
+            relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            purchasePrice: 3.0937452626664474
+            isActive: true
+            widthMM: 3.0576100241049344
+            tagsInherited: true
+            number: number
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            availableUntil: 2000-01-23T04:56:07.000+00:00
+            isInvisibleIfNetStockIsNotPositive: true
+            weightG: 7
+            customs: 9.132027271330688
+            model: model
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            images:
+            - documentUploadPreviewHeight: 1
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 0
+              height: 6
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              imageId: 9
+              availabilities:
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 2
+              names:
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 9
+              storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
+              lastUpdate: lastUpdate
+              width: 4
+              position: 6
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            - documentUploadPreviewHeight: 1
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 0
+              height: 6
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              imageId: 9
+              availabilities:
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 2
+              names:
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 9
+              storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
+              lastUpdate: lastUpdate
+              width: 4
+              position: 6
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            extraShippingCharge2: 4.078845849666752
+            isMain: true
+            picking: picking
+            palletTypeId: 6
+            isVisibleIfNetStockIsPositive: true
+            categoriesInherited: true
+            itemId: 6
+            automaticListVisibility: 7
+            operatingCosts: 0.8774076871421566
+            availabilityId: 3
+            mainWarehouseId: 6
+            name: name
+            mainVariationId: 6
+            position: 5
+            releasedAt: 2000-01-23T04:56:07.000+00:00
+            weightNetG: 3
+            transportationCosts: 4.678947989005849
+            packingUnitTypeId: 1
+            isAvailableIfNetStockIsPositive: true
+            isHiddenInCategoryList: true
+            availability: 6
+            isVisibleInListIfNetStockIsPositive: true
+            bundleType: bundleType
+            priceCalculationUUID: priceCalculationUUID
+            maximumOrderQuantity: 0.10263654006109402
+            warehousesInherited: true
+            referrerInherited: true
+            extraShippingCharge1: 3.2588565619047607
+            unitsContained: 0
+            supplierInherited: true
+            heightMM: 5.533258397034986
+            externalId: externalId
+            priceCalculationId: 0
+            defaultShippingCosts: 5.507386964179881
+            lengthMM: 7.04836565559697
+            isInvisibleInListIfNetStockIsNotPositive: true
+            estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
+            salesPricesInherited: true
+            storageCosts: 7.260521264802104
+            movingAveragePrice: 7.143538047012306
+        - images:
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            imageId: 9
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          - documentUploadPreviewHeight: 1
+            insert: insert
+            type: type
+            md5Checksum: md5Checksum
+            path: path
+            cleanImageName: cleanImageName
+            urlPreview: urlPreview
+            id: 0
+            height: 6
+            documentUploadPreviewWidth: 1
+            hasVariationLink: true
+            imageId: 9
+            availabilities:
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            - imageId: 3
+              type: type
+              value: 5.6644160867523485
+            urlMiddle: urlMiddle
+            url: url
+            urlSecondPreview: urlSecondPreview
+            documentUploadPathPreview: documentUploadPathPreview
+            itemId: 2
+            names:
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            - imageId: 1
+              name: name
+              alternate: alternate
+              lang: lang
+            size: 9
+            storageProviderId: storageProviderId
+            uploadUrl: uploadUrl
+            lastUpdate: lastUpdate
+            width: 4
+            position: 6
+            documentUploadPath: documentUploadPath
+            fileType: fileType
+            md5ChecksumOriginal: md5ChecksumOriginal
+          clients:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 3
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            plentyId: 3
+          skus:
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          - additionalInformation: additionalInformation
+            isActive: true
+            marketId: 8
+            accountId: 2
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            initialSku: initialSku
+            deletedAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 3
+            parentSku: parentSku
+            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            exportedAt: 2000-01-23T04:56:07.000+00:00
+            id: 4
+            sku: sku
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            status: status
+          comments:
+          - id: 6
+            text: text
+            isVisibleForContact: true
+            userId: 3
+          - id: 6
+            text: text
+            isVisibleForContact: true
+            userId: 3
+          attributeValues:
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          - attributeId: 5
+            isLinkableToImage: true
+            valueId: 5
+            attributeValue:
+              image: image
+              percentageDistribution: 1
+              ottoValue: ottoValue
+              laRedouteValue: laRedouteValue
+              attributeId: 7
+              tracdelightValue: tracdelightValue
+              amazonValue: amazonValue
+              backendName: backendName
+              comment: comment
+              id: 7
+              position: 9
+              neckermannAtEpValue: neckermannAtEpValue
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attribute:
+              isLinkableToImage: true
+              neckermannAtEpAttribute: 9
+              laRedouteAttribute: 7
+              isSurchargePercental: true
+              values:
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              - image: image
+                percentageDistribution: 1
+                ottoValue: ottoValue
+                laRedouteValue: laRedouteValue
+                attributeId: 7
+                tracdelightValue: tracdelightValue
+                amazonValue: amazonValue
+                backendName: backendName
+                comment: comment
+                id: 7
+                position: 9
+                neckermannAtEpValue: neckermannAtEpValue
+                updatedAt: 2000-01-23T04:56:07.000+00:00
+              amazonAttribute: amazonAttribute
+              pixmaniaAttribute: 3
+              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
+              fruugoAttribute: fruugoAttribute
+              googleShoppingAttribute: googleShoppingAttribute
+              isGroupable: true
+              backendName: backendName
+              id: 3
+              position: 1
+              ottoAttribute: ottoAttribute
+              updatedAt: 2000-01-23T04:56:07.000+00:00
+            attributeValueSetId: 4
+          warehouses:
+          - reorderLevel: 7
+            stockTurnoverInDays: 4
+            warehouseId: 1
+            zoneId: 6
+            storageLocationType: storageLocationType
+            storageLocation: 5
+            stockBuffer: 9
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          - reorderLevel: 7
+            stockTurnoverInDays: 4
+            warehouseId: 1
+            zoneId: 6
+            storageLocationType: storageLocationType
+            storageLocation: 5
+            stockBuffer: 9
+            isBatch: true
+            maximumStock: 1
+            isBestBeforeDate: true
+          additionalSkus:
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          - marketAccountId: 3.616076749251911
+            sku: sku
+            marketId: 9.301444243932576
+          barcodes:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 8
+            code: code
+            barcodeId: 4
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 8
+            code: code
+            barcodeId: 4
+          tags:
+          - tagId: 9
+          - tagId: 9
+          marketIdentNumbers:
+          - variationId: 8
+            id: 9
+            position: 5
+            type: type
+            value: value
+            countryId: 0
+          - variationId: 8
+            id: 9
+            position: 5
+            type: type
+            value: value
+            countryId: 0
+          markets:
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            marketId: 5.877124706116695
+          - createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            marketId: 5.877124706116695
+          unit:
+            unitId: 6
+            content: 2.8841621266687802
+            unitCombinationId: 1
+          bundleComponents:
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          - componentVariationId: 2.027123023002322
+            componentQuantity: 4.145608029883936
+          defaultCategories:
+          - branchId: 1
+            variationId: 7
+            manually: true
+            plentyId: 1
+          - branchId: 1
+            variationId: 7
+            manually: true
+            plentyId: 1
+          supplier:
+          - currencyPurchasePrice: 2.7977867356748476
+            itemNumber: itemNumber
+            supplierId: 8
+            isDiscountable: true
+            packagingUnit: 4.332304821875894
+            discount: 7.203794749804894
+            minimumPurchase: 0.4833312865174044
+            purchasePrice: 4.518309517874243
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 3
+            deliveryTimeInDays: 0
+            id: 2
+            itemDescription: itemDescription
+          - currencyPurchasePrice: 2.7977867356748476
+            itemNumber: itemNumber
+            supplierId: 8
+            isDiscountable: true
+            packagingUnit: 4.332304821875894
+            discount: 7.203794749804894
+            minimumPurchase: 0.4833312865174044
+            purchasePrice: 4.518309517874243
+            lastPriceQuery: true
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            lastUpdateTimestamp: lastUpdateTimestamp
+            variationId: 3
+            deliveryTimeInDays: 0
+            id: 2
+            itemDescription: itemDescription
+          id: 7
+          categories:
+          - variationId: 5
+            position: 7
+            categoryId: 8
+            isNeckermannPrimary: true
+          - variationId: 5
+            position: 7
+            categoryId: 8
+            isNeckermannPrimary: true
+          salesPrices:
+          - salesPriceId: 1
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            price: 3.502657762086401
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          - salesPriceId: 1
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            variationId: 9
+            price: 3.502657762086401
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+          properties:
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 6
+            selectionValues:
+            - selectionId: 8
+            - selectionId: 8
+            propertyId: 9
+            value: ""
+          - values:
+            - description: description
+              lang: lang
+              value: value
+            - description: description
+              lang: lang
+              value: value
+            groupId: 6
+            selectionValues:
+            - selectionId: 8
+            - selectionId: 8
+            propertyId: 9
+            value: ""
+          base:
+            intervalOrderQuantity: 8.969578798196912
+            automaticClientVisibility: 0
+            stockLimitation: 7
+            minimumOrderQuantity: 4.652396432933246
+            propertiesInherited: true
+            clientsInherited: true
+            isUnavailableIfNetStockIsNotPositive: true
+            packingUnits: 4
+            vatId: 9
+            relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
+            purchasePrice: 3.0937452626664474
+            isActive: true
+            widthMM: 3.0576100241049344
+            tagsInherited: true
+            number: number
+            createdAt: 2000-01-23T04:56:07.000+00:00
+            availableUntil: 2000-01-23T04:56:07.000+00:00
+            isInvisibleIfNetStockIsNotPositive: true
+            weightG: 7
+            customs: 9.132027271330688
+            model: model
+            updatedAt: 2000-01-23T04:56:07.000+00:00
+            images:
+            - documentUploadPreviewHeight: 1
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 0
+              height: 6
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              imageId: 9
+              availabilities:
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 2
+              names:
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 9
+              storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
+              lastUpdate: lastUpdate
+              width: 4
+              position: 6
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            - documentUploadPreviewHeight: 1
+              insert: insert
+              type: type
+              md5Checksum: md5Checksum
+              path: path
+              cleanImageName: cleanImageName
+              urlPreview: urlPreview
+              id: 0
+              height: 6
+              documentUploadPreviewWidth: 1
+              hasVariationLink: true
+              imageId: 9
+              availabilities:
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              - imageId: 3
+                type: type
+                value: 5.6644160867523485
+              urlMiddle: urlMiddle
+              url: url
+              urlSecondPreview: urlSecondPreview
+              documentUploadPathPreview: documentUploadPathPreview
+              itemId: 2
+              names:
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              - imageId: 1
+                name: name
+                alternate: alternate
+                lang: lang
+              size: 9
+              storageProviderId: storageProviderId
+              uploadUrl: uploadUrl
+              lastUpdate: lastUpdate
+              width: 4
+              position: 6
+              documentUploadPath: documentUploadPath
+              fileType: fileType
+              md5ChecksumOriginal: md5ChecksumOriginal
+            extraShippingCharge2: 4.078845849666752
+            isMain: true
+            picking: picking
+            palletTypeId: 6
+            isVisibleIfNetStockIsPositive: true
+            categoriesInherited: true
+            itemId: 6
+            automaticListVisibility: 7
+            operatingCosts: 0.8774076871421566
+            availabilityId: 3
+            mainWarehouseId: 6
+            name: name
+            mainVariationId: 6
+            position: 5
+            releasedAt: 2000-01-23T04:56:07.000+00:00
+            weightNetG: 3
+            transportationCosts: 4.678947989005849
+            packingUnitTypeId: 1
+            isAvailableIfNetStockIsPositive: true
+            isHiddenInCategoryList: true
+            availability: 6
+            isVisibleInListIfNetStockIsPositive: true
+            bundleType: bundleType
+            priceCalculationUUID: priceCalculationUUID
+            maximumOrderQuantity: 0.10263654006109402
+            warehousesInherited: true
+            referrerInherited: true
+            extraShippingCharge1: 3.2588565619047607
+            unitsContained: 0
+            supplierInherited: true
+            heightMM: 5.533258397034986
+            externalId: externalId
+            priceCalculationId: 0
+            defaultShippingCosts: 5.507386964179881
+            lengthMM: 7.04836565559697
+            isInvisibleInListIfNetStockIsNotPositive: true
+            estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
+            salesPricesInherited: true
+            storageCosts: 7.260521264802104
+            movingAveragePrice: 7.143538047012306
+      properties:
+        cursor:
+          description: The cursor for the next page of results.
+          type: string
+        entries:
+          description: List of Variation
+          items:
+            $ref: '#/components/schemas/PimVariation'
+          type: array
+      type: object
     VariationPagination:
       description: pagination response containing variations
       example:
@@ -25219,1140 +26354,6 @@ components:
         itemsPerPage:
           description: The requested amount of items per result page
           type: integer
-        entries:
-          description: List of Variation
-          items:
-            $ref: '#/components/schemas/PimVariation'
-          type: array
-      type: object
-    inline_response_200_1:
-      example:
-        cursor: cursor
-        entries:
-        - images:
-          - documentUploadPreviewHeight: 1
-            insert: insert
-            type: type
-            md5Checksum: md5Checksum
-            path: path
-            cleanImageName: cleanImageName
-            urlPreview: urlPreview
-            id: 0
-            height: 6
-            documentUploadPreviewWidth: 1
-            hasVariationLink: true
-            imageId: 9
-            availabilities:
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            urlMiddle: urlMiddle
-            url: url
-            urlSecondPreview: urlSecondPreview
-            documentUploadPathPreview: documentUploadPathPreview
-            itemId: 2
-            names:
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            size: 9
-            storageProviderId: storageProviderId
-            uploadUrl: uploadUrl
-            lastUpdate: lastUpdate
-            width: 4
-            position: 6
-            documentUploadPath: documentUploadPath
-            fileType: fileType
-            md5ChecksumOriginal: md5ChecksumOriginal
-          - documentUploadPreviewHeight: 1
-            insert: insert
-            type: type
-            md5Checksum: md5Checksum
-            path: path
-            cleanImageName: cleanImageName
-            urlPreview: urlPreview
-            id: 0
-            height: 6
-            documentUploadPreviewWidth: 1
-            hasVariationLink: true
-            imageId: 9
-            availabilities:
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            urlMiddle: urlMiddle
-            url: url
-            urlSecondPreview: urlSecondPreview
-            documentUploadPathPreview: documentUploadPathPreview
-            itemId: 2
-            names:
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            size: 9
-            storageProviderId: storageProviderId
-            uploadUrl: uploadUrl
-            lastUpdate: lastUpdate
-            width: 4
-            position: 6
-            documentUploadPath: documentUploadPath
-            fileType: fileType
-            md5ChecksumOriginal: md5ChecksumOriginal
-          clients:
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            plentyId: 3
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            plentyId: 3
-          skus:
-          - additionalInformation: additionalInformation
-            isActive: true
-            marketId: 8
-            accountId: 2
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            initialSku: initialSku
-            deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            parentSku: parentSku
-            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
-            sku: sku
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-            status: status
-          - additionalInformation: additionalInformation
-            isActive: true
-            marketId: 8
-            accountId: 2
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            initialSku: initialSku
-            deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            parentSku: parentSku
-            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
-            sku: sku
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-            status: status
-          comments:
-          - id: 6
-            text: text
-            isVisibleForContact: true
-            userId: 3
-          - id: 6
-            text: text
-            isVisibleForContact: true
-            userId: 3
-          attributeValues:
-          - attributeId: 5
-            isLinkableToImage: true
-            valueId: 5
-            attributeValue:
-              image: image
-              percentageDistribution: 1
-              ottoValue: ottoValue
-              laRedouteValue: laRedouteValue
-              attributeId: 7
-              tracdelightValue: tracdelightValue
-              amazonValue: amazonValue
-              backendName: backendName
-              comment: comment
-              id: 7
-              position: 9
-              neckermannAtEpValue: neckermannAtEpValue
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attribute:
-              isLinkableToImage: true
-              neckermannAtEpAttribute: 9
-              laRedouteAttribute: 7
-              isSurchargePercental: true
-              values:
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              amazonAttribute: amazonAttribute
-              pixmaniaAttribute: 3
-              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
-              fruugoAttribute: fruugoAttribute
-              googleShoppingAttribute: googleShoppingAttribute
-              isGroupable: true
-              backendName: backendName
-              id: 3
-              position: 1
-              ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attributeValueSetId: 4
-          - attributeId: 5
-            isLinkableToImage: true
-            valueId: 5
-            attributeValue:
-              image: image
-              percentageDistribution: 1
-              ottoValue: ottoValue
-              laRedouteValue: laRedouteValue
-              attributeId: 7
-              tracdelightValue: tracdelightValue
-              amazonValue: amazonValue
-              backendName: backendName
-              comment: comment
-              id: 7
-              position: 9
-              neckermannAtEpValue: neckermannAtEpValue
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attribute:
-              isLinkableToImage: true
-              neckermannAtEpAttribute: 9
-              laRedouteAttribute: 7
-              isSurchargePercental: true
-              values:
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              amazonAttribute: amazonAttribute
-              pixmaniaAttribute: 3
-              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
-              fruugoAttribute: fruugoAttribute
-              googleShoppingAttribute: googleShoppingAttribute
-              isGroupable: true
-              backendName: backendName
-              id: 3
-              position: 1
-              ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attributeValueSetId: 4
-          warehouses:
-          - reorderLevel: 7
-            stockTurnoverInDays: 4
-            warehouseId: 1
-            zoneId: 6
-            storageLocationType: storageLocationType
-            storageLocation: 5
-            stockBuffer: 9
-            isBatch: true
-            maximumStock: 1
-            isBestBeforeDate: true
-          - reorderLevel: 7
-            stockTurnoverInDays: 4
-            warehouseId: 1
-            zoneId: 6
-            storageLocationType: storageLocationType
-            storageLocation: 5
-            stockBuffer: 9
-            isBatch: true
-            maximumStock: 1
-            isBestBeforeDate: true
-          additionalSkus:
-          - marketAccountId: 3.616076749251911
-            sku: sku
-            marketId: 9.301444243932576
-          - marketAccountId: 3.616076749251911
-            sku: sku
-            marketId: 9.301444243932576
-          barcodes:
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 8
-            code: code
-            barcodeId: 4
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 8
-            code: code
-            barcodeId: 4
-          tags:
-          - tagId: 9
-          - tagId: 9
-          marketIdentNumbers:
-          - variationId: 8
-            id: 9
-            position: 5
-            type: type
-            value: value
-            countryId: 0
-          - variationId: 8
-            id: 9
-            position: 5
-            type: type
-            value: value
-            countryId: 0
-          markets:
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            marketId: 5.877124706116695
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            marketId: 5.877124706116695
-          unit:
-            unitId: 6
-            content: 2.8841621266687802
-            unitCombinationId: 1
-          bundleComponents:
-          - componentVariationId: 2.027123023002322
-            componentQuantity: 4.145608029883936
-          - componentVariationId: 2.027123023002322
-            componentQuantity: 4.145608029883936
-          defaultCategories:
-          - branchId: 1
-            variationId: 7
-            manually: true
-            plentyId: 1
-          - branchId: 1
-            variationId: 7
-            manually: true
-            plentyId: 1
-          supplier:
-          - currencyPurchasePrice: 2.7977867356748476
-            itemNumber: itemNumber
-            supplierId: 8
-            isDiscountable: true
-            packagingUnit: 4.332304821875894
-            discount: 7.203794749804894
-            minimumPurchase: 0.4833312865174044
-            purchasePrice: 4.518309517874243
-            lastPriceQuery: true
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            lastUpdateTimestamp: lastUpdateTimestamp
-            variationId: 3
-            deliveryTimeInDays: 0
-            id: 2
-            itemDescription: itemDescription
-          - currencyPurchasePrice: 2.7977867356748476
-            itemNumber: itemNumber
-            supplierId: 8
-            isDiscountable: true
-            packagingUnit: 4.332304821875894
-            discount: 7.203794749804894
-            minimumPurchase: 0.4833312865174044
-            purchasePrice: 4.518309517874243
-            lastPriceQuery: true
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            lastUpdateTimestamp: lastUpdateTimestamp
-            variationId: 3
-            deliveryTimeInDays: 0
-            id: 2
-            itemDescription: itemDescription
-          id: 7
-          categories:
-          - variationId: 5
-            position: 7
-            categoryId: 8
-            isNeckermannPrimary: true
-          - variationId: 5
-            position: 7
-            categoryId: 8
-            isNeckermannPrimary: true
-          salesPrices:
-          - salesPriceId: 1
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            price: 3.502657762086401
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-          - salesPriceId: 1
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            price: 3.502657762086401
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-          properties:
-          - values:
-            - description: description
-              lang: lang
-              value: value
-            - description: description
-              lang: lang
-              value: value
-            groupId: 6
-            selectionValues:
-            - selectionId: 8
-            - selectionId: 8
-            propertyId: 9
-            value: ""
-          - values:
-            - description: description
-              lang: lang
-              value: value
-            - description: description
-              lang: lang
-              value: value
-            groupId: 6
-            selectionValues:
-            - selectionId: 8
-            - selectionId: 8
-            propertyId: 9
-            value: ""
-          base:
-            intervalOrderQuantity: 8.969578798196912
-            automaticClientVisibility: 0
-            stockLimitation: 7
-            minimumOrderQuantity: 4.652396432933246
-            propertiesInherited: true
-            clientsInherited: true
-            isUnavailableIfNetStockIsNotPositive: true
-            packingUnits: 4
-            vatId: 9
-            relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            purchasePrice: 3.0937452626664474
-            isActive: true
-            widthMM: 3.0576100241049344
-            tagsInherited: true
-            number: number
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            availableUntil: 2000-01-23T04:56:07.000+00:00
-            isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 9.132027271330688
-            model: model
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-            images:
-            - documentUploadPreviewHeight: 1
-              insert: insert
-              type: type
-              md5Checksum: md5Checksum
-              path: path
-              cleanImageName: cleanImageName
-              urlPreview: urlPreview
-              id: 0
-              height: 6
-              documentUploadPreviewWidth: 1
-              hasVariationLink: true
-              imageId: 9
-              availabilities:
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              urlMiddle: urlMiddle
-              url: url
-              urlSecondPreview: urlSecondPreview
-              documentUploadPathPreview: documentUploadPathPreview
-              itemId: 2
-              names:
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              size: 9
-              storageProviderId: storageProviderId
-              uploadUrl: uploadUrl
-              lastUpdate: lastUpdate
-              width: 4
-              position: 6
-              documentUploadPath: documentUploadPath
-              fileType: fileType
-              md5ChecksumOriginal: md5ChecksumOriginal
-            - documentUploadPreviewHeight: 1
-              insert: insert
-              type: type
-              md5Checksum: md5Checksum
-              path: path
-              cleanImageName: cleanImageName
-              urlPreview: urlPreview
-              id: 0
-              height: 6
-              documentUploadPreviewWidth: 1
-              hasVariationLink: true
-              imageId: 9
-              availabilities:
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              urlMiddle: urlMiddle
-              url: url
-              urlSecondPreview: urlSecondPreview
-              documentUploadPathPreview: documentUploadPathPreview
-              itemId: 2
-              names:
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              size: 9
-              storageProviderId: storageProviderId
-              uploadUrl: uploadUrl
-              lastUpdate: lastUpdate
-              width: 4
-              position: 6
-              documentUploadPath: documentUploadPath
-              fileType: fileType
-              md5ChecksumOriginal: md5ChecksumOriginal
-            extraShippingCharge2: 4.078845849666752
-            isMain: true
-            picking: picking
-            palletTypeId: 6
-            isVisibleIfNetStockIsPositive: true
-            categoriesInherited: true
-            itemId: 6
-            automaticListVisibility: 7
-            operatingCosts: 0.8774076871421566
-            availabilityId: 3
-            mainWarehouseId: 6
-            name: name
-            mainVariationId: 6
-            position: 5
-            releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 3
-            transportationCosts: 4.678947989005849
-            packingUnitTypeId: 1
-            isAvailableIfNetStockIsPositive: true
-            isHiddenInCategoryList: true
-            availability: 6
-            isVisibleInListIfNetStockIsPositive: true
-            bundleType: bundleType
-            priceCalculationUUID: priceCalculationUUID
-            maximumOrderQuantity: 0.10263654006109402
-            warehousesInherited: true
-            referrerInherited: true
-            extraShippingCharge1: 3.2588565619047607
-            unitsContained: 0
-            supplierInherited: true
-            heightMM: 5.533258397034986
-            externalId: externalId
-            priceCalculationId: 0
-            defaultShippingCosts: 5.507386964179881
-            lengthMM: 7.04836565559697
-            isInvisibleInListIfNetStockIsNotPositive: true
-            estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
-            salesPricesInherited: true
-            storageCosts: 7.260521264802104
-            movingAveragePrice: 7.143538047012306
-        - images:
-          - documentUploadPreviewHeight: 1
-            insert: insert
-            type: type
-            md5Checksum: md5Checksum
-            path: path
-            cleanImageName: cleanImageName
-            urlPreview: urlPreview
-            id: 0
-            height: 6
-            documentUploadPreviewWidth: 1
-            hasVariationLink: true
-            imageId: 9
-            availabilities:
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            urlMiddle: urlMiddle
-            url: url
-            urlSecondPreview: urlSecondPreview
-            documentUploadPathPreview: documentUploadPathPreview
-            itemId: 2
-            names:
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            size: 9
-            storageProviderId: storageProviderId
-            uploadUrl: uploadUrl
-            lastUpdate: lastUpdate
-            width: 4
-            position: 6
-            documentUploadPath: documentUploadPath
-            fileType: fileType
-            md5ChecksumOriginal: md5ChecksumOriginal
-          - documentUploadPreviewHeight: 1
-            insert: insert
-            type: type
-            md5Checksum: md5Checksum
-            path: path
-            cleanImageName: cleanImageName
-            urlPreview: urlPreview
-            id: 0
-            height: 6
-            documentUploadPreviewWidth: 1
-            hasVariationLink: true
-            imageId: 9
-            availabilities:
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            - imageId: 3
-              type: type
-              value: 5.6644160867523485
-            urlMiddle: urlMiddle
-            url: url
-            urlSecondPreview: urlSecondPreview
-            documentUploadPathPreview: documentUploadPathPreview
-            itemId: 2
-            names:
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            - imageId: 1
-              name: name
-              alternate: alternate
-              lang: lang
-            size: 9
-            storageProviderId: storageProviderId
-            uploadUrl: uploadUrl
-            lastUpdate: lastUpdate
-            width: 4
-            position: 6
-            documentUploadPath: documentUploadPath
-            fileType: fileType
-            md5ChecksumOriginal: md5ChecksumOriginal
-          clients:
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            plentyId: 3
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            plentyId: 3
-          skus:
-          - additionalInformation: additionalInformation
-            isActive: true
-            marketId: 8
-            accountId: 2
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            initialSku: initialSku
-            deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            parentSku: parentSku
-            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
-            sku: sku
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-            status: status
-          - additionalInformation: additionalInformation
-            isActive: true
-            marketId: 8
-            accountId: 2
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            initialSku: initialSku
-            deletedAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 3
-            parentSku: parentSku
-            stockUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            exportedAt: 2000-01-23T04:56:07.000+00:00
-            id: 4
-            sku: sku
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-            status: status
-          comments:
-          - id: 6
-            text: text
-            isVisibleForContact: true
-            userId: 3
-          - id: 6
-            text: text
-            isVisibleForContact: true
-            userId: 3
-          attributeValues:
-          - attributeId: 5
-            isLinkableToImage: true
-            valueId: 5
-            attributeValue:
-              image: image
-              percentageDistribution: 1
-              ottoValue: ottoValue
-              laRedouteValue: laRedouteValue
-              attributeId: 7
-              tracdelightValue: tracdelightValue
-              amazonValue: amazonValue
-              backendName: backendName
-              comment: comment
-              id: 7
-              position: 9
-              neckermannAtEpValue: neckermannAtEpValue
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attribute:
-              isLinkableToImage: true
-              neckermannAtEpAttribute: 9
-              laRedouteAttribute: 7
-              isSurchargePercental: true
-              values:
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              amazonAttribute: amazonAttribute
-              pixmaniaAttribute: 3
-              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
-              fruugoAttribute: fruugoAttribute
-              googleShoppingAttribute: googleShoppingAttribute
-              isGroupable: true
-              backendName: backendName
-              id: 3
-              position: 1
-              ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attributeValueSetId: 4
-          - attributeId: 5
-            isLinkableToImage: true
-            valueId: 5
-            attributeValue:
-              image: image
-              percentageDistribution: 1
-              ottoValue: ottoValue
-              laRedouteValue: laRedouteValue
-              attributeId: 7
-              tracdelightValue: tracdelightValue
-              amazonValue: amazonValue
-              backendName: backendName
-              comment: comment
-              id: 7
-              position: 9
-              neckermannAtEpValue: neckermannAtEpValue
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attribute:
-              isLinkableToImage: true
-              neckermannAtEpAttribute: 9
-              laRedouteAttribute: 7
-              isSurchargePercental: true
-              values:
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              - image: image
-                percentageDistribution: 1
-                ottoValue: ottoValue
-                laRedouteValue: laRedouteValue
-                attributeId: 7
-                tracdelightValue: tracdelightValue
-                amazonValue: amazonValue
-                backendName: backendName
-                comment: comment
-                id: 7
-                position: 9
-                neckermannAtEpValue: neckermannAtEpValue
-                updatedAt: 2000-01-23T04:56:07.000+00:00
-              amazonAttribute: amazonAttribute
-              pixmaniaAttribute: 3
-              typeOfSelectionInOnlineStore: typeOfSelectionInOnlineStore
-              fruugoAttribute: fruugoAttribute
-              googleShoppingAttribute: googleShoppingAttribute
-              isGroupable: true
-              backendName: backendName
-              id: 3
-              position: 1
-              ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
-            attributeValueSetId: 4
-          warehouses:
-          - reorderLevel: 7
-            stockTurnoverInDays: 4
-            warehouseId: 1
-            zoneId: 6
-            storageLocationType: storageLocationType
-            storageLocation: 5
-            stockBuffer: 9
-            isBatch: true
-            maximumStock: 1
-            isBestBeforeDate: true
-          - reorderLevel: 7
-            stockTurnoverInDays: 4
-            warehouseId: 1
-            zoneId: 6
-            storageLocationType: storageLocationType
-            storageLocation: 5
-            stockBuffer: 9
-            isBatch: true
-            maximumStock: 1
-            isBestBeforeDate: true
-          additionalSkus:
-          - marketAccountId: 3.616076749251911
-            sku: sku
-            marketId: 9.301444243932576
-          - marketAccountId: 3.616076749251911
-            sku: sku
-            marketId: 9.301444243932576
-          barcodes:
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 8
-            code: code
-            barcodeId: 4
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 8
-            code: code
-            barcodeId: 4
-          tags:
-          - tagId: 9
-          - tagId: 9
-          marketIdentNumbers:
-          - variationId: 8
-            id: 9
-            position: 5
-            type: type
-            value: value
-            countryId: 0
-          - variationId: 8
-            id: 9
-            position: 5
-            type: type
-            value: value
-            countryId: 0
-          markets:
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            marketId: 5.877124706116695
-          - createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            marketId: 5.877124706116695
-          unit:
-            unitId: 6
-            content: 2.8841621266687802
-            unitCombinationId: 1
-          bundleComponents:
-          - componentVariationId: 2.027123023002322
-            componentQuantity: 4.145608029883936
-          - componentVariationId: 2.027123023002322
-            componentQuantity: 4.145608029883936
-          defaultCategories:
-          - branchId: 1
-            variationId: 7
-            manually: true
-            plentyId: 1
-          - branchId: 1
-            variationId: 7
-            manually: true
-            plentyId: 1
-          supplier:
-          - currencyPurchasePrice: 2.7977867356748476
-            itemNumber: itemNumber
-            supplierId: 8
-            isDiscountable: true
-            packagingUnit: 4.332304821875894
-            discount: 7.203794749804894
-            minimumPurchase: 0.4833312865174044
-            purchasePrice: 4.518309517874243
-            lastPriceQuery: true
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            lastUpdateTimestamp: lastUpdateTimestamp
-            variationId: 3
-            deliveryTimeInDays: 0
-            id: 2
-            itemDescription: itemDescription
-          - currencyPurchasePrice: 2.7977867356748476
-            itemNumber: itemNumber
-            supplierId: 8
-            isDiscountable: true
-            packagingUnit: 4.332304821875894
-            discount: 7.203794749804894
-            minimumPurchase: 0.4833312865174044
-            purchasePrice: 4.518309517874243
-            lastPriceQuery: true
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            lastUpdateTimestamp: lastUpdateTimestamp
-            variationId: 3
-            deliveryTimeInDays: 0
-            id: 2
-            itemDescription: itemDescription
-          id: 7
-          categories:
-          - variationId: 5
-            position: 7
-            categoryId: 8
-            isNeckermannPrimary: true
-          - variationId: 5
-            position: 7
-            categoryId: 8
-            isNeckermannPrimary: true
-          salesPrices:
-          - salesPriceId: 1
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            price: 3.502657762086401
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-          - salesPriceId: 1
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            variationId: 9
-            price: 3.502657762086401
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-          properties:
-          - values:
-            - description: description
-              lang: lang
-              value: value
-            - description: description
-              lang: lang
-              value: value
-            groupId: 6
-            selectionValues:
-            - selectionId: 8
-            - selectionId: 8
-            propertyId: 9
-            value: ""
-          - values:
-            - description: description
-              lang: lang
-              value: value
-            - description: description
-              lang: lang
-              value: value
-            groupId: 6
-            selectionValues:
-            - selectionId: 8
-            - selectionId: 8
-            propertyId: 9
-            value: ""
-          base:
-            intervalOrderQuantity: 8.969578798196912
-            automaticClientVisibility: 0
-            stockLimitation: 7
-            minimumOrderQuantity: 4.652396432933246
-            propertiesInherited: true
-            clientsInherited: true
-            isUnavailableIfNetStockIsNotPositive: true
-            packingUnits: 4
-            vatId: 9
-            relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            purchasePrice: 3.0937452626664474
-            isActive: true
-            widthMM: 3.0576100241049344
-            tagsInherited: true
-            number: number
-            createdAt: 2000-01-23T04:56:07.000+00:00
-            availableUntil: 2000-01-23T04:56:07.000+00:00
-            isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 9.132027271330688
-            model: model
-            updatedAt: 2000-01-23T04:56:07.000+00:00
-            images:
-            - documentUploadPreviewHeight: 1
-              insert: insert
-              type: type
-              md5Checksum: md5Checksum
-              path: path
-              cleanImageName: cleanImageName
-              urlPreview: urlPreview
-              id: 0
-              height: 6
-              documentUploadPreviewWidth: 1
-              hasVariationLink: true
-              imageId: 9
-              availabilities:
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              urlMiddle: urlMiddle
-              url: url
-              urlSecondPreview: urlSecondPreview
-              documentUploadPathPreview: documentUploadPathPreview
-              itemId: 2
-              names:
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              size: 9
-              storageProviderId: storageProviderId
-              uploadUrl: uploadUrl
-              lastUpdate: lastUpdate
-              width: 4
-              position: 6
-              documentUploadPath: documentUploadPath
-              fileType: fileType
-              md5ChecksumOriginal: md5ChecksumOriginal
-            - documentUploadPreviewHeight: 1
-              insert: insert
-              type: type
-              md5Checksum: md5Checksum
-              path: path
-              cleanImageName: cleanImageName
-              urlPreview: urlPreview
-              id: 0
-              height: 6
-              documentUploadPreviewWidth: 1
-              hasVariationLink: true
-              imageId: 9
-              availabilities:
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              - imageId: 3
-                type: type
-                value: 5.6644160867523485
-              urlMiddle: urlMiddle
-              url: url
-              urlSecondPreview: urlSecondPreview
-              documentUploadPathPreview: documentUploadPathPreview
-              itemId: 2
-              names:
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              - imageId: 1
-                name: name
-                alternate: alternate
-                lang: lang
-              size: 9
-              storageProviderId: storageProviderId
-              uploadUrl: uploadUrl
-              lastUpdate: lastUpdate
-              width: 4
-              position: 6
-              documentUploadPath: documentUploadPath
-              fileType: fileType
-              md5ChecksumOriginal: md5ChecksumOriginal
-            extraShippingCharge2: 4.078845849666752
-            isMain: true
-            picking: picking
-            palletTypeId: 6
-            isVisibleIfNetStockIsPositive: true
-            categoriesInherited: true
-            itemId: 6
-            automaticListVisibility: 7
-            operatingCosts: 0.8774076871421566
-            availabilityId: 3
-            mainWarehouseId: 6
-            name: name
-            mainVariationId: 6
-            position: 5
-            releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 3
-            transportationCosts: 4.678947989005849
-            packingUnitTypeId: 1
-            isAvailableIfNetStockIsPositive: true
-            isHiddenInCategoryList: true
-            availability: 6
-            isVisibleInListIfNetStockIsPositive: true
-            bundleType: bundleType
-            priceCalculationUUID: priceCalculationUUID
-            maximumOrderQuantity: 0.10263654006109402
-            warehousesInherited: true
-            referrerInherited: true
-            extraShippingCharge1: 3.2588565619047607
-            unitsContained: 0
-            supplierInherited: true
-            heightMM: 5.533258397034986
-            externalId: externalId
-            priceCalculationId: 0
-            defaultShippingCosts: 5.507386964179881
-            lengthMM: 7.04836565559697
-            isInvisibleInListIfNetStockIsNotPositive: true
-            estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
-            salesPricesInherited: true
-            storageCosts: 7.260521264802104
-            movingAveragePrice: 7.143538047012306
-      properties:
-        cursor:
-          description: The cursor for the next page of results.
-          type: string
         entries:
           description: List of Variation
           items:

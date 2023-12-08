@@ -3953,7 +3953,7 @@ func (r ApiRestPimVariationsScrollGetRequest) Cursor(cursor string) ApiRestPimVa
 	return r
 }
 
-func (r ApiRestPimVariationsScrollGetRequest) Execute() (InlineResponse2001, *_nethttp.Response, error) {
+func (r ApiRestPimVariationsScrollGetRequest) Execute() (PimVariationScrollResponse, *_nethttp.Response, error) {
 	return r.ApiService.RestPimVariationsScrollGetExecute(r)
 }
 
@@ -3973,15 +3973,15 @@ func (a *DefaultApiService) RestPimVariationsScrollGet(ctx _context.Context) Api
 }
 
 // Execute executes the request
-//  @return InlineResponse2001
-func (a *DefaultApiService) RestPimVariationsScrollGetExecute(r ApiRestPimVariationsScrollGetRequest) (InlineResponse2001, *_nethttp.Response, error) {
+//  @return PimVariationScrollResponse
+func (a *DefaultApiService) RestPimVariationsScrollGetExecute(r ApiRestPimVariationsScrollGetRequest) (PimVariationScrollResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  InlineResponse2001
+		localVarReturnValue  PimVariationScrollResponse
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestPimVariationsScrollGet")

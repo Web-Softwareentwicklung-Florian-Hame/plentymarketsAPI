@@ -1670,7 +1670,7 @@ No authorization required
 
 ## RestPimVariationsScrollGet
 
-> InlineResponse2001 RestPimVariationsScrollGet(ctx).With(with).GroupBy(groupBy).Ids(ids).ItemId(itemId).ItemIds(itemIds).IsActive(isActive).IsMain(isMain).IsSalable(isSalable).SupplierId(supplierId).AvailabilityIds(availabilityIds).HasChildren(hasChildren).HasActiveChildren(hasActiveChildren).AttributeId(attributeId).AnyAttributeId(anyAttributeId).AllAttributeIds(allAttributeIds).AttributeValueId(attributeValueId).AnyAttributeValueId(anyAttributeValueId).AllAttributeValueIds(allAttributeValueIds).BarcodeCode(barcodeCode).BarcodeId(barcodeId).BundleType(bundleType).CategoryId(categoryId).AnyCategoryId(anyCategoryId).AllCategoryIds(allCategoryIds).AnyCharacteristicId(anyCharacteristicId).AllCharacteristicIds(allCharacteristicIds).ClientId(clientId).AnyClientId(anyClientId).AllClientIds(allClientIds).AutomaticClientVisibilities(automaticClientVisibilities).ImageHasMarketId(imageHasMarketId).Flag1(flag1).Flag2(flag2).ManufacturerId(manufacturerId).AnyManufacturerId(anyManufacturerId).ItemType(itemType).MarketId(marketId).AnyMarketId(anyMarketId).AllMarketIds(allMarketIds).PriceBetween(priceBetween).PriceBetweenById(priceBetweenById).AnySalesPriceId(anySalesPriceId).ReferrerIds(referrerIds).PriceCalculationUuid(priceCalculationUuid).PropertySelectionId(propertySelectionId).AnyPropertySelectionId(anyPropertySelectionId).AllPropertySelectionIds(allPropertySelectionIds).HasNameInLanguage(hasNameInLanguage).CreatedAt(createdAt).UpdatedAt(updatedAt).ItemCreatedAt(itemCreatedAt).ItemUpdatedAt(itemUpdatedAt).AvailabilityUpdatedAt(availabilityUpdatedAt).StockUpdatedAt(stockUpdatedAt).BarcodeUpdatedAt(barcodeUpdatedAt).CategoryUpdatedAt(categoryUpdatedAt).ClientUpdatedAt(clientUpdatedAt).MarketUpdatedAt(marketUpdatedAt).PropertyUpdatedAt(propertyUpdatedAt).SupplierUpdatedAt(supplierUpdatedAt).TagUpdatedAt(tagUpdatedAt).WarehouseUpdatedAt(warehouseUpdatedAt).HasLowestPrice(hasLowestPrice).Number(number).BundleComponentVariationId(bundleComponentVariationId).ItemNames(itemNames).ItemName1(itemName1).ItemName2(itemName2).ItemName3(itemName3).Model(model).SupplierItemNumber(supplierItemNumber).Lang(lang).Cursor(cursor).Execute()
+> PimVariationScrollResponse RestPimVariationsScrollGet(ctx).With(with).GroupBy(groupBy).Ids(ids).ItemId(itemId).ItemIds(itemIds).IsActive(isActive).IsMain(isMain).IsSalable(isSalable).SupplierId(supplierId).AvailabilityIds(availabilityIds).HasChildren(hasChildren).HasActiveChildren(hasActiveChildren).AttributeId(attributeId).AnyAttributeId(anyAttributeId).AllAttributeIds(allAttributeIds).AttributeValueId(attributeValueId).AnyAttributeValueId(anyAttributeValueId).AllAttributeValueIds(allAttributeValueIds).BarcodeCode(barcodeCode).BarcodeId(barcodeId).BundleType(bundleType).CategoryId(categoryId).AnyCategoryId(anyCategoryId).AllCategoryIds(allCategoryIds).AnyCharacteristicId(anyCharacteristicId).AllCharacteristicIds(allCharacteristicIds).ClientId(clientId).AnyClientId(anyClientId).AllClientIds(allClientIds).AutomaticClientVisibilities(automaticClientVisibilities).ImageHasMarketId(imageHasMarketId).Flag1(flag1).Flag2(flag2).ManufacturerId(manufacturerId).AnyManufacturerId(anyManufacturerId).ItemType(itemType).MarketId(marketId).AnyMarketId(anyMarketId).AllMarketIds(allMarketIds).PriceBetween(priceBetween).PriceBetweenById(priceBetweenById).AnySalesPriceId(anySalesPriceId).ReferrerIds(referrerIds).PriceCalculationUuid(priceCalculationUuid).PropertySelectionId(propertySelectionId).AnyPropertySelectionId(anyPropertySelectionId).AllPropertySelectionIds(allPropertySelectionIds).HasNameInLanguage(hasNameInLanguage).CreatedAt(createdAt).UpdatedAt(updatedAt).ItemCreatedAt(itemCreatedAt).ItemUpdatedAt(itemUpdatedAt).AvailabilityUpdatedAt(availabilityUpdatedAt).StockUpdatedAt(stockUpdatedAt).BarcodeUpdatedAt(barcodeUpdatedAt).CategoryUpdatedAt(categoryUpdatedAt).ClientUpdatedAt(clientUpdatedAt).MarketUpdatedAt(marketUpdatedAt).PropertyUpdatedAt(propertyUpdatedAt).SupplierUpdatedAt(supplierUpdatedAt).TagUpdatedAt(tagUpdatedAt).WarehouseUpdatedAt(warehouseUpdatedAt).HasLowestPrice(hasLowestPrice).Number(number).BundleComponentVariationId(bundleComponentVariationId).ItemNames(itemNames).ItemName1(itemName1).ItemName2(itemName2).ItemName3(itemName3).Model(model).SupplierItemNumber(supplierItemNumber).Lang(lang).Cursor(cursor).Execute()
 
 Scrolls through variations
 
@@ -1770,7 +1770,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestPimVariationsScrollGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RestPimVariationsScrollGet`: InlineResponse2001
+    // response from `RestPimVariationsScrollGet`: PimVariationScrollResponse
     fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestPimVariationsScrollGet`: %v\n", resp)
 }
 ```
@@ -1862,7 +1862,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**PimVariationScrollResponse**](PimVariationScrollResponse.md)
 
 ### Authorization
 

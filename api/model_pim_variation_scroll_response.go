@@ -14,33 +14,33 @@ import (
 	"encoding/json"
 )
 
-// InlineResponse2001 struct for InlineResponse2001
-type InlineResponse2001 struct {
+// PimVariationScrollResponse pagination response containing variations
+type PimVariationScrollResponse struct {
 	// The cursor for the next page of results.
 	Cursor *string `json:"cursor,omitempty"`
 	// List of Variation
 	Entries *[]PimVariation `json:"entries,omitempty"`
 }
 
-// NewInlineResponse2001 instantiates a new InlineResponse2001 object
+// NewPimVariationScrollResponse instantiates a new PimVariationScrollResponse object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewInlineResponse2001() *InlineResponse2001 {
-	this := InlineResponse2001{}
+func NewPimVariationScrollResponse() *PimVariationScrollResponse {
+	this := PimVariationScrollResponse{}
 	return &this
 }
 
-// NewInlineResponse2001WithDefaults instantiates a new InlineResponse2001 object
+// NewPimVariationScrollResponseWithDefaults instantiates a new PimVariationScrollResponse object
 // This constructor will only assign default values to properties that have it defined,
 // but it doesn't guarantee that properties required by API are set
-func NewInlineResponse2001WithDefaults() *InlineResponse2001 {
-	this := InlineResponse2001{}
+func NewPimVariationScrollResponseWithDefaults() *PimVariationScrollResponse {
+	this := PimVariationScrollResponse{}
 	return &this
 }
 
 // GetCursor returns the Cursor field value if set, zero value otherwise.
-func (o *InlineResponse2001) GetCursor() string {
+func (o *PimVariationScrollResponse) GetCursor() string {
 	if o == nil || o.Cursor == nil {
 		var ret string
 		return ret
@@ -50,7 +50,7 @@ func (o *InlineResponse2001) GetCursor() string {
 
 // GetCursorOk returns a tuple with the Cursor field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InlineResponse2001) GetCursorOk() (*string, bool) {
+func (o *PimVariationScrollResponse) GetCursorOk() (*string, bool) {
 	if o == nil || o.Cursor == nil {
 		return nil, false
 	}
@@ -58,7 +58,7 @@ func (o *InlineResponse2001) GetCursorOk() (*string, bool) {
 }
 
 // HasCursor returns a boolean if a field has been set.
-func (o *InlineResponse2001) HasCursor() bool {
+func (o *PimVariationScrollResponse) HasCursor() bool {
 	if o != nil && o.Cursor != nil {
 		return true
 	}
@@ -67,12 +67,12 @@ func (o *InlineResponse2001) HasCursor() bool {
 }
 
 // SetCursor gets a reference to the given string and assigns it to the Cursor field.
-func (o *InlineResponse2001) SetCursor(v string) {
+func (o *PimVariationScrollResponse) SetCursor(v string) {
 	o.Cursor = &v
 }
 
 // GetEntries returns the Entries field value if set, zero value otherwise.
-func (o *InlineResponse2001) GetEntries() []PimVariation {
+func (o *PimVariationScrollResponse) GetEntries() []PimVariation {
 	if o == nil || o.Entries == nil {
 		var ret []PimVariation
 		return ret
@@ -82,7 +82,7 @@ func (o *InlineResponse2001) GetEntries() []PimVariation {
 
 // GetEntriesOk returns a tuple with the Entries field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *InlineResponse2001) GetEntriesOk() (*[]PimVariation, bool) {
+func (o *PimVariationScrollResponse) GetEntriesOk() (*[]PimVariation, bool) {
 	if o == nil || o.Entries == nil {
 		return nil, false
 	}
@@ -90,7 +90,7 @@ func (o *InlineResponse2001) GetEntriesOk() (*[]PimVariation, bool) {
 }
 
 // HasEntries returns a boolean if a field has been set.
-func (o *InlineResponse2001) HasEntries() bool {
+func (o *PimVariationScrollResponse) HasEntries() bool {
 	if o != nil && o.Entries != nil {
 		return true
 	}
@@ -99,11 +99,11 @@ func (o *InlineResponse2001) HasEntries() bool {
 }
 
 // SetEntries gets a reference to the given []PimVariation and assigns it to the Entries field.
-func (o *InlineResponse2001) SetEntries(v []PimVariation) {
+func (o *PimVariationScrollResponse) SetEntries(v []PimVariation) {
 	o.Entries = &v
 }
 
-func (o InlineResponse2001) MarshalJSON() ([]byte, error) {
+func (o PimVariationScrollResponse) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Cursor != nil {
 		toSerialize["cursor"] = o.Cursor
@@ -114,38 +114,38 @@ func (o InlineResponse2001) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableInlineResponse2001 struct {
-	value *InlineResponse2001
+type NullablePimVariationScrollResponse struct {
+	value *PimVariationScrollResponse
 	isSet bool
 }
 
-func (v NullableInlineResponse2001) Get() *InlineResponse2001 {
+func (v NullablePimVariationScrollResponse) Get() *PimVariationScrollResponse {
 	return v.value
 }
 
-func (v *NullableInlineResponse2001) Set(val *InlineResponse2001) {
+func (v *NullablePimVariationScrollResponse) Set(val *PimVariationScrollResponse) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableInlineResponse2001) IsSet() bool {
+func (v NullablePimVariationScrollResponse) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableInlineResponse2001) Unset() {
+func (v *NullablePimVariationScrollResponse) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableInlineResponse2001(val *InlineResponse2001) *NullableInlineResponse2001 {
-	return &NullableInlineResponse2001{value: val, isSet: true}
+func NewNullablePimVariationScrollResponse(val *PimVariationScrollResponse) *NullablePimVariationScrollResponse {
+	return &NullablePimVariationScrollResponse{value: val, isSet: true}
 }
 
-func (v NullableInlineResponse2001) MarshalJSON() ([]byte, error) {
+func (v NullablePimVariationScrollResponse) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableInlineResponse2001) UnmarshalJSON(src []byte) error {
+func (v *NullablePimVariationScrollResponse) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

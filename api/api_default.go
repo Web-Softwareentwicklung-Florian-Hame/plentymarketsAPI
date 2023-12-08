@@ -3575,6 +3575,15 @@ type ApiRestPimVariationsScrollGetRequest struct {
 	tagUpdatedAt *string
 	warehouseUpdatedAt *string
 	hasLowestPrice *bool
+	number *string
+	bundleComponentVariationId *int32
+	itemNames *string
+	itemName1 *string
+	itemName2 *string
+	itemName3 *string
+	model *string
+	supplierItemNumber *string
+	lang *string
 	cursor *string
 }
 
@@ -3893,6 +3902,51 @@ func (r ApiRestPimVariationsScrollGetRequest) HasLowestPrice(hasLowestPrice bool
 	r.hasLowestPrice = &hasLowestPrice
 	return r
 }
+// Filter restricts the list of results to variations which matching the number of the variation.
+func (r ApiRestPimVariationsScrollGetRequest) Number(number string) ApiRestPimVariationsScrollGetRequest {
+	r.number = &number
+	return r
+}
+// Filter restricts the list of results to variations which have the specified bundle component variation ID.
+func (r ApiRestPimVariationsScrollGetRequest) BundleComponentVariationId(bundleComponentVariationId int32) ApiRestPimVariationsScrollGetRequest {
+	r.bundleComponentVariationId = &bundleComponentVariationId
+	return r
+}
+// Filter restricts the list of results to variations matching any name of the item.
+func (r ApiRestPimVariationsScrollGetRequest) ItemNames(itemNames string) ApiRestPimVariationsScrollGetRequest {
+	r.itemNames = &itemNames
+	return r
+}
+// Filter restricts the list of results to variations matching name 1 of the item
+func (r ApiRestPimVariationsScrollGetRequest) ItemName1(itemName1 string) ApiRestPimVariationsScrollGetRequest {
+	r.itemName1 = &itemName1
+	return r
+}
+// Filter restricts the list of results to variations matching name 2 of the item
+func (r ApiRestPimVariationsScrollGetRequest) ItemName2(itemName2 string) ApiRestPimVariationsScrollGetRequest {
+	r.itemName2 = &itemName2
+	return r
+}
+// Filter restricts the list of results to variations matching name 3 of the item
+func (r ApiRestPimVariationsScrollGetRequest) ItemName3(itemName3 string) ApiRestPimVariationsScrollGetRequest {
+	r.itemName3 = &itemName3
+	return r
+}
+// Filter restricts the list of results to variations which matching the model of the variation.
+func (r ApiRestPimVariationsScrollGetRequest) Model(model string) ApiRestPimVariationsScrollGetRequest {
+	r.model = &model
+	return r
+}
+// Filter restricts the list of results to variations which matching the supplier item number of the variation.
+func (r ApiRestPimVariationsScrollGetRequest) SupplierItemNumber(supplierItemNumber string) ApiRestPimVariationsScrollGetRequest {
+	r.supplierItemNumber = &supplierItemNumber
+	return r
+}
+// Specifies the language of the language-dependent filters
+func (r ApiRestPimVariationsScrollGetRequest) Lang(lang string) ApiRestPimVariationsScrollGetRequest {
+	r.lang = &lang
+	return r
+}
 // The cursor to get the next entries
 func (r ApiRestPimVariationsScrollGetRequest) Cursor(cursor string) ApiRestPimVariationsScrollGetRequest {
 	r.cursor = &cursor
@@ -4137,6 +4191,33 @@ func (a *DefaultApiService) RestPimVariationsScrollGetExecute(r ApiRestPimVariat
 	}
 	if r.hasLowestPrice != nil {
 		localVarQueryParams.Add("hasLowestPrice", parameterToString(*r.hasLowestPrice, ""))
+	}
+	if r.number != nil {
+		localVarQueryParams.Add("number", parameterToString(*r.number, ""))
+	}
+	if r.bundleComponentVariationId != nil {
+		localVarQueryParams.Add("bundleComponentVariationId", parameterToString(*r.bundleComponentVariationId, ""))
+	}
+	if r.itemNames != nil {
+		localVarQueryParams.Add("itemNames", parameterToString(*r.itemNames, ""))
+	}
+	if r.itemName1 != nil {
+		localVarQueryParams.Add("itemName1", parameterToString(*r.itemName1, ""))
+	}
+	if r.itemName2 != nil {
+		localVarQueryParams.Add("itemName2", parameterToString(*r.itemName2, ""))
+	}
+	if r.itemName3 != nil {
+		localVarQueryParams.Add("itemName3", parameterToString(*r.itemName3, ""))
+	}
+	if r.model != nil {
+		localVarQueryParams.Add("model", parameterToString(*r.model, ""))
+	}
+	if r.supplierItemNumber != nil {
+		localVarQueryParams.Add("supplierItemNumber", parameterToString(*r.supplierItemNumber, ""))
+	}
+	if r.lang != nil {
+		localVarQueryParams.Add("lang", parameterToString(*r.lang, ""))
 	}
 	if r.cursor != nil {
 		localVarQueryParams.Add("cursor", parameterToString(*r.cursor, ""))

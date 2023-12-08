@@ -2569,6 +2569,86 @@ paths:
         schema:
           type: boolean
         style: form
+      - description: Filter restricts the list of results to variations which matching
+          the number of the variation.
+        explode: true
+        in: query
+        name: number
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which have
+          the specified bundle component variation ID.
+        explode: true
+        in: query
+        name: bundleComponentVariationId
+        required: false
+        schema:
+          type: integer
+        style: form
+      - description: Filter restricts the list of results to variations matching any
+          name of the item.
+        explode: true
+        in: query
+        name: itemNames
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations matching name
+          1 of the item
+        explode: true
+        in: query
+        name: itemName1
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations matching name
+          2 of the item
+        explode: true
+        in: query
+        name: itemName2
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations matching name
+          3 of the item
+        explode: true
+        in: query
+        name: itemName3
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which matching
+          the model of the variation.
+        explode: true
+        in: query
+        name: model
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Filter restricts the list of results to variations which matching
+          the supplier item number of the variation.
+        explode: true
+        in: query
+        name: supplierItemNumber
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: Specifies the language of the language-dependent filters
+        explode: true
+        in: query
+        name: lang
+        required: false
+        schema:
+          type: string
+        style: form
       - description: The cursor to get the next entries
         explode: true
         in: query

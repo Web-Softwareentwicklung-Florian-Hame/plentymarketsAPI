@@ -12,7 +12,6 @@ package api
 
 import (
 	"encoding/json"
-	"time"
 )
 
 // Attribute Variation attribute model that is place in VariationAttributeValue model
@@ -31,7 +30,7 @@ type Attribute struct {
 	TypeOfSelectionInOnlineStore *string `json:"typeOfSelectionInOnlineStore,omitempty"`
 	LaRedouteAttribute *int32 `json:"laRedouteAttribute,omitempty"`
 	IsGroupable *bool `json:"isGroupable,omitempty"`
-	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
+	UpdatedAt *string `json:"updatedAt,omitempty"`
 	// only accessible for get attributes call when with flag is set
 	Values *[]AttributeValue `json:"values,omitempty"`
 }
@@ -502,9 +501,9 @@ func (o *Attribute) SetIsGroupable(v bool) {
 }
 
 // GetUpdatedAt returns the UpdatedAt field value if set, zero value otherwise.
-func (o *Attribute) GetUpdatedAt() time.Time {
+func (o *Attribute) GetUpdatedAt() string {
 	if o == nil || o.UpdatedAt == nil {
-		var ret time.Time
+		var ret string
 		return ret
 	}
 	return *o.UpdatedAt
@@ -512,7 +511,7 @@ func (o *Attribute) GetUpdatedAt() time.Time {
 
 // GetUpdatedAtOk returns a tuple with the UpdatedAt field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Attribute) GetUpdatedAtOk() (*time.Time, bool) {
+func (o *Attribute) GetUpdatedAtOk() (*string, bool) {
 	if o == nil || o.UpdatedAt == nil {
 		return nil, false
 	}
@@ -528,8 +527,8 @@ func (o *Attribute) HasUpdatedAt() bool {
 	return false
 }
 
-// SetUpdatedAt gets a reference to the given time.Time and assigns it to the UpdatedAt field.
-func (o *Attribute) SetUpdatedAt(v time.Time) {
+// SetUpdatedAt gets a reference to the given string and assigns it to the UpdatedAt field.
+func (o *Attribute) SetUpdatedAt(v string) {
 	o.UpdatedAt = &v
 }
 

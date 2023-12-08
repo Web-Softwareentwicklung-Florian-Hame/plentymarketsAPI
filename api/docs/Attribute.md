@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **TypeOfSelectionInOnlineStore** | Pointer to **string** |  | [optional] 
 **LaRedouteAttribute** | Pointer to **int32** |  | [optional] 
 **IsGroupable** | Pointer to **bool** |  | [optional] 
-**UpdatedAt** | Pointer to **time.Time** |  | [optional] 
+**UpdatedAt** | Pointer to **string** |  | [optional] 
 **Values** | Pointer to [**[]AttributeValue**](AttributeValue.md) | only accessible for get attributes call when with flag is set | [optional] 
 
 ## Methods
@@ -392,20 +392,20 @@ HasIsGroupable returns a boolean if a field has been set.
 
 ### GetUpdatedAt
 
-`func (o *Attribute) GetUpdatedAt() time.Time`
+`func (o *Attribute) GetUpdatedAt() string`
 
 GetUpdatedAt returns the UpdatedAt field if non-nil, zero value otherwise.
 
 ### GetUpdatedAtOk
 
-`func (o *Attribute) GetUpdatedAtOk() (*time.Time, bool)`
+`func (o *Attribute) GetUpdatedAtOk() (*string, bool)`
 
 GetUpdatedAtOk returns a tuple with the UpdatedAt field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetUpdatedAt
 
-`func (o *Attribute) SetUpdatedAt(v time.Time)`
+`func (o *Attribute) SetUpdatedAt(v string)`
 
 SetUpdatedAt sets UpdatedAt field to given value.
 

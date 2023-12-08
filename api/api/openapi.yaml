@@ -3364,7 +3364,7 @@ components:
             id: 3
             position: 1
             ottoAttribute: ottoAttribute
-            updatedAt: 2000-01-23T04:56:07.000+00:00
+            updatedAt: updatedAt
           attributeValueSetId: 4
         - attributeId: 5
           isLinkableToImage: true
@@ -3425,7 +3425,7 @@ components:
             id: 3
             position: 1
             ottoAttribute: ottoAttribute
-            updatedAt: 2000-01-23T04:56:07.000+00:00
+            updatedAt: updatedAt
           attributeValueSetId: 4
         warehouses:
         - reorderLevel: 7
@@ -4417,7 +4417,7 @@ components:
             id: 3
             position: 1
             ottoAttribute: ottoAttribute
-            updatedAt: 2000-01-23T04:56:07.000+00:00
+            updatedAt: updatedAt
           attributeValueSetId: 4
         - attributeId: 5
           isLinkableToImage: true
@@ -4478,7 +4478,7 @@ components:
             id: 3
             position: 1
             ottoAttribute: ottoAttribute
-            updatedAt: 2000-01-23T04:56:07.000+00:00
+            updatedAt: updatedAt
           attributeValueSetId: 4
         priceCalculationUUID: priceCalculationUUID
         variationBarcodes:
@@ -5284,7 +5284,7 @@ components:
           id: 3
           position: 1
           ottoAttribute: ottoAttribute
-          updatedAt: 2000-01-23T04:56:07.000+00:00
+          updatedAt: updatedAt
         attributeValueSetId: 4
       properties:
         attributeValueSetId:
@@ -5393,7 +5393,7 @@ components:
         id: 3
         position: 1
         ottoAttribute: ottoAttribute
-        updatedAt: 2000-01-23T04:56:07.000+00:00
+        updatedAt: updatedAt
       properties:
         id:
           type: integer
@@ -5424,7 +5424,6 @@ components:
         isGroupable:
           type: boolean
         updatedAt:
-          format: date-time
           type: string
         values:
           description: only accessible for get attributes call when with flag is set
@@ -6732,7 +6731,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -6793,7 +6792,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           priceCalculationUUID: priceCalculationUUID
           variationBarcodes:
@@ -7532,7 +7531,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -7593,7 +7592,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           priceCalculationUUID: priceCalculationUUID
           variationBarcodes:
@@ -8672,7 +8671,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -8733,7 +8732,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           priceCalculationUUID: priceCalculationUUID
           variationBarcodes:
@@ -9472,7 +9471,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -9533,7 +9532,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           priceCalculationUUID: priceCalculationUUID
           variationBarcodes:
@@ -11139,7 +11138,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             - attributeId: 5
               isLinkableToImage: true
@@ -11200,7 +11199,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             priceCalculationUUID: priceCalculationUUID
             variationBarcodes:
@@ -11996,7 +11995,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             - attributeId: 5
               isLinkableToImage: true
@@ -12057,7 +12056,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             priceCalculationUUID: priceCalculationUUID
             variationBarcodes:
@@ -12968,7 +12967,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -13029,7 +13028,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           priceCalculationUUID: priceCalculationUUID
           variationBarcodes:
@@ -14395,7 +14394,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             - attributeId: 5
               isLinkableToImage: true
@@ -14456,7 +14455,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             priceCalculationUUID: priceCalculationUUID
             variationBarcodes:
@@ -15466,7 +15465,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               - attributeId: 5
                 isLinkableToImage: true
@@ -15527,7 +15526,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               priceCalculationUUID: priceCalculationUUID
               variationBarcodes:
@@ -16323,7 +16322,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               - attributeId: 5
                 isLinkableToImage: true
@@ -16384,7 +16383,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               priceCalculationUUID: priceCalculationUUID
               variationBarcodes:
@@ -17476,7 +17475,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               - attributeId: 5
                 isLinkableToImage: true
@@ -17537,7 +17536,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               priceCalculationUUID: priceCalculationUUID
               variationBarcodes:
@@ -18333,7 +18332,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               - attributeId: 5
                 isLinkableToImage: true
@@ -18394,7 +18393,7 @@ components:
                   id: 3
                   position: 1
                   ottoAttribute: ottoAttribute
-                  updatedAt: 2000-01-23T04:56:07.000+00:00
+                  updatedAt: updatedAt
                 attributeValueSetId: 4
               priceCalculationUUID: priceCalculationUUID
               variationBarcodes:
@@ -19309,7 +19308,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             - attributeId: 5
               isLinkableToImage: true
@@ -19370,7 +19369,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             priceCalculationUUID: priceCalculationUUID
             variationBarcodes:
@@ -20109,7 +20108,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             - attributeId: 5
               isLinkableToImage: true
@@ -20170,7 +20169,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             priceCalculationUUID: priceCalculationUUID
             variationBarcodes:
@@ -20994,7 +20993,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             - attributeId: 5
               isLinkableToImage: true
@@ -21055,7 +21054,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             priceCalculationUUID: priceCalculationUUID
             variationBarcodes:
@@ -21794,7 +21793,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             - attributeId: 5
               isLinkableToImage: true
@@ -21855,7 +21854,7 @@ components:
                 id: 3
                 position: 1
                 ottoAttribute: ottoAttribute
-                updatedAt: 2000-01-23T04:56:07.000+00:00
+                updatedAt: updatedAt
               attributeValueSetId: 4
             priceCalculationUUID: priceCalculationUUID
             variationBarcodes:
@@ -22360,7 +22359,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -22421,7 +22420,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           warehouses:
           - reorderLevel: 7
@@ -22949,7 +22948,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -23010,7 +23009,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           warehouses:
           - reorderLevel: 7
@@ -23865,7 +23864,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -23926,7 +23925,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           priceCalculationUUID: priceCalculationUUID
           variationBarcodes:
@@ -24665,7 +24664,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -24726,7 +24725,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           priceCalculationUUID: priceCalculationUUID
           variationBarcodes:
@@ -25183,7 +25182,7 @@ components:
           id: 3
           position: 1
           ottoAttribute: ottoAttribute
-          updatedAt: 2000-01-23T04:56:07.000+00:00
+          updatedAt: updatedAt
         - isLinkableToImage: true
           neckermannAtEpAttribute: 9
           laRedouteAttribute: 7
@@ -25225,7 +25224,7 @@ components:
           id: 3
           position: 1
           ottoAttribute: ottoAttribute
-          updatedAt: 2000-01-23T04:56:07.000+00:00
+          updatedAt: updatedAt
         itemsPerPage: 2
         isLastPage: true
         firstOnPage: 5
@@ -25574,7 +25573,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -25635,7 +25634,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           warehouses:
           - reorderLevel: 7
@@ -26163,7 +26162,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           - attributeId: 5
             isLinkableToImage: true
@@ -26224,7 +26223,7 @@ components:
               id: 3
               position: 1
               ottoAttribute: ottoAttribute
-              updatedAt: 2000-01-23T04:56:07.000+00:00
+              updatedAt: updatedAt
             attributeValueSetId: 4
           warehouses:
           - reorderLevel: 7

@@ -2846,7 +2846,6 @@ components:
           type: boolean
         updatedAt:
           type: string
-          format: date-time
         values:
           description: "only accessible for get attributes call when with flag is set"
           type: array

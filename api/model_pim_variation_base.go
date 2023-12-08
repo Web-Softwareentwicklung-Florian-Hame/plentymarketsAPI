@@ -18,6 +18,7 @@ import (
 // PimVariationBase struct for PimVariationBase
 type PimVariationBase struct {
 	IsMain *bool `json:"isMain,omitempty"`
+	MainVariationId *int32 `json:"mainVariationId,omitempty"`
 	ItemId *int32 `json:"itemId,omitempty"`
 	Position *int32 `json:"position,omitempty"`
 	IsActive *bool `json:"isActive,omitempty"`
@@ -25,8 +26,11 @@ type PimVariationBase struct {
 	Model *string `json:"model,omitempty"`
 	ExternalId *string `json:"externalId,omitempty"`
 	Availability *int32 `json:"availability,omitempty"`
+	AvailabilityId *int32 `json:"availabilityId,omitempty"`
 	EstimatedAvailableAt *time.Time `json:"estimatedAvailableAt,omitempty"`
 	PurchasePrice *float32 `json:"purchasePrice,omitempty"`
+	MovingAveragePrice *float32 `json:"movingAveragePrice,omitempty"`
+	PriceCalculationUUID *string `json:"priceCalculationUUID,omitempty"`
 	CreatedAt *time.Time `json:"createdAt,omitempty"`
 	UpdatedAt *time.Time `json:"updatedAt,omitempty"`
 	RelatedUpdatedAt *time.Time `json:"relatedUpdatedAt,omitempty"`
@@ -37,6 +41,8 @@ type PimVariationBase struct {
 	IsInvisibleIfNetStockIsNotPositive *bool `json:"isInvisibleIfNetStockIsNotPositive,omitempty"`
 	IsAvailableIfNetStockIsPositive *bool `json:"isAvailableIfNetStockIsPositive,omitempty"`
 	IsUnavailableIfNetStockIsNotPositive *bool `json:"isUnavailableIfNetStockIsNotPositive,omitempty"`
+	IsVisibleInListIfNetStockIsPositive *bool `json:"isVisibleInListIfNetStockIsPositive,omitempty"`
+	IsInvisibleInListIfNetStockIsNotPositive *bool `json:"isInvisibleInListIfNetStockIsNotPositive,omitempty"`
 	MainWarehouseId *int32 `json:"mainWarehouseId,omitempty"`
 	MaximumOrderQuantity *float32 `json:"maximumOrderQuantity,omitempty"`
 	MinimumOrderQuantity *float32 `json:"minimumOrderQuantity,omitempty"`
@@ -62,7 +68,18 @@ type PimVariationBase struct {
 	VatId *int32 `json:"vatId,omitempty"`
 	BundleType *string `json:"bundleType,omitempty"`
 	AutomaticClientVisibility *int32 `json:"automaticClientVisibility,omitempty"`
+	AutomaticListVisibility *int32 `json:"automaticListVisibility,omitempty"`
 	IsHiddenInCategoryList *bool `json:"isHiddenInCategoryList,omitempty"`
+	DefaultShippingCosts *float32 `json:"defaultShippingCosts,omitempty"`
+	CategoriesInherited *bool `json:"categoriesInherited,omitempty"`
+	ReferrerInherited *bool `json:"referrerInherited,omitempty"`
+	ClientsInherited *bool `json:"clientsInherited,omitempty"`
+	SalesPricesInherited *bool `json:"salesPricesInherited,omitempty"`
+	SupplierInherited *bool `json:"supplierInherited,omitempty"`
+	WarehousesInherited *bool `json:"warehousesInherited,omitempty"`
+	PropertiesInherited *bool `json:"propertiesInherited,omitempty"`
+	TagsInherited *bool `json:"tagsInherited,omitempty"`
+	Images *[]VariationImage `json:"images,omitempty"`
 }
 
 // NewPimVariationBase instantiates a new PimVariationBase object
@@ -112,6 +129,38 @@ func (o *PimVariationBase) HasIsMain() bool {
 // SetIsMain gets a reference to the given bool and assigns it to the IsMain field.
 func (o *PimVariationBase) SetIsMain(v bool) {
 	o.IsMain = &v
+}
+
+// GetMainVariationId returns the MainVariationId field value if set, zero value otherwise.
+func (o *PimVariationBase) GetMainVariationId() int32 {
+	if o == nil || o.MainVariationId == nil {
+		var ret int32
+		return ret
+	}
+	return *o.MainVariationId
+}
+
+// GetMainVariationIdOk returns a tuple with the MainVariationId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetMainVariationIdOk() (*int32, bool) {
+	if o == nil || o.MainVariationId == nil {
+		return nil, false
+	}
+	return o.MainVariationId, true
+}
+
+// HasMainVariationId returns a boolean if a field has been set.
+func (o *PimVariationBase) HasMainVariationId() bool {
+	if o != nil && o.MainVariationId != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMainVariationId gets a reference to the given int32 and assigns it to the MainVariationId field.
+func (o *PimVariationBase) SetMainVariationId(v int32) {
+	o.MainVariationId = &v
 }
 
 // GetItemId returns the ItemId field value if set, zero value otherwise.
@@ -338,6 +387,38 @@ func (o *PimVariationBase) SetAvailability(v int32) {
 	o.Availability = &v
 }
 
+// GetAvailabilityId returns the AvailabilityId field value if set, zero value otherwise.
+func (o *PimVariationBase) GetAvailabilityId() int32 {
+	if o == nil || o.AvailabilityId == nil {
+		var ret int32
+		return ret
+	}
+	return *o.AvailabilityId
+}
+
+// GetAvailabilityIdOk returns a tuple with the AvailabilityId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetAvailabilityIdOk() (*int32, bool) {
+	if o == nil || o.AvailabilityId == nil {
+		return nil, false
+	}
+	return o.AvailabilityId, true
+}
+
+// HasAvailabilityId returns a boolean if a field has been set.
+func (o *PimVariationBase) HasAvailabilityId() bool {
+	if o != nil && o.AvailabilityId != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetAvailabilityId gets a reference to the given int32 and assigns it to the AvailabilityId field.
+func (o *PimVariationBase) SetAvailabilityId(v int32) {
+	o.AvailabilityId = &v
+}
+
 // GetEstimatedAvailableAt returns the EstimatedAvailableAt field value if set, zero value otherwise.
 func (o *PimVariationBase) GetEstimatedAvailableAt() time.Time {
 	if o == nil || o.EstimatedAvailableAt == nil {
@@ -400,6 +481,70 @@ func (o *PimVariationBase) HasPurchasePrice() bool {
 // SetPurchasePrice gets a reference to the given float32 and assigns it to the PurchasePrice field.
 func (o *PimVariationBase) SetPurchasePrice(v float32) {
 	o.PurchasePrice = &v
+}
+
+// GetMovingAveragePrice returns the MovingAveragePrice field value if set, zero value otherwise.
+func (o *PimVariationBase) GetMovingAveragePrice() float32 {
+	if o == nil || o.MovingAveragePrice == nil {
+		var ret float32
+		return ret
+	}
+	return *o.MovingAveragePrice
+}
+
+// GetMovingAveragePriceOk returns a tuple with the MovingAveragePrice field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetMovingAveragePriceOk() (*float32, bool) {
+	if o == nil || o.MovingAveragePrice == nil {
+		return nil, false
+	}
+	return o.MovingAveragePrice, true
+}
+
+// HasMovingAveragePrice returns a boolean if a field has been set.
+func (o *PimVariationBase) HasMovingAveragePrice() bool {
+	if o != nil && o.MovingAveragePrice != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetMovingAveragePrice gets a reference to the given float32 and assigns it to the MovingAveragePrice field.
+func (o *PimVariationBase) SetMovingAveragePrice(v float32) {
+	o.MovingAveragePrice = &v
+}
+
+// GetPriceCalculationUUID returns the PriceCalculationUUID field value if set, zero value otherwise.
+func (o *PimVariationBase) GetPriceCalculationUUID() string {
+	if o == nil || o.PriceCalculationUUID == nil {
+		var ret string
+		return ret
+	}
+	return *o.PriceCalculationUUID
+}
+
+// GetPriceCalculationUUIDOk returns a tuple with the PriceCalculationUUID field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetPriceCalculationUUIDOk() (*string, bool) {
+	if o == nil || o.PriceCalculationUUID == nil {
+		return nil, false
+	}
+	return o.PriceCalculationUUID, true
+}
+
+// HasPriceCalculationUUID returns a boolean if a field has been set.
+func (o *PimVariationBase) HasPriceCalculationUUID() bool {
+	if o != nil && o.PriceCalculationUUID != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetPriceCalculationUUID gets a reference to the given string and assigns it to the PriceCalculationUUID field.
+func (o *PimVariationBase) SetPriceCalculationUUID(v string) {
+	o.PriceCalculationUUID = &v
 }
 
 // GetCreatedAt returns the CreatedAt field value if set, zero value otherwise.
@@ -720,6 +865,70 @@ func (o *PimVariationBase) HasIsUnavailableIfNetStockIsNotPositive() bool {
 // SetIsUnavailableIfNetStockIsNotPositive gets a reference to the given bool and assigns it to the IsUnavailableIfNetStockIsNotPositive field.
 func (o *PimVariationBase) SetIsUnavailableIfNetStockIsNotPositive(v bool) {
 	o.IsUnavailableIfNetStockIsNotPositive = &v
+}
+
+// GetIsVisibleInListIfNetStockIsPositive returns the IsVisibleInListIfNetStockIsPositive field value if set, zero value otherwise.
+func (o *PimVariationBase) GetIsVisibleInListIfNetStockIsPositive() bool {
+	if o == nil || o.IsVisibleInListIfNetStockIsPositive == nil {
+		var ret bool
+		return ret
+	}
+	return *o.IsVisibleInListIfNetStockIsPositive
+}
+
+// GetIsVisibleInListIfNetStockIsPositiveOk returns a tuple with the IsVisibleInListIfNetStockIsPositive field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetIsVisibleInListIfNetStockIsPositiveOk() (*bool, bool) {
+	if o == nil || o.IsVisibleInListIfNetStockIsPositive == nil {
+		return nil, false
+	}
+	return o.IsVisibleInListIfNetStockIsPositive, true
+}
+
+// HasIsVisibleInListIfNetStockIsPositive returns a boolean if a field has been set.
+func (o *PimVariationBase) HasIsVisibleInListIfNetStockIsPositive() bool {
+	if o != nil && o.IsVisibleInListIfNetStockIsPositive != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetIsVisibleInListIfNetStockIsPositive gets a reference to the given bool and assigns it to the IsVisibleInListIfNetStockIsPositive field.
+func (o *PimVariationBase) SetIsVisibleInListIfNetStockIsPositive(v bool) {
+	o.IsVisibleInListIfNetStockIsPositive = &v
+}
+
+// GetIsInvisibleInListIfNetStockIsNotPositive returns the IsInvisibleInListIfNetStockIsNotPositive field value if set, zero value otherwise.
+func (o *PimVariationBase) GetIsInvisibleInListIfNetStockIsNotPositive() bool {
+	if o == nil || o.IsInvisibleInListIfNetStockIsNotPositive == nil {
+		var ret bool
+		return ret
+	}
+	return *o.IsInvisibleInListIfNetStockIsNotPositive
+}
+
+// GetIsInvisibleInListIfNetStockIsNotPositiveOk returns a tuple with the IsInvisibleInListIfNetStockIsNotPositive field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetIsInvisibleInListIfNetStockIsNotPositiveOk() (*bool, bool) {
+	if o == nil || o.IsInvisibleInListIfNetStockIsNotPositive == nil {
+		return nil, false
+	}
+	return o.IsInvisibleInListIfNetStockIsNotPositive, true
+}
+
+// HasIsInvisibleInListIfNetStockIsNotPositive returns a boolean if a field has been set.
+func (o *PimVariationBase) HasIsInvisibleInListIfNetStockIsNotPositive() bool {
+	if o != nil && o.IsInvisibleInListIfNetStockIsNotPositive != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetIsInvisibleInListIfNetStockIsNotPositive gets a reference to the given bool and assigns it to the IsInvisibleInListIfNetStockIsNotPositive field.
+func (o *PimVariationBase) SetIsInvisibleInListIfNetStockIsNotPositive(v bool) {
+	o.IsInvisibleInListIfNetStockIsNotPositive = &v
 }
 
 // GetMainWarehouseId returns the MainWarehouseId field value if set, zero value otherwise.
@@ -1522,6 +1731,38 @@ func (o *PimVariationBase) SetAutomaticClientVisibility(v int32) {
 	o.AutomaticClientVisibility = &v
 }
 
+// GetAutomaticListVisibility returns the AutomaticListVisibility field value if set, zero value otherwise.
+func (o *PimVariationBase) GetAutomaticListVisibility() int32 {
+	if o == nil || o.AutomaticListVisibility == nil {
+		var ret int32
+		return ret
+	}
+	return *o.AutomaticListVisibility
+}
+
+// GetAutomaticListVisibilityOk returns a tuple with the AutomaticListVisibility field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetAutomaticListVisibilityOk() (*int32, bool) {
+	if o == nil || o.AutomaticListVisibility == nil {
+		return nil, false
+	}
+	return o.AutomaticListVisibility, true
+}
+
+// HasAutomaticListVisibility returns a boolean if a field has been set.
+func (o *PimVariationBase) HasAutomaticListVisibility() bool {
+	if o != nil && o.AutomaticListVisibility != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetAutomaticListVisibility gets a reference to the given int32 and assigns it to the AutomaticListVisibility field.
+func (o *PimVariationBase) SetAutomaticListVisibility(v int32) {
+	o.AutomaticListVisibility = &v
+}
+
 // GetIsHiddenInCategoryList returns the IsHiddenInCategoryList field value if set, zero value otherwise.
 func (o *PimVariationBase) GetIsHiddenInCategoryList() bool {
 	if o == nil || o.IsHiddenInCategoryList == nil {
@@ -1554,10 +1795,333 @@ func (o *PimVariationBase) SetIsHiddenInCategoryList(v bool) {
 	o.IsHiddenInCategoryList = &v
 }
 
+// GetDefaultShippingCosts returns the DefaultShippingCosts field value if set, zero value otherwise.
+func (o *PimVariationBase) GetDefaultShippingCosts() float32 {
+	if o == nil || o.DefaultShippingCosts == nil {
+		var ret float32
+		return ret
+	}
+	return *o.DefaultShippingCosts
+}
+
+// GetDefaultShippingCostsOk returns a tuple with the DefaultShippingCosts field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetDefaultShippingCostsOk() (*float32, bool) {
+	if o == nil || o.DefaultShippingCosts == nil {
+		return nil, false
+	}
+	return o.DefaultShippingCosts, true
+}
+
+// HasDefaultShippingCosts returns a boolean if a field has been set.
+func (o *PimVariationBase) HasDefaultShippingCosts() bool {
+	if o != nil && o.DefaultShippingCosts != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetDefaultShippingCosts gets a reference to the given float32 and assigns it to the DefaultShippingCosts field.
+func (o *PimVariationBase) SetDefaultShippingCosts(v float32) {
+	o.DefaultShippingCosts = &v
+}
+
+// GetCategoriesInherited returns the CategoriesInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetCategoriesInherited() bool {
+	if o == nil || o.CategoriesInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.CategoriesInherited
+}
+
+// GetCategoriesInheritedOk returns a tuple with the CategoriesInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetCategoriesInheritedOk() (*bool, bool) {
+	if o == nil || o.CategoriesInherited == nil {
+		return nil, false
+	}
+	return o.CategoriesInherited, true
+}
+
+// HasCategoriesInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasCategoriesInherited() bool {
+	if o != nil && o.CategoriesInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetCategoriesInherited gets a reference to the given bool and assigns it to the CategoriesInherited field.
+func (o *PimVariationBase) SetCategoriesInherited(v bool) {
+	o.CategoriesInherited = &v
+}
+
+// GetReferrerInherited returns the ReferrerInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetReferrerInherited() bool {
+	if o == nil || o.ReferrerInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.ReferrerInherited
+}
+
+// GetReferrerInheritedOk returns a tuple with the ReferrerInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetReferrerInheritedOk() (*bool, bool) {
+	if o == nil || o.ReferrerInherited == nil {
+		return nil, false
+	}
+	return o.ReferrerInherited, true
+}
+
+// HasReferrerInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasReferrerInherited() bool {
+	if o != nil && o.ReferrerInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetReferrerInherited gets a reference to the given bool and assigns it to the ReferrerInherited field.
+func (o *PimVariationBase) SetReferrerInherited(v bool) {
+	o.ReferrerInherited = &v
+}
+
+// GetClientsInherited returns the ClientsInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetClientsInherited() bool {
+	if o == nil || o.ClientsInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.ClientsInherited
+}
+
+// GetClientsInheritedOk returns a tuple with the ClientsInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetClientsInheritedOk() (*bool, bool) {
+	if o == nil || o.ClientsInherited == nil {
+		return nil, false
+	}
+	return o.ClientsInherited, true
+}
+
+// HasClientsInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasClientsInherited() bool {
+	if o != nil && o.ClientsInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetClientsInherited gets a reference to the given bool and assigns it to the ClientsInherited field.
+func (o *PimVariationBase) SetClientsInherited(v bool) {
+	o.ClientsInherited = &v
+}
+
+// GetSalesPricesInherited returns the SalesPricesInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetSalesPricesInherited() bool {
+	if o == nil || o.SalesPricesInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.SalesPricesInherited
+}
+
+// GetSalesPricesInheritedOk returns a tuple with the SalesPricesInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetSalesPricesInheritedOk() (*bool, bool) {
+	if o == nil || o.SalesPricesInherited == nil {
+		return nil, false
+	}
+	return o.SalesPricesInherited, true
+}
+
+// HasSalesPricesInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasSalesPricesInherited() bool {
+	if o != nil && o.SalesPricesInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetSalesPricesInherited gets a reference to the given bool and assigns it to the SalesPricesInherited field.
+func (o *PimVariationBase) SetSalesPricesInherited(v bool) {
+	o.SalesPricesInherited = &v
+}
+
+// GetSupplierInherited returns the SupplierInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetSupplierInherited() bool {
+	if o == nil || o.SupplierInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.SupplierInherited
+}
+
+// GetSupplierInheritedOk returns a tuple with the SupplierInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetSupplierInheritedOk() (*bool, bool) {
+	if o == nil || o.SupplierInherited == nil {
+		return nil, false
+	}
+	return o.SupplierInherited, true
+}
+
+// HasSupplierInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasSupplierInherited() bool {
+	if o != nil && o.SupplierInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetSupplierInherited gets a reference to the given bool and assigns it to the SupplierInherited field.
+func (o *PimVariationBase) SetSupplierInherited(v bool) {
+	o.SupplierInherited = &v
+}
+
+// GetWarehousesInherited returns the WarehousesInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetWarehousesInherited() bool {
+	if o == nil || o.WarehousesInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.WarehousesInherited
+}
+
+// GetWarehousesInheritedOk returns a tuple with the WarehousesInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetWarehousesInheritedOk() (*bool, bool) {
+	if o == nil || o.WarehousesInherited == nil {
+		return nil, false
+	}
+	return o.WarehousesInherited, true
+}
+
+// HasWarehousesInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasWarehousesInherited() bool {
+	if o != nil && o.WarehousesInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetWarehousesInherited gets a reference to the given bool and assigns it to the WarehousesInherited field.
+func (o *PimVariationBase) SetWarehousesInherited(v bool) {
+	o.WarehousesInherited = &v
+}
+
+// GetPropertiesInherited returns the PropertiesInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetPropertiesInherited() bool {
+	if o == nil || o.PropertiesInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.PropertiesInherited
+}
+
+// GetPropertiesInheritedOk returns a tuple with the PropertiesInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetPropertiesInheritedOk() (*bool, bool) {
+	if o == nil || o.PropertiesInherited == nil {
+		return nil, false
+	}
+	return o.PropertiesInherited, true
+}
+
+// HasPropertiesInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasPropertiesInherited() bool {
+	if o != nil && o.PropertiesInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetPropertiesInherited gets a reference to the given bool and assigns it to the PropertiesInherited field.
+func (o *PimVariationBase) SetPropertiesInherited(v bool) {
+	o.PropertiesInherited = &v
+}
+
+// GetTagsInherited returns the TagsInherited field value if set, zero value otherwise.
+func (o *PimVariationBase) GetTagsInherited() bool {
+	if o == nil || o.TagsInherited == nil {
+		var ret bool
+		return ret
+	}
+	return *o.TagsInherited
+}
+
+// GetTagsInheritedOk returns a tuple with the TagsInherited field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetTagsInheritedOk() (*bool, bool) {
+	if o == nil || o.TagsInherited == nil {
+		return nil, false
+	}
+	return o.TagsInherited, true
+}
+
+// HasTagsInherited returns a boolean if a field has been set.
+func (o *PimVariationBase) HasTagsInherited() bool {
+	if o != nil && o.TagsInherited != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetTagsInherited gets a reference to the given bool and assigns it to the TagsInherited field.
+func (o *PimVariationBase) SetTagsInherited(v bool) {
+	o.TagsInherited = &v
+}
+
+// GetImages returns the Images field value if set, zero value otherwise.
+func (o *PimVariationBase) GetImages() []VariationImage {
+	if o == nil || o.Images == nil {
+		var ret []VariationImage
+		return ret
+	}
+	return *o.Images
+}
+
+// GetImagesOk returns a tuple with the Images field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetImagesOk() (*[]VariationImage, bool) {
+	if o == nil || o.Images == nil {
+		return nil, false
+	}
+	return o.Images, true
+}
+
+// HasImages returns a boolean if a field has been set.
+func (o *PimVariationBase) HasImages() bool {
+	if o != nil && o.Images != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetImages gets a reference to the given []VariationImage and assigns it to the Images field.
+func (o *PimVariationBase) SetImages(v []VariationImage) {
+	o.Images = &v
+}
+
 func (o PimVariationBase) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.IsMain != nil {
 		toSerialize["isMain"] = o.IsMain
+	}
+	if o.MainVariationId != nil {
+		toSerialize["mainVariationId"] = o.MainVariationId
 	}
 	if o.ItemId != nil {
 		toSerialize["itemId"] = o.ItemId
@@ -1580,11 +2144,20 @@ func (o PimVariationBase) MarshalJSON() ([]byte, error) {
 	if o.Availability != nil {
 		toSerialize["availability"] = o.Availability
 	}
+	if o.AvailabilityId != nil {
+		toSerialize["availabilityId"] = o.AvailabilityId
+	}
 	if o.EstimatedAvailableAt != nil {
 		toSerialize["estimatedAvailableAt"] = o.EstimatedAvailableAt
 	}
 	if o.PurchasePrice != nil {
 		toSerialize["purchasePrice"] = o.PurchasePrice
+	}
+	if o.MovingAveragePrice != nil {
+		toSerialize["movingAveragePrice"] = o.MovingAveragePrice
+	}
+	if o.PriceCalculationUUID != nil {
+		toSerialize["priceCalculationUUID"] = o.PriceCalculationUUID
 	}
 	if o.CreatedAt != nil {
 		toSerialize["createdAt"] = o.CreatedAt
@@ -1615,6 +2188,12 @@ func (o PimVariationBase) MarshalJSON() ([]byte, error) {
 	}
 	if o.IsUnavailableIfNetStockIsNotPositive != nil {
 		toSerialize["isUnavailableIfNetStockIsNotPositive"] = o.IsUnavailableIfNetStockIsNotPositive
+	}
+	if o.IsVisibleInListIfNetStockIsPositive != nil {
+		toSerialize["isVisibleInListIfNetStockIsPositive"] = o.IsVisibleInListIfNetStockIsPositive
+	}
+	if o.IsInvisibleInListIfNetStockIsNotPositive != nil {
+		toSerialize["isInvisibleInListIfNetStockIsNotPositive"] = o.IsInvisibleInListIfNetStockIsNotPositive
 	}
 	if o.MainWarehouseId != nil {
 		toSerialize["mainWarehouseId"] = o.MainWarehouseId
@@ -1691,8 +2270,41 @@ func (o PimVariationBase) MarshalJSON() ([]byte, error) {
 	if o.AutomaticClientVisibility != nil {
 		toSerialize["automaticClientVisibility"] = o.AutomaticClientVisibility
 	}
+	if o.AutomaticListVisibility != nil {
+		toSerialize["automaticListVisibility"] = o.AutomaticListVisibility
+	}
 	if o.IsHiddenInCategoryList != nil {
 		toSerialize["isHiddenInCategoryList"] = o.IsHiddenInCategoryList
+	}
+	if o.DefaultShippingCosts != nil {
+		toSerialize["defaultShippingCosts"] = o.DefaultShippingCosts
+	}
+	if o.CategoriesInherited != nil {
+		toSerialize["categoriesInherited"] = o.CategoriesInherited
+	}
+	if o.ReferrerInherited != nil {
+		toSerialize["referrerInherited"] = o.ReferrerInherited
+	}
+	if o.ClientsInherited != nil {
+		toSerialize["clientsInherited"] = o.ClientsInherited
+	}
+	if o.SalesPricesInherited != nil {
+		toSerialize["salesPricesInherited"] = o.SalesPricesInherited
+	}
+	if o.SupplierInherited != nil {
+		toSerialize["supplierInherited"] = o.SupplierInherited
+	}
+	if o.WarehousesInherited != nil {
+		toSerialize["warehousesInherited"] = o.WarehousesInherited
+	}
+	if o.PropertiesInherited != nil {
+		toSerialize["propertiesInherited"] = o.PropertiesInherited
+	}
+	if o.TagsInherited != nil {
+		toSerialize["tagsInherited"] = o.TagsInherited
+	}
+	if o.Images != nil {
+		toSerialize["images"] = o.Images
 	}
 	return json.Marshal(toSerialize)
 }

@@ -3509,6 +3509,692 @@ func (a *DefaultApiService) RestPimVariationsPutExecute(r ApiRestPimVariationsPu
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiRestPimVariationsScrollGetRequest struct {
+	ctx _context.Context
+	ApiService *DefaultApiService
+	with *[]string
+	groupBy *string
+	ids *string
+	itemId *int32
+	itemIds *string
+	isActive *bool
+	isMain *bool
+	isSalable *bool
+	supplierId *int32
+	availabilityIds *string
+	hasChildren *bool
+	hasActiveChildren *bool
+	attributeId *int32
+	anyAttributeId *string
+	allAttributeIds *string
+	attributeValueId *int32
+	anyAttributeValueId *string
+	allAttributeValueIds *string
+	barcodeCode *string
+	barcodeId *int32
+	bundleType *string
+	categoryId *int32
+	anyCategoryId *string
+	allCategoryIds *string
+	anyCharacteristicId *string
+	allCharacteristicIds *string
+	clientId *int32
+	anyClientId *string
+	allClientIds *string
+	automaticClientVisibilities *string
+	imageHasMarketId *float32
+	flag1 *int32
+	flag2 *int32
+	manufacturerId *int32
+	anyManufacturerId *string
+	itemType *string
+	marketId *float32
+	anyMarketId *string
+	allMarketIds *string
+	priceBetween *string
+	priceBetweenById *string
+	anySalesPriceId *string
+	referrerIds *string
+	priceCalculationUuid *string
+	propertySelectionId *int32
+	anyPropertySelectionId *string
+	allPropertySelectionIds *string
+	hasNameInLanguage *string
+	createdAt *string
+	updatedAt *string
+	itemCreatedAt *string
+	itemUpdatedAt *string
+	availabilityUpdatedAt *string
+	stockUpdatedAt *string
+	barcodeUpdatedAt *string
+	categoryUpdatedAt *string
+	clientUpdatedAt *string
+	marketUpdatedAt *string
+	propertyUpdatedAt *string
+	supplierUpdatedAt *string
+	tagUpdatedAt *string
+	warehouseUpdatedAt *string
+	hasLowestPrice *bool
+	cursor *string
+}
+
+// Includes the specified information in the results. More than one parameter should be separated by commas. The following parameters are available:&lt;ul&gt;&lt;li&gt;&#39;additionalSkus&#39; &#x3D; The additional skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues&#39; &#x3D; The attribute values of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attribute&#39;/b&gt; &#x3D; Includes attributeValues. The attribute data to the related attribute ID.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attributeValue&#39; &#x3D; Includes attributeValues. The attribute value data to the related attribute value ID.&lt;/li&gt;&lt;li&gt;&#39;barcodes&#39; &#x3D; The barcodes of the variation.&lt;/li&gt;&lt;li&gt;&#39;barcodes.barcode&#39; &#x3D; Includes barcodes. The barcode data to the related barcode ID.&lt;/li&gt;&lt;li&gt;&#39;base&#39; &#x3D; The variation base.&lt;/li&gt;&lt;li&gt;&#39;base.item&#39; &#x3D; Includes base. The item data of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.itemSerialNumber&#39; &#x3D; Includes base. The item serial numbers of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.feedback&#39; &#x3D; Includes base. The feedback of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.characteristics&#39; &#x3D; Includes base. The characteristics of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.crossSelling&#39; &#x3D; Includes base. The cross selling items of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.texts&#39; &#x3D; Includes base. The texts of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.availability&#39; &#x3D; Includes base. The availability data related to the variation&#39;s availability ID.&lt;/li&gt;&lt;li&gt;&#39;base.images&#39; &#x3D; Includes base. The images linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.shippingProfiles&#39; &#x3D; Includes base. The shipping profiles linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.stock&#39; &#x3D; Includes base. The stock of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.stockStorageLocations&#39; &#x3D; Includes base. The stock storage locations of the variation.&lt;/li&gt;&lt;li&gt;&#39;bundleComponents&#39; &#x3D; The bundle components of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories&#39; &#x3D; The categories of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories.category&#39; &#x3D; Includes categories. The related category data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;categories.categoryBranch&#39; &#x3D; Includes categories. The related category branch data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;clients&#39; &#x3D; The clients of the variation.&lt;/li&gt;&lt;li&gt;&#39;defaultCategories&#39; &#x3D; The default categories of the variation&lt;/li&gt;&lt;li&gt;&#39;defaultCategories.category&#39; &#x3D; Includes defaultCategories. The category data to the related category ID.&lt;/li&gt;&lt;li&gt;&#39;images&#39; &#x3D; The images of the variation&lt;/li&gt;&lt;li&gt;&#39;images.image&#39; &#x3D; Includes images. The image data to the related image ID.&lt;/li&gt;&lt;li&gt;&#39;markets&#39; &#x3D; The markets of the variation.&lt;/li&gt;&lt;li&gt;&#39;marketIdentNumbers&#39; &#x3D; The market ident numbers of the variation&lt;/li&gt;&lt;li&gt;&#39;salesPrices&#39; &#x3D; The sales prices of the variation.&lt;/li&gt;&lt;li&gt;&#39;salesPrices.salesPrice&#39; &#x3D; Includes salesPrices. The sales price data to the related sales price ID.&lt;/li&gt;&lt;li&gt;&#39;skus&#39; &#x3D; The skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier&#39; &#x3D; The supplier of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier.supplier&#39; &#x3D; Includes supplier. The contact data to the related supplier ID.&lt;/li&gt;&lt;li&gt;&#39;timestamps&#39; &#x3D; The timetamps of the variation.&lt;/li&gt;&lt;li&gt;&#39;warehouses&#39; &#x3D; The warehouses of the variation&lt;/li&gt;&lt;li&gt;&#39;warehouses.warehouse&#39; &#x3D; Includes warehouses. The warehouse data to the related warehouse ID.&lt;/li&gt;&lt;li&gt;&#39;unit&#39; &#x3D; The unit of the variation&lt;/li&gt;&lt;li&gt;&#39;unit.unit&#39; &#x3D; Includes unit. The unit data of the related unit ID.&lt;/li&gt;&lt;li&gt;&#39;tags&#39; &#x3D; The tags of the variation.&lt;/li&gt;&lt;li&gt;&#39;tags.tag&#39; &#x3D; Includes tags. The tag data to the related tag ID.&lt;/li&gt;&lt;li&gt;&#39;properties&#39; &#x3D; The properties of the variation.&lt;/li&gt;&lt;li&gt;&#39;properties.property&#39; &#x3D; Includes properties. The property data to the related property ID.&lt;/li&gt;&lt;/ul&gt;
+func (r ApiRestPimVariationsScrollGetRequest) With(with []string) ApiRestPimVariationsScrollGetRequest {
+	r.with = &with
+	return r
+}
+// Groups the result. The following parameters are available:&lt;ul&gt;&lt;li&gt;&#39;itemId&#39; &#x3D; Groups the result by the item ID.&lt;/li&gt;&lt;li&gt;&#39;itemAttributeValue&#39; &#x3D; Groups the result by the attribute with the flag &#39;isGroupable&#39;.&lt;/li&gt;&lt;/ul&gt;
+func (r ApiRestPimVariationsScrollGetRequest) GroupBy(groupBy string) ApiRestPimVariationsScrollGetRequest {
+	r.groupBy = &groupBy
+	return r
+}
+// Filter restricts the list of results to variations with the specified IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) Ids(ids string) ApiRestPimVariationsScrollGetRequest {
+	r.ids = &ids
+	return r
+}
+// Filter restricts the list of results to variations with the specified item ID.
+func (r ApiRestPimVariationsScrollGetRequest) ItemId(itemId int32) ApiRestPimVariationsScrollGetRequest {
+	r.itemId = &itemId
+	return r
+}
+// Filter restricts the list of results to variations with the specified item IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) ItemIds(itemIds string) ApiRestPimVariationsScrollGetRequest {
+	r.itemIds = &itemIds
+	return r
+}
+// Filter restricts the list of results to variations which are active/inactive.
+func (r ApiRestPimVariationsScrollGetRequest) IsActive(isActive bool) ApiRestPimVariationsScrollGetRequest {
+	r.isActive = &isActive
+	return r
+}
+// Filter restricts the list of results to variations which are main/not main.
+func (r ApiRestPimVariationsScrollGetRequest) IsMain(isMain bool) ApiRestPimVariationsScrollGetRequest {
+	r.isMain = &isMain
+	return r
+}
+// Filter restricts the list of results to variations which are salable.
+func (r ApiRestPimVariationsScrollGetRequest) IsSalable(isSalable bool) ApiRestPimVariationsScrollGetRequest {
+	r.isSalable = &isSalable
+	return r
+}
+// Filter restricts the list of results to variations which have the given supplier ID.
+func (r ApiRestPimVariationsScrollGetRequest) SupplierId(supplierId int32) ApiRestPimVariationsScrollGetRequest {
+	r.supplierId = &supplierId
+	return r
+}
+// Filter restricts the list of results to variations with the specified availability IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AvailabilityIds(availabilityIds string) ApiRestPimVariationsScrollGetRequest {
+	r.availabilityIds = &availabilityIds
+	return r
+}
+// Filter restricts the list of results to variations which have children.
+func (r ApiRestPimVariationsScrollGetRequest) HasChildren(hasChildren bool) ApiRestPimVariationsScrollGetRequest {
+	r.hasChildren = &hasChildren
+	return r
+}
+// Filter restricts the list of results to variations which have active children.
+func (r ApiRestPimVariationsScrollGetRequest) HasActiveChildren(hasActiveChildren bool) ApiRestPimVariationsScrollGetRequest {
+	r.hasActiveChildren = &hasActiveChildren
+	return r
+}
+//  Filter restricts the list of results to variations which have the specified attribute ID.
+func (r ApiRestPimVariationsScrollGetRequest) AttributeId(attributeId int32) ApiRestPimVariationsScrollGetRequest {
+	r.attributeId = &attributeId
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified attribute IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AnyAttributeId(anyAttributeId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyAttributeId = &anyAttributeId
+	return r
+}
+// Filter restricts the list of results to variations which have all specified attribute IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AllAttributeIds(allAttributeIds string) ApiRestPimVariationsScrollGetRequest {
+	r.allAttributeIds = &allAttributeIds
+	return r
+}
+//  Filter restricts the list of results to variations which have the specified attribute value ID.
+func (r ApiRestPimVariationsScrollGetRequest) AttributeValueId(attributeValueId int32) ApiRestPimVariationsScrollGetRequest {
+	r.attributeValueId = &attributeValueId
+	return r
+}
+//  Filter restricts the list of results to variations which have the any of the specified attribute value IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AnyAttributeValueId(anyAttributeValueId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyAttributeValueId = &anyAttributeValueId
+	return r
+}
+// Filter restricts the list of results to variations which have all specified attribute value IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AllAttributeValueIds(allAttributeValueIds string) ApiRestPimVariationsScrollGetRequest {
+	r.allAttributeValueIds = &allAttributeValueIds
+	return r
+}
+// Filter restricts the list of results to variations which have a barcode with the specified code.
+func (r ApiRestPimVariationsScrollGetRequest) BarcodeCode(barcodeCode string) ApiRestPimVariationsScrollGetRequest {
+	r.barcodeCode = &barcodeCode
+	return r
+}
+// Filter restricts the list of results to variations which have a barcode with the specified ID.
+func (r ApiRestPimVariationsScrollGetRequest) BarcodeId(barcodeId int32) ApiRestPimVariationsScrollGetRequest {
+	r.barcodeId = &barcodeId
+	return r
+}
+// Filter restricts the list of results to variations with the specified bundle type.
+func (r ApiRestPimVariationsScrollGetRequest) BundleType(bundleType string) ApiRestPimVariationsScrollGetRequest {
+	r.bundleType = &bundleType
+	return r
+}
+// Filter restricts the list of results to variations which have the specified category ID.
+func (r ApiRestPimVariationsScrollGetRequest) CategoryId(categoryId int32) ApiRestPimVariationsScrollGetRequest {
+	r.categoryId = &categoryId
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified category IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AnyCategoryId(anyCategoryId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyCategoryId = &anyCategoryId
+	return r
+}
+// Filter restricts the list of results to variations which have all specified category IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AllCategoryIds(allCategoryIds string) ApiRestPimVariationsScrollGetRequest {
+	r.allCategoryIds = &allCategoryIds
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified characteristic IDs.
+func (r ApiRestPimVariationsScrollGetRequest) AnyCharacteristicId(anyCharacteristicId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyCharacteristicId = &anyCharacteristicId
+	return r
+}
+// Filter restricts the list of results to variations which have all specified characteristic IDs.
+func (r ApiRestPimVariationsScrollGetRequest) AllCharacteristicIds(allCharacteristicIds string) ApiRestPimVariationsScrollGetRequest {
+	r.allCharacteristicIds = &allCharacteristicIds
+	return r
+}
+// Filter restricts the list of results to variations which have the specified client ID.
+func (r ApiRestPimVariationsScrollGetRequest) ClientId(clientId int32) ApiRestPimVariationsScrollGetRequest {
+	r.clientId = &clientId
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified client IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AnyClientId(anyClientId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyClientId = &anyClientId
+	return r
+}
+// Filter restricts the list of results to variations which have all specified client IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AllClientIds(allClientIds string) ApiRestPimVariationsScrollGetRequest {
+	r.allClientIds = &allClientIds
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified automatic client visibilities. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AutomaticClientVisibilities(automaticClientVisibilities string) ApiRestPimVariationsScrollGetRequest {
+	r.automaticClientVisibilities = &automaticClientVisibilities
+	return r
+}
+//  Filter restricts the list of results to variations which have an image available for the specified market ID.
+func (r ApiRestPimVariationsScrollGetRequest) ImageHasMarketId(imageHasMarketId float32) ApiRestPimVariationsScrollGetRequest {
+	r.imageHasMarketId = &imageHasMarketId
+	return r
+}
+// Filter restricts the list of results to variations with the specified flag one.
+func (r ApiRestPimVariationsScrollGetRequest) Flag1(flag1 int32) ApiRestPimVariationsScrollGetRequest {
+	r.flag1 = &flag1
+	return r
+}
+// Filter restricts the list of results to variations with the specified flag two.
+func (r ApiRestPimVariationsScrollGetRequest) Flag2(flag2 int32) ApiRestPimVariationsScrollGetRequest {
+	r.flag2 = &flag2
+	return r
+}
+// Filter restricts the list of results to variations with the specified manufacturer ID.
+func (r ApiRestPimVariationsScrollGetRequest) ManufacturerId(manufacturerId int32) ApiRestPimVariationsScrollGetRequest {
+	r.manufacturerId = &manufacturerId
+	return r
+}
+// Filter restricts the list of results to variations with any of the specified manufacturer IDs.
+func (r ApiRestPimVariationsScrollGetRequest) AnyManufacturerId(anyManufacturerId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyManufacturerId = &anyManufacturerId
+	return r
+}
+// Filter restricts the list of results to variations which have the specified item type.
+func (r ApiRestPimVariationsScrollGetRequest) ItemType(itemType string) ApiRestPimVariationsScrollGetRequest {
+	r.itemType = &itemType
+	return r
+}
+// Filter restricts the list of results to variations which have the specified market ID.
+func (r ApiRestPimVariationsScrollGetRequest) MarketId(marketId float32) ApiRestPimVariationsScrollGetRequest {
+	r.marketId = &marketId
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified market IDs.
+func (r ApiRestPimVariationsScrollGetRequest) AnyMarketId(anyMarketId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyMarketId = &anyMarketId
+	return r
+}
+// Filter restricts the list of results to variations which have all specified market IDs.
+func (r ApiRestPimVariationsScrollGetRequest) AllMarketIds(allMarketIds string) ApiRestPimVariationsScrollGetRequest {
+	r.allMarketIds = &allMarketIds
+	return r
+}
+// Filter restricts the list of results to variations which have a sales price between the specified minimum and maximum value. Minimum and maximum value should be separated by a comma.
+func (r ApiRestPimVariationsScrollGetRequest) PriceBetween(priceBetween string) ApiRestPimVariationsScrollGetRequest {
+	r.priceBetween = &priceBetween
+	return r
+}
+// Filter restricts the list of results to variations where the specified sales price is between the specified minimum and maximum value. Sales price ID, Minimum and maximum value should be separated by a comma.
+func (r ApiRestPimVariationsScrollGetRequest) PriceBetweenById(priceBetweenById string) ApiRestPimVariationsScrollGetRequest {
+	r.priceBetweenById = &priceBetweenById
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified sales price IDs. More than one parameter should be separated by commas.
+func (r ApiRestPimVariationsScrollGetRequest) AnySalesPriceId(anySalesPriceId string) ApiRestPimVariationsScrollGetRequest {
+	r.anySalesPriceId = &anySalesPriceId
+	return r
+}
+// Filter restricts the list of results to variations which have/not have any of the specified market IDs.
+func (r ApiRestPimVariationsScrollGetRequest) ReferrerIds(referrerIds string) ApiRestPimVariationsScrollGetRequest {
+	r.referrerIds = &referrerIds
+	return r
+}
+// Filter restricts the list of results to variations with the specified price calculiation uuid.
+func (r ApiRestPimVariationsScrollGetRequest) PriceCalculationUuid(priceCalculationUuid string) ApiRestPimVariationsScrollGetRequest {
+	r.priceCalculationUuid = &priceCalculationUuid
+	return r
+}
+// Filter restricts the list of results to variations which have the specified property selection ID.
+func (r ApiRestPimVariationsScrollGetRequest) PropertySelectionId(propertySelectionId int32) ApiRestPimVariationsScrollGetRequest {
+	r.propertySelectionId = &propertySelectionId
+	return r
+}
+// Filter restricts the list of results to variations which have any of the specified property selection IDs.
+func (r ApiRestPimVariationsScrollGetRequest) AnyPropertySelectionId(anyPropertySelectionId string) ApiRestPimVariationsScrollGetRequest {
+	r.anyPropertySelectionId = &anyPropertySelectionId
+	return r
+}
+// Filter restricts the list of results to variations which have all specified property selection IDs.
+func (r ApiRestPimVariationsScrollGetRequest) AllPropertySelectionIds(allPropertySelectionIds string) ApiRestPimVariationsScrollGetRequest {
+	r.allPropertySelectionIds = &allPropertySelectionIds
+	return r
+}
+// Filter restricts the list of results to variations which have a name in the specified language.
+func (r ApiRestPimVariationsScrollGetRequest) HasNameInLanguage(hasNameInLanguage string) ApiRestPimVariationsScrollGetRequest {
+	r.hasNameInLanguage = &hasNameInLanguage
+	return r
+}
+// Filter restricts the list of results to variations which have been created in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) CreatedAt(createdAt string) ApiRestPimVariationsScrollGetRequest {
+	r.createdAt = &createdAt
+	return r
+}
+// Filter restricts the list of results to variations which have been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) UpdatedAt(updatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.updatedAt = &updatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose item has been created in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) ItemCreatedAt(itemCreatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.itemCreatedAt = &itemCreatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose item has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) ItemUpdatedAt(itemUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.itemUpdatedAt = &itemUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose availablity has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) AvailabilityUpdatedAt(availabilityUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.availabilityUpdatedAt = &availabilityUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose stock has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) StockUpdatedAt(stockUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.stockUpdatedAt = &stockUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose barcodes has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) BarcodeUpdatedAt(barcodeUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.barcodeUpdatedAt = &barcodeUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose categories has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) CategoryUpdatedAt(categoryUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.categoryUpdatedAt = &categoryUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose clients has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) ClientUpdatedAt(clientUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.clientUpdatedAt = &clientUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose markets has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) MarketUpdatedAt(marketUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.marketUpdatedAt = &marketUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose properties has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) PropertyUpdatedAt(propertyUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.propertyUpdatedAt = &propertyUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose suppliers has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) SupplierUpdatedAt(supplierUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.supplierUpdatedAt = &supplierUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose tags has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) TagUpdatedAt(tagUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.tagUpdatedAt = &tagUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations whose warehouse has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead.
+func (r ApiRestPimVariationsScrollGetRequest) WarehouseUpdatedAt(warehouseUpdatedAt string) ApiRestPimVariationsScrollGetRequest {
+	r.warehouseUpdatedAt = &warehouseUpdatedAt
+	return r
+}
+// Filter restricts the list of results to variations which has or has not lowest price.
+func (r ApiRestPimVariationsScrollGetRequest) HasLowestPrice(hasLowestPrice bool) ApiRestPimVariationsScrollGetRequest {
+	r.hasLowestPrice = &hasLowestPrice
+	return r
+}
+// The cursor to get the next entries
+func (r ApiRestPimVariationsScrollGetRequest) Cursor(cursor string) ApiRestPimVariationsScrollGetRequest {
+	r.cursor = &cursor
+	return r
+}
+
+func (r ApiRestPimVariationsScrollGetRequest) Execute() (InlineResponse2001, *_nethttp.Response, error) {
+	return r.ApiService.RestPimVariationsScrollGetExecute(r)
+}
+
+/*
+RestPimVariationsScrollGet Scrolls through variations
+
+Scrolls through variations with the specified data.
+
+ @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiRestPimVariationsScrollGetRequest
+*/
+func (a *DefaultApiService) RestPimVariationsScrollGet(ctx _context.Context) ApiRestPimVariationsScrollGetRequest {
+	return ApiRestPimVariationsScrollGetRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return InlineResponse2001
+func (a *DefaultApiService) RestPimVariationsScrollGetExecute(r ApiRestPimVariationsScrollGetRequest) (InlineResponse2001, *_nethttp.Response, error) {
+	var (
+		localVarHTTPMethod   = _nethttp.MethodGet
+		localVarPostBody     interface{}
+		localVarFormFileName string
+		localVarFileName     string
+		localVarFileBytes    []byte
+		localVarReturnValue  InlineResponse2001
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DefaultApiService.RestPimVariationsScrollGet")
+	if err != nil {
+		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/rest/pim/variations/scroll"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := _neturl.Values{}
+	localVarFormParams := _neturl.Values{}
+
+	if r.with != nil {
+		t := *r.with
+		if reflect.TypeOf(t).Kind() == reflect.Slice {
+			s := reflect.ValueOf(t)
+			for i := 0; i < s.Len(); i++ {
+				localVarQueryParams.Add("with", parameterToString(s.Index(i), "multi"))
+			}
+		} else {
+			localVarQueryParams.Add("with", parameterToString(t, "multi"))
+		}
+	}
+	if r.groupBy != nil {
+		localVarQueryParams.Add("groupBy", parameterToString(*r.groupBy, ""))
+	}
+	if r.ids != nil {
+		localVarQueryParams.Add("ids", parameterToString(*r.ids, ""))
+	}
+	if r.itemId != nil {
+		localVarQueryParams.Add("itemId", parameterToString(*r.itemId, ""))
+	}
+	if r.itemIds != nil {
+		localVarQueryParams.Add("itemIds", parameterToString(*r.itemIds, ""))
+	}
+	if r.isActive != nil {
+		localVarQueryParams.Add("isActive", parameterToString(*r.isActive, ""))
+	}
+	if r.isMain != nil {
+		localVarQueryParams.Add("isMain", parameterToString(*r.isMain, ""))
+	}
+	if r.isSalable != nil {
+		localVarQueryParams.Add("isSalable", parameterToString(*r.isSalable, ""))
+	}
+	if r.supplierId != nil {
+		localVarQueryParams.Add("supplierId", parameterToString(*r.supplierId, ""))
+	}
+	if r.availabilityIds != nil {
+		localVarQueryParams.Add("availabilityIds", parameterToString(*r.availabilityIds, ""))
+	}
+	if r.hasChildren != nil {
+		localVarQueryParams.Add("hasChildren", parameterToString(*r.hasChildren, ""))
+	}
+	if r.hasActiveChildren != nil {
+		localVarQueryParams.Add("hasActiveChildren", parameterToString(*r.hasActiveChildren, ""))
+	}
+	if r.attributeId != nil {
+		localVarQueryParams.Add("attributeId", parameterToString(*r.attributeId, ""))
+	}
+	if r.anyAttributeId != nil {
+		localVarQueryParams.Add("anyAttributeId", parameterToString(*r.anyAttributeId, ""))
+	}
+	if r.allAttributeIds != nil {
+		localVarQueryParams.Add("allAttributeIds", parameterToString(*r.allAttributeIds, ""))
+	}
+	if r.attributeValueId != nil {
+		localVarQueryParams.Add("attributeValueId", parameterToString(*r.attributeValueId, ""))
+	}
+	if r.anyAttributeValueId != nil {
+		localVarQueryParams.Add("anyAttributeValueId", parameterToString(*r.anyAttributeValueId, ""))
+	}
+	if r.allAttributeValueIds != nil {
+		localVarQueryParams.Add("allAttributeValueIds", parameterToString(*r.allAttributeValueIds, ""))
+	}
+	if r.barcodeCode != nil {
+		localVarQueryParams.Add("barcodeCode", parameterToString(*r.barcodeCode, ""))
+	}
+	if r.barcodeId != nil {
+		localVarQueryParams.Add("barcodeId", parameterToString(*r.barcodeId, ""))
+	}
+	if r.bundleType != nil {
+		localVarQueryParams.Add("bundleType", parameterToString(*r.bundleType, ""))
+	}
+	if r.categoryId != nil {
+		localVarQueryParams.Add("categoryId", parameterToString(*r.categoryId, ""))
+	}
+	if r.anyCategoryId != nil {
+		localVarQueryParams.Add("anyCategoryId", parameterToString(*r.anyCategoryId, ""))
+	}
+	if r.allCategoryIds != nil {
+		localVarQueryParams.Add("allCategoryIds", parameterToString(*r.allCategoryIds, ""))
+	}
+	if r.anyCharacteristicId != nil {
+		localVarQueryParams.Add("anyCharacteristicId", parameterToString(*r.anyCharacteristicId, ""))
+	}
+	if r.allCharacteristicIds != nil {
+		localVarQueryParams.Add("allCharacteristicIds", parameterToString(*r.allCharacteristicIds, ""))
+	}
+	if r.clientId != nil {
+		localVarQueryParams.Add("clientId", parameterToString(*r.clientId, ""))
+	}
+	if r.anyClientId != nil {
+		localVarQueryParams.Add("anyClientId", parameterToString(*r.anyClientId, ""))
+	}
+	if r.allClientIds != nil {
+		localVarQueryParams.Add("allClientIds", parameterToString(*r.allClientIds, ""))
+	}
+	if r.automaticClientVisibilities != nil {
+		localVarQueryParams.Add("automaticClientVisibilities", parameterToString(*r.automaticClientVisibilities, ""))
+	}
+	if r.imageHasMarketId != nil {
+		localVarQueryParams.Add("imageHasMarketId", parameterToString(*r.imageHasMarketId, ""))
+	}
+	if r.flag1 != nil {
+		localVarQueryParams.Add("flag1", parameterToString(*r.flag1, ""))
+	}
+	if r.flag2 != nil {
+		localVarQueryParams.Add("flag2", parameterToString(*r.flag2, ""))
+	}
+	if r.manufacturerId != nil {
+		localVarQueryParams.Add("manufacturerId", parameterToString(*r.manufacturerId, ""))
+	}
+	if r.anyManufacturerId != nil {
+		localVarQueryParams.Add("anyManufacturerId", parameterToString(*r.anyManufacturerId, ""))
+	}
+	if r.itemType != nil {
+		localVarQueryParams.Add("itemType", parameterToString(*r.itemType, ""))
+	}
+	if r.marketId != nil {
+		localVarQueryParams.Add("marketId", parameterToString(*r.marketId, ""))
+	}
+	if r.anyMarketId != nil {
+		localVarQueryParams.Add("anyMarketId", parameterToString(*r.anyMarketId, ""))
+	}
+	if r.allMarketIds != nil {
+		localVarQueryParams.Add("allMarketIds", parameterToString(*r.allMarketIds, ""))
+	}
+	if r.priceBetween != nil {
+		localVarQueryParams.Add("priceBetween", parameterToString(*r.priceBetween, ""))
+	}
+	if r.priceBetweenById != nil {
+		localVarQueryParams.Add("priceBetweenById", parameterToString(*r.priceBetweenById, ""))
+	}
+	if r.anySalesPriceId != nil {
+		localVarQueryParams.Add("anySalesPriceId", parameterToString(*r.anySalesPriceId, ""))
+	}
+	if r.referrerIds != nil {
+		localVarQueryParams.Add("referrerIds", parameterToString(*r.referrerIds, ""))
+	}
+	if r.priceCalculationUuid != nil {
+		localVarQueryParams.Add("priceCalculationUuid", parameterToString(*r.priceCalculationUuid, ""))
+	}
+	if r.propertySelectionId != nil {
+		localVarQueryParams.Add("propertySelectionId", parameterToString(*r.propertySelectionId, ""))
+	}
+	if r.anyPropertySelectionId != nil {
+		localVarQueryParams.Add("anyPropertySelectionId", parameterToString(*r.anyPropertySelectionId, ""))
+	}
+	if r.allPropertySelectionIds != nil {
+		localVarQueryParams.Add("allPropertySelectionIds", parameterToString(*r.allPropertySelectionIds, ""))
+	}
+	if r.hasNameInLanguage != nil {
+		localVarQueryParams.Add("hasNameInLanguage", parameterToString(*r.hasNameInLanguage, ""))
+	}
+	if r.createdAt != nil {
+		localVarQueryParams.Add("createdAt", parameterToString(*r.createdAt, ""))
+	}
+	if r.updatedAt != nil {
+		localVarQueryParams.Add("updatedAt", parameterToString(*r.updatedAt, ""))
+	}
+	if r.itemCreatedAt != nil {
+		localVarQueryParams.Add("itemCreatedAt", parameterToString(*r.itemCreatedAt, ""))
+	}
+	if r.itemUpdatedAt != nil {
+		localVarQueryParams.Add("itemUpdatedAt", parameterToString(*r.itemUpdatedAt, ""))
+	}
+	if r.availabilityUpdatedAt != nil {
+		localVarQueryParams.Add("availabilityUpdatedAt", parameterToString(*r.availabilityUpdatedAt, ""))
+	}
+	if r.stockUpdatedAt != nil {
+		localVarQueryParams.Add("stockUpdatedAt", parameterToString(*r.stockUpdatedAt, ""))
+	}
+	if r.barcodeUpdatedAt != nil {
+		localVarQueryParams.Add("barcodeUpdatedAt", parameterToString(*r.barcodeUpdatedAt, ""))
+	}
+	if r.categoryUpdatedAt != nil {
+		localVarQueryParams.Add("categoryUpdatedAt", parameterToString(*r.categoryUpdatedAt, ""))
+	}
+	if r.clientUpdatedAt != nil {
+		localVarQueryParams.Add("clientUpdatedAt", parameterToString(*r.clientUpdatedAt, ""))
+	}
+	if r.marketUpdatedAt != nil {
+		localVarQueryParams.Add("marketUpdatedAt", parameterToString(*r.marketUpdatedAt, ""))
+	}
+	if r.propertyUpdatedAt != nil {
+		localVarQueryParams.Add("propertyUpdatedAt", parameterToString(*r.propertyUpdatedAt, ""))
+	}
+	if r.supplierUpdatedAt != nil {
+		localVarQueryParams.Add("supplierUpdatedAt", parameterToString(*r.supplierUpdatedAt, ""))
+	}
+	if r.tagUpdatedAt != nil {
+		localVarQueryParams.Add("tagUpdatedAt", parameterToString(*r.tagUpdatedAt, ""))
+	}
+	if r.warehouseUpdatedAt != nil {
+		localVarQueryParams.Add("warehouseUpdatedAt", parameterToString(*r.warehouseUpdatedAt, ""))
+	}
+	if r.hasLowestPrice != nil {
+		localVarQueryParams.Add("hasLowestPrice", parameterToString(*r.hasLowestPrice, ""))
+	}
+	if r.cursor != nil {
+		localVarQueryParams.Add("cursor", parameterToString(*r.cursor, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json;charset=utf-8"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFormFileName, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := _ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = _ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiRestStockmanagementWarehousesWarehouseIdStockCorrectionPutRequest struct {
 	ctx _context.Context
 	ApiService *DefaultApiService

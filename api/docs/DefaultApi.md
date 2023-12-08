@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**RestOrdersSearchGet**](DefaultApi.md#RestOrdersSearchGet) | **Get** /rest/orders/search | searches for orders. The results can be restricted by using filters
 [**RestPimVariationsGet**](DefaultApi.md#RestPimVariationsGet) | **Get** /rest/pim/variations | Lists variations
 [**RestPimVariationsPut**](DefaultApi.md#RestPimVariationsPut) | **Put** /rest/pim/variations | Create a list of variations and their related data
+[**RestPimVariationsScrollGet**](DefaultApi.md#RestPimVariationsScrollGet) | **Get** /rest/pim/variations/scroll | Scrolls through variations
 [**RestStockmanagementWarehousesWarehouseIdStockCorrectionPut**](DefaultApi.md#RestStockmanagementWarehousesWarehouseIdStockCorrectionPut) | **Put** /rest/stockmanagement/warehouses/{warehouseId}/stock/correction | set stocks
 
 
@@ -1660,6 +1661,198 @@ No authorization required
 ### HTTP request headers
 
 - **Content-Type**: application/json;charset=utf-8
+- **Accept**: application/json;charset=utf-8
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## RestPimVariationsScrollGet
+
+> InlineResponse2001 RestPimVariationsScrollGet(ctx).With(with).GroupBy(groupBy).Ids(ids).ItemId(itemId).ItemIds(itemIds).IsActive(isActive).IsMain(isMain).IsSalable(isSalable).SupplierId(supplierId).AvailabilityIds(availabilityIds).HasChildren(hasChildren).HasActiveChildren(hasActiveChildren).AttributeId(attributeId).AnyAttributeId(anyAttributeId).AllAttributeIds(allAttributeIds).AttributeValueId(attributeValueId).AnyAttributeValueId(anyAttributeValueId).AllAttributeValueIds(allAttributeValueIds).BarcodeCode(barcodeCode).BarcodeId(barcodeId).BundleType(bundleType).CategoryId(categoryId).AnyCategoryId(anyCategoryId).AllCategoryIds(allCategoryIds).AnyCharacteristicId(anyCharacteristicId).AllCharacteristicIds(allCharacteristicIds).ClientId(clientId).AnyClientId(anyClientId).AllClientIds(allClientIds).AutomaticClientVisibilities(automaticClientVisibilities).ImageHasMarketId(imageHasMarketId).Flag1(flag1).Flag2(flag2).ManufacturerId(manufacturerId).AnyManufacturerId(anyManufacturerId).ItemType(itemType).MarketId(marketId).AnyMarketId(anyMarketId).AllMarketIds(allMarketIds).PriceBetween(priceBetween).PriceBetweenById(priceBetweenById).AnySalesPriceId(anySalesPriceId).ReferrerIds(referrerIds).PriceCalculationUuid(priceCalculationUuid).PropertySelectionId(propertySelectionId).AnyPropertySelectionId(anyPropertySelectionId).AllPropertySelectionIds(allPropertySelectionIds).HasNameInLanguage(hasNameInLanguage).CreatedAt(createdAt).UpdatedAt(updatedAt).ItemCreatedAt(itemCreatedAt).ItemUpdatedAt(itemUpdatedAt).AvailabilityUpdatedAt(availabilityUpdatedAt).StockUpdatedAt(stockUpdatedAt).BarcodeUpdatedAt(barcodeUpdatedAt).CategoryUpdatedAt(categoryUpdatedAt).ClientUpdatedAt(clientUpdatedAt).MarketUpdatedAt(marketUpdatedAt).PropertyUpdatedAt(propertyUpdatedAt).SupplierUpdatedAt(supplierUpdatedAt).TagUpdatedAt(tagUpdatedAt).WarehouseUpdatedAt(warehouseUpdatedAt).HasLowestPrice(hasLowestPrice).Cursor(cursor).Execute()
+
+Scrolls through variations
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    openapiclient "./openapi"
+)
+
+func main() {
+    with := []string{"With_example"} // []string | Includes the specified information in the results. More than one parameter should be separated by commas. The following parameters are available:<ul><li>'additionalSkus' = The additional skus of the variation.</li><li>'attributeValues' = The attribute values of the variation.</li><li>'attributeValues.attribute'/b> = Includes attributeValues. The attribute data to the related attribute ID.</li><li>'attributeValues.attributeValue' = Includes attributeValues. The attribute value data to the related attribute value ID.</li><li>'barcodes' = The barcodes of the variation.</li><li>'barcodes.barcode' = Includes barcodes. The barcode data to the related barcode ID.</li><li>'base' = The variation base.</li><li>'base.item' = Includes base. The item data of the variation.</li><li>'base.itemSerialNumber' = Includes base. The item serial numbers of the variation.</li><li>'base.feedback' = Includes base. The feedback of the variation.</li><li>'base.characteristics' = Includes base. The characteristics of the variation.</li><li>'base.crossSelling' = Includes base. The cross selling items of the variation.</li><li>'base.texts' = Includes base. The texts of the variation.</li><li>'base.availability' = Includes base. The availability data related to the variation's availability ID.</li><li>'base.images' = Includes base. The images linked to the item.</li><li>'base.shippingProfiles' = Includes base. The shipping profiles linked to the item.</li><li>'base.stock' = Includes base. The stock of the variation.</li><li>'base.stockStorageLocations' = Includes base. The stock storage locations of the variation.</li><li>'bundleComponents' = The bundle components of the variation.</li><li>'categories' = The categories of the variation.</li><li>'categories.category' = Includes categories. The related category data for each category ID.</li><li>'categories.categoryBranch' = Includes categories. The related category branch data for each category ID.</li><li>'clients' = The clients of the variation.</li><li>'defaultCategories' = The default categories of the variation</li><li>'defaultCategories.category' = Includes defaultCategories. The category data to the related category ID.</li><li>'images' = The images of the variation</li><li>'images.image' = Includes images. The image data to the related image ID.</li><li>'markets' = The markets of the variation.</li><li>'marketIdentNumbers' = The market ident numbers of the variation</li><li>'salesPrices' = The sales prices of the variation.</li><li>'salesPrices.salesPrice' = Includes salesPrices. The sales price data to the related sales price ID.</li><li>'skus' = The skus of the variation.</li><li>'supplier' = The supplier of the variation.</li><li>'supplier.supplier' = Includes supplier. The contact data to the related supplier ID.</li><li>'timestamps' = The timetamps of the variation.</li><li>'warehouses' = The warehouses of the variation</li><li>'warehouses.warehouse' = Includes warehouses. The warehouse data to the related warehouse ID.</li><li>'unit' = The unit of the variation</li><li>'unit.unit' = Includes unit. The unit data of the related unit ID.</li><li>'tags' = The tags of the variation.</li><li>'tags.tag' = Includes tags. The tag data to the related tag ID.</li><li>'properties' = The properties of the variation.</li><li>'properties.property' = Includes properties. The property data to the related property ID.</li></ul> (optional)
+    groupBy := "groupBy_example" // string | Groups the result. The following parameters are available:<ul><li>'itemId' = Groups the result by the item ID.</li><li>'itemAttributeValue' = Groups the result by the attribute with the flag 'isGroupable'.</li></ul> (optional)
+    ids := "ids_example" // string | Filter restricts the list of results to variations with the specified IDs. More than one parameter should be separated by commas. (optional)
+    itemId := int32(56) // int32 | Filter restricts the list of results to variations with the specified item ID. (optional)
+    itemIds := "itemIds_example" // string | Filter restricts the list of results to variations with the specified item IDs. More than one parameter should be separated by commas. (optional)
+    isActive := true // bool | Filter restricts the list of results to variations which are active/inactive. (optional)
+    isMain := true // bool | Filter restricts the list of results to variations which are main/not main. (optional)
+    isSalable := true // bool | Filter restricts the list of results to variations which are salable. (optional)
+    supplierId := int32(56) // int32 | Filter restricts the list of results to variations which have the given supplier ID. (optional)
+    availabilityIds := "availabilityIds_example" // string | Filter restricts the list of results to variations with the specified availability IDs. More than one parameter should be separated by commas. (optional)
+    hasChildren := true // bool | Filter restricts the list of results to variations which have children. (optional)
+    hasActiveChildren := true // bool | Filter restricts the list of results to variations which have active children. (optional)
+    attributeId := int32(56) // int32 |  Filter restricts the list of results to variations which have the specified attribute ID. (optional)
+    anyAttributeId := "anyAttributeId_example" // string | Filter restricts the list of results to variations which have any of the specified attribute IDs. More than one parameter should be separated by commas. (optional)
+    allAttributeIds := "allAttributeIds_example" // string | Filter restricts the list of results to variations which have all specified attribute IDs. More than one parameter should be separated by commas. (optional)
+    attributeValueId := int32(56) // int32 |  Filter restricts the list of results to variations which have the specified attribute value ID. (optional)
+    anyAttributeValueId := "anyAttributeValueId_example" // string |  Filter restricts the list of results to variations which have the any of the specified attribute value IDs. More than one parameter should be separated by commas. (optional)
+    allAttributeValueIds := "allAttributeValueIds_example" // string | Filter restricts the list of results to variations which have all specified attribute value IDs. More than one parameter should be separated by commas. (optional)
+    barcodeCode := "barcodeCode_example" // string | Filter restricts the list of results to variations which have a barcode with the specified code. (optional)
+    barcodeId := int32(56) // int32 | Filter restricts the list of results to variations which have a barcode with the specified ID. (optional)
+    bundleType := "bundleType_example" // string | Filter restricts the list of results to variations with the specified bundle type. (optional)
+    categoryId := int32(56) // int32 | Filter restricts the list of results to variations which have the specified category ID. (optional)
+    anyCategoryId := "anyCategoryId_example" // string | Filter restricts the list of results to variations which have any of the specified category IDs. More than one parameter should be separated by commas. (optional)
+    allCategoryIds := "allCategoryIds_example" // string | Filter restricts the list of results to variations which have all specified category IDs. More than one parameter should be separated by commas. (optional)
+    anyCharacteristicId := "anyCharacteristicId_example" // string | Filter restricts the list of results to variations which have any of the specified characteristic IDs. (optional)
+    allCharacteristicIds := "allCharacteristicIds_example" // string | Filter restricts the list of results to variations which have all specified characteristic IDs. (optional)
+    clientId := int32(56) // int32 | Filter restricts the list of results to variations which have the specified client ID. (optional)
+    anyClientId := "anyClientId_example" // string | Filter restricts the list of results to variations which have any of the specified client IDs. More than one parameter should be separated by commas. (optional)
+    allClientIds := "allClientIds_example" // string | Filter restricts the list of results to variations which have all specified client IDs. More than one parameter should be separated by commas. (optional)
+    automaticClientVisibilities := "automaticClientVisibilities_example" // string | Filter restricts the list of results to variations which have any of the specified automatic client visibilities. More than one parameter should be separated by commas. (optional)
+    imageHasMarketId := float32(8.14) // float32 |  Filter restricts the list of results to variations which have an image available for the specified market ID. (optional)
+    flag1 := int32(56) // int32 | Filter restricts the list of results to variations with the specified flag one. (optional)
+    flag2 := int32(56) // int32 | Filter restricts the list of results to variations with the specified flag two. (optional)
+    manufacturerId := int32(56) // int32 | Filter restricts the list of results to variations with the specified manufacturer ID. (optional)
+    anyManufacturerId := "anyManufacturerId_example" // string | Filter restricts the list of results to variations with any of the specified manufacturer IDs. (optional)
+    itemType := "itemType_example" // string | Filter restricts the list of results to variations which have the specified item type. (optional)
+    marketId := float32(8.14) // float32 | Filter restricts the list of results to variations which have the specified market ID. (optional)
+    anyMarketId := "anyMarketId_example" // string | Filter restricts the list of results to variations which have any of the specified market IDs. (optional)
+    allMarketIds := "allMarketIds_example" // string | Filter restricts the list of results to variations which have all specified market IDs. (optional)
+    priceBetween := "priceBetween_example" // string | Filter restricts the list of results to variations which have a sales price between the specified minimum and maximum value. Minimum and maximum value should be separated by a comma. (optional)
+    priceBetweenById := "priceBetweenById_example" // string | Filter restricts the list of results to variations where the specified sales price is between the specified minimum and maximum value. Sales price ID, Minimum and maximum value should be separated by a comma. (optional)
+    anySalesPriceId := "anySalesPriceId_example" // string | Filter restricts the list of results to variations which have any of the specified sales price IDs. More than one parameter should be separated by commas. (optional)
+    referrerIds := "referrerIds_example" // string | Filter restricts the list of results to variations which have/not have any of the specified market IDs. (optional)
+    priceCalculationUuid := "priceCalculationUuid_example" // string | Filter restricts the list of results to variations with the specified price calculiation uuid. (optional)
+    propertySelectionId := int32(56) // int32 | Filter restricts the list of results to variations which have the specified property selection ID. (optional)
+    anyPropertySelectionId := "anyPropertySelectionId_example" // string | Filter restricts the list of results to variations which have any of the specified property selection IDs. (optional)
+    allPropertySelectionIds := "allPropertySelectionIds_example" // string | Filter restricts the list of results to variations which have all specified property selection IDs. (optional)
+    hasNameInLanguage := "hasNameInLanguage_example" // string | Filter restricts the list of results to variations which have a name in the specified language. (optional)
+    createdAt := "createdAt_example" // string | Filter restricts the list of results to variations which have been created in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    updatedAt := "updatedAt_example" // string | Filter restricts the list of results to variations which have been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    itemCreatedAt := "itemCreatedAt_example" // string | Filter restricts the list of results to variations whose item has been created in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    itemUpdatedAt := "itemUpdatedAt_example" // string | Filter restricts the list of results to variations whose item has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    availabilityUpdatedAt := "availabilityUpdatedAt_example" // string | Filter restricts the list of results to variations whose availablity has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    stockUpdatedAt := "stockUpdatedAt_example" // string | Filter restricts the list of results to variations whose stock has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    barcodeUpdatedAt := "barcodeUpdatedAt_example" // string | Filter restricts the list of results to variations whose barcodes has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    categoryUpdatedAt := "categoryUpdatedAt_example" // string | Filter restricts the list of results to variations whose categories has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    clientUpdatedAt := "clientUpdatedAt_example" // string | Filter restricts the list of results to variations whose clients has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    marketUpdatedAt := "marketUpdatedAt_example" // string | Filter restricts the list of results to variations whose markets has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    propertyUpdatedAt := "propertyUpdatedAt_example" // string | Filter restricts the list of results to variations whose properties has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    supplierUpdatedAt := "supplierUpdatedAt_example" // string | Filter restricts the list of results to variations whose suppliers has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    tagUpdatedAt := "tagUpdatedAt_example" // string | Filter restricts the list of results to variations whose tags has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    warehouseUpdatedAt := "warehouseUpdatedAt_example" // string | Filter restricts the list of results to variations whose warehouse has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. (optional)
+    hasLowestPrice := true // bool | Filter restricts the list of results to variations which has or has not lowest price. (optional)
+    cursor := "cursor_example" // string | The cursor to get the next entries (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    api_client := openapiclient.NewAPIClient(configuration)
+    resp, r, err := api_client.DefaultApi.RestPimVariationsScrollGet(context.Background()).With(with).GroupBy(groupBy).Ids(ids).ItemId(itemId).ItemIds(itemIds).IsActive(isActive).IsMain(isMain).IsSalable(isSalable).SupplierId(supplierId).AvailabilityIds(availabilityIds).HasChildren(hasChildren).HasActiveChildren(hasActiveChildren).AttributeId(attributeId).AnyAttributeId(anyAttributeId).AllAttributeIds(allAttributeIds).AttributeValueId(attributeValueId).AnyAttributeValueId(anyAttributeValueId).AllAttributeValueIds(allAttributeValueIds).BarcodeCode(barcodeCode).BarcodeId(barcodeId).BundleType(bundleType).CategoryId(categoryId).AnyCategoryId(anyCategoryId).AllCategoryIds(allCategoryIds).AnyCharacteristicId(anyCharacteristicId).AllCharacteristicIds(allCharacteristicIds).ClientId(clientId).AnyClientId(anyClientId).AllClientIds(allClientIds).AutomaticClientVisibilities(automaticClientVisibilities).ImageHasMarketId(imageHasMarketId).Flag1(flag1).Flag2(flag2).ManufacturerId(manufacturerId).AnyManufacturerId(anyManufacturerId).ItemType(itemType).MarketId(marketId).AnyMarketId(anyMarketId).AllMarketIds(allMarketIds).PriceBetween(priceBetween).PriceBetweenById(priceBetweenById).AnySalesPriceId(anySalesPriceId).ReferrerIds(referrerIds).PriceCalculationUuid(priceCalculationUuid).PropertySelectionId(propertySelectionId).AnyPropertySelectionId(anyPropertySelectionId).AllPropertySelectionIds(allPropertySelectionIds).HasNameInLanguage(hasNameInLanguage).CreatedAt(createdAt).UpdatedAt(updatedAt).ItemCreatedAt(itemCreatedAt).ItemUpdatedAt(itemUpdatedAt).AvailabilityUpdatedAt(availabilityUpdatedAt).StockUpdatedAt(stockUpdatedAt).BarcodeUpdatedAt(barcodeUpdatedAt).CategoryUpdatedAt(categoryUpdatedAt).ClientUpdatedAt(clientUpdatedAt).MarketUpdatedAt(marketUpdatedAt).PropertyUpdatedAt(propertyUpdatedAt).SupplierUpdatedAt(supplierUpdatedAt).TagUpdatedAt(tagUpdatedAt).WarehouseUpdatedAt(warehouseUpdatedAt).HasLowestPrice(hasLowestPrice).Cursor(cursor).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `DefaultApi.RestPimVariationsScrollGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `RestPimVariationsScrollGet`: InlineResponse2001
+    fmt.Fprintf(os.Stdout, "Response from `DefaultApi.RestPimVariationsScrollGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiRestPimVariationsScrollGetRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **with** | **[]string** | Includes the specified information in the results. More than one parameter should be separated by commas. The following parameters are available:&lt;ul&gt;&lt;li&gt;&#39;additionalSkus&#39; &#x3D; The additional skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues&#39; &#x3D; The attribute values of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attribute&#39;/b&gt; &#x3D; Includes attributeValues. The attribute data to the related attribute ID.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attributeValue&#39; &#x3D; Includes attributeValues. The attribute value data to the related attribute value ID.&lt;/li&gt;&lt;li&gt;&#39;barcodes&#39; &#x3D; The barcodes of the variation.&lt;/li&gt;&lt;li&gt;&#39;barcodes.barcode&#39; &#x3D; Includes barcodes. The barcode data to the related barcode ID.&lt;/li&gt;&lt;li&gt;&#39;base&#39; &#x3D; The variation base.&lt;/li&gt;&lt;li&gt;&#39;base.item&#39; &#x3D; Includes base. The item data of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.itemSerialNumber&#39; &#x3D; Includes base. The item serial numbers of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.feedback&#39; &#x3D; Includes base. The feedback of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.characteristics&#39; &#x3D; Includes base. The characteristics of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.crossSelling&#39; &#x3D; Includes base. The cross selling items of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.texts&#39; &#x3D; Includes base. The texts of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.availability&#39; &#x3D; Includes base. The availability data related to the variation&#39;s availability ID.&lt;/li&gt;&lt;li&gt;&#39;base.images&#39; &#x3D; Includes base. The images linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.shippingProfiles&#39; &#x3D; Includes base. The shipping profiles linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.stock&#39; &#x3D; Includes base. The stock of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.stockStorageLocations&#39; &#x3D; Includes base. The stock storage locations of the variation.&lt;/li&gt;&lt;li&gt;&#39;bundleComponents&#39; &#x3D; The bundle components of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories&#39; &#x3D; The categories of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories.category&#39; &#x3D; Includes categories. The related category data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;categories.categoryBranch&#39; &#x3D; Includes categories. The related category branch data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;clients&#39; &#x3D; The clients of the variation.&lt;/li&gt;&lt;li&gt;&#39;defaultCategories&#39; &#x3D; The default categories of the variation&lt;/li&gt;&lt;li&gt;&#39;defaultCategories.category&#39; &#x3D; Includes defaultCategories. The category data to the related category ID.&lt;/li&gt;&lt;li&gt;&#39;images&#39; &#x3D; The images of the variation&lt;/li&gt;&lt;li&gt;&#39;images.image&#39; &#x3D; Includes images. The image data to the related image ID.&lt;/li&gt;&lt;li&gt;&#39;markets&#39; &#x3D; The markets of the variation.&lt;/li&gt;&lt;li&gt;&#39;marketIdentNumbers&#39; &#x3D; The market ident numbers of the variation&lt;/li&gt;&lt;li&gt;&#39;salesPrices&#39; &#x3D; The sales prices of the variation.&lt;/li&gt;&lt;li&gt;&#39;salesPrices.salesPrice&#39; &#x3D; Includes salesPrices. The sales price data to the related sales price ID.&lt;/li&gt;&lt;li&gt;&#39;skus&#39; &#x3D; The skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier&#39; &#x3D; The supplier of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier.supplier&#39; &#x3D; Includes supplier. The contact data to the related supplier ID.&lt;/li&gt;&lt;li&gt;&#39;timestamps&#39; &#x3D; The timetamps of the variation.&lt;/li&gt;&lt;li&gt;&#39;warehouses&#39; &#x3D; The warehouses of the variation&lt;/li&gt;&lt;li&gt;&#39;warehouses.warehouse&#39; &#x3D; Includes warehouses. The warehouse data to the related warehouse ID.&lt;/li&gt;&lt;li&gt;&#39;unit&#39; &#x3D; The unit of the variation&lt;/li&gt;&lt;li&gt;&#39;unit.unit&#39; &#x3D; Includes unit. The unit data of the related unit ID.&lt;/li&gt;&lt;li&gt;&#39;tags&#39; &#x3D; The tags of the variation.&lt;/li&gt;&lt;li&gt;&#39;tags.tag&#39; &#x3D; Includes tags. The tag data to the related tag ID.&lt;/li&gt;&lt;li&gt;&#39;properties&#39; &#x3D; The properties of the variation.&lt;/li&gt;&lt;li&gt;&#39;properties.property&#39; &#x3D; Includes properties. The property data to the related property ID.&lt;/li&gt;&lt;/ul&gt; | 
+ **groupBy** | **string** | Groups the result. The following parameters are available:&lt;ul&gt;&lt;li&gt;&#39;itemId&#39; &#x3D; Groups the result by the item ID.&lt;/li&gt;&lt;li&gt;&#39;itemAttributeValue&#39; &#x3D; Groups the result by the attribute with the flag &#39;isGroupable&#39;.&lt;/li&gt;&lt;/ul&gt; | 
+ **ids** | **string** | Filter restricts the list of results to variations with the specified IDs. More than one parameter should be separated by commas. | 
+ **itemId** | **int32** | Filter restricts the list of results to variations with the specified item ID. | 
+ **itemIds** | **string** | Filter restricts the list of results to variations with the specified item IDs. More than one parameter should be separated by commas. | 
+ **isActive** | **bool** | Filter restricts the list of results to variations which are active/inactive. | 
+ **isMain** | **bool** | Filter restricts the list of results to variations which are main/not main. | 
+ **isSalable** | **bool** | Filter restricts the list of results to variations which are salable. | 
+ **supplierId** | **int32** | Filter restricts the list of results to variations which have the given supplier ID. | 
+ **availabilityIds** | **string** | Filter restricts the list of results to variations with the specified availability IDs. More than one parameter should be separated by commas. | 
+ **hasChildren** | **bool** | Filter restricts the list of results to variations which have children. | 
+ **hasActiveChildren** | **bool** | Filter restricts the list of results to variations which have active children. | 
+ **attributeId** | **int32** |  Filter restricts the list of results to variations which have the specified attribute ID. | 
+ **anyAttributeId** | **string** | Filter restricts the list of results to variations which have any of the specified attribute IDs. More than one parameter should be separated by commas. | 
+ **allAttributeIds** | **string** | Filter restricts the list of results to variations which have all specified attribute IDs. More than one parameter should be separated by commas. | 
+ **attributeValueId** | **int32** |  Filter restricts the list of results to variations which have the specified attribute value ID. | 
+ **anyAttributeValueId** | **string** |  Filter restricts the list of results to variations which have the any of the specified attribute value IDs. More than one parameter should be separated by commas. | 
+ **allAttributeValueIds** | **string** | Filter restricts the list of results to variations which have all specified attribute value IDs. More than one parameter should be separated by commas. | 
+ **barcodeCode** | **string** | Filter restricts the list of results to variations which have a barcode with the specified code. | 
+ **barcodeId** | **int32** | Filter restricts the list of results to variations which have a barcode with the specified ID. | 
+ **bundleType** | **string** | Filter restricts the list of results to variations with the specified bundle type. | 
+ **categoryId** | **int32** | Filter restricts the list of results to variations which have the specified category ID. | 
+ **anyCategoryId** | **string** | Filter restricts the list of results to variations which have any of the specified category IDs. More than one parameter should be separated by commas. | 
+ **allCategoryIds** | **string** | Filter restricts the list of results to variations which have all specified category IDs. More than one parameter should be separated by commas. | 
+ **anyCharacteristicId** | **string** | Filter restricts the list of results to variations which have any of the specified characteristic IDs. | 
+ **allCharacteristicIds** | **string** | Filter restricts the list of results to variations which have all specified characteristic IDs. | 
+ **clientId** | **int32** | Filter restricts the list of results to variations which have the specified client ID. | 
+ **anyClientId** | **string** | Filter restricts the list of results to variations which have any of the specified client IDs. More than one parameter should be separated by commas. | 
+ **allClientIds** | **string** | Filter restricts the list of results to variations which have all specified client IDs. More than one parameter should be separated by commas. | 
+ **automaticClientVisibilities** | **string** | Filter restricts the list of results to variations which have any of the specified automatic client visibilities. More than one parameter should be separated by commas. | 
+ **imageHasMarketId** | **float32** |  Filter restricts the list of results to variations which have an image available for the specified market ID. | 
+ **flag1** | **int32** | Filter restricts the list of results to variations with the specified flag one. | 
+ **flag2** | **int32** | Filter restricts the list of results to variations with the specified flag two. | 
+ **manufacturerId** | **int32** | Filter restricts the list of results to variations with the specified manufacturer ID. | 
+ **anyManufacturerId** | **string** | Filter restricts the list of results to variations with any of the specified manufacturer IDs. | 
+ **itemType** | **string** | Filter restricts the list of results to variations which have the specified item type. | 
+ **marketId** | **float32** | Filter restricts the list of results to variations which have the specified market ID. | 
+ **anyMarketId** | **string** | Filter restricts the list of results to variations which have any of the specified market IDs. | 
+ **allMarketIds** | **string** | Filter restricts the list of results to variations which have all specified market IDs. | 
+ **priceBetween** | **string** | Filter restricts the list of results to variations which have a sales price between the specified minimum and maximum value. Minimum and maximum value should be separated by a comma. | 
+ **priceBetweenById** | **string** | Filter restricts the list of results to variations where the specified sales price is between the specified minimum and maximum value. Sales price ID, Minimum and maximum value should be separated by a comma. | 
+ **anySalesPriceId** | **string** | Filter restricts the list of results to variations which have any of the specified sales price IDs. More than one parameter should be separated by commas. | 
+ **referrerIds** | **string** | Filter restricts the list of results to variations which have/not have any of the specified market IDs. | 
+ **priceCalculationUuid** | **string** | Filter restricts the list of results to variations with the specified price calculiation uuid. | 
+ **propertySelectionId** | **int32** | Filter restricts the list of results to variations which have the specified property selection ID. | 
+ **anyPropertySelectionId** | **string** | Filter restricts the list of results to variations which have any of the specified property selection IDs. | 
+ **allPropertySelectionIds** | **string** | Filter restricts the list of results to variations which have all specified property selection IDs. | 
+ **hasNameInLanguage** | **string** | Filter restricts the list of results to variations which have a name in the specified language. | 
+ **createdAt** | **string** | Filter restricts the list of results to variations which have been created in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **updatedAt** | **string** | Filter restricts the list of results to variations which have been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **itemCreatedAt** | **string** | Filter restricts the list of results to variations whose item has been created in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **itemUpdatedAt** | **string** | Filter restricts the list of results to variations whose item has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **availabilityUpdatedAt** | **string** | Filter restricts the list of results to variations whose availablity has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **stockUpdatedAt** | **string** | Filter restricts the list of results to variations whose stock has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **barcodeUpdatedAt** | **string** | Filter restricts the list of results to variations whose barcodes has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **categoryUpdatedAt** | **string** | Filter restricts the list of results to variations whose categories has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **clientUpdatedAt** | **string** | Filter restricts the list of results to variations whose clients has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **marketUpdatedAt** | **string** | Filter restricts the list of results to variations whose markets has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **propertyUpdatedAt** | **string** | Filter restricts the list of results to variations whose properties has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **supplierUpdatedAt** | **string** | Filter restricts the list of results to variations whose suppliers has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **tagUpdatedAt** | **string** | Filter restricts the list of results to variations whose tags has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **warehouseUpdatedAt** | **string** | Filter restricts the list of results to variations whose warehouse has been updated in the specified time frame. The from and to parameter should be separated by a comma. If there is no to value, the current time is used instead. | 
+ **hasLowestPrice** | **bool** | Filter restricts the list of results to variations which has or has not lowest price. | 
+ **cursor** | **string** | The cursor to get the next entries | 
+
+### Return type
+
+[**InlineResponse2001**](InlineResponse2001.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: application/json;charset=utf-8
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

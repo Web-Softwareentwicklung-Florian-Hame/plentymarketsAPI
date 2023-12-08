@@ -21,6 +21,7 @@ docs/DefaultApi.md
 docs/ImageAvailability.md
 docs/ImageName.md
 docs/InlineResponse200.md
+docs/InlineResponse2001.md
 docs/ItemEbayTitle.md
 docs/ItemPagination.md
 docs/ItemProperty.md
@@ -105,6 +106,7 @@ model_create_items_response.go
 model_image_availability.go
 model_image_name.go
 model_inline_response_200.go
+model_inline_response_200_1.go
 model_item_ebay_title.go
 model_item_pagination.go
 model_item_property.go

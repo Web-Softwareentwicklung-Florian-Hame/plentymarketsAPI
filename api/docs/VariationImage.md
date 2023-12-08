@@ -4,6 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**ImageId** | Pointer to **int32** |  | [optional] 
 **Id** | Pointer to **int32** |  | [optional] 
 **ItemId** | Pointer to **int32** |  | [optional] 
 **Type** | Pointer to **string** |  | [optional] 
@@ -50,6 +51,31 @@ will change when the set of required properties is changed
 NewVariationImageWithDefaults instantiates a new VariationImage object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetImageId
+
+`func (o *VariationImage) GetImageId() int32`
+
+GetImageId returns the ImageId field if non-nil, zero value otherwise.
+
+### GetImageIdOk
+
+`func (o *VariationImage) GetImageIdOk() (*int32, bool)`
+
+GetImageIdOk returns a tuple with the ImageId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageId
+
+`func (o *VariationImage) SetImageId(v int32)`
+
+SetImageId sets ImageId field to given value.
+
+### HasImageId
+
+`func (o *VariationImage) HasImageId() bool`
+
+HasImageId returns a boolean if a field has been set.
 
 ### GetId
 

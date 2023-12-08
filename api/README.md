@@ -98,6 +98,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**RestOrdersSearchGet**](docs/DefaultApi.md#restorderssearchget) | **Get** /rest/orders/search | searches for orders. The results can be restricted by using filters
 *DefaultApi* | [**RestPimVariationsGet**](docs/DefaultApi.md#restpimvariationsget) | **Get** /rest/pim/variations | Lists variations
 *DefaultApi* | [**RestPimVariationsPut**](docs/DefaultApi.md#restpimvariationsput) | **Put** /rest/pim/variations | Create a list of variations and their related data
+*DefaultApi* | [**RestPimVariationsScrollGet**](docs/DefaultApi.md#restpimvariationsscrollget) | **Get** /rest/pim/variations/scroll | Scrolls through variations
 *DefaultApi* | [**RestStockmanagementWarehousesWarehouseIdStockCorrectionPut**](docs/DefaultApi.md#reststockmanagementwarehouseswarehouseidstockcorrectionput) | **Put** /rest/stockmanagement/warehouses/{warehouseId}/stock/correction | set stocks
 
 
@@ -117,6 +118,7 @@ Class | Method | HTTP request | Description
  - [ImageAvailability](docs/ImageAvailability.md)
  - [ImageName](docs/ImageName.md)
  - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse2001](docs/InlineResponse2001.md)
  - [ItemEbayTitle](docs/ItemEbayTitle.md)
  - [ItemPagination](docs/ItemPagination.md)
  - [ItemProperty](docs/ItemProperty.md)

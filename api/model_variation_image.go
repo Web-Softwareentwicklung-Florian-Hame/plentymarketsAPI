@@ -16,6 +16,7 @@ import (
 
 // VariationImage variation image model
 type VariationImage struct {
+	ImageId *int32 `json:"imageId,omitempty"`
 	Id *int32 `json:"id,omitempty"`
 	ItemId *int32 `json:"itemId,omitempty"`
 	Type *string `json:"type,omitempty"`
@@ -60,6 +61,38 @@ func NewVariationImage() *VariationImage {
 func NewVariationImageWithDefaults() *VariationImage {
 	this := VariationImage{}
 	return &this
+}
+
+// GetImageId returns the ImageId field value if set, zero value otherwise.
+func (o *VariationImage) GetImageId() int32 {
+	if o == nil || o.ImageId == nil {
+		var ret int32
+		return ret
+	}
+	return *o.ImageId
+}
+
+// GetImageIdOk returns a tuple with the ImageId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VariationImage) GetImageIdOk() (*int32, bool) {
+	if o == nil || o.ImageId == nil {
+		return nil, false
+	}
+	return o.ImageId, true
+}
+
+// HasImageId returns a boolean if a field has been set.
+func (o *VariationImage) HasImageId() bool {
+	if o != nil && o.ImageId != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetImageId gets a reference to the given int32 and assigns it to the ImageId field.
+func (o *VariationImage) SetImageId(v int32) {
+	o.ImageId = &v
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
@@ -928,6 +961,9 @@ func (o *VariationImage) SetNames(v []ImageName) {
 
 func (o VariationImage) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
+	if o.ImageId != nil {
+		toSerialize["imageId"] = o.ImageId
+	}
 	if o.Id != nil {
 		toSerialize["id"] = o.Id
 	}

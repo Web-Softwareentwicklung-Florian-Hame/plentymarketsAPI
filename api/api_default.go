@@ -3514,6 +3514,7 @@ type ApiRestPimVariationsScrollGetRequest struct {
 	ApiService *DefaultApiService
 	with *[]string
 	groupBy *string
+	itemsPerPage *int32
 	ids *string
 	itemId *int32
 	itemIds *string
@@ -3595,6 +3596,11 @@ func (r ApiRestPimVariationsScrollGetRequest) With(with []string) ApiRestPimVari
 // Groups the result. The following parameters are available:&lt;ul&gt;&lt;li&gt;&#39;itemId&#39; &#x3D; Groups the result by the item ID.&lt;/li&gt;&lt;li&gt;&#39;itemAttributeValue&#39; &#x3D; Groups the result by the attribute with the flag &#39;isGroupable&#39;.&lt;/li&gt;&lt;/ul&gt;
 func (r ApiRestPimVariationsScrollGetRequest) GroupBy(groupBy string) ApiRestPimVariationsScrollGetRequest {
 	r.groupBy = &groupBy
+	return r
+}
+// Restricts the number of items per page. Maximum value is 250. Default value is 50.
+func (r ApiRestPimVariationsScrollGetRequest) ItemsPerPage(itemsPerPage int32) ApiRestPimVariationsScrollGetRequest {
+	r.itemsPerPage = &itemsPerPage
 	return r
 }
 // Filter restricts the list of results to variations with the specified IDs. More than one parameter should be separated by commas.
@@ -4000,6 +4006,9 @@ func (a *DefaultApiService) RestPimVariationsScrollGetExecute(r ApiRestPimVariat
 	}
 	if r.groupBy != nil {
 		localVarQueryParams.Add("groupBy", parameterToString(*r.groupBy, ""))
+	}
+	if r.itemsPerPage != nil {
+		localVarQueryParams.Add("itemsPerPage", parameterToString(*r.itemsPerPage, ""))
 	}
 	if r.ids != nil {
 		localVarQueryParams.Add("ids", parameterToString(*r.ids, ""))

@@ -1980,6 +1980,15 @@ paths:
         schema:
           type: string
         style: form
+      - description: Restricts the number of items per page. Maximum value is 250.
+          Default value is 50.
+        explode: true
+        in: query
+        name: itemsPerPage
+        required: false
+        schema:
+          type: integer
+        style: form
       - description: Filter restricts the list of results to variations with the specified
           IDs. More than one parameter should be separated by commas.
         explode: true

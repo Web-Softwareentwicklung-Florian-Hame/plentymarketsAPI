@@ -1439,6 +1439,13 @@ paths:
           description: "Groups the result. The following parameters are available:<ul><li>'itemId' = Groups the result by the item ID.</li><li>'itemAttributeValue' = Groups the result by the attribute with the flag 'isGroupable'.</li></ul>"
 
         - in: query
+          name: itemsPerPage
+          schema:
+            type: integer
+          required: false
+          description: "Restricts the number of items per page. Maximum value is 250. Default value is 50."
+
+        - in: query
           name: ids
           schema:
             type: string

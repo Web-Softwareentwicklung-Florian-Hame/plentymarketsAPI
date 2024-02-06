@@ -25,6 +25,8 @@ type PimVariationBase struct {
 	Number *string `json:"number,omitempty"`
 	Model *string `json:"model,omitempty"`
 	ExternalId *string `json:"externalId,omitempty"`
+	FlagOne *int32 `json:"flagOne,omitempty"`
+	FlagTwo *int32 `json:"flagTwo,omitempty"`
 	Availability *int32 `json:"availability,omitempty"`
 	AvailabilityId *int32 `json:"availabilityId,omitempty"`
 	EstimatedAvailableAt *time.Time `json:"estimatedAvailableAt,omitempty"`
@@ -354,6 +356,70 @@ func (o *PimVariationBase) HasExternalId() bool {
 // SetExternalId gets a reference to the given string and assigns it to the ExternalId field.
 func (o *PimVariationBase) SetExternalId(v string) {
 	o.ExternalId = &v
+}
+
+// GetFlagOne returns the FlagOne field value if set, zero value otherwise.
+func (o *PimVariationBase) GetFlagOne() int32 {
+	if o == nil || o.FlagOne == nil {
+		var ret int32
+		return ret
+	}
+	return *o.FlagOne
+}
+
+// GetFlagOneOk returns a tuple with the FlagOne field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetFlagOneOk() (*int32, bool) {
+	if o == nil || o.FlagOne == nil {
+		return nil, false
+	}
+	return o.FlagOne, true
+}
+
+// HasFlagOne returns a boolean if a field has been set.
+func (o *PimVariationBase) HasFlagOne() bool {
+	if o != nil && o.FlagOne != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetFlagOne gets a reference to the given int32 and assigns it to the FlagOne field.
+func (o *PimVariationBase) SetFlagOne(v int32) {
+	o.FlagOne = &v
+}
+
+// GetFlagTwo returns the FlagTwo field value if set, zero value otherwise.
+func (o *PimVariationBase) GetFlagTwo() int32 {
+	if o == nil || o.FlagTwo == nil {
+		var ret int32
+		return ret
+	}
+	return *o.FlagTwo
+}
+
+// GetFlagTwoOk returns a tuple with the FlagTwo field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetFlagTwoOk() (*int32, bool) {
+	if o == nil || o.FlagTwo == nil {
+		return nil, false
+	}
+	return o.FlagTwo, true
+}
+
+// HasFlagTwo returns a boolean if a field has been set.
+func (o *PimVariationBase) HasFlagTwo() bool {
+	if o != nil && o.FlagTwo != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetFlagTwo gets a reference to the given int32 and assigns it to the FlagTwo field.
+func (o *PimVariationBase) SetFlagTwo(v int32) {
+	o.FlagTwo = &v
 }
 
 // GetAvailability returns the Availability field value if set, zero value otherwise.
@@ -2173,6 +2239,12 @@ func (o PimVariationBase) MarshalJSON() ([]byte, error) {
 	}
 	if o.ExternalId != nil {
 		toSerialize["externalId"] = o.ExternalId
+	}
+	if o.FlagOne != nil {
+		toSerialize["flagOne"] = o.FlagOne
+	}
+	if o.FlagTwo != nil {
+		toSerialize["flagTwo"] = o.FlagTwo
 	}
 	if o.Availability != nil {
 		toSerialize["availability"] = o.Availability

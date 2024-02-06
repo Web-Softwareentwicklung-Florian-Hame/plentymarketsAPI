@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **Number** | Pointer to **string** |  | [optional] 
 **Model** | Pointer to **string** |  | [optional] 
 **ExternalId** | Pointer to **string** |  | [optional] 
+**FlagOne** | Pointer to **int32** |  | [optional] 
+**FlagTwo** | Pointer to **int32** |  | [optional] 
 **Availability** | Pointer to **int32** |  | [optional] 
 **AvailabilityId** | Pointer to **int32** |  | [optional] 
 **EstimatedAvailableAt** | Pointer to **time.Time** |  | [optional] 
@@ -287,6 +289,56 @@ SetExternalId sets ExternalId field to given value.
 `func (o *PimVariationBase) HasExternalId() bool`
 
 HasExternalId returns a boolean if a field has been set.
+
+### GetFlagOne
+
+`func (o *PimVariationBase) GetFlagOne() int32`
+
+GetFlagOne returns the FlagOne field if non-nil, zero value otherwise.
+
+### GetFlagOneOk
+
+`func (o *PimVariationBase) GetFlagOneOk() (*int32, bool)`
+
+GetFlagOneOk returns a tuple with the FlagOne field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlagOne
+
+`func (o *PimVariationBase) SetFlagOne(v int32)`
+
+SetFlagOne sets FlagOne field to given value.
+
+### HasFlagOne
+
+`func (o *PimVariationBase) HasFlagOne() bool`
+
+HasFlagOne returns a boolean if a field has been set.
+
+### GetFlagTwo
+
+`func (o *PimVariationBase) GetFlagTwo() int32`
+
+GetFlagTwo returns the FlagTwo field if non-nil, zero value otherwise.
+
+### GetFlagTwoOk
+
+`func (o *PimVariationBase) GetFlagTwoOk() (*int32, bool)`
+
+GetFlagTwoOk returns a tuple with the FlagTwo field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlagTwo
+
+`func (o *PimVariationBase) SetFlagTwo(v int32)`
+
+SetFlagTwo sets FlagTwo field to given value.
+
+### HasFlagTwo
+
+`func (o *PimVariationBase) HasFlagTwo() bool`
+
+HasFlagTwo returns a boolean if a field has been set.
 
 ### GetAvailability
 

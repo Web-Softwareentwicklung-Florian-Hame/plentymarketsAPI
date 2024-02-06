@@ -2808,17 +2808,17 @@ components:
     PimVariationStock:
       example:
         storehouse_type: storehouse_type
-        reservedStock: 4.459605034958679
-        stockPhysical: 8.251625748923757
-        reordered: 1.7325933120207193
-        reservedEbay: 3.901545264248647
-        reservedBundle: 8.28965939814297
-        stockNet: 2.9409642974827896
-        itemId: 4
-        variationId: 4
-        warehouseId: 6
-        reorderDelta: 0.43431398824148815
-        averagePurchasePrice: 6.623518433804886
+        reservedStock: 0.43431398824148815
+        stockPhysical: 3.901545264248647
+        reordered: 6.623518433804886
+        reservedEbay: 2.9409642974827896
+        reservedBundle: 4.573936264232251
+        stockNet: 8.28965939814297
+        itemId: 8
+        variationId: 9
+        warehouseId: 4
+        reorderDelta: 1.7325933120207193
+        averagePurchasePrice: 8.863729185622827
         warehousePriority: warehousePriority
         updatedAt: 2000-01-23T04:56:07.000+00:00
       properties:
@@ -2854,54 +2854,54 @@ components:
       type: object
     PimVariationBase:
       example:
-        intervalOrderQuantity: 8.969578798196912
-        automaticClientVisibility: 0
-        stockLimitation: 7
-        minimumOrderQuantity: 4.652396432933246
+        intervalOrderQuantity: 3.0205796992916243
+        automaticClientVisibility: 5
+        stockLimitation: 0
+        minimumOrderQuantity: 7.740351818741173
         propertiesInherited: true
         clientsInherited: true
         isUnavailableIfNetStockIsNotPositive: true
         packingUnits: 4
-        vatId: 9
+        vatId: 7
         relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-        purchasePrice: 3.0937452626664474
+        purchasePrice: 0.8851374739011653
         isActive: true
-        widthMM: 3.0576100241049344
+        widthMM: 5.533258397034986
         tagsInherited: true
         number: number
         createdAt: 2000-01-23T04:56:07.000+00:00
         availableUntil: 2000-01-23T04:56:07.000+00:00
         isInvisibleIfNetStockIsNotPositive: true
-        weightG: 7
-        customs: 9.132027271330688
+        weightG: 3
+        customs: 9.702963800023566
         model: model
         stock:
         - storehouse_type: storehouse_type
-          reservedStock: 4.459605034958679
-          stockPhysical: 8.251625748923757
-          reordered: 1.7325933120207193
-          reservedEbay: 3.901545264248647
-          reservedBundle: 8.28965939814297
-          stockNet: 2.9409642974827896
-          itemId: 4
-          variationId: 4
-          warehouseId: 6
-          reorderDelta: 0.43431398824148815
-          averagePurchasePrice: 6.623518433804886
+          reservedStock: 0.43431398824148815
+          stockPhysical: 3.901545264248647
+          reordered: 6.623518433804886
+          reservedEbay: 2.9409642974827896
+          reservedBundle: 4.573936264232251
+          stockNet: 8.28965939814297
+          itemId: 8
+          variationId: 9
+          warehouseId: 4
+          reorderDelta: 1.7325933120207193
+          averagePurchasePrice: 8.863729185622827
           warehousePriority: warehousePriority
           updatedAt: 2000-01-23T04:56:07.000+00:00
         - storehouse_type: storehouse_type
-          reservedStock: 4.459605034958679
-          stockPhysical: 8.251625748923757
-          reordered: 1.7325933120207193
-          reservedEbay: 3.901545264248647
-          reservedBundle: 8.28965939814297
-          stockNet: 2.9409642974827896
-          itemId: 4
-          variationId: 4
-          warehouseId: 6
-          reorderDelta: 0.43431398824148815
-          averagePurchasePrice: 6.623518433804886
+          reservedStock: 0.43431398824148815
+          stockPhysical: 3.901545264248647
+          reordered: 6.623518433804886
+          reservedEbay: 2.9409642974827896
+          reservedBundle: 4.573936264232251
+          stockNet: 8.28965939814297
+          itemId: 8
+          variationId: 9
+          warehouseId: 4
+          reorderDelta: 1.7325933120207193
+          averagePurchasePrice: 8.863729185622827
           warehousePriority: warehousePriority
           updatedAt: 2000-01-23T04:56:07.000+00:00
         updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -2990,46 +2990,48 @@ components:
           documentUploadPath: documentUploadPath
           fileType: fileType
           md5ChecksumOriginal: md5ChecksumOriginal
-        extraShippingCharge2: 4.078845849666752
+        extraShippingCharge2: 6.628464275087742
         isMain: true
         picking: picking
-        palletTypeId: 6
+        palletTypeId: 1
         isVisibleIfNetStockIsPositive: true
         categoriesInherited: true
         itemId: 6
-        automaticListVisibility: 7
-        operatingCosts: 0.8774076871421566
-        availabilityId: 3
-        mainWarehouseId: 6
+        automaticListVisibility: 4
+        operatingCosts: 0.5199002018724985
+        availabilityId: 7
+        mainWarehouseId: 4
         name: name
         mainVariationId: 6
         position: 5
         releasedAt: 2000-01-23T04:56:07.000+00:00
-        weightNetG: 3
-        transportationCosts: 4.678947989005849
-        packingUnitTypeId: 1
+        weightNetG: 7
+        transportationCosts: 9.132027271330688
+        packingUnitTypeId: 7
         isAvailableIfNetStockIsPositive: true
         isHiddenInCategoryList: true
-        availability: 6
+        availability: 3
         isVisibleInListIfNetStockIsPositive: true
         bundleType: bundleType
         priceCalculationUUID: priceCalculationUUID
-        maximumOrderQuantity: 0.10263654006109402
+        flagTwo: 3
+        maximumOrderQuantity: 8.969578798196912
         warehousesInherited: true
+        flagOne: 6
         referrerInherited: true
-        extraShippingCharge1: 3.2588565619047607
-        unitsContained: 0
+        extraShippingCharge1: 0.2025324113236393
+        unitsContained: 4
         supplierInherited: true
-        heightMM: 5.533258397034986
+        heightMM: 4.078845849666752
         externalId: externalId
-        priceCalculationId: 0
-        defaultShippingCosts: 5.507386964179881
-        lengthMM: 7.04836565559697
+        priceCalculationId: 6
+        defaultShippingCosts: 6.073898085781152
+        lengthMM: 3.2588565619047607
         isInvisibleInListIfNetStockIsNotPositive: true
         estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
         salesPricesInherited: true
-        storageCosts: 7.260521264802104
-        movingAveragePrice: 7.143538047012306
+        storageCosts: 0.8774076871421566
+        movingAveragePrice: 7.058770351582356
       properties:
         isMain:
           type: boolean
@@ -3047,6 +3049,10 @@ components:
           type: string
         externalId:
           type: string
+        flagOne:
+          type: integer
+        flagTwo:
+          type: integer
         availability:
           type: integer
         availabilityId:
@@ -3585,54 +3591,54 @@ components:
           propertyId: 9
           value: ""
         base:
-          intervalOrderQuantity: 8.969578798196912
-          automaticClientVisibility: 0
-          stockLimitation: 7
-          minimumOrderQuantity: 4.652396432933246
+          intervalOrderQuantity: 3.0205796992916243
+          automaticClientVisibility: 5
+          stockLimitation: 0
+          minimumOrderQuantity: 7.740351818741173
           propertiesInherited: true
           clientsInherited: true
           isUnavailableIfNetStockIsNotPositive: true
           packingUnits: 4
-          vatId: 9
+          vatId: 7
           relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-          purchasePrice: 3.0937452626664474
+          purchasePrice: 0.8851374739011653
           isActive: true
-          widthMM: 3.0576100241049344
+          widthMM: 5.533258397034986
           tagsInherited: true
           number: number
           createdAt: 2000-01-23T04:56:07.000+00:00
           availableUntil: 2000-01-23T04:56:07.000+00:00
           isInvisibleIfNetStockIsNotPositive: true
-          weightG: 7
-          customs: 9.132027271330688
+          weightG: 3
+          customs: 9.702963800023566
           model: model
           stock:
           - storehouse_type: storehouse_type
-            reservedStock: 4.459605034958679
-            stockPhysical: 8.251625748923757
-            reordered: 1.7325933120207193
-            reservedEbay: 3.901545264248647
-            reservedBundle: 8.28965939814297
-            stockNet: 2.9409642974827896
-            itemId: 4
-            variationId: 4
-            warehouseId: 6
-            reorderDelta: 0.43431398824148815
-            averagePurchasePrice: 6.623518433804886
+            reservedStock: 0.43431398824148815
+            stockPhysical: 3.901545264248647
+            reordered: 6.623518433804886
+            reservedEbay: 2.9409642974827896
+            reservedBundle: 4.573936264232251
+            stockNet: 8.28965939814297
+            itemId: 8
+            variationId: 9
+            warehouseId: 4
+            reorderDelta: 1.7325933120207193
+            averagePurchasePrice: 8.863729185622827
             warehousePriority: warehousePriority
             updatedAt: 2000-01-23T04:56:07.000+00:00
           - storehouse_type: storehouse_type
-            reservedStock: 4.459605034958679
-            stockPhysical: 8.251625748923757
-            reordered: 1.7325933120207193
-            reservedEbay: 3.901545264248647
-            reservedBundle: 8.28965939814297
-            stockNet: 2.9409642974827896
-            itemId: 4
-            variationId: 4
-            warehouseId: 6
-            reorderDelta: 0.43431398824148815
-            averagePurchasePrice: 6.623518433804886
+            reservedStock: 0.43431398824148815
+            stockPhysical: 3.901545264248647
+            reordered: 6.623518433804886
+            reservedEbay: 2.9409642974827896
+            reservedBundle: 4.573936264232251
+            stockNet: 8.28965939814297
+            itemId: 8
+            variationId: 9
+            warehouseId: 4
+            reorderDelta: 1.7325933120207193
+            averagePurchasePrice: 8.863729185622827
             warehousePriority: warehousePriority
             updatedAt: 2000-01-23T04:56:07.000+00:00
           updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -3721,46 +3727,48 @@ components:
             documentUploadPath: documentUploadPath
             fileType: fileType
             md5ChecksumOriginal: md5ChecksumOriginal
-          extraShippingCharge2: 4.078845849666752
+          extraShippingCharge2: 6.628464275087742
           isMain: true
           picking: picking
-          palletTypeId: 6
+          palletTypeId: 1
           isVisibleIfNetStockIsPositive: true
           categoriesInherited: true
           itemId: 6
-          automaticListVisibility: 7
-          operatingCosts: 0.8774076871421566
-          availabilityId: 3
-          mainWarehouseId: 6
+          automaticListVisibility: 4
+          operatingCosts: 0.5199002018724985
+          availabilityId: 7
+          mainWarehouseId: 4
           name: name
           mainVariationId: 6
           position: 5
           releasedAt: 2000-01-23T04:56:07.000+00:00
-          weightNetG: 3
-          transportationCosts: 4.678947989005849
-          packingUnitTypeId: 1
+          weightNetG: 7
+          transportationCosts: 9.132027271330688
+          packingUnitTypeId: 7
           isAvailableIfNetStockIsPositive: true
           isHiddenInCategoryList: true
-          availability: 6
+          availability: 3
           isVisibleInListIfNetStockIsPositive: true
           bundleType: bundleType
           priceCalculationUUID: priceCalculationUUID
-          maximumOrderQuantity: 0.10263654006109402
+          flagTwo: 3
+          maximumOrderQuantity: 8.969578798196912
           warehousesInherited: true
+          flagOne: 6
           referrerInherited: true
-          extraShippingCharge1: 3.2588565619047607
-          unitsContained: 0
+          extraShippingCharge1: 0.2025324113236393
+          unitsContained: 4
           supplierInherited: true
-          heightMM: 5.533258397034986
+          heightMM: 4.078845849666752
           externalId: externalId
-          priceCalculationId: 0
-          defaultShippingCosts: 5.507386964179881
-          lengthMM: 7.04836565559697
+          priceCalculationId: 6
+          defaultShippingCosts: 6.073898085781152
+          lengthMM: 3.2588565619047607
           isInvisibleInListIfNetStockIsNotPositive: true
           estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
           salesPricesInherited: true
-          storageCosts: 7.260521264802104
-          movingAveragePrice: 7.143538047012306
+          storageCosts: 0.8774076871421566
+          movingAveragePrice: 7.058770351582356
       properties:
         id:
           description: The id of the variation. optional
@@ -22580,54 +22588,54 @@ components:
             propertyId: 9
             value: ""
           base:
-            intervalOrderQuantity: 8.969578798196912
-            automaticClientVisibility: 0
-            stockLimitation: 7
-            minimumOrderQuantity: 4.652396432933246
+            intervalOrderQuantity: 3.0205796992916243
+            automaticClientVisibility: 5
+            stockLimitation: 0
+            minimumOrderQuantity: 7.740351818741173
             propertiesInherited: true
             clientsInherited: true
             isUnavailableIfNetStockIsNotPositive: true
             packingUnits: 4
-            vatId: 9
+            vatId: 7
             relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            purchasePrice: 3.0937452626664474
+            purchasePrice: 0.8851374739011653
             isActive: true
-            widthMM: 3.0576100241049344
+            widthMM: 5.533258397034986
             tagsInherited: true
             number: number
             createdAt: 2000-01-23T04:56:07.000+00:00
             availableUntil: 2000-01-23T04:56:07.000+00:00
             isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 9.132027271330688
+            weightG: 3
+            customs: 9.702963800023566
             model: model
             stock:
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -22716,46 +22724,48 @@ components:
               documentUploadPath: documentUploadPath
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
-            extraShippingCharge2: 4.078845849666752
+            extraShippingCharge2: 6.628464275087742
             isMain: true
             picking: picking
-            palletTypeId: 6
+            palletTypeId: 1
             isVisibleIfNetStockIsPositive: true
             categoriesInherited: true
             itemId: 6
-            automaticListVisibility: 7
-            operatingCosts: 0.8774076871421566
-            availabilityId: 3
-            mainWarehouseId: 6
+            automaticListVisibility: 4
+            operatingCosts: 0.5199002018724985
+            availabilityId: 7
+            mainWarehouseId: 4
             name: name
             mainVariationId: 6
             position: 5
             releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 3
-            transportationCosts: 4.678947989005849
-            packingUnitTypeId: 1
+            weightNetG: 7
+            transportationCosts: 9.132027271330688
+            packingUnitTypeId: 7
             isAvailableIfNetStockIsPositive: true
             isHiddenInCategoryList: true
-            availability: 6
+            availability: 3
             isVisibleInListIfNetStockIsPositive: true
             bundleType: bundleType
             priceCalculationUUID: priceCalculationUUID
-            maximumOrderQuantity: 0.10263654006109402
+            flagTwo: 3
+            maximumOrderQuantity: 8.969578798196912
             warehousesInherited: true
+            flagOne: 6
             referrerInherited: true
-            extraShippingCharge1: 3.2588565619047607
-            unitsContained: 0
+            extraShippingCharge1: 0.2025324113236393
+            unitsContained: 4
             supplierInherited: true
-            heightMM: 5.533258397034986
+            heightMM: 4.078845849666752
             externalId: externalId
-            priceCalculationId: 0
-            defaultShippingCosts: 5.507386964179881
-            lengthMM: 7.04836565559697
+            priceCalculationId: 6
+            defaultShippingCosts: 6.073898085781152
+            lengthMM: 3.2588565619047607
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
-            storageCosts: 7.260521264802104
-            movingAveragePrice: 7.143538047012306
+            storageCosts: 0.8774076871421566
+            movingAveragePrice: 7.058770351582356
         - images:
           - documentUploadPreviewHeight: 1
             insert: insert
@@ -23169,54 +23179,54 @@ components:
             propertyId: 9
             value: ""
           base:
-            intervalOrderQuantity: 8.969578798196912
-            automaticClientVisibility: 0
-            stockLimitation: 7
-            minimumOrderQuantity: 4.652396432933246
+            intervalOrderQuantity: 3.0205796992916243
+            automaticClientVisibility: 5
+            stockLimitation: 0
+            minimumOrderQuantity: 7.740351818741173
             propertiesInherited: true
             clientsInherited: true
             isUnavailableIfNetStockIsNotPositive: true
             packingUnits: 4
-            vatId: 9
+            vatId: 7
             relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            purchasePrice: 3.0937452626664474
+            purchasePrice: 0.8851374739011653
             isActive: true
-            widthMM: 3.0576100241049344
+            widthMM: 5.533258397034986
             tagsInherited: true
             number: number
             createdAt: 2000-01-23T04:56:07.000+00:00
             availableUntil: 2000-01-23T04:56:07.000+00:00
             isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 9.132027271330688
+            weightG: 3
+            customs: 9.702963800023566
             model: model
             stock:
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -23305,46 +23315,48 @@ components:
               documentUploadPath: documentUploadPath
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
-            extraShippingCharge2: 4.078845849666752
+            extraShippingCharge2: 6.628464275087742
             isMain: true
             picking: picking
-            palletTypeId: 6
+            palletTypeId: 1
             isVisibleIfNetStockIsPositive: true
             categoriesInherited: true
             itemId: 6
-            automaticListVisibility: 7
-            operatingCosts: 0.8774076871421566
-            availabilityId: 3
-            mainWarehouseId: 6
+            automaticListVisibility: 4
+            operatingCosts: 0.5199002018724985
+            availabilityId: 7
+            mainWarehouseId: 4
             name: name
             mainVariationId: 6
             position: 5
             releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 3
-            transportationCosts: 4.678947989005849
-            packingUnitTypeId: 1
+            weightNetG: 7
+            transportationCosts: 9.132027271330688
+            packingUnitTypeId: 7
             isAvailableIfNetStockIsPositive: true
             isHiddenInCategoryList: true
-            availability: 6
+            availability: 3
             isVisibleInListIfNetStockIsPositive: true
             bundleType: bundleType
             priceCalculationUUID: priceCalculationUUID
-            maximumOrderQuantity: 0.10263654006109402
+            flagTwo: 3
+            maximumOrderQuantity: 8.969578798196912
             warehousesInherited: true
+            flagOne: 6
             referrerInherited: true
-            extraShippingCharge1: 3.2588565619047607
-            unitsContained: 0
+            extraShippingCharge1: 0.2025324113236393
+            unitsContained: 4
             supplierInherited: true
-            heightMM: 5.533258397034986
+            heightMM: 4.078845849666752
             externalId: externalId
-            priceCalculationId: 0
-            defaultShippingCosts: 5.507386964179881
-            lengthMM: 7.04836565559697
+            priceCalculationId: 6
+            defaultShippingCosts: 6.073898085781152
+            lengthMM: 3.2588565619047607
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
-            storageCosts: 7.260521264802104
-            movingAveragePrice: 7.143538047012306
+            storageCosts: 0.8774076871421566
+            movingAveragePrice: 7.058770351582356
       properties:
         cursor:
           description: The cursor for the next page of results.
@@ -25794,54 +25806,54 @@ components:
             propertyId: 9
             value: ""
           base:
-            intervalOrderQuantity: 8.969578798196912
-            automaticClientVisibility: 0
-            stockLimitation: 7
-            minimumOrderQuantity: 4.652396432933246
+            intervalOrderQuantity: 3.0205796992916243
+            automaticClientVisibility: 5
+            stockLimitation: 0
+            minimumOrderQuantity: 7.740351818741173
             propertiesInherited: true
             clientsInherited: true
             isUnavailableIfNetStockIsNotPositive: true
             packingUnits: 4
-            vatId: 9
+            vatId: 7
             relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            purchasePrice: 3.0937452626664474
+            purchasePrice: 0.8851374739011653
             isActive: true
-            widthMM: 3.0576100241049344
+            widthMM: 5.533258397034986
             tagsInherited: true
             number: number
             createdAt: 2000-01-23T04:56:07.000+00:00
             availableUntil: 2000-01-23T04:56:07.000+00:00
             isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 9.132027271330688
+            weightG: 3
+            customs: 9.702963800023566
             model: model
             stock:
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -25930,46 +25942,48 @@ components:
               documentUploadPath: documentUploadPath
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
-            extraShippingCharge2: 4.078845849666752
+            extraShippingCharge2: 6.628464275087742
             isMain: true
             picking: picking
-            palletTypeId: 6
+            palletTypeId: 1
             isVisibleIfNetStockIsPositive: true
             categoriesInherited: true
             itemId: 6
-            automaticListVisibility: 7
-            operatingCosts: 0.8774076871421566
-            availabilityId: 3
-            mainWarehouseId: 6
+            automaticListVisibility: 4
+            operatingCosts: 0.5199002018724985
+            availabilityId: 7
+            mainWarehouseId: 4
             name: name
             mainVariationId: 6
             position: 5
             releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 3
-            transportationCosts: 4.678947989005849
-            packingUnitTypeId: 1
+            weightNetG: 7
+            transportationCosts: 9.132027271330688
+            packingUnitTypeId: 7
             isAvailableIfNetStockIsPositive: true
             isHiddenInCategoryList: true
-            availability: 6
+            availability: 3
             isVisibleInListIfNetStockIsPositive: true
             bundleType: bundleType
             priceCalculationUUID: priceCalculationUUID
-            maximumOrderQuantity: 0.10263654006109402
+            flagTwo: 3
+            maximumOrderQuantity: 8.969578798196912
             warehousesInherited: true
+            flagOne: 6
             referrerInherited: true
-            extraShippingCharge1: 3.2588565619047607
-            unitsContained: 0
+            extraShippingCharge1: 0.2025324113236393
+            unitsContained: 4
             supplierInherited: true
-            heightMM: 5.533258397034986
+            heightMM: 4.078845849666752
             externalId: externalId
-            priceCalculationId: 0
-            defaultShippingCosts: 5.507386964179881
-            lengthMM: 7.04836565559697
+            priceCalculationId: 6
+            defaultShippingCosts: 6.073898085781152
+            lengthMM: 3.2588565619047607
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
-            storageCosts: 7.260521264802104
-            movingAveragePrice: 7.143538047012306
+            storageCosts: 0.8774076871421566
+            movingAveragePrice: 7.058770351582356
         - images:
           - documentUploadPreviewHeight: 1
             insert: insert
@@ -26383,54 +26397,54 @@ components:
             propertyId: 9
             value: ""
           base:
-            intervalOrderQuantity: 8.969578798196912
-            automaticClientVisibility: 0
-            stockLimitation: 7
-            minimumOrderQuantity: 4.652396432933246
+            intervalOrderQuantity: 3.0205796992916243
+            automaticClientVisibility: 5
+            stockLimitation: 0
+            minimumOrderQuantity: 7.740351818741173
             propertiesInherited: true
             clientsInherited: true
             isUnavailableIfNetStockIsNotPositive: true
             packingUnits: 4
-            vatId: 9
+            vatId: 7
             relatedUpdatedAt: 2000-01-23T04:56:07.000+00:00
-            purchasePrice: 3.0937452626664474
+            purchasePrice: 0.8851374739011653
             isActive: true
-            widthMM: 3.0576100241049344
+            widthMM: 5.533258397034986
             tagsInherited: true
             number: number
             createdAt: 2000-01-23T04:56:07.000+00:00
             availableUntil: 2000-01-23T04:56:07.000+00:00
             isInvisibleIfNetStockIsNotPositive: true
-            weightG: 7
-            customs: 9.132027271330688
+            weightG: 3
+            customs: 9.702963800023566
             model: model
             stock:
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             - storehouse_type: storehouse_type
-              reservedStock: 4.459605034958679
-              stockPhysical: 8.251625748923757
-              reordered: 1.7325933120207193
-              reservedEbay: 3.901545264248647
-              reservedBundle: 8.28965939814297
-              stockNet: 2.9409642974827896
-              itemId: 4
-              variationId: 4
-              warehouseId: 6
-              reorderDelta: 0.43431398824148815
-              averagePurchasePrice: 6.623518433804886
+              reservedStock: 0.43431398824148815
+              stockPhysical: 3.901545264248647
+              reordered: 6.623518433804886
+              reservedEbay: 2.9409642974827896
+              reservedBundle: 4.573936264232251
+              stockNet: 8.28965939814297
+              itemId: 8
+              variationId: 9
+              warehouseId: 4
+              reorderDelta: 1.7325933120207193
+              averagePurchasePrice: 8.863729185622827
               warehousePriority: warehousePriority
               updatedAt: 2000-01-23T04:56:07.000+00:00
             updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -26519,46 +26533,48 @@ components:
               documentUploadPath: documentUploadPath
               fileType: fileType
               md5ChecksumOriginal: md5ChecksumOriginal
-            extraShippingCharge2: 4.078845849666752
+            extraShippingCharge2: 6.628464275087742
             isMain: true
             picking: picking
-            palletTypeId: 6
+            palletTypeId: 1
             isVisibleIfNetStockIsPositive: true
             categoriesInherited: true
             itemId: 6
-            automaticListVisibility: 7
-            operatingCosts: 0.8774076871421566
-            availabilityId: 3
-            mainWarehouseId: 6
+            automaticListVisibility: 4
+            operatingCosts: 0.5199002018724985
+            availabilityId: 7
+            mainWarehouseId: 4
             name: name
             mainVariationId: 6
             position: 5
             releasedAt: 2000-01-23T04:56:07.000+00:00
-            weightNetG: 3
-            transportationCosts: 4.678947989005849
-            packingUnitTypeId: 1
+            weightNetG: 7
+            transportationCosts: 9.132027271330688
+            packingUnitTypeId: 7
             isAvailableIfNetStockIsPositive: true
             isHiddenInCategoryList: true
-            availability: 6
+            availability: 3
             isVisibleInListIfNetStockIsPositive: true
             bundleType: bundleType
             priceCalculationUUID: priceCalculationUUID
-            maximumOrderQuantity: 0.10263654006109402
+            flagTwo: 3
+            maximumOrderQuantity: 8.969578798196912
             warehousesInherited: true
+            flagOne: 6
             referrerInherited: true
-            extraShippingCharge1: 3.2588565619047607
-            unitsContained: 0
+            extraShippingCharge1: 0.2025324113236393
+            unitsContained: 4
             supplierInherited: true
-            heightMM: 5.533258397034986
+            heightMM: 4.078845849666752
             externalId: externalId
-            priceCalculationId: 0
-            defaultShippingCosts: 5.507386964179881
-            lengthMM: 7.04836565559697
+            priceCalculationId: 6
+            defaultShippingCosts: 6.073898085781152
+            lengthMM: 3.2588565619047607
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
-            storageCosts: 7.260521264802104
-            movingAveragePrice: 7.143538047012306
+            storageCosts: 0.8774076871421566
+            movingAveragePrice: 7.058770351582356
         itemsPerPage: 2
         isLastPage: true
         firstOnPage: 5

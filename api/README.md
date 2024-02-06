@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
  - [PimVariationBundleComponent](docs/PimVariationBundleComponent.md)
  - [PimVariationComment](docs/PimVariationComment.md)
  - [PimVariationDefaultCategory](docs/PimVariationDefaultCategory.md)
+ - [PimVariationItem](docs/PimVariationItem.md)
  - [PimVariationProperty](docs/PimVariationProperty.md)
  - [PimVariationPropertySelectionValues](docs/PimVariationPropertySelectionValues.md)
  - [PimVariationPropertyValues](docs/PimVariationPropertyValues.md)

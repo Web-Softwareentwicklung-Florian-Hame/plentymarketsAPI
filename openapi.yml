@@ -2077,6 +2077,16 @@ components:
         variationId:
           type: integer
 
+    PimVariationItem:
+      type: object
+      properties:
+        id:
+          type: integer
+        flagOne:
+          type: integer
+        flagTwo:
+          type: integer
+
     PimVariationBase:
       type: object
       properties:
@@ -2096,10 +2106,6 @@ components:
           type: string
         externalId:
           type: string
-        flagOne:
-          type: integer
-        flagTwo:
-          type: integer
         availability:
           type: integer
         availabilityId:
@@ -2222,6 +2228,9 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PimVariationStock'
+        item:
+          $ref: '#/components/schemas/PimVariationItem'
+
     PimVariation:
       type: object
       properties:

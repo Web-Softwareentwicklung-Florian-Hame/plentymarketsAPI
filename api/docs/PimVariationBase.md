@@ -12,8 +12,6 @@ Name | Type | Description | Notes
 **Number** | Pointer to **string** |  | [optional] 
 **Model** | Pointer to **string** |  | [optional] 
 **ExternalId** | Pointer to **string** |  | [optional] 
-**FlagOne** | Pointer to **int32** |  | [optional] 
-**FlagTwo** | Pointer to **int32** |  | [optional] 
 **Availability** | Pointer to **int32** |  | [optional] 
 **AvailabilityId** | Pointer to **int32** |  | [optional] 
 **EstimatedAvailableAt** | Pointer to **time.Time** |  | [optional] 
@@ -70,6 +68,7 @@ Name | Type | Description | Notes
 **TagsInherited** | Pointer to **bool** |  | [optional] 
 **Images** | Pointer to [**[]VariationImage**](VariationImage.md) |  | [optional] 
 **Stock** | Pointer to [**[]PimVariationStock**](PimVariationStock.md) |  | [optional] 
+**Item** | Pointer to [**PimVariationItem**](PimVariationItem.md) |  | [optional] 
 
 ## Methods
 
@@ -289,56 +288,6 @@ SetExternalId sets ExternalId field to given value.
 `func (o *PimVariationBase) HasExternalId() bool`
 
 HasExternalId returns a boolean if a field has been set.
-
-### GetFlagOne
-
-`func (o *PimVariationBase) GetFlagOne() int32`
-
-GetFlagOne returns the FlagOne field if non-nil, zero value otherwise.
-
-### GetFlagOneOk
-
-`func (o *PimVariationBase) GetFlagOneOk() (*int32, bool)`
-
-GetFlagOneOk returns a tuple with the FlagOne field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFlagOne
-
-`func (o *PimVariationBase) SetFlagOne(v int32)`
-
-SetFlagOne sets FlagOne field to given value.
-
-### HasFlagOne
-
-`func (o *PimVariationBase) HasFlagOne() bool`
-
-HasFlagOne returns a boolean if a field has been set.
-
-### GetFlagTwo
-
-`func (o *PimVariationBase) GetFlagTwo() int32`
-
-GetFlagTwo returns the FlagTwo field if non-nil, zero value otherwise.
-
-### GetFlagTwoOk
-
-`func (o *PimVariationBase) GetFlagTwoOk() (*int32, bool)`
-
-GetFlagTwoOk returns a tuple with the FlagTwo field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFlagTwo
-
-`func (o *PimVariationBase) SetFlagTwo(v int32)`
-
-SetFlagTwo sets FlagTwo field to given value.
-
-### HasFlagTwo
-
-`func (o *PimVariationBase) HasFlagTwo() bool`
-
-HasFlagTwo returns a boolean if a field has been set.
 
 ### GetAvailability
 
@@ -1739,6 +1688,31 @@ SetStock sets Stock field to given value.
 `func (o *PimVariationBase) HasStock() bool`
 
 HasStock returns a boolean if a field has been set.
+
+### GetItem
+
+`func (o *PimVariationBase) GetItem() PimVariationItem`
+
+GetItem returns the Item field if non-nil, zero value otherwise.
+
+### GetItemOk
+
+`func (o *PimVariationBase) GetItemOk() (*PimVariationItem, bool)`
+
+GetItemOk returns a tuple with the Item field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItem
+
+`func (o *PimVariationBase) SetItem(v PimVariationItem)`
+
+SetItem sets Item field to given value.
+
+### HasItem
+
+`func (o *PimVariationBase) HasItem() bool`
+
+HasItem returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

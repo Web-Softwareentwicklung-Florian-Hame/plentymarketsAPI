@@ -44,6 +44,7 @@ type VariationImage struct {
 	HasVariationLink *bool `json:"hasVariationLink,omitempty"`
 	Availabilities *[]ImageAvailability `json:"availabilities,omitempty"`
 	Names *[]ImageName `json:"names,omitempty"`
+	AttributeValueImages *[]ImageMarketAttributeValue `json:"attributeValueImages,omitempty"`
 }
 
 // NewVariationImage instantiates a new VariationImage object
@@ -959,6 +960,38 @@ func (o *VariationImage) SetNames(v []ImageName) {
 	o.Names = &v
 }
 
+// GetAttributeValueImages returns the AttributeValueImages field value if set, zero value otherwise.
+func (o *VariationImage) GetAttributeValueImages() []ImageMarketAttributeValue {
+	if o == nil || o.AttributeValueImages == nil {
+		var ret []ImageMarketAttributeValue
+		return ret
+	}
+	return *o.AttributeValueImages
+}
+
+// GetAttributeValueImagesOk returns a tuple with the AttributeValueImages field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *VariationImage) GetAttributeValueImagesOk() (*[]ImageMarketAttributeValue, bool) {
+	if o == nil || o.AttributeValueImages == nil {
+		return nil, false
+	}
+	return o.AttributeValueImages, true
+}
+
+// HasAttributeValueImages returns a boolean if a field has been set.
+func (o *VariationImage) HasAttributeValueImages() bool {
+	if o != nil && o.AttributeValueImages != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetAttributeValueImages gets a reference to the given []ImageMarketAttributeValue and assigns it to the AttributeValueImages field.
+func (o *VariationImage) SetAttributeValueImages(v []ImageMarketAttributeValue) {
+	o.AttributeValueImages = &v
+}
+
 func (o VariationImage) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.ImageId != nil {
@@ -1044,6 +1077,9 @@ func (o VariationImage) MarshalJSON() ([]byte, error) {
 	}
 	if o.Names != nil {
 		toSerialize["names"] = o.Names
+	}
+	if o.AttributeValueImages != nil {
+		toSerialize["attributeValueImages"] = o.AttributeValueImages
 	}
 	return json.Marshal(toSerialize)
 }

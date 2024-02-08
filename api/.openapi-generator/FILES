@@ -19,6 +19,7 @@ docs/ContactOption.md
 docs/CreateItemsResponse.md
 docs/DefaultApi.md
 docs/ImageAvailability.md
+docs/ImageMarketAttributeValue.md
 docs/ImageName.md
 docs/InlineResponse200.md
 docs/ItemEbayTitle.md
@@ -106,6 +107,7 @@ model_contact.go
 model_contact_option.go
 model_create_items_response.go
 model_image_availability.go
+model_image_market_attribute_value.go
 model_image_name.go
 model_inline_response_200.go
 model_item_ebay_title.go

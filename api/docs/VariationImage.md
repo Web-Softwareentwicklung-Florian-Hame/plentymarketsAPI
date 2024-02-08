@@ -32,6 +32,7 @@ Name | Type | Description | Notes
 **HasVariationLink** | Pointer to **bool** |  | [optional] 
 **Availabilities** | Pointer to [**[]ImageAvailability**](ImageAvailability.md) |  | [optional] 
 **Names** | Pointer to [**[]ImageName**](ImageName.md) |  | [optional] 
+**AttributeValueImages** | Pointer to [**[]ImageMarketAttributeValue**](ImageMarketAttributeValue.md) |  | [optional] 
 
 ## Methods
 
@@ -751,6 +752,31 @@ SetNames sets Names field to given value.
 `func (o *VariationImage) HasNames() bool`
 
 HasNames returns a boolean if a field has been set.
+
+### GetAttributeValueImages
+
+`func (o *VariationImage) GetAttributeValueImages() []ImageMarketAttributeValue`
+
+GetAttributeValueImages returns the AttributeValueImages field if non-nil, zero value otherwise.
+
+### GetAttributeValueImagesOk
+
+`func (o *VariationImage) GetAttributeValueImagesOk() (*[]ImageMarketAttributeValue, bool)`
+
+GetAttributeValueImagesOk returns a tuple with the AttributeValueImages field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAttributeValueImages
+
+`func (o *VariationImage) SetAttributeValueImages(v []ImageMarketAttributeValue)`
+
+SetAttributeValueImages sets AttributeValueImages field to given value.
+
+### HasAttributeValueImages
+
+`func (o *VariationImage) HasAttributeValueImages() bool`
+
+HasAttributeValueImages returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

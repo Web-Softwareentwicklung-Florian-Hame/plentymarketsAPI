@@ -116,6 +116,7 @@ Class | Method | HTTP request | Description
  - [ContactOption](docs/ContactOption.md)
  - [CreateItemsResponse](docs/CreateItemsResponse.md)
  - [ImageAvailability](docs/ImageAvailability.md)
+ - [ImageMarketAttributeValue](docs/ImageMarketAttributeValue.md)
  - [ImageName](docs/ImageName.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [ItemEbayTitle](docs/ItemEbayTitle.md)

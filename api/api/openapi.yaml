@@ -2930,6 +2930,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -2972,6 +2981,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -3203,6 +3221,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -3245,6 +3272,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -3667,6 +3703,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -3709,6 +3754,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -4129,6 +4183,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -4171,6 +4234,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -4540,6 +4612,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -4582,6 +4663,15 @@ components:
           height: 6
           documentUploadPreviewWidth: 1
           hasVariationLink: true
+          attributeValueImages:
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
+          - attributeId: attributeId
+            itemId: itemId
+            valueId: valueId
+            imageId: imageId
           imageId: 9
           availabilities:
           - imageId: 3
@@ -5468,6 +5558,15 @@ components:
         height: 6
         documentUploadPreviewWidth: 1
         hasVariationLink: true
+        attributeValueImages:
+        - attributeId: attributeId
+          itemId: itemId
+          valueId: valueId
+          imageId: imageId
+        - attributeId: attributeId
+          itemId: itemId
+          valueId: valueId
+          imageId: imageId
         imageId: 9
         availabilities:
         - imageId: 3
@@ -5560,6 +5659,10 @@ components:
           items:
             $ref: '#/components/schemas/ImageName'
           type: array
+        attributeValueImages:
+          items:
+            $ref: '#/components/schemas/ImageMarketAttributeValue'
+          type: array
       type: object
     ImageName:
       description: image name model
@@ -5591,6 +5694,23 @@ components:
           type: string
         value:
           type: number
+      type: object
+    ImageMarketAttributeValue:
+      description: image market attribute value model
+      example:
+        attributeId: attributeId
+        itemId: itemId
+        valueId: valueId
+        imageId: imageId
+      properties:
+        valueId:
+          type: string
+        attributeId:
+          type: string
+        imageId:
+          type: string
+        itemId:
+          type: string
       type: object
     VariationSupplier:
       description: variation supplier model
@@ -6443,6 +6563,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -6485,6 +6614,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -6854,6 +6992,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -6896,6 +7043,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -7243,6 +7399,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -7285,6 +7450,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -7654,6 +7828,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -7696,6 +7879,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -8383,6 +8575,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -8425,6 +8626,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -8794,6 +9004,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -8836,6 +9055,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -9183,6 +9411,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -9225,6 +9462,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -9594,6 +9840,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -9636,6 +9891,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -10850,6 +11114,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -10892,6 +11165,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -11261,6 +11543,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -11303,6 +11594,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -11707,6 +12007,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -11749,6 +12058,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -12118,6 +12436,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -12160,6 +12487,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -12679,6 +13015,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -12721,6 +13066,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -13090,6 +13444,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -13132,6 +13495,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -14106,6 +14478,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -14148,6 +14529,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -14517,6 +14907,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -14559,6 +14958,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -15177,6 +15585,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -15219,6 +15636,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -15588,6 +16014,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -15630,6 +16065,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -16034,6 +16478,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -16076,6 +16529,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -16445,6 +16907,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -16487,6 +16958,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -17187,6 +17667,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -17229,6 +17718,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -17598,6 +18096,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -17640,6 +18147,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -18044,6 +18560,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -18086,6 +18611,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -18455,6 +18989,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -18497,6 +19040,15 @@ components:
                 height: 6
                 documentUploadPreviewWidth: 1
                 hasVariationLink: true
+                attributeValueImages:
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
+                - attributeId: attributeId
+                  itemId: itemId
+                  valueId: valueId
+                  imageId: imageId
                 imageId: 9
                 availabilities:
                 - imageId: 3
@@ -19020,6 +19572,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -19062,6 +19623,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -19431,6 +20001,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -19473,6 +20052,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -19820,6 +20408,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -19862,6 +20459,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -20231,6 +20837,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -20273,6 +20888,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -20705,6 +21329,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -20747,6 +21380,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -21116,6 +21758,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -21158,6 +21809,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -21505,6 +22165,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -21547,6 +22216,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -21916,6 +22594,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -21958,6 +22645,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -22202,6 +22898,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -22244,6 +22949,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -22666,6 +23380,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -22708,6 +23431,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -22795,6 +23527,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -22837,6 +23578,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -23259,6 +24009,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -23301,6 +24060,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -23584,6 +24352,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -23626,6 +24403,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -23995,6 +24781,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -24037,6 +24832,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -24384,6 +25188,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -24426,6 +25239,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -24795,6 +25617,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -24837,6 +25668,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -25424,6 +26264,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -25466,6 +26315,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -25888,6 +26746,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -25930,6 +26797,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -26017,6 +26893,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -26059,6 +26944,15 @@ components:
             height: 6
             documentUploadPreviewWidth: 1
             hasVariationLink: true
+            attributeValueImages:
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
+            - attributeId: attributeId
+              itemId: itemId
+              valueId: valueId
+              imageId: imageId
             imageId: 9
             availabilities:
             - imageId: 3
@@ -26481,6 +27375,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3
@@ -26523,6 +27426,15 @@ components:
               height: 6
               documentUploadPreviewWidth: 1
               hasVariationLink: true
+              attributeValueImages:
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
+              - attributeId: attributeId
+                itemId: itemId
+                valueId: valueId
+                imageId: imageId
               imageId: 9
               availabilities:
               - imageId: 3

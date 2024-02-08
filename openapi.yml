@@ -2929,6 +2929,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/ImageName'
+        attributeValueImages:
+          type: array
+          items:
+            $ref: '#/components/schemas/ImageMarketAttributeValue'
     ImageName:
       type: object
       description: image name model
@@ -2951,6 +2955,18 @@ components:
           type: string
         value:
           type: number
+    ImageMarketAttributeValue:
+      type: object
+      description: image market attribute value model
+      properties:
+        valueId:
+          type: string
+        attributeId:
+          type: string
+        imageId:
+          type: string
+        itemId:
+          type: string
     VariationSupplier:
       type: object
       description: variation supplier model

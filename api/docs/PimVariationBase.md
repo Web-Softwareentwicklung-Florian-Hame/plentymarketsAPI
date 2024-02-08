@@ -69,6 +69,7 @@ Name | Type | Description | Notes
 **Images** | Pointer to [**[]VariationImage**](VariationImage.md) |  | [optional] 
 **Stock** | Pointer to [**[]PimVariationStock**](PimVariationStock.md) |  | [optional] 
 **Item** | Pointer to [**PimVariationItem**](PimVariationItem.md) |  | [optional] 
+**Texts** | Pointer to [**[]PimVariationBaseText**](PimVariationBaseText.md) |  | [optional] 
 
 ## Methods
 
@@ -1713,6 +1714,31 @@ SetItem sets Item field to given value.
 `func (o *PimVariationBase) HasItem() bool`
 
 HasItem returns a boolean if a field has been set.
+
+### GetTexts
+
+`func (o *PimVariationBase) GetTexts() []PimVariationBaseText`
+
+GetTexts returns the Texts field if non-nil, zero value otherwise.
+
+### GetTextsOk
+
+`func (o *PimVariationBase) GetTextsOk() (*[]PimVariationBaseText, bool)`
+
+GetTextsOk returns a tuple with the Texts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTexts
+
+`func (o *PimVariationBase) SetTexts(v []PimVariationBaseText)`
+
+SetTexts sets Texts field to given value.
+
+### HasTexts
+
+`func (o *PimVariationBase) HasTexts() bool`
+
+HasTexts returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

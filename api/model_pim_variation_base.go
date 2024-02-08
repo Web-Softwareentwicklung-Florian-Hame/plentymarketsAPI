@@ -82,6 +82,7 @@ type PimVariationBase struct {
 	Images *[]VariationImage `json:"images,omitempty"`
 	Stock *[]PimVariationStock `json:"stock,omitempty"`
 	Item *PimVariationItem `json:"item,omitempty"`
+	Texts *[]PimVariationBaseText `json:"texts,omitempty"`
 }
 
 // NewPimVariationBase instantiates a new PimVariationBase object
@@ -2181,6 +2182,38 @@ func (o *PimVariationBase) SetItem(v PimVariationItem) {
 	o.Item = &v
 }
 
+// GetTexts returns the Texts field value if set, zero value otherwise.
+func (o *PimVariationBase) GetTexts() []PimVariationBaseText {
+	if o == nil || o.Texts == nil {
+		var ret []PimVariationBaseText
+		return ret
+	}
+	return *o.Texts
+}
+
+// GetTextsOk returns a tuple with the Texts field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *PimVariationBase) GetTextsOk() (*[]PimVariationBaseText, bool) {
+	if o == nil || o.Texts == nil {
+		return nil, false
+	}
+	return o.Texts, true
+}
+
+// HasTexts returns a boolean if a field has been set.
+func (o *PimVariationBase) HasTexts() bool {
+	if o != nil && o.Texts != nil {
+		return true
+	}
+
+	return false
+}
+
+// SetTexts gets a reference to the given []PimVariationBaseText and assigns it to the Texts field.
+func (o *PimVariationBase) SetTexts(v []PimVariationBaseText) {
+	o.Texts = &v
+}
+
 func (o PimVariationBase) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.IsMain != nil {
@@ -2377,6 +2410,9 @@ func (o PimVariationBase) MarshalJSON() ([]byte, error) {
 	}
 	if o.Item != nil {
 		toSerialize["item"] = o.Item
+	}
+	if o.Texts != nil {
+		toSerialize["texts"] = o.Texts
 	}
 	return json.Marshal(toSerialize)
 }

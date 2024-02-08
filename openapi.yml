@@ -2086,7 +2086,17 @@ components:
           type: integer
         flagTwo:
           type: integer
-
+    PimVariationBaseText:
+      type: object
+      properties:
+        name3:
+          type: string
+        name2:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
     PimVariationBase:
       type: object
       properties:
@@ -2230,6 +2240,10 @@ components:
             $ref: '#/components/schemas/PimVariationStock'
         item:
           $ref: '#/components/schemas/PimVariationItem'
+        texts:
+          type: array
+          items:
+            $ref: '#/components/schemas/PimVariationBaseText'
 
     PimVariation:
       type: object

@@ -46,6 +46,7 @@ docs/OrderRelation.md
 docs/PimVariation.md
 docs/PimVariationAdditionalSku.md
 docs/PimVariationBase.md
+docs/PimVariationBaseText.md
 docs/PimVariationBundleComponent.md
 docs/PimVariationComment.md
 docs/PimVariationDefaultCategory.md
@@ -134,6 +135,7 @@ model_order_relation.go
 model_pim_variation.go
 model_pim_variation_additional_sku.go
 model_pim_variation_base.go
+model_pim_variation_base_text.go
 model_pim_variation_bundle_component.go
 model_pim_variation_comment.go
 model_pim_variation_default_category.go

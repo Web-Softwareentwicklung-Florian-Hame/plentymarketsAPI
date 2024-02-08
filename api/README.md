@@ -143,6 +143,7 @@ Class | Method | HTTP request | Description
  - [PimVariation](docs/PimVariation.md)
  - [PimVariationAdditionalSku](docs/PimVariationAdditionalSku.md)
  - [PimVariationBase](docs/PimVariationBase.md)
+ - [PimVariationBaseText](docs/PimVariationBaseText.md)
  - [PimVariationBundleComponent](docs/PimVariationBundleComponent.md)
  - [PimVariationComment](docs/PimVariationComment.md)
  - [PimVariationDefaultCategory](docs/PimVariationDefaultCategory.md)

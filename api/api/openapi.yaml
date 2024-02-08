@@ -2865,6 +2865,22 @@ components:
         flagTwo:
           type: integer
       type: object
+    PimVariationBaseText:
+      example:
+        name3: name3
+        name: name
+        description: description
+        name2: name2
+      properties:
+        name3:
+          type: string
+        name2:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+      type: object
     PimVariationBase:
       example:
         intervalOrderQuantity: 8.969578798196912
@@ -3063,6 +3079,15 @@ components:
         isInvisibleInListIfNetStockIsNotPositive: true
         estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
         salesPricesInherited: true
+        texts:
+        - name3: name3
+          name: name
+          description: description
+          name2: name2
+        - name3: name3
+          name: name
+          description: description
+          name2: name2
         storageCosts: 7.260521264802104
         movingAveragePrice: 7.143538047012306
       properties:
@@ -3206,6 +3231,10 @@ components:
           type: array
         item:
           $ref: '#/components/schemas/PimVariationItem'
+        texts:
+          items:
+            $ref: '#/components/schemas/PimVariationBaseText'
+          type: array
       type: object
     PimVariation:
       example:
@@ -3836,6 +3865,15 @@ components:
           isInvisibleInListIfNetStockIsNotPositive: true
           estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
           salesPricesInherited: true
+          texts:
+          - name3: name3
+            name: name
+            description: description
+            name2: name2
+          - name3: name3
+            name: name
+            description: description
+            name2: name2
           storageCosts: 7.260521264802104
           movingAveragePrice: 7.143538047012306
       properties:
@@ -23513,6 +23551,15 @@ components:
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
+            texts:
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
             storageCosts: 7.260521264802104
             movingAveragePrice: 7.143538047012306
         - images:
@@ -24142,6 +24189,15 @@ components:
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
+            texts:
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
             storageCosts: 7.260521264802104
             movingAveragePrice: 7.143538047012306
       properties:
@@ -26879,6 +26935,15 @@ components:
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
+            texts:
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
             storageCosts: 7.260521264802104
             movingAveragePrice: 7.143538047012306
         - images:
@@ -27508,6 +27573,15 @@ components:
             isInvisibleInListIfNetStockIsNotPositive: true
             estimatedAvailableAt: 2000-01-23T04:56:07.000+00:00
             salesPricesInherited: true
+            texts:
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
+            - name3: name3
+              name: name
+              description: description
+              name2: name2
             storageCosts: 7.260521264802104
             movingAveragePrice: 7.143538047012306
         itemsPerPage: 2

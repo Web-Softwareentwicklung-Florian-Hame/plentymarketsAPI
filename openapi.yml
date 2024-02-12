@@ -1339,6 +1339,14 @@ paths:
           required: false
           description: "The number of results per page. Maximum value is 250. Default value is 50."
 
+        - in: query
+          name: warehouseIds
+          schema:
+            type: string
+          required: false
+          description: "Filter restricts the result to variations which meet the specified warehouse id criteria. Allowed operators are: 'eq', 'not', 'nin' and 'in'. Multiple Warehouses need to be comma separated"
+
+
     put:
       summary: Create a list of variations and their related data
       description: " Creates a list of variations and their related data."
@@ -1941,6 +1949,13 @@ paths:
             type: string
           required: false
           description: "The cursor to get the next entries"
+
+        - in: query
+          name: warehouseIds
+          schema:
+            type: string
+          required: false
+          description: "Filter restricts the result to variations which meet the specified warehouse id criteria. Allowed operators are: 'eq', 'not', 'nin' and 'in'. Multiple Warehouses need to be comma separated"
 
 components:
   schemas:

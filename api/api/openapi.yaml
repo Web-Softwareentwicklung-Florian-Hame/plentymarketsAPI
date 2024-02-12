@@ -1834,6 +1834,16 @@ paths:
         schema:
           type: integer
         style: form
+      - description: 'Filter restricts the result to variations which meet the specified
+          warehouse id criteria. Allowed operators are: ''eq'', ''not'', ''nin'' and
+          ''in''. Multiple Warehouses need to be comma separated'
+        explode: true
+        in: query
+        name: warehouseIds
+        required: false
+        schema:
+          type: string
+        style: form
       responses:
         "200":
           content:
@@ -2662,6 +2672,16 @@ paths:
         explode: true
         in: query
         name: cursor
+        required: false
+        schema:
+          type: string
+        style: form
+      - description: 'Filter restricts the result to variations which meet the specified
+          warehouse id criteria. Allowed operators are: ''eq'', ''not'', ''nin'' and
+          ''in''. Multiple Warehouses need to be comma separated'
+        explode: true
+        in: query
+        name: warehouseIds
         required: false
         schema:
           type: string

@@ -2853,6 +2853,7 @@ type ApiRestPimVariationsGetRequest struct {
 	stockUpdatedAt *string
 	page *int32
 	itemsPerPage *int32
+	warehouseIds *string
 }
 
 // Includes the specified information in the results. More than one parameter should be separated by commas. The following parameters are available:&lt;ul&gt;&lt;li&gt;&#39;additionalSkus&#39; &#x3D; The additional skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues&#39; &#x3D; The attribute values of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attribute&#39;/b&gt; &#x3D; Includes attributeValues. The attribute data to the related attribute ID.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attributeValue&#39; &#x3D; Includes attributeValues. The attribute value data to the related attribute value ID.&lt;/li&gt;&lt;li&gt;&#39;barcodes&#39; &#x3D; The barcodes of the variation.&lt;/li&gt;&lt;li&gt;&#39;barcodes.barcode&#39; &#x3D; Includes barcodes. The barcode data to the related barcode ID.&lt;/li&gt;&lt;li&gt;&#39;base&#39; &#x3D; The variation base.&lt;/li&gt;&lt;li&gt;&#39;base.item&#39; &#x3D; Includes base. The item data of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.itemSerialNumber&#39; &#x3D; Includes base. The item serial numbers of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.feedback&#39; &#x3D; Includes base. The feedback of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.characteristics&#39; &#x3D; Includes base. The characteristics of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.crossSelling&#39; &#x3D; Includes base. The cross selling items of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.texts&#39; &#x3D; Includes base. The texts of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.availability&#39; &#x3D; Includes base. The availability data related to the variation&#39;s availability ID.&lt;/li&gt;&lt;li&gt;&#39;base.images&#39; &#x3D; Includes base. The images linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.shippingProfiles&#39; &#x3D; Includes base. The shipping profiles linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.stock&#39; &#x3D; Includes base. The stock of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.stockStorageLocations&#39; &#x3D; Includes base. The stock storage locations of the variation.&lt;/li&gt;&lt;li&gt;&#39;bundleComponents&#39; &#x3D; The bundle components of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories&#39; &#x3D; The categories of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories.category&#39; &#x3D; Includes categories. The related category data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;categories.categoryBranch&#39; &#x3D; Includes categories. The related category branch data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;clients&#39; &#x3D; The clients of the variation.&lt;/li&gt;&lt;li&gt;&#39;defaultCategories&#39; &#x3D; The default categories of the variation&lt;/li&gt;&lt;li&gt;&#39;defaultCategories.category&#39; &#x3D; Includes defaultCategories. The category data to the related category ID.&lt;/li&gt;&lt;li&gt;&#39;images&#39; &#x3D; The images of the variation&lt;/li&gt;&lt;li&gt;&#39;images.image&#39; &#x3D; Includes images. The image data to the related image ID.&lt;/li&gt;&lt;li&gt;&#39;markets&#39; &#x3D; The markets of the variation.&lt;/li&gt;&lt;li&gt;&#39;marketIdentNumbers&#39; &#x3D; The market ident numbers of the variation&lt;/li&gt;&lt;li&gt;&#39;salesPrices&#39; &#x3D; The sales prices of the variation.&lt;/li&gt;&lt;li&gt;&#39;salesPrices.salesPrice&#39; &#x3D; Includes salesPrices. The sales price data to the related sales price ID.&lt;/li&gt;&lt;li&gt;&#39;skus&#39; &#x3D; The skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier&#39; &#x3D; The supplier of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier.supplier&#39; &#x3D; Includes supplier. The contact data to the related supplier ID.&lt;/li&gt;&lt;li&gt;&#39;timestamps&#39; &#x3D; The timetamps of the variation.&lt;/li&gt;&lt;li&gt;&#39;warehouses&#39; &#x3D; The warehouses of the variation&lt;/li&gt;&lt;li&gt;&#39;warehouses.warehouse&#39; &#x3D; Includes warehouses. The warehouse data to the related warehouse ID.&lt;/li&gt;&lt;li&gt;&#39;unit&#39; &#x3D; The unit of the variation&lt;/li&gt;&lt;li&gt;&#39;unit.unit&#39; &#x3D; Includes unit. The unit data of the related unit ID.&lt;/li&gt;&lt;li&gt;&#39;tags&#39; &#x3D; The tags of the variation.&lt;/li&gt;&lt;li&gt;&#39;tags.tag&#39; &#x3D; Includes tags. The tag data to the related tag ID.&lt;/li&gt;&lt;li&gt;&#39;properties&#39; &#x3D; The properties of the variation.&lt;/li&gt;&lt;li&gt;&#39;properties.property&#39; &#x3D; Includes properties. The property data to the related property ID.&lt;/li&gt;&lt;/ul&gt;
@@ -3130,6 +3131,11 @@ func (r ApiRestPimVariationsGetRequest) ItemsPerPage(itemsPerPage int32) ApiRest
 	r.itemsPerPage = &itemsPerPage
 	return r
 }
+// Filter restricts the result to variations which meet the specified warehouse id criteria. Allowed operators are: &#39;eq&#39;, &#39;not&#39;, &#39;nin&#39; and &#39;in&#39;. Multiple Warehouses need to be comma separated
+func (r ApiRestPimVariationsGetRequest) WarehouseIds(warehouseIds string) ApiRestPimVariationsGetRequest {
+	r.warehouseIds = &warehouseIds
+	return r
+}
 
 func (r ApiRestPimVariationsGetRequest) Execute() (InlineResponse200, *_nethttp.Response, error) {
 	return r.ApiService.RestPimVariationsGetExecute(r)
@@ -3345,6 +3351,9 @@ func (a *DefaultApiService) RestPimVariationsGetExecute(r ApiRestPimVariationsGe
 	}
 	if r.itemsPerPage != nil {
 		localVarQueryParams.Add("itemsPerPage", parameterToString(*r.itemsPerPage, ""))
+	}
+	if r.warehouseIds != nil {
+		localVarQueryParams.Add("warehouseIds", parameterToString(*r.warehouseIds, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3586,6 +3595,7 @@ type ApiRestPimVariationsScrollGetRequest struct {
 	supplierItemNumber *string
 	lang *string
 	cursor *string
+	warehouseIds *string
 }
 
 // Includes the specified information in the results. More than one parameter should be separated by commas. The following parameters are available:&lt;ul&gt;&lt;li&gt;&#39;additionalSkus&#39; &#x3D; The additional skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues&#39; &#x3D; The attribute values of the variation.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attribute&#39;/b&gt; &#x3D; Includes attributeValues. The attribute data to the related attribute ID.&lt;/li&gt;&lt;li&gt;&#39;attributeValues.attributeValue&#39; &#x3D; Includes attributeValues. The attribute value data to the related attribute value ID.&lt;/li&gt;&lt;li&gt;&#39;barcodes&#39; &#x3D; The barcodes of the variation.&lt;/li&gt;&lt;li&gt;&#39;barcodes.barcode&#39; &#x3D; Includes barcodes. The barcode data to the related barcode ID.&lt;/li&gt;&lt;li&gt;&#39;base&#39; &#x3D; The variation base.&lt;/li&gt;&lt;li&gt;&#39;base.item&#39; &#x3D; Includes base. The item data of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.itemSerialNumber&#39; &#x3D; Includes base. The item serial numbers of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.feedback&#39; &#x3D; Includes base. The feedback of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.characteristics&#39; &#x3D; Includes base. The characteristics of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.crossSelling&#39; &#x3D; Includes base. The cross selling items of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.texts&#39; &#x3D; Includes base. The texts of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.availability&#39; &#x3D; Includes base. The availability data related to the variation&#39;s availability ID.&lt;/li&gt;&lt;li&gt;&#39;base.images&#39; &#x3D; Includes base. The images linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.shippingProfiles&#39; &#x3D; Includes base. The shipping profiles linked to the item.&lt;/li&gt;&lt;li&gt;&#39;base.stock&#39; &#x3D; Includes base. The stock of the variation.&lt;/li&gt;&lt;li&gt;&#39;base.stockStorageLocations&#39; &#x3D; Includes base. The stock storage locations of the variation.&lt;/li&gt;&lt;li&gt;&#39;bundleComponents&#39; &#x3D; The bundle components of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories&#39; &#x3D; The categories of the variation.&lt;/li&gt;&lt;li&gt;&#39;categories.category&#39; &#x3D; Includes categories. The related category data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;categories.categoryBranch&#39; &#x3D; Includes categories. The related category branch data for each category ID.&lt;/li&gt;&lt;li&gt;&#39;clients&#39; &#x3D; The clients of the variation.&lt;/li&gt;&lt;li&gt;&#39;defaultCategories&#39; &#x3D; The default categories of the variation&lt;/li&gt;&lt;li&gt;&#39;defaultCategories.category&#39; &#x3D; Includes defaultCategories. The category data to the related category ID.&lt;/li&gt;&lt;li&gt;&#39;images&#39; &#x3D; The images of the variation&lt;/li&gt;&lt;li&gt;&#39;images.image&#39; &#x3D; Includes images. The image data to the related image ID.&lt;/li&gt;&lt;li&gt;&#39;markets&#39; &#x3D; The markets of the variation.&lt;/li&gt;&lt;li&gt;&#39;marketIdentNumbers&#39; &#x3D; The market ident numbers of the variation&lt;/li&gt;&lt;li&gt;&#39;salesPrices&#39; &#x3D; The sales prices of the variation.&lt;/li&gt;&lt;li&gt;&#39;salesPrices.salesPrice&#39; &#x3D; Includes salesPrices. The sales price data to the related sales price ID.&lt;/li&gt;&lt;li&gt;&#39;skus&#39; &#x3D; The skus of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier&#39; &#x3D; The supplier of the variation.&lt;/li&gt;&lt;li&gt;&#39;supplier.supplier&#39; &#x3D; Includes supplier. The contact data to the related supplier ID.&lt;/li&gt;&lt;li&gt;&#39;timestamps&#39; &#x3D; The timetamps of the variation.&lt;/li&gt;&lt;li&gt;&#39;warehouses&#39; &#x3D; The warehouses of the variation&lt;/li&gt;&lt;li&gt;&#39;warehouses.warehouse&#39; &#x3D; Includes warehouses. The warehouse data to the related warehouse ID.&lt;/li&gt;&lt;li&gt;&#39;unit&#39; &#x3D; The unit of the variation&lt;/li&gt;&lt;li&gt;&#39;unit.unit&#39; &#x3D; Includes unit. The unit data of the related unit ID.&lt;/li&gt;&lt;li&gt;&#39;tags&#39; &#x3D; The tags of the variation.&lt;/li&gt;&lt;li&gt;&#39;tags.tag&#39; &#x3D; Includes tags. The tag data to the related tag ID.&lt;/li&gt;&lt;li&gt;&#39;properties&#39; &#x3D; The properties of the variation.&lt;/li&gt;&lt;li&gt;&#39;properties.property&#39; &#x3D; Includes properties. The property data to the related property ID.&lt;/li&gt;&lt;/ul&gt;
@@ -3958,6 +3968,11 @@ func (r ApiRestPimVariationsScrollGetRequest) Cursor(cursor string) ApiRestPimVa
 	r.cursor = &cursor
 	return r
 }
+// Filter restricts the result to variations which meet the specified warehouse id criteria. Allowed operators are: &#39;eq&#39;, &#39;not&#39;, &#39;nin&#39; and &#39;in&#39;. Multiple Warehouses need to be comma separated
+func (r ApiRestPimVariationsScrollGetRequest) WarehouseIds(warehouseIds string) ApiRestPimVariationsScrollGetRequest {
+	r.warehouseIds = &warehouseIds
+	return r
+}
 
 func (r ApiRestPimVariationsScrollGetRequest) Execute() (PimVariationScrollResponse, *_nethttp.Response, error) {
 	return r.ApiService.RestPimVariationsScrollGetExecute(r)
@@ -4222,6 +4237,9 @@ func (a *DefaultApiService) RestPimVariationsScrollGetExecute(r ApiRestPimVariat
 	}
 	if r.cursor != nil {
 		localVarQueryParams.Add("cursor", parameterToString(*r.cursor, ""))
+	}
+	if r.warehouseIds != nil {
+		localVarQueryParams.Add("warehouseIds", parameterToString(*r.warehouseIds, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

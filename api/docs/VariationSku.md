@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | Pointer to **int32** |  | [optional] 
 **VariationId** | Pointer to **int32** |  | [optional] 
-**MarketId** | Pointer to **int32** |  | [optional] 
+**MarketId** | Pointer to **float32** |  | [optional] 
 **AccountId** | Pointer to **int32** |  | [optional] 
 **InitialSku** | Pointer to **string** |  | [optional] 
 **Sku** | Pointer to **string** |  | [optional] 
@@ -91,20 +91,20 @@ HasVariationId returns a boolean if a field has been set.
 
 ### GetMarketId
 
-`func (o *VariationSku) GetMarketId() int32`
+`func (o *VariationSku) GetMarketId() float32`
 
 GetMarketId returns the MarketId field if non-nil, zero value otherwise.
 
 ### GetMarketIdOk
 
-`func (o *VariationSku) GetMarketIdOk() (*int32, bool)`
+`func (o *VariationSku) GetMarketIdOk() (*float32, bool)`
 
 GetMarketIdOk returns a tuple with the MarketId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetMarketId
 
-`func (o *VariationSku) SetMarketId(v int32)`
+`func (o *VariationSku) SetMarketId(v float32)`
 
 SetMarketId sets MarketId field to given value.
 

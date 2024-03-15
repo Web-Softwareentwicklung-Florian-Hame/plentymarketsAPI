@@ -3371,7 +3371,7 @@ components:
         skus:
         - additionalInformation: additionalInformation
           isActive: true
-          marketId: 8
+          marketId: 8.262795412896967
           accountId: 2
           createdAt: 2000-01-23T04:56:07.000+00:00
           initialSku: initialSku
@@ -3386,7 +3386,7 @@ components:
           status: status
         - additionalInformation: additionalInformation
           isActive: true
-          marketId: 8
+          marketId: 8.262795412896967
           accountId: 2
           createdAt: 2000-01-23T04:56:07.000+00:00
           initialSku: initialSku
@@ -4066,7 +4066,7 @@ components:
         variationSkus:
         - additionalInformation: additionalInformation
           isActive: true
-          marketId: 8
+          marketId: 8.262795412896967
           accountId: 2
           createdAt: 2000-01-23T04:56:07.000+00:00
           initialSku: initialSku
@@ -4081,7 +4081,7 @@ components:
           status: status
         - additionalInformation: additionalInformation
           isActive: true
-          marketId: 8
+          marketId: 8.262795412896967
           accountId: 2
           createdAt: 2000-01-23T04:56:07.000+00:00
           initialSku: initialSku
@@ -5343,7 +5343,7 @@ components:
       example:
         additionalInformation: additionalInformation
         isActive: true
-        marketId: 8
+        marketId: 8.262795412896967
         accountId: 2
         createdAt: 2000-01-23T04:56:07.000+00:00
         initialSku: initialSku
@@ -5362,7 +5362,7 @@ components:
         variationId:
           type: integer
         marketId:
-          type: integer
+          type: number
         accountId:
           type: integer
         initialSku:
@@ -6446,7 +6446,7 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -6461,7 +6461,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -7282,7 +7282,7 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -7297,7 +7297,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -8458,7 +8458,7 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -8473,7 +8473,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -9294,7 +9294,7 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -9309,7 +9309,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -10997,7 +10997,7 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -11012,7 +11012,7 @@ components:
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -11890,7 +11890,7 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -11905,7 +11905,7 @@ components:
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -12898,7 +12898,7 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -12913,7 +12913,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -14361,7 +14361,7 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -14376,7 +14376,7 @@ components:
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -15468,7 +15468,7 @@ components:
               variationSkus:
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -15483,7 +15483,7 @@ components:
                 status: status
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -16361,7 +16361,7 @@ components:
               variationSkus:
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -16376,7 +16376,7 @@ components:
                 status: status
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -17550,7 +17550,7 @@ components:
               variationSkus:
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -17565,7 +17565,7 @@ components:
                 status: status
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -18443,7 +18443,7 @@ components:
               variationSkus:
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -18458,7 +18458,7 @@ components:
                 status: status
               - additionalInformation: additionalInformation
                 isActive: true
-                marketId: 8
+                marketId: 8.262795412896967
                 accountId: 2
                 createdAt: 2000-01-23T04:56:07.000+00:00
                 initialSku: initialSku
@@ -19455,7 +19455,7 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -19470,7 +19470,7 @@ components:
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -20291,7 +20291,7 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -20306,7 +20306,7 @@ components:
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -21212,7 +21212,7 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -21227,7 +21227,7 @@ components:
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -22048,7 +22048,7 @@ components:
             variationSkus:
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -22063,7 +22063,7 @@ components:
               status: status
             - additionalInformation: additionalInformation
               isActive: true
-              marketId: 8
+              marketId: 8.262795412896967
               accountId: 2
               createdAt: 2000-01-23T04:56:07.000+00:00
               initialSku: initialSku
@@ -23057,7 +23057,7 @@ components:
           skus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -23072,7 +23072,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -23695,7 +23695,7 @@ components:
           skus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -23710,7 +23710,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -24253,7 +24253,7 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -24268,7 +24268,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -25089,7 +25089,7 @@ components:
           variationSkus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -25104,7 +25104,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -26441,7 +26441,7 @@ components:
           skus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -26456,7 +26456,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -27079,7 +27079,7 @@ components:
           skus:
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku
@@ -27094,7 +27094,7 @@ components:
             status: status
           - additionalInformation: additionalInformation
             isActive: true
-            marketId: 8
+            marketId: 8.262795412896967
             accountId: 2
             createdAt: 2000-01-23T04:56:07.000+00:00
             initialSku: initialSku

@@ -1,6 +1,6 @@
 module github.com/Web-Softwareentwicklung-Florian-Hame/plentymarketsAPI
 
-go 1.16
+go 1.22
 
 require (
 	github.com/Web-Softwareentwicklung-Florian-Hame/plentymarketsAPI v1.2.12

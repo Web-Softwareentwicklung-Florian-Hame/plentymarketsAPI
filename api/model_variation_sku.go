@@ -19,7 +19,7 @@ import (
 type VariationSku struct {
 	Id *int32 `json:"id,omitempty"`
 	VariationId *int32 `json:"variationId,omitempty"`
-	MarketId *int32 `json:"marketId,omitempty"`
+	MarketId *float32 `json:"marketId,omitempty"`
 	AccountId *int32 `json:"accountId,omitempty"`
 	InitialSku *string `json:"initialSku,omitempty"`
 	Sku *string `json:"sku,omitempty"`
@@ -116,9 +116,9 @@ func (o *VariationSku) SetVariationId(v int32) {
 }
 
 // GetMarketId returns the MarketId field value if set, zero value otherwise.
-func (o *VariationSku) GetMarketId() int32 {
+func (o *VariationSku) GetMarketId() float32 {
 	if o == nil || o.MarketId == nil {
-		var ret int32
+		var ret float32
 		return ret
 	}
 	return *o.MarketId
@@ -126,7 +126,7 @@ func (o *VariationSku) GetMarketId() int32 {
 
 // GetMarketIdOk returns a tuple with the MarketId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *VariationSku) GetMarketIdOk() (*int32, bool) {
+func (o *VariationSku) GetMarketIdOk() (*float32, bool) {
 	if o == nil || o.MarketId == nil {
 		return nil, false
 	}
@@ -142,8 +142,8 @@ func (o *VariationSku) HasMarketId() bool {
 	return false
 }
 
-// SetMarketId gets a reference to the given int32 and assigns it to the MarketId field.
-func (o *VariationSku) SetMarketId(v int32) {
+// SetMarketId gets a reference to the given float32 and assigns it to the MarketId field.
+func (o *VariationSku) SetMarketId(v float32) {
 	o.MarketId = &v
 }
 

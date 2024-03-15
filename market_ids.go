@@ -166,7 +166,7 @@ const (
 	Marktkauf                      MarketName = "Marktkauf"
 )
 
-var SkuMarketsMapId = map[MarketName]int32{
+var SkuMarketsMapId = map[MarketName]float32{
 	Amazon:     4,
 	Kaufland:   102,
 	OttoMarket: 160,
